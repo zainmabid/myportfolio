@@ -77,12 +77,8 @@ export const Brands: React.FC = () => {
         </div>
       </div>
 
-      {/* 3-Row Infinite Animated Marquee Ticker */}
-      <div className="relative w-full overflow-hidden space-y-4 sm:space-y-5 py-2">
-        {/* Left & Right Smooth Edge Fade Masks */}
-        <div className="pointer-events-none absolute inset-y-0 left-0 w-16 sm:w-32 bg-gradient-to-r from-[var(--surface)] to-transparent z-10" />
-        <div className="pointer-events-none absolute inset-y-0 right-0 w-16 sm:w-32 bg-gradient-to-l from-[var(--surface)] to-transparent z-10" />
-
+      {/* 3-Row Infinite Animated Marquee Ticker with Clean Edge Mask */}
+      <div className="marquee-mask relative w-full overflow-hidden space-y-4 sm:space-y-5 py-2">
         {/* Line 1: Left-to-Right Animation (Wide Logos) */}
         <div className="flex overflow-hidden">
           <div className="animate-marquee-right flex items-center gap-4 sm:gap-6 pr-4 sm:pr-6">
