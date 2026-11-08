@@ -6,18 +6,18 @@ import { Barcode } from './Barcode';
 
 const ROTATING_HOOKS = [
   {
-    lead: 'I make',
-    core: 'warehouses, factories and asset registers',
+    lead: 'I make ',
+    core: 'warehouses, factories and asset registers ',
     tail: 'countable.'
   },
   {
-    lead: 'I engineer',
-    core: 'zero-loss physical asset traceability',
+    lead: 'I engineer ',
+    core: 'zero-loss physical asset traceability ',
     tail: 'from floor to ERP.'
   },
   {
-    lead: 'I synchronize',
-    core: 'RFID, barcode automation and live inventory',
+    lead: 'I synchronize ',
+    core: 'RFID, barcode automation and live inventory ',
     tail: 'in real time.'
   }
 ];
@@ -25,13 +25,52 @@ const ROTATING_HOOKS = [
 export const Hero: React.FC = () => {
   const { person } = PORTFOLIO_DATA;
   const [hookIndex, setHookIndex] = useState(0);
+  const [charIndex, setCharIndex] = useState(0);
+  const [isDeleting, setIsDeleting] = useState(false);
 
   useEffect(() => {
-    const timer = setInterval(() => {
+    const current = ROTATING_HOOKS[hookIndex];
+    const fullText = current.lead + current.core + current.tail;
+
+    let timeout: NodeJS.Timeout;
+
+    if (!isDeleting && charIndex < fullText.length) {
+      // Typing speed: snappy & rhythmic
+      timeout = setTimeout(() => {
+        setCharIndex((prev) => prev + 1);
+      }, 35);
+    } else if (!isDeleting && charIndex === fullText.length) {
+      // Pause at full text so visitor can read comfortably
+      timeout = setTimeout(() => {
+        setIsDeleting(true);
+      }, 2800);
+    } else if (isDeleting && charIndex > 0) {
+      // Fast backspace deleting
+      timeout = setTimeout(() => {
+        setCharIndex((prev) => prev - 1);
+      }, 16);
+    } else if (isDeleting && charIndex === 0) {
+      // Switch to next hook seamlessly
+      setIsDeleting(false);
       setHookIndex((prev) => (prev + 1) % ROTATING_HOOKS.length);
-    }, 4500);
-    return () => clearInterval(timer);
-  }, []);
+    }
+
+    return () => clearTimeout(timeout);
+  }, [charIndex, isDeleting, hookIndex]);
+
+  const currentHook = ROTATING_HOOKS[hookIndex];
+  const leadLen = currentHook.lead.length;
+  const coreLen = currentHook.core.length;
+
+  const leadText = currentHook.lead.slice(0, Math.min(charIndex, leadLen));
+  const coreText =
+    charIndex > leadLen
+      ? currentHook.core.slice(0, Math.min(charIndex - leadLen, coreLen))
+      : '';
+  const tailText =
+    charIndex > leadLen + coreLen
+      ? currentHook.tail.slice(0, charIndex - leadLen - coreLen)
+      : '';
 
   // Single orchestrated hero entrance
   const containerVariants = {
@@ -80,47 +119,28 @@ export const Hero: React.FC = () => {
           </span>
         </motion.div>
 
-        {/* Two-Column Grid: Headline & Profile */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start lg:items-center">
+        {/* Two-Column Grid: Headline & Profile (Top-Aligned) */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
           {/* Main Info Column */}
           <div className="lg:col-span-7 xl:col-span-8">
-            {/* Main Industrial Headline with Rotating Dynamic Hooks */}
-            <div className="min-h-[145px] sm:min-h-[175px] lg:min-h-[200px] flex flex-col justify-center">
-              <AnimatePresence mode="wait">
-                <motion.h1
-                  key={hookIndex}
-                  initial={{ opacity: 0, y: 14, filter: 'blur(3px)' }}
-                  animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
-                  exit={{ opacity: 0, y: -14, filter: 'blur(3px)' }}
-                  transition={{ duration: 0.38, ease: 'easeOut' }}
-                  className="font-heading text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-[var(--ink)] leading-[1.08] max-w-3xl"
-                >
-                  <span>{ROTATING_HOOKS[hookIndex].lead} </span>
+            {/* Main Industrial Headline with Typewriter Hook */}
+            <div className="min-h-[140px] sm:min-h-[165px] lg:min-h-[190px] flex flex-col justify-start">
+              <motion.h1
+                variants={itemVariants}
+                className="font-heading text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-[var(--ink)] leading-[1.08] max-w-3xl"
+              >
+                <span>{leadText}</span>
+                {coreText && (
                   <span className="text-[var(--accent)] underline decoration-[var(--line)] underline-offset-4 decoration-2">
-                    {ROTATING_HOOKS[hookIndex].core}
-                  </span>{' '}
-                  <span>{ROTATING_HOOKS[hookIndex].tail}</span>
-                </motion.h1>
-              </AnimatePresence>
-
-              {/* Telemetry Segment Selector */}
-              <div className="flex items-center gap-2 mt-4 select-none">
-                {ROTATING_HOOKS.map((_, idx) => (
-                  <button
-                    key={idx}
-                    onClick={() => setHookIndex(idx)}
-                    className={`h-1 rounded-full transition-all duration-300 cursor-pointer ${
-                      idx === hookIndex
-                        ? 'w-8 bg-[var(--accent)] shadow-xs'
-                        : 'w-2.5 bg-[var(--line)] hover:bg-[var(--muted)]'
-                    }`}
-                    aria-label={`Switch to hook ${idx + 1}`}
-                  />
-                ))}
-                <span className="font-mono text-[9px] uppercase tracking-widest text-[var(--muted)] ml-2">
-                  HOOK // 0{hookIndex + 1}
-                </span>
-              </div>
+                    {coreText}
+                  </span>
+                )}
+                {tailText && <span>{tailText}</span>}
+                <span
+                  className="inline-block w-[3px] sm:w-[4px] h-[0.8em] bg-[var(--accent)] ml-1.5 align-middle animate-pulse"
+                  aria-hidden="true"
+                />
+              </motion.h1>
             </div>
 
             {/* Sub-line */}
@@ -168,7 +188,7 @@ export const Hero: React.FC = () => {
           {/* Executive Portrait Column with Animated RFID Signal Field */}
           <motion.div
             variants={itemVariants}
-            className="lg:col-span-5 xl:col-span-4 flex justify-center lg:justify-end mt-4 lg:mt-0 relative"
+            className="lg:col-span-5 xl:col-span-4 flex justify-center lg:justify-end relative"
           >
             {/* Animated Concentric RFID / Radio Waves */}
             <div className="absolute inset-0 flex items-center justify-center pointer-events-none -z-10 overflow-visible" aria-hidden="true">
