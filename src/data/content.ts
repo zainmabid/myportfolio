@@ -719,13 +719,6 @@ export const PORTFOLIO_DATA: PortfolioData = {
       issuerLogo: '/logos/mindlabs.png'
     },
     {
-      id: 'cert-atlassian',
-      group: 'Business and project',
-      issuer: 'Atlassian',
-      title: 'Agile Project Management',
-      year: '2022'
-    },
-    {
       id: 'cert-scrumstudy',
       group: 'Business and project',
       issuer: 'SCRUMstudy',
