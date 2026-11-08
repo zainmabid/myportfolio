@@ -1,11 +1,37 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowDownRight, ExternalLink, MapPin } from 'lucide-react';
 import { PORTFOLIO_DATA } from '@/data/content';
 import { Barcode } from './Barcode';
 
+const ROTATING_HOOKS = [
+  {
+    lead: 'I make',
+    core: 'warehouses, factories and asset registers',
+    tail: 'countable.'
+  },
+  {
+    lead: 'I engineer',
+    core: 'zero-loss physical asset traceability',
+    tail: 'from floor to ERP.'
+  },
+  {
+    lead: 'I synchronize',
+    core: 'RFID, barcode automation and live inventory',
+    tail: 'in real time.'
+  }
+];
+
 export const Hero: React.FC = () => {
   const { person } = PORTFOLIO_DATA;
+  const [hookIndex, setHookIndex] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setHookIndex((prev) => (prev + 1) % ROTATING_HOOKS.length);
+    }, 4500);
+    return () => clearInterval(timer);
+  }, []);
 
   // Single orchestrated hero entrance
   const containerVariants = {
@@ -58,13 +84,44 @@ export const Hero: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start lg:items-center">
           {/* Main Info Column */}
           <div className="lg:col-span-7 xl:col-span-8">
-            {/* Main Industrial Headline */}
-            <motion.h1
-              variants={itemVariants}
-              className="font-heading text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-[var(--ink)] leading-[1.1] max-w-3xl"
-            >
-              I make warehouses, factories and asset registers countable.
-            </motion.h1>
+            {/* Main Industrial Headline with Rotating Dynamic Hooks */}
+            <div className="min-h-[145px] sm:min-h-[175px] lg:min-h-[200px] flex flex-col justify-center">
+              <AnimatePresence mode="wait">
+                <motion.h1
+                  key={hookIndex}
+                  initial={{ opacity: 0, y: 14, filter: 'blur(3px)' }}
+                  animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
+                  exit={{ opacity: 0, y: -14, filter: 'blur(3px)' }}
+                  transition={{ duration: 0.38, ease: 'easeOut' }}
+                  className="font-heading text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-[var(--ink)] leading-[1.08] max-w-3xl"
+                >
+                  <span>{ROTATING_HOOKS[hookIndex].lead} </span>
+                  <span className="text-[var(--accent)] underline decoration-[var(--line)] underline-offset-4 decoration-2">
+                    {ROTATING_HOOKS[hookIndex].core}
+                  </span>{' '}
+                  <span>{ROTATING_HOOKS[hookIndex].tail}</span>
+                </motion.h1>
+              </AnimatePresence>
+
+              {/* Telemetry Segment Selector */}
+              <div className="flex items-center gap-2 mt-4 select-none">
+                {ROTATING_HOOKS.map((_, idx) => (
+                  <button
+                    key={idx}
+                    onClick={() => setHookIndex(idx)}
+                    className={`h-1 rounded-full transition-all duration-300 cursor-pointer ${
+                      idx === hookIndex
+                        ? 'w-8 bg-[var(--accent)] shadow-xs'
+                        : 'w-2.5 bg-[var(--line)] hover:bg-[var(--muted)]'
+                    }`}
+                    aria-label={`Switch to hook ${idx + 1}`}
+                  />
+                ))}
+                <span className="font-mono text-[9px] uppercase tracking-widest text-[var(--muted)] ml-2">
+                  HOOK // 0{hookIndex + 1}
+                </span>
+              </div>
+            </div>
 
             {/* Sub-line */}
             <motion.p
