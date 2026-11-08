@@ -165,11 +165,18 @@ export const Hero: React.FC = () => {
             </motion.div>
           </div>
 
-          {/* Executive Portrait Column */}
+          {/* Executive Portrait Column with Animated RFID Signal Field */}
           <motion.div
             variants={itemVariants}
-            className="lg:col-span-5 xl:col-span-4 flex justify-center lg:justify-end mt-4 lg:mt-0"
+            className="lg:col-span-5 xl:col-span-4 flex justify-center lg:justify-end mt-4 lg:mt-0 relative"
           >
+            {/* Animated Concentric RFID / Radio Waves */}
+            <div className="absolute inset-0 flex items-center justify-center pointer-events-none -z-10 overflow-visible" aria-hidden="true">
+              <div className="w-[280px] h-[280px] rounded-full border border-[var(--accent)]/30 animate-rf-pulse" />
+              <div className="w-[380px] h-[380px] rounded-full border border-[var(--accent)]/20 animate-rf-pulse [animation-delay:1.5s]" />
+              <div className="w-[480px] h-[480px] rounded-full border border-[var(--accent)]/10 animate-rf-pulse [animation-delay:3s]" />
+            </div>
+
             <div className="relative group max-w-[280px] sm:max-w-[310px] w-full">
               {/* Industrial Viewfinder Corner Markers */}
               <div className="absolute -top-2 -left-2 w-4 h-4 border-t-2 border-l-2 border-[var(--accent)] pointer-events-none z-10" />

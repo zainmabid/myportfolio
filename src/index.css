@@ -152,6 +152,60 @@ html.dark .asset-card:hover {
   -webkit-mask-image: linear-gradient(to right, transparent 0%, black 28px, black calc(100% - 28px), transparent 100%);
 }
 
+/* Ambient Background Drift Animations */
+@keyframes float-orb-1 {
+  0% {
+    transform: translate(0px, 0px) scale(1);
+  }
+  33% {
+    transform: translate(40px, -50px) scale(1.1);
+  }
+  66% {
+    transform: translate(-30px, 30px) scale(0.95);
+  }
+  100% {
+    transform: translate(0px, 0px) scale(1);
+  }
+}
+
+@keyframes float-orb-2 {
+  0% {
+    transform: translate(0px, 0px) scale(1);
+  }
+  50% {
+    transform: translate(-60px, -40px) scale(1.15);
+  }
+  100% {
+    transform: translate(0px, 0px) scale(1);
+  }
+}
+
+@keyframes rf-wave-pulse {
+  0% {
+    transform: scale(0.65);
+    opacity: 0.7;
+  }
+  50% {
+    opacity: 0.25;
+  }
+  100% {
+    transform: scale(1.75);
+    opacity: 0;
+  }
+}
+
+.animate-float-1 {
+  animation: float-orb-1 22s ease-in-out infinite;
+}
+
+.animate-float-2 {
+  animation: float-orb-2 28s ease-in-out infinite;
+}
+
+.animate-rf-pulse {
+  animation: rf-wave-pulse 4.5s cubic-bezier(0.2, 0.8, 0.4, 1) infinite;
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;

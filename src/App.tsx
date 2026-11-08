@@ -1,5 +1,6 @@
 import React from 'react';
 import { ThemeProvider } from '@/components/ThemeContext';
+import { BackgroundEffects } from '@/components/BackgroundEffects';
 import { Navbar } from '@/components/Navbar';
 import { Hero } from '@/components/Hero';
 import { Brands } from '@/components/Brands';
@@ -14,9 +15,10 @@ import { Contact } from '@/components/Contact';
 export const App: React.FC = () => {
   return (
     <ThemeProvider>
-      <div className="min-h-screen bg-[var(--bg)] text-[var(--ink)] antialiased transition-colors duration-200">
+      <div className="relative min-h-screen bg-[var(--bg)] text-[var(--ink)] antialiased transition-colors duration-200">
+        <BackgroundEffects />
         <Navbar />
-        <main>
+        <main className="relative z-10">
           <Hero />
           <Brands />
           <Projects />
