@@ -1,0 +1,36 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/credentials/v2"
+  ],
+  "type": [
+    "VerifiableCredential"
+  ],
+  "id": "https://www.credential.net/2fe23149-907e-4647-8582-c6e8c5ab9d68",
+  "name": "Digital Footprints and Different Devices",
+  "description": "Different footprints from different types of devices. ",
+  "image": "https://api.accredible.com/v1/credentials/vq2lu6dk/artifact/badge",
+  "issuer": {
+    "id": "did:web:api.accredible.com:v1:verifiable_credential:organizations:87878",
+    "name": "Internet Society"
+  },
+  "validFrom": "2026-10-31T00:00:00Z",
+  "credentialSubject": {
+    "name": "Zain Abid",
+    "identifier": {
+      "type": "IdentityObject",
+      "hashed": true,
+      "identityHash": "sha256$245c6eea61cb329980805f9e6d8988ce75a9ac028f545efa29127a9d9253c932",
+      "identityType": "email",
+      "salt": "f5b895e3145913627f780f4fd9dde5aa"
+    }
+  },
+  "completionDate": "2026-10-31",
+  "proof": {
+    "type": "DataIntegrityProof",
+    "cryptosuite": "eddsa-rdfc-2022",
+    "created": "2026-11-08T16:05:15Z",
+    "verificationMethod": "did:web:api.accredible.com:v1:verifiable_credential:organizations:87878#f9e53500-dc26-11f0-a2f5-6f603df29d3f",
+    "proofPurpose": "assertionMethod",
+    "proofValue": "z2FwYM3K8mka1iwQtzeoSWFcSztTvvW9u4vTcBvLJwi1ebzjEmx686Wuo7T6e8MGchDNGsRoDr9oin8NCn6TJNk8C"
+  }
+}

@@ -1,0 +1,139 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg: #F5F7F8;
+    --surface: #FFFFFF;
+    --surface-alt: #EDF1F4;
+    --ink: #141A21;
+    --muted: #536270;
+    --line: #D0D8E0;
+    --accent: #0D7A80;
+    --accent-hover: #096368;
+    --accent-fg: #FFFFFF;
+    --secondary: #282C33;
+    --secondary-hover: #171B20;
+    --scan-line: #0D7A80;
+  }
+
+  html.dark {
+    --bg: #0C1015;
+    --surface: #141A22;
+    --surface-alt: #1B232D;
+    --ink: #EDF3F8;
+    --muted: #8898A7;
+    --line: #222D3B;
+    --accent: #20C4BA;
+    --accent-hover: #3DE0D6;
+    --accent-fg: #081116;
+    --secondary: #3D8C8E;
+    --secondary-hover: #20C4BA;
+    --scan-line: #20C4BA;
+  }
+
+  * {
+    border-color: var(--line);
+  }
+
+  html {
+    scroll-behavior: smooth;
+    font-family: 'Public Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    color: var(--ink);
+    background-color: var(--bg);
+  }
+
+  body {
+    min-height: 100vh;
+    background-color: var(--bg);
+    color: var(--ink);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Archivo', -apple-system, BlinkMacSystemFont, sans-serif;
+    letter-spacing: -0.025em;
+    color: var(--ink);
+    font-weight: 700;
+  }
+
+  /* Accessibility: visible focus states */
+  a:focus-visible,
+  button:focus-visible,
+  input:focus-visible,
+  textarea:focus-visible,
+  select:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+  }
+}
+
+/* Industrial asset / shipping label card styling */
+.asset-card {
+  background-color: var(--surface);
+  border: 1px solid var(--line);
+  border-top: 4px solid var(--accent);
+  border-radius: 6px;
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.asset-card:hover {
+  border-color: var(--line);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px -6px rgba(15, 27, 38, 0.08);
+}
+
+html.dark .asset-card:hover {
+  box-shadow: 0 8px 24px -6px rgba(0, 0, 0, 0.4);
+}
+
+/* Red Laser Scan Line Animation for Hero Barcode */
+@keyframes laser-sweep {
+  0% {
+    top: 0%;
+    opacity: 0;
+  }
+  15% {
+    opacity: 1;
+  }
+  85% {
+    opacity: 1;
+  }
+  100% {
+    top: 100%;
+    opacity: 0;
+  }
+}
+
+.barcode-laser {
+  animation: laser-sweep 2.4s cubic-bezier(0.4, 0, 0.2, 1) 0.6s 1 forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .barcode-laser {
+    animation: none !important;
+    display: none !important;
+  }
+  .asset-card:hover {
+    transform: none !important;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--line);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--muted);
+}

@@ -1,0 +1,36 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/credentials/v2"
+  ],
+  "type": [
+    "VerifiableCredential"
+  ],
+  "id": "https://www.credential.net/087bc4ba-fe4b-477d-bad2-ad1653e81452",
+  "name": "Grant Application",
+  "description": "This module will guide you through the process of  thinking and planning for the sustainability of your project, and writing your project narrative.  ",
+  "image": "https://api.accredible.com/v1/credentials/xps796bh/artifact/badge",
+  "issuer": {
+    "id": "did:web:api.accredible.com:v1:verifiable_credential:organizations:87878",
+    "name": "Internet Society"
+  },
+  "validFrom": "2026-10-31T00:00:00Z",
+  "credentialSubject": {
+    "name": "Zain Abid",
+    "identifier": {
+      "type": "IdentityObject",
+      "hashed": true,
+      "identityHash": "sha256$0ec7d04f91789685729556604e53a6f7fff5fd3f79290c3b88c59ec2595ca3de",
+      "identityType": "email",
+      "salt": "7545d96dcd11d610cbb41ace4ec437e5"
+    }
+  },
+  "completionDate": "2026-10-31",
+  "proof": {
+    "type": "DataIntegrityProof",
+    "cryptosuite": "eddsa-rdfc-2022",
+    "created": "2026-11-08T16:07:39Z",
+    "verificationMethod": "did:web:api.accredible.com:v1:verifiable_credential:organizations:87878#f9e53500-dc26-11f0-a2f5-6f603df29d3f",
+    "proofPurpose": "assertionMethod",
+    "proofValue": "z2WysQRkRCA9GuftSzqwzKvEngt8gBZYyVp8pLaqg911hEuEodPcngoTHPdFDmKfkiAP2aA87t6zkcqPw2Db6dbCS"
+  }
+}

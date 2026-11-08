@@ -1,0 +1,36 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/credentials/v2"
+  ],
+  "type": [
+    "VerifiableCredential"
+  ],
+  "id": "https://www.credential.net/5df622b1-e612-4b0e-8c17-ccbf0db61893",
+  "name": "Importance of Digital Footprints",
+  "description": "The module explains the importance of explicit and implicit digital footprints   ",
+  "image": "https://api.accredible.com/v1/credentials/xdnsmwmy/artifact/badge",
+  "issuer": {
+    "id": "did:web:api.accredible.com:v1:verifiable_credential:organizations:87878",
+    "name": "Internet Society"
+  },
+  "validFrom": "2026-10-31T00:00:00Z",
+  "credentialSubject": {
+    "name": "Zain Abid",
+    "identifier": {
+      "type": "IdentityObject",
+      "hashed": true,
+      "identityHash": "sha256$c87c6654cb9bdf00aa65eccc965236b1804f30be4357203c4d8e271c28d4de75",
+      "identityType": "email",
+      "salt": "ed3f1243ad4ab2cf8a35e35c90fe3761"
+    }
+  },
+  "completionDate": "2026-10-31",
+  "proof": {
+    "type": "DataIntegrityProof",
+    "cryptosuite": "eddsa-rdfc-2022",
+    "created": "2026-11-08T16:04:26Z",
+    "verificationMethod": "did:web:api.accredible.com:v1:verifiable_credential:organizations:87878#f9e53500-dc26-11f0-a2f5-6f603df29d3f",
+    "proofPurpose": "assertionMethod",
+    "proofValue": "z57ax193s8jwrRcLHymvLgr3347gZC5S5Hp2uaHYtJQf1fnAzCHMCE2HLenYPRDAmwEWycVy39GqUQGHbwJKZxQD3"
+  }
+}

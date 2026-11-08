@@ -1,0 +1,36 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/credentials/v2"
+  ],
+  "type": [
+    "VerifiableCredential"
+  ],
+  "id": "https://www.credential.net/f83cacec-dbad-496c-bf53-8e7601a60cae",
+  "name": "Privacy Frameworks",
+  "description": "This module describes the role of privacy and data protection laws in regulating the collection and use of personal data. It also highlights the issues arising from cross-border transfers of data, and gives examples of multi-national approaches to this problem.",
+  "image": "https://api.accredible.com/v1/credentials/p5pe0pbn/artifact/badge",
+  "issuer": {
+    "id": "did:web:api.accredible.com:v1:verifiable_credential:organizations:87878",
+    "name": "Internet Society"
+  },
+  "validFrom": "2026-10-31T00:00:00Z",
+  "credentialSubject": {
+    "name": "Zain Abid",
+    "identifier": {
+      "type": "IdentityObject",
+      "hashed": true,
+      "identityHash": "sha256$55c68776cc56e43a7097855903630d4d16cf614d9a814105cc717cda1dc30840",
+      "identityType": "email",
+      "salt": "0de48ec1693c2ec2439f76ada2418d64"
+    }
+  },
+  "completionDate": "2026-10-31",
+  "proof": {
+    "type": "DataIntegrityProof",
+    "cryptosuite": "eddsa-rdfc-2022",
+    "created": "2026-11-08T16:02:46Z",
+    "verificationMethod": "did:web:api.accredible.com:v1:verifiable_credential:organizations:87878#f9e53500-dc26-11f0-a2f5-6f603df29d3f",
+    "proofPurpose": "assertionMethod",
+    "proofValue": "z5Ht5N7DZ9o4FLR7qWr1GAzABaVN6fTbTazbey38x8BhCFkXSieB34BLQq3brXHfytWWutxpM7r11Yngbk2btcWUu"
+  }
+}

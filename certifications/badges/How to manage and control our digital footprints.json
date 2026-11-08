@@ -1,0 +1,36 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/credentials/v2"
+  ],
+  "type": [
+    "VerifiableCredential"
+  ],
+  "id": "https://www.credential.net/92c8a32b-5e66-4d98-9760-c89aed9b4baa",
+  "name": "How to manage and control our digital footprints",
+  "description": "This module provides the learner with hands-on practice using the package management tool of FreeBSD. It guides the learner on how to install software on FreeBSD. The learner will follow step-by-step guides in interactive walkthroughs and demos to install the following software: Perl, Python, and VIM.",
+  "image": "https://api.accredible.com/v1/credentials/ozthpwse/artifact/badge",
+  "issuer": {
+    "id": "did:web:api.accredible.com:v1:verifiable_credential:organizations:87878",
+    "name": "Internet Society"
+  },
+  "validFrom": "2026-10-31T00:00:00Z",
+  "credentialSubject": {
+    "name": "Zain Abid",
+    "identifier": {
+      "type": "IdentityObject",
+      "hashed": true,
+      "identityHash": "sha256$cba4c47ee0f3d7ed21655c4dcae5cb152863954fe031705ea9f3e847709bd1af",
+      "identityType": "email",
+      "salt": "b2af716c0c8c55a9d9fa459b941bd5bf"
+    }
+  },
+  "completionDate": "2026-10-31",
+  "proof": {
+    "type": "DataIntegrityProof",
+    "cryptosuite": "eddsa-rdfc-2022",
+    "created": "2026-11-08T16:06:04Z",
+    "verificationMethod": "did:web:api.accredible.com:v1:verifiable_credential:organizations:87878#f9e53500-dc26-11f0-a2f5-6f603df29d3f",
+    "proofPurpose": "assertionMethod",
+    "proofValue": "z62EHiufy2inZqLLxC3hvjNYnwFmaCDEcbprKm6cvJ6QnN7fDJsAZQcuRMu3QWf3twrXPtZiS1Yy8Ko1apKKinsAV"
+  }
+}

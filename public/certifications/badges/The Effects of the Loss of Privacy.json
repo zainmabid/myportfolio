@@ -1,0 +1,36 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/credentials/v2"
+  ],
+  "type": [
+    "VerifiableCredential"
+  ],
+  "id": "https://www.credential.net/bcf14846-88b7-4a02-983b-6fd8ec5dff1c",
+  "name": "The Effects of the Loss of Privacy",
+  "description": "The loss of privacy and anonymity's effects",
+  "image": "https://api.accredible.com/v1/credentials/7otnza1z/artifact/badge",
+  "issuer": {
+    "id": "did:web:api.accredible.com:v1:verifiable_credential:organizations:87878",
+    "name": "Internet Society"
+  },
+  "validFrom": "2026-10-31T00:00:00Z",
+  "credentialSubject": {
+    "name": "Zain Abid",
+    "identifier": {
+      "type": "IdentityObject",
+      "hashed": true,
+      "identityHash": "sha256$a8d5518bd6a1962dbfe9e921819893130e7426dd9b2c122af3ff49df03950814",
+      "identityType": "email",
+      "salt": "7991fe15970515f38dbf0348cfce2513"
+    }
+  },
+  "completionDate": "2026-10-31",
+  "proof": {
+    "type": "DataIntegrityProof",
+    "cryptosuite": "eddsa-rdfc-2022",
+    "created": "2026-11-08T16:05:01Z",
+    "verificationMethod": "did:web:api.accredible.com:v1:verifiable_credential:organizations:87878#f9e53500-dc26-11f0-a2f5-6f603df29d3f",
+    "proofPurpose": "assertionMethod",
+    "proofValue": "z5fuPaNdFke8QzTD7gCYnmoJSMqEcuQ3SNbYSJzpsXAEnWGssWLgYGsKRmoc3pLyLFmAk5yqKyvLqvUvCVRgRMuSN"
+  }
+}

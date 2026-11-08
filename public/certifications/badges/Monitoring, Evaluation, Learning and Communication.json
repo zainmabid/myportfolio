@@ -1,0 +1,36 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/credentials/v2"
+  ],
+  "type": [
+    "VerifiableCredential"
+  ],
+  "id": "https://www.credential.net/a89d9153-b35e-47a6-a456-f40a8ac2b2bf",
+  "name": "Monitoring, Evaluation, Learning and Communication",
+  "description": "This module will guide you through the process of  incorporating monitoring, evaluation, and learning (MEL) principles, as well as communication,  into the implementation of a project. It is likely that you and your team are already conducting a lot of these practices informally, through conversations and interactions among staff and partners that you would consider project implementation. This guidance will support you in formalizing some of these practices into processes to ensure consistency and comprehensiveness of the information you are gathering and communicating around your project.",
+  "image": "https://api.accredible.com/v1/credentials/m10x4x1o/artifact/badge",
+  "issuer": {
+    "id": "did:web:api.accredible.com:v1:verifiable_credential:organizations:87878",
+    "name": "Internet Society"
+  },
+  "validFrom": "2026-10-31T00:00:00Z",
+  "credentialSubject": {
+    "name": "Zain Abid",
+    "identifier": {
+      "type": "IdentityObject",
+      "hashed": true,
+      "identityHash": "sha256$475d9eb23a75bfd5f7b9094318e340855d154678ed4f1d0b447ba0b62956e575",
+      "identityType": "email",
+      "salt": "46f9f20105026a33264b3996bd770b1c"
+    }
+  },
+  "completionDate": "2026-10-31",
+  "proof": {
+    "type": "DataIntegrityProof",
+    "cryptosuite": "eddsa-rdfc-2022",
+    "created": "2026-11-08T16:07:56Z",
+    "verificationMethod": "did:web:api.accredible.com:v1:verifiable_credential:organizations:87878#f9e53500-dc26-11f0-a2f5-6f603df29d3f",
+    "proofPurpose": "assertionMethod",
+    "proofValue": "z61iSWFUpcpP4JNsWjUezE5ZoXKoXjKPsrZTWe7yp5EDoWW4KgzpaE9iWqGDS7rTDjpukwm4qZmpdSLcYW4sMcXCY"
+  }
+}

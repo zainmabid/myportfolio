@@ -1,0 +1,36 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/credentials/v2"
+  ],
+  "type": [
+    "VerifiableCredential"
+  ],
+  "id": "https://www.credential.net/41e4ce57-a999-4446-a10b-2161ca68b0c9",
+  "name": "Data Protection Laws",
+  "description": "Challenges related to national privacy laws, cultural norms,  and cross-border data protection",
+  "image": "https://api.accredible.com/v1/credentials/ispr2y0j/artifact/badge",
+  "issuer": {
+    "id": "did:web:api.accredible.com:v1:verifiable_credential:organizations:87878",
+    "name": "Internet Society"
+  },
+  "validFrom": "2026-10-31T00:00:00Z",
+  "credentialSubject": {
+    "name": "Zain Abid",
+    "identifier": {
+      "type": "IdentityObject",
+      "hashed": true,
+      "identityHash": "sha256$d4e475380d0305140619315895d3eb444a71dbec967e052a659f5268a6d80d8f",
+      "identityType": "email",
+      "salt": "1a6e0059f74f3a30ccc571e402e627ef"
+    }
+  },
+  "completionDate": "2026-10-31",
+  "proof": {
+    "type": "DataIntegrityProof",
+    "cryptosuite": "eddsa-rdfc-2022",
+    "created": "2026-11-08T16:06:43Z",
+    "verificationMethod": "did:web:api.accredible.com:v1:verifiable_credential:organizations:87878#f9e53500-dc26-11f0-a2f5-6f603df29d3f",
+    "proofPurpose": "assertionMethod",
+    "proofValue": "z62y4jNhZwVT3bErtS9bV1Ah1EkqPSXDsEQEWKVCfSvp3EvQ6kr5d7N7Q3oRqQdcGHGg37ZhQcEeGbqN6asDEaN3e"
+  }
+}

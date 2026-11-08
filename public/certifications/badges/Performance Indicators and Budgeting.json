@@ -1,0 +1,36 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/credentials/v2"
+  ],
+  "type": [
+    "VerifiableCredential"
+  ],
+  "id": "https://www.credential.net/c7739d0c-3f57-4e0a-bd3b-b69c366d40b6",
+  "name": "Performance Indicators and Budgeting",
+  "description": "This module will guide you through the process of  defining and developing key performance indicators (KPIs) for your project, and creating a budget.",
+  "image": "https://api.accredible.com/v1/credentials/emim2fur/artifact/badge",
+  "issuer": {
+    "id": "did:web:api.accredible.com:v1:verifiable_credential:organizations:87878",
+    "name": "Internet Society"
+  },
+  "validFrom": "2026-10-31T00:00:00Z",
+  "credentialSubject": {
+    "name": "Zain Abid",
+    "identifier": {
+      "type": "IdentityObject",
+      "hashed": true,
+      "identityHash": "sha256$76c95b8d1f1404a40bedfeb45f0576549972e1a3f002de43eb743878623f0807",
+      "identityType": "email",
+      "salt": "da8fc30de041f30377a8728a4c6182e8"
+    }
+  },
+  "completionDate": "2026-10-31",
+  "proof": {
+    "type": "DataIntegrityProof",
+    "cryptosuite": "eddsa-rdfc-2022",
+    "created": "2026-11-08T16:07:25Z",
+    "verificationMethod": "did:web:api.accredible.com:v1:verifiable_credential:organizations:87878#f9e53500-dc26-11f0-a2f5-6f603df29d3f",
+    "proofPurpose": "assertionMethod",
+    "proofValue": "zKM5AHiD6nDRT3kbxi6U4a2g1QpDFHijKSvUkwf996Nvuw7cBzeDCetFirhQ7xdx4JqyfztwowHiQ7jpz8XJk9cy"
+  }
+}
