@@ -125,8 +125,22 @@ export interface GoogleBadge {
   description: string;
 }
 
+export interface JourneyMilestone {
+  period: string;
+  headline: string;
+  subhead: string;
+  points: string[];
+}
+
+export interface JourneyData {
+  headline: string;
+  paragraphs: string[];
+  milestones: JourneyMilestone[];
+}
+
 export interface PortfolioData {
   person: PersonInfo;
+  journey: JourneyData;
   brands: Brand[];
   projects: Project[];
   industries: IndustryItem[];
@@ -142,7 +156,7 @@ export interface PortfolioData {
 export const PORTFOLIO_DATA: PortfolioData = {
   person: {
     name: 'Zain Mashhood Abid',
-    headline: 'RFID, Auto-ID and Enterprise Automation Consultant | Founder & Managing Director, Zaintegrated Solutions',
+    headline: 'Founder & Managing Director, Zaintegrated Solutions | Connecting Physical Operations with Digital ERP',
     location: 'Lahore, Pakistan',
     relocationStatus: 'Open to relocation',
     email: 'zainmabid@gmail.com',
@@ -151,7 +165,38 @@ export const PORTFOLIO_DATA: PortfolioData = {
     yearsExperience: 10,
     avatar: '/zain-portrait.jpg',
     about:
-      'Founder & Managing Director at Zaintegrated Solutions with 10+ years in enterprise IT, RFID, barcode and warehouse automation, ERP consulting, and solution architecture. Trusted consultant across multiple leading national and international companies — analyzing operational workflows, engineering end-to-end physical asset traceability, and synchronizing shop-floor automation with enterprise systems.'
+      'For over a decade, I’ve operated at the intersection of enterprise software, technology leadership, and business scale. Today, I solve one of the most expensive leaks in supply chains: bridging the gap between fast-moving manufacturing floors and central ERP ledgers using custom RFID, barcode tracking, and Industry 4.0 automation.'
+  },
+
+  journey: {
+    headline: 'A Decade of Strategy. Grounded on the Factory Floor.',
+    paragraphs: [
+      "I didn't start out in tracking hardware. The first 8 years of my career were spent deep inside tech ecosystems—managing high-stakes enterprise sales, architecting complex CRM/ERP software solutions, and aligning business vision with engineering execution.",
+      "But as I watched large-scale corporate strategies deploy, I saw a repeating blind spot: beautiful software dashboards completely blind to the chaotic reality of physical production floors.",
+      "For the past 2 years, I have focused exclusively on fixing that specific disconnect. By blending my foundational software background with specialized Industry 4.0 operational automation, I design RFID, barcode, and asset tracking systems built for the human operators who actually use them."
+    ],
+    milestones: [
+      {
+        period: 'Years 1 – 8',
+        headline: 'Enterprise Software, CRM/ERP & Tech Strategy',
+        subhead: 'Inside tech ecosystems, systems integration, and business scale',
+        points: [
+          'High-stakes enterprise technology consulting and solutions architecture',
+          'Aligning executive business vision with robust engineering execution',
+          'Deploying enterprise CRM, ERP middleware, and scalable tech platforms'
+        ]
+      },
+      {
+        period: 'Last 2 Years',
+        headline: 'Grounded on the Factory Floor: Industry 4.0 & RFID',
+        subhead: 'Eliminating the physical-to-digital disconnect at Zaintegrated Solutions',
+        points: [
+          'Configuring tracking hardware so managers know where assets are across plant zones instantly',
+          'Deploying bulletproof RFID and barcode workflows built for real human operators',
+          'Synchronizing fast-moving production floors with central ERP ledgers with zero discrepancy'
+        ]
+      }
+    ]
   },
 
   brands: [

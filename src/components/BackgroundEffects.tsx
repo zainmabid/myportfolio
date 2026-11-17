@@ -36,9 +36,9 @@ export const BackgroundEffects: React.FC = () => {
     <div className="pointer-events-none fixed inset-0 z-0 overflow-hidden select-none" aria-hidden="true">
       {/* 1. Subtle Interactive Mouse Spotlight Glow */}
       <div
-        className="absolute w-[600px] h-[600px] rounded-full transition-opacity duration-300 pointer-events-none opacity-40 dark:opacity-60 blur-[80px]"
+        className="absolute w-[500px] h-[500px] rounded-full transition-opacity duration-300 pointer-events-none opacity-20 dark:opacity-30 blur-[100px]"
         style={{
-          transform: `translate3d(${mousePos.x - 300}px, ${mousePos.y - 300}px, 0)`,
+          transform: `translate3d(${mousePos.x - 250}px, ${mousePos.y - 250}px, 0)`,
           background: 'radial-gradient(circle, var(--accent) 0%, transparent 70%)',
           willChange: 'transform'
         }}

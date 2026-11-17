@@ -143,6 +143,49 @@ export const Projects: React.FC = () => {
           </AnimatePresence>
         </motion.div>
 
+        {/* Real Proof: Field Operations & Whiteboard-to-Floor Reality */}
+        <div className="mt-14 p-6 sm:p-8 rounded-[6px] bg-[var(--surface)] border border-[var(--line)]">
+          <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-4 mb-6 border-b border-[var(--line)]">
+            <div>
+              <span className="font-mono text-[10px] uppercase font-bold tracking-wider text-[var(--accent)] px-2 py-0.5 rounded-[2px] bg-[var(--accent)]/10 border border-[var(--accent)]/20">
+                FIELD EXECUTION &amp; REALITY
+              </span>
+              <h3 className="font-heading text-xl font-bold text-[var(--ink)] tracking-tight mt-1.5">
+                How Implementations Actually Happen
+              </h3>
+            </div>
+            <p className="text-xs text-[var(--muted)] max-w-md">
+              No theoretical software decks. Real solutions require walking the factory floor, mapping physical touchpoints with operators, and aligning ERP schemas on the whiteboard.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
+            <div className="p-4 rounded-[4px] bg-[var(--bg)] border border-[var(--line)]">
+              <span className="font-mono text-[10px] text-[var(--accent)] font-bold block mb-1">01 // WHITEBOARD ARCHITECTURE</span>
+              <h4 className="font-heading text-sm font-bold text-[var(--ink)] mb-1">System &amp; Schema Mapping</h4>
+              <p className="text-xs text-[var(--muted)] leading-relaxed">
+                Working directly with tech leads to translate physical scan events into clean, real-time database transactions without slowing ERP performance.
+              </p>
+            </div>
+
+            <div className="p-4 rounded-[4px] bg-[var(--bg)] border border-[var(--line)]">
+              <span className="font-mono text-[10px] text-[var(--accent)] font-bold block mb-1">02 // SHOP-FLOOR TESTING</span>
+              <h4 className="font-heading text-sm font-bold text-[var(--ink)] mb-1">Tag Tuning &amp; RF Audits</h4>
+              <p className="text-xs text-[var(--muted)] leading-relaxed">
+                Testing antenna polarizations and tag placement directly against metal containers, chemical drums, and fast forklift movements.
+              </p>
+            </div>
+
+            <div className="p-4 rounded-[4px] bg-[var(--bg)] border border-[var(--line)]">
+              <span className="font-mono text-[10px] text-[var(--accent)] font-bold block mb-1">03 // OPERATOR ADOPTION</span>
+              <h4 className="font-heading text-sm font-bold text-[var(--ink)] mb-1">Human-First Workflows</h4>
+              <p className="text-xs text-[var(--muted)] leading-relaxed">
+                Training warehouse and line workers so scanning takes seconds, minimizing fatigue and eliminating manual paperwork compliance friction.
+              </p>
+            </div>
+          </div>
+        </div>
+
         {/* Barcode Divider */}
         <BarcodeDivider label="SECTION // 02-03" />
       </div>

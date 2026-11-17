@@ -232,14 +232,13 @@ export const GoogleBadges: React.FC = () => {
                 >
                   {/* Badge Art Showcase & Metadata */}
                   <div className="flex flex-col sm:flex-row items-center sm:items-start gap-6 pb-6 border-b border-[var(--line)]">
-                    {/* Badge Artwork Container with Glow */}
+                    {/* Badge Artwork Container */}
                     <div className="relative shrink-0 group">
-                      <div className="absolute -inset-1 bg-gradient-to-r from-[var(--accent)]/30 to-[var(--secondary)]/30 rounded-xl blur-md opacity-40 group-hover:opacity-75 transition duration-300" />
                       <div className="relative w-32 h-32 sm:w-36 sm:h-36 rounded-[8px] bg-[var(--surface)] border border-[var(--line)] p-3 flex items-center justify-center shadow-xs">
                         <img
                           src={activeBadge.image}
                           alt={activeBadge.title}
-                          className="w-full h-full object-contain filter drop-shadow-md transform group-hover:scale-105 transition-transform duration-300"
+                          className="w-full h-full object-contain filter drop-shadow-sm transform group-hover:scale-103 transition-transform duration-300"
                         />
                       </div>
                     </div>
