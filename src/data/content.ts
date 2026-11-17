@@ -1169,6 +1169,18 @@ export const PORTFOLIO_DATA: PortfolioData = {
                 "description": "Demonstrated understanding of foundational cloud technology, virtualization, containerization, VMs, microservices, serverless, hybrid multicloud deployment models, and hands-on resource provisioning on IBM Cloud."
         },
     {
+        "id": "google-digital-transformation",
+        "title": "Digital Transformation with Google Cloud",
+        "issuer": "Google Cloud & Google Skills",
+        "group": "Google Cloud & Gemini",
+        "date": "Earned Nov 17, 2026",
+        "badgeUrl": "https://www.skills.google/public_profiles/14bbe981-af34-4dd0-b317-30eaf266f8e3/badges/29708971",
+        "image": "/badges/google/google-cloud-digital-transformation.png",
+        "category": "Cloud Strategy & Digital Transformation",
+        "verificationType": "Google Cloud Verified",
+        "description": "Digital transformation is a critical journey for modern organizations. This course introduces core technologies, global network infrastructure, strategic frameworks, and the shared responsibility model as part of the Google Cloud Digital Leader track."
+    },
+    {
         "id": "google-gemini-draft-nda",
         "title": "Draft NDA Documents with Gemini",
         "issuer": "Google Cloud & Google Skills",
@@ -1495,6 +1507,17 @@ export const PORTFOLIO_DATA: PortfolioData = {
 ],
 
   googleBadges: [
+    {
+      id: 'google-digital-transformation',
+      title: 'Digital Transformation with Google Cloud',
+      issuer: 'Google Cloud & Google Skills',
+      date: 'Earned Nov 17, 2026',
+      badgeUrl: 'https://www.skills.google/public_profiles/14bbe981-af34-4dd0-b317-30eaf266f8e3/badges/29708971',
+      image: '/badges/google/google-cloud-digital-transformation.png',
+      category: 'Cloud Strategy & Digital Transformation',
+      description:
+        'Digital transformation is a critical journey for modern organizations. This course introduces core technologies, global network infrastructure, strategic frameworks, and the shared responsibility model as part of the Google Cloud Digital Leader track.'
+    },
     {
       id: 'google-gemini-draft-nda',
       title: 'Draft NDA Documents with Gemini',
