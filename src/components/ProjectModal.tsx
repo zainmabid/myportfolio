@@ -43,11 +43,8 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
         <div className="flex items-start justify-between gap-4 pb-4 border-b border-[var(--line)]">
           <div>
             <div className="flex items-center gap-2 mb-1.5">
-              <span className="font-mono text-[10px] uppercase tracking-widest px-2 py-0.5 rounded-[2px] bg-[var(--accent)] text-[var(--accent-fg)] font-bold">
+              <span className="font-mono text-[10px] uppercase tracking-widest px-2.5 py-0.5 rounded-[2px] bg-[var(--accent)] text-[var(--accent-fg)] font-bold">
                 {project.industry}
-              </span>
-              <span className="font-mono text-[11px] uppercase tracking-wider text-[var(--muted)]">
-                Client: <strong className="text-[var(--ink)]">{project.client}</strong>
               </span>
             </div>
             <h2 id="modal-project-title" className="font-heading text-2xl sm:text-3xl font-bold tracking-tight text-[var(--ink)]">

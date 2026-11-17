@@ -51,10 +51,10 @@ export const Projects: React.FC = () => {
                   </div>
                 </div>
 
-                {/* Title & Client */}
+                {/* Title & Industry Domain */}
                 <div className="mb-6">
                   <span className="text-xs text-[var(--muted)] font-mono uppercase tracking-wider block mb-1">
-                    {project.client} • {project.industry}
+                    {project.industry}
                   </span>
                   <h3 className="font-heading text-xl sm:text-2xl font-bold text-[var(--ink)] group-hover:text-[var(--ink)] tracking-tight leading-snug">
                     {project.title}
