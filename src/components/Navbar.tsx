@@ -28,13 +28,13 @@ export const Navbar: React.FC = () => {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-40 transition-colors duration-200 ${
+      className={`fixed top-0 left-0 right-0 z-40 transition-all duration-200 ${
         scrolled
-          ? 'bg-[var(--bg)]/90 backdrop-blur-md border-b border-[var(--line)] shadow-sm'
-          : 'bg-transparent'
+          ? 'bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-xs'
+          : 'bg-white/80 backdrop-blur-xs border-b border-slate-100'
       }`}
     >
-      <div className="max-w-[1100px] mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-[1140px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 sm:h-20">
           {/* Left: ZMA Brand Logo & Name */}
           <a
@@ -42,49 +42,49 @@ export const Navbar: React.FC = () => {
             className="flex items-center gap-3 group focus-visible:outline-none"
             aria-label="Back to top"
           >
-            <div className="h-8 sm:h-9 px-1.5 py-0.5 rounded-[4px] bg-white border border-[var(--line)] shadow-xs flex items-center justify-center shrink-0 group-hover:border-[var(--accent)] transition-all">
+            <div className="h-8 sm:h-9 px-2 py-0.5 rounded-lg bg-white border border-slate-200 shadow-xs flex items-center justify-center shrink-0 group-hover:border-slate-400 transition-all">
               <img
                 src="/logos/zma.png"
                 alt="ZMA"
                 className="h-full w-auto object-contain"
               />
             </div>
-            <div className="flex flex-col">
-              <span className="font-heading font-extrabold text-sm sm:text-base tracking-tight text-[var(--ink)] group-hover:text-[var(--accent)] transition-colors">
+            <div className="flex flex-col text-left">
+              <span className="font-heading font-extrabold text-sm sm:text-base tracking-tight text-[#0F172A] group-hover:text-slate-700 transition-colors">
                 {PORTFOLIO_DATA.person.name}
               </span>
-              <span className="font-mono text-[9px] sm:text-[10px] uppercase tracking-wider text-[var(--muted)]">
+              <span className="font-mono text-[9px] sm:text-[10px] uppercase tracking-wider text-[#475569]">
                 RFID &amp; Auto-ID Architecture
               </span>
             </div>
           </a>
 
-          {/* Right: Desktop Navigation Links & Theme Toggle */}
+          {/* Right: Desktop Navigation Links */}
           <div className="hidden md:flex items-center gap-6">
             <nav className="flex items-center gap-6" aria-label="Main Navigation">
               {navLinks.map((link) => (
                 <a
                   key={link.href}
                   href={link.href}
-                  className="text-xs uppercase font-mono tracking-wider text-[var(--muted)] hover:text-[var(--ink)] transition-colors font-medium py-1"
+                  className="text-xs uppercase font-mono tracking-wider text-[#475569] hover:text-[#0F172A] transition-colors font-medium py-1"
                 >
                   {link.label}
                 </a>
               ))}
             </nav>
 
-            <div className="w-[1px] h-4 bg-[var(--line)]" aria-hidden="true" />
+            <div className="w-[1px] h-4 bg-slate-200" aria-hidden="true" />
 
-            {/* Theme Toggle */}
+            {/* Clean Minimalist Theme Action */}
             <button
               onClick={toggleTheme}
-              className="p-2 rounded-[4px] border border-[var(--line)] bg-[var(--surface)] text-[var(--ink)] hover:border-[var(--muted)] transition-colors cursor-pointer"
+              className="p-2 rounded-lg border border-slate-200 bg-white text-[#0F172A] hover:border-slate-300 transition-colors cursor-pointer shadow-xs"
               aria-label={`Switch to ${theme === 'light' ? 'dark' : 'light'} theme`}
             >
               {theme === 'light' ? (
-                <Moon className="w-4 h-4 text-[var(--ink)]" />
+                <Moon className="w-4 h-4 text-[#475569]" />
               ) : (
-                <Sun className="w-4 h-4 text-[var(--accent)]" />
+                <Sun className="w-4 h-4 text-[#0F172A]" />
               )}
             </button>
           </div>
@@ -93,15 +93,15 @@ export const Navbar: React.FC = () => {
           <div className="flex items-center gap-2 md:hidden">
             <button
               onClick={toggleTheme}
-              className="p-2 rounded-[4px] border border-[var(--line)] bg-[var(--surface)] text-[var(--ink)]"
+              className="p-2 rounded-lg border border-slate-200 bg-white text-[#0F172A]"
               aria-label={`Switch to ${theme === 'light' ? 'dark' : 'light'} theme`}
             >
-              {theme === 'light' ? <Moon className="w-4 h-4" /> : <Sun className="w-4 h-4 text-[var(--accent)]" />}
+              {theme === 'light' ? <Moon className="w-4 h-4 text-[#475569]" /> : <Sun className="w-4 h-4 text-[#0F172A]" />}
             </button>
 
             <button
               onClick={() => setMobileOpen(!mobileOpen)}
-              className="p-2 rounded-[4px] border border-[var(--line)] bg-[var(--surface)] text-[var(--ink)]"
+              className="p-2 rounded-lg border border-slate-200 bg-white text-[#0F172A]"
               aria-label="Toggle navigation menu"
               aria-expanded={mobileOpen}
             >
@@ -113,14 +113,14 @@ export const Navbar: React.FC = () => {
 
       {/* Mobile Drawer */}
       {mobileOpen && (
-        <div className="md:hidden border-b border-[var(--line)] bg-[var(--surface)] px-6 py-4 space-y-3 shadow-lg">
+        <div className="md:hidden border-b border-slate-200 bg-white px-6 py-4 space-y-3 shadow-lg text-left">
           <nav className="flex flex-col space-y-2.5">
             {navLinks.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
                 onClick={() => setMobileOpen(false)}
-                className="font-mono text-xs uppercase tracking-wider text-[var(--muted)] hover:text-[var(--ink)] py-1.5 transition-colors"
+                className="font-mono text-xs uppercase tracking-wider text-[#475569] hover:text-[#0F172A] py-1.5 transition-colors"
               >
                 {link.label}
               </a>

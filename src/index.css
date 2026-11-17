@@ -2,34 +2,35 @@
 
 @layer base {
   :root {
-    --bg: #F5F7F8;
+    --bg: #FFFFFF;
     --surface: #FFFFFF;
-    --surface-alt: #EDF1F4;
-    --ink: #141A21;
-    --muted: #536270;
-    --line: #D0D8E0;
-    --accent: #0D7A80;
-    --accent-hover: #096368;
+    --surface-alt: #F8FAFC;
+    --ink: #0F172A;
+    --muted: #475569;
+    --line: #E2E8F0;
+    --line-hover: #CBD5E1;
+    --accent: #0F172A;
+    --accent-hover: #1E293B;
     --accent-fg: #FFFFFF;
-    --secondary: #282C33;
-    --secondary-hover: #171B20;
-    --scan-line: #0D7A80;
+    --secondary: #0D7A80;
+    --secondary-hover: #096368;
+    --scan-line: #0F172A;
   }
 
   html.dark {
-    --bg: #0D1117;
-    --surface: #161B22;
-    --surface-alt: #1C2128;
-    --ink: #F0F6FC;
-    --muted: #8B949E;
-    --line: #21262D;
-    --line-hover: #30363D;
-    --accent: #20C4BA;
-    --accent-hover: #32DDD3;
-    --accent-fg: #0D1117;
-    --secondary: #58A6FF;
-    --secondary-hover: #79C0FF;
-    --scan-line: #20C4BA;
+    --bg: #FFFFFF;
+    --surface: #FFFFFF;
+    --surface-alt: #F8FAFC;
+    --ink: #0F172A;
+    --muted: #475569;
+    --line: #E2E8F0;
+    --line-hover: #CBD5E1;
+    --accent: #0F172A;
+    --accent-hover: #1E293B;
+    --accent-fg: #FFFFFF;
+    --secondary: #0D7A80;
+    --secondary-hover: #096368;
+    --scan-line: #0F172A;
   }
 
   * {
@@ -38,7 +39,7 @@
 
   html {
     scroll-behavior: smooth;
-    font-family: 'Inter', 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     color: var(--ink);
     background-color: var(--bg);
   }
@@ -70,45 +71,19 @@
   }
 }
 
-/* Industrial asset / shipping label card styling */
+/* Executive Card Styling */
 .asset-card {
-  background-color: var(--surface);
-  border: 1px solid var(--line);
-  border-top: 4px solid var(--accent);
-  border-radius: 6px;
+  background-color: #FFFFFF;
+  border: 1px solid #F1F5F9;
+  border-radius: 1rem;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05), 0 1px 2px -1px rgba(0, 0, 0, 0.05);
   transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
 .asset-card:hover {
-  border-color: var(--line);
+  border-color: #E2E8F0;
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px -6px rgba(15, 27, 38, 0.08);
-}
-
-html.dark .asset-card:hover {
-  box-shadow: 0 8px 24px -6px rgba(0, 0, 0, 0.4);
-}
-
-/* Red Laser Scan Line Animation for Hero Barcode */
-@keyframes laser-sweep {
-  0% {
-    top: 0%;
-    opacity: 0;
-  }
-  15% {
-    opacity: 1;
-  }
-  85% {
-    opacity: 1;
-  }
-  100% {
-    top: 100%;
-    opacity: 0;
-  }
-}
-
-.barcode-laser {
-  animation: laser-sweep 2.4s cubic-bezier(0.4, 0, 0.2, 1) 0.6s 1 forwards;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.06), 0 2px 4px -2px rgba(0, 0, 0, 0.04);
 }
 
 /* Infinite Marquee Animations for Brands Section */
@@ -147,73 +122,15 @@ html.dark .asset-card:hover {
   animation-play-state: paused;
 }
 
-/* Subtle, clean alpha fade mask for marquee edges (no muddy overlay) */
+/* Subtle alpha fade mask for marquee edges */
 .marquee-mask {
   mask-image: linear-gradient(to right, transparent 0%, black 28px, black calc(100% - 28px), transparent 100%);
   -webkit-mask-image: linear-gradient(to right, transparent 0%, black 28px, black calc(100% - 28px), transparent 100%);
 }
 
-/* Ambient Background Drift Animations */
-@keyframes float-orb-1 {
-  0% {
-    transform: translate(0px, 0px) scale(1);
-  }
-  33% {
-    transform: translate(40px, -50px) scale(1.1);
-  }
-  66% {
-    transform: translate(-30px, 30px) scale(0.95);
-  }
-  100% {
-    transform: translate(0px, 0px) scale(1);
-  }
-}
-
-@keyframes float-orb-2 {
-  0% {
-    transform: translate(0px, 0px) scale(1);
-  }
-  50% {
-    transform: translate(-60px, -40px) scale(1.15);
-  }
-  100% {
-    transform: translate(0px, 0px) scale(1);
-  }
-}
-
-@keyframes rf-wave-pulse {
-  0% {
-    transform: scale(0.65);
-    opacity: 0.7;
-  }
-  50% {
-    opacity: 0.25;
-  }
-  100% {
-    transform: scale(1.75);
-    opacity: 0;
-  }
-}
-
-.animate-float-1 {
-  animation: float-orb-1 22s ease-in-out infinite;
-}
-
-.animate-float-2 {
-  animation: float-orb-2 28s ease-in-out infinite;
-}
-
-.animate-rf-pulse {
-  animation: rf-wave-pulse 4.5s cubic-bezier(0.2, 0.8, 0.4, 1) infinite;
-}
-
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
-  }
-  .barcode-laser {
-    animation: none !important;
-    display: none !important;
   }
   .asset-card:hover {
     transform: none !important;

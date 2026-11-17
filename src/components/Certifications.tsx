@@ -1,6 +1,6 @@
 import React, { useState, useMemo } from 'react';
-import { Award, ExternalLink, Search, ChevronDown, ChevronUp, ShieldCheck } from 'lucide-react';
-import { PORTFOLIO_DATA, CertificationGroup, CertificationItem } from '@/data/content';
+import { Award, ExternalLink, Search, ChevronDown, ChevronUp } from 'lucide-react';
+import { PORTFOLIO_DATA, CertificationGroup } from '@/data/content';
 import { BarcodeDivider } from './Barcode';
 
 const FILTER_GROUPS: CertificationGroup[] = [
@@ -39,23 +39,23 @@ export const Certifications: React.FC = () => {
   const hasMoreThanEight = filteredItems.length > 8;
 
   return (
-    <section id="credentials" className="py-28 sm:py-36 border-b border-[var(--line)] bg-[var(--bg)]">
+    <section id="credentials" className="py-28 sm:py-36 border-b border-slate-200 bg-[#F8FAFC]">
       <div className="max-w-[1140px] mx-auto px-4 sm:px-6 lg:px-8 text-left">
         {/* Section Heading */}
         <div className="max-w-2xl mb-12">
-          <span className="inline-flex items-center gap-2 px-3 py-1 rounded-[4px] bg-[var(--surface)] border border-[var(--line)] font-mono text-[11px] uppercase tracking-wider text-[var(--accent)] mb-3 shadow-xs">
+          <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-slate-200 font-mono text-[11px] uppercase tracking-wider text-[#0F172A] mb-3 shadow-xs">
             [ 05 // PROFESSIONAL CREDENTIALS ]
           </span>
-          <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-[var(--ink)]">
+          <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-[#0F172A]">
             Accredited Certifications &amp; Licenses
           </h2>
-          <p className="mt-3 text-base text-[var(--muted)] leading-relaxed">
+          <p className="mt-3 text-base text-[#475569] leading-relaxed">
             Formal qualifications across project delivery frameworks, business analysis, cloud systems, and cybersecurity standards.
           </p>
         </div>
 
         {/* Filter Controls Bar */}
-        <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-4 mb-8 pb-4 border-b border-[var(--line)]">
+        <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-4 mb-8 pb-4 border-b border-slate-200">
           {/* Group Chips */}
           <div className="flex flex-wrap items-center gap-2">
             {FILTER_GROUPS.map((group) => {
@@ -64,10 +64,10 @@ export const Certifications: React.FC = () => {
                 <button
                   key={group}
                   onClick={() => setSelectedGroup(group)}
-                  className={`px-3 py-1.5 rounded-[3px] font-mono text-xs uppercase tracking-wider transition-colors cursor-pointer ${
+                  className={`px-3.5 py-1.5 rounded-lg font-mono text-xs uppercase tracking-wider transition-colors cursor-pointer ${
                     isActive
-                      ? 'bg-[var(--accent)] text-[var(--accent-fg)] font-bold shadow-xs'
-                      : 'bg-[var(--surface)] text-[var(--muted)] hover:text-[var(--ink)] border border-[var(--line)] hover:border-[var(--muted)]'
+                      ? 'bg-[#0F172A] text-white font-bold shadow-xs'
+                      : 'bg-white text-slate-600 hover:text-[#0F172A] border border-slate-200 hover:border-slate-300'
                   }`}
                 >
                   {group}
@@ -78,30 +78,29 @@ export const Certifications: React.FC = () => {
 
           {/* Quick Search */}
           <div className="relative w-full sm:w-64">
-            <Search className="w-3.5 h-3.5 text-[var(--muted)] absolute left-3 top-1/2 -translate-y-1/2" />
+            <Search className="w-3.5 h-3.5 text-slate-400 absolute left-3 top-1/2 -translate-y-1/2" />
             <input
               type="text"
               placeholder="Search credentials..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full pl-9 pr-3 py-1.5 rounded-[3px] bg-[var(--surface)] border border-[var(--line)] text-xs text-[var(--ink)] placeholder-[var(--muted)] focus:outline-none focus:border-[var(--accent)]"
+              className="w-full pl-9 pr-3 py-2 rounded-lg bg-white border border-slate-200 text-xs text-[#0F172A] placeholder-slate-400 focus:outline-none focus:border-slate-400 shadow-xs"
             />
           </div>
         </div>
 
-        {/* Certifications Grid */}
+        {/* Certifications Grid: Flat crisp white cards: bg-white border border-slate-100 rounded-2xl shadow-sm p-6 */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
           {visibleItems.map((item) => (
             <div
               key={item.id}
-              className="asset-card p-4 sm:p-5 flex flex-col justify-between group text-left"
+              className="p-6 rounded-2xl bg-white border border-slate-100 hover:border-slate-300 hover:shadow-md transition-all duration-200 shadow-sm flex flex-col justify-between group text-left"
             >
               <div>
                 {/* Header label & Logo */}
-                <div className="flex items-center justify-between gap-2.5 mb-3.5 pb-2.5 border-b border-[var(--line)]">
+                <div className="flex items-center justify-between gap-2.5 mb-3.5 pb-2.5 border-b border-slate-100">
                   {item.issuerLogo ? (
-                    <div className="h-10 sm:h-11 px-2.5 py-1 rounded-[4px] bg-white border border-slate-200/90 flex items-center shadow-xs shrink-0 max-w-[185px]">
-                      {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <div className="h-10 sm:h-11 px-2.5 py-1 rounded-lg bg-white border border-slate-200/90 flex items-center shadow-xs shrink-0 max-w-[185px]">
                       <img
                         src={item.issuerLogo}
                         alt={`${item.issuer} logo`}
@@ -110,14 +109,14 @@ export const Certifications: React.FC = () => {
                       />
                     </div>
                   ) : (
-                    <span className="font-mono text-xs uppercase font-bold tracking-wider text-[var(--secondary)]">
+                    <span className="font-mono text-xs uppercase font-bold tracking-wider text-slate-700">
                       {item.issuer}
                     </span>
                   )}
 
-                  <div className="flex flex-col items-end text-right font-mono text-[11px] text-[var(--muted)] shrink-0">
+                  <div className="flex flex-col items-end text-right font-mono text-[11px] text-[#475569] shrink-0">
                     {item.year && (
-                      <span className="text-[10px] font-semibold text-[var(--muted)] px-2 py-0.5 rounded bg-[var(--surface-alt)] border border-[var(--line)]">
+                      <span className="text-[10px] font-semibold text-[#475569] px-2 py-0.5 rounded-md bg-slate-50 border border-slate-200">
                         {item.year}
                       </span>
                     )}
@@ -126,31 +125,30 @@ export const Certifications: React.FC = () => {
 
                 {/* Badge Image if available */}
                 {item.image && (
-                  <div className="h-28 sm:h-32 flex items-center justify-center p-3 bg-[var(--surface-alt)] rounded-[4px] border border-[var(--line)] mb-3.5 group-hover:border-[var(--accent)] transition-colors overflow-hidden">
-                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <div className="h-28 sm:h-32 flex items-center justify-center p-3 bg-slate-50 rounded-xl border border-slate-100 mb-3.5 group-hover:border-slate-300 transition-colors overflow-hidden">
                     <img
                       src={item.image}
                       alt={item.title}
-                      className="max-h-full max-w-full object-contain filter drop-shadow-md group-hover:scale-105 transition-transform duration-200"
+                      className="max-h-full max-w-full object-contain filter drop-shadow-sm group-hover:scale-105 transition-transform duration-200"
                       loading="lazy"
                     />
                   </div>
                 )}
 
                 {/* Issuer Subtitle */}
-                <div className="font-mono text-[11px] uppercase tracking-wider text-[var(--secondary)] font-semibold mb-1">
+                <div className="font-mono text-[11px] uppercase tracking-wider text-slate-500 font-semibold mb-1">
                   {item.issuer}
                 </div>
 
                 {/* Credential Title */}
-                <h3 className="font-heading text-sm sm:text-base font-bold tracking-tight text-[var(--ink)] group-hover:text-[var(--secondary)] transition-colors leading-snug">
+                <h3 className="font-heading text-sm sm:text-base font-bold tracking-tight text-[#0F172A] leading-snug">
                   {item.title}
                 </h3>
               </div>
 
               {/* Bottom Row */}
-              <div className="mt-4 pt-3 border-t border-[var(--line)] flex items-center justify-between text-[11px] font-mono">
-                <span className="text-[10px] uppercase text-[var(--muted)] truncate max-w-[130px]">
+              <div className="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between text-[11px] font-mono">
+                <span className="text-[10px] uppercase text-[#475569] truncate max-w-[130px]">
                   {item.group}
                 </span>
 
@@ -159,13 +157,13 @@ export const Certifications: React.FC = () => {
                     href={item.credentialUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1 text-[var(--secondary)] hover:underline font-semibold"
+                    className="inline-flex items-center gap-1 text-[#0F172A] hover:underline font-semibold"
                   >
                     <span>Verify</span>
                     <ExternalLink className="w-3 h-3" />
                   </a>
                 ) : (
-                  <span className="text-[var(--muted)]">Verified</span>
+                  <span className="text-slate-500">Verified</span>
                 )}
               </div>
             </div>
@@ -174,10 +172,10 @@ export const Certifications: React.FC = () => {
 
         {/* Empty state if search returned 0 items */}
         {filteredItems.length === 0 && (
-          <div className="text-center py-12 bg-[var(--surface)] border border-[var(--line)] rounded-[6px]">
-            <Award className="w-8 h-8 text-[var(--muted)] mx-auto mb-2 opacity-50" />
-            <p className="font-heading font-bold text-sm text-[var(--ink)]">No matching credentials found</p>
-            <p className="font-mono text-xs text-[var(--muted)] mt-1">Try resetting the search query or group filter.</p>
+          <div className="text-center py-12 bg-white border border-slate-200 rounded-2xl">
+            <Award className="w-8 h-8 text-slate-400 mx-auto mb-2 opacity-50" />
+            <p className="font-heading font-bold text-sm text-[#0F172A]">No matching credentials found</p>
+            <p className="font-mono text-xs text-[#475569] mt-1">Try resetting the search query or group filter.</p>
           </div>
         )}
 
@@ -186,10 +184,10 @@ export const Certifications: React.FC = () => {
           <div className="mt-8 text-center">
             <button
               onClick={() => setShowAll(!showAll)}
-              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-[4px] bg-[var(--surface)] hover:bg-[var(--surface-alt)] border border-[var(--line)] hover:border-[var(--muted)] text-xs font-mono uppercase tracking-wider text-[var(--ink)] font-semibold transition-colors cursor-pointer"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-[#0F172A] hover:bg-[#1E293B] text-white text-xs font-mono uppercase tracking-wider font-semibold transition-colors cursor-pointer shadow-sm"
             >
               <span>{showAll ? 'Show Fewer Credentials' : `Show All Credentials (${filteredItems.length})`}</span>
-              {showAll ? <ChevronUp className="w-4 h-4 text-[var(--secondary)]" /> : <ChevronDown className="w-4 h-4 text-[var(--secondary)]" />}
+              {showAll ? <ChevronUp className="w-4 h-4 text-white" /> : <ChevronDown className="w-4 h-4 text-white" />}
             </button>
           </div>
         )}

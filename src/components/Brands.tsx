@@ -61,17 +61,17 @@ export const Brands: React.FC = () => {
   }, [brands]);
 
   return (
-    <section className="py-28 sm:py-36 border-b border-[var(--line)] bg-[var(--surface)] overflow-hidden">
+    <section className="py-28 sm:py-36 border-b border-slate-200 bg-[#F8FAFC] overflow-hidden">
       {/* Section Header: Styled consistently with all portfolio section headers */}
       <div className="max-w-[1140px] mx-auto px-4 sm:px-6 lg:px-8 mb-12 sm:mb-16 text-left">
         <div className="max-w-3xl">
-          <span className="inline-flex items-center gap-2 px-3 py-1 rounded-[4px] bg-[var(--bg)] border border-[var(--line)] font-mono text-[11px] uppercase tracking-wider text-[var(--accent)] mb-3 shadow-xs">
+          <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-slate-200 font-mono text-[11px] uppercase tracking-wider text-[#0F172A] mb-3 shadow-xs">
             [ 01 // ENTERPRISE CLIENTS ]
           </span>
-          <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-[var(--ink)]">
+          <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-[#0F172A]">
             Client &amp; Enterprise Deployments
           </h2>
-          <p className="mt-3 text-base text-[var(--muted)] leading-relaxed">
+          <p className="mt-3 text-base text-[#475569] leading-relaxed">
             National &amp; multinational corporate, governmental and institutional partners.
           </p>
         </div>
@@ -86,7 +86,7 @@ export const Brands: React.FC = () => {
               <div
                 key={`r1-${brand.id}-${idx}`}
                 title={brand.name}
-                className="h-16 sm:h-20 min-w-[145px] sm:min-w-[175px] max-w-[210px] px-5 py-2.5 rounded-[6px] bg-white border border-[var(--line)] shadow-xs flex items-center justify-center transition-all duration-200 hover:border-[var(--accent)] hover:shadow-md hover:scale-105 shrink-0 cursor-default"
+                className="h-16 sm:h-20 min-w-[145px] sm:min-w-[175px] max-w-[210px] px-5 py-2.5 rounded-xl bg-white border border-slate-200/80 shadow-xs flex items-center justify-center transition-all duration-200 hover:border-slate-400 hover:shadow-md hover:scale-102 shrink-0 cursor-default"
               >
                 {brand.logo && (
                   <img
@@ -108,7 +108,7 @@ export const Brands: React.FC = () => {
               <div
                 key={`r2-${brand.id}-${idx}`}
                 title={brand.name}
-                className="h-16 sm:h-20 w-16 sm:w-20 rounded-[6px] bg-white border border-[var(--line)] shadow-xs flex items-center justify-center transition-all duration-200 hover:border-[var(--accent)] hover:shadow-md hover:scale-105 shrink-0 p-2.5 cursor-default"
+                className="h-16 sm:h-20 w-16 sm:w-20 rounded-xl bg-white border border-slate-200/80 shadow-xs flex items-center justify-center transition-all duration-200 hover:border-slate-400 hover:shadow-md hover:scale-102 shrink-0 p-2.5 cursor-default"
               >
                 {brand.logo && (
                   <img
@@ -130,7 +130,7 @@ export const Brands: React.FC = () => {
               <div
                 key={`r3-${brand.id}-${idx}`}
                 title={brand.name}
-                className="h-16 sm:h-20 min-w-[145px] sm:min-w-[175px] max-w-[210px] px-5 py-2.5 rounded-[6px] bg-white border border-[var(--line)] shadow-xs flex items-center justify-center transition-all duration-200 hover:border-[var(--accent)] hover:shadow-md hover:scale-105 shrink-0 cursor-default"
+                className="h-16 sm:h-20 min-w-[145px] sm:min-w-[175px] max-w-[210px] px-5 py-2.5 rounded-xl bg-white border border-slate-200/80 shadow-xs flex items-center justify-center transition-all duration-200 hover:border-slate-400 hover:shadow-md hover:scale-102 shrink-0 cursor-default"
               >
                 {brand.logo && (
                   <img

@@ -39,7 +39,7 @@ export const Hero: React.FC = () => {
   };
 
   return (
-    <section className="pt-32 pb-24 sm:pt-44 sm:pb-36 border-b border-[var(--line)] bg-[var(--bg)]">
+    <section className="pt-32 pb-24 sm:pt-44 sm:pb-36 border-b border-slate-200 bg-white">
       <motion.div
         className="max-w-[1140px] mx-auto px-4 sm:px-6 lg:px-8 text-left"
         variants={containerVariants}
@@ -52,36 +52,36 @@ export const Hero: React.FC = () => {
           <div className="lg:col-span-7 flex flex-col justify-center">
             {/* Tag / Capsule */}
             <motion.div variants={lineVariants} className="mb-6">
-              <span className="inline-flex items-center gap-2 px-3 py-1 rounded-[4px] bg-[var(--surface)] border border-[var(--line)] font-mono text-[11px] uppercase tracking-wider text-[var(--ink)] shadow-xs">
-                <span className="w-1.5 h-1.5 rounded-full bg-[var(--accent)]" aria-hidden="true" />
+              <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-50 border border-slate-200 font-mono text-[11px] uppercase tracking-wider text-[#0F172A] shadow-xs">
+                <span className="w-1.5 h-1.5 rounded-full bg-[#0F172A]" aria-hidden="true" />
                 [ STRATEGY &amp; OPERATIONS ]
               </span>
             </motion.div>
 
             {/* Main Headline */}
             <motion.div variants={lineVariants} className="overflow-hidden">
-              <h1 className="font-heading text-4xl sm:text-5xl lg:text-[3.5rem] font-bold tracking-tight text-[var(--ink)] leading-[1.12]">
+              <h1 className="font-heading text-4xl sm:text-5xl lg:text-[3.5rem] font-bold tracking-tight text-[#0F172A] leading-[1.12]">
                 I build the physical tracking workflows that keep enterprise software{' '}
-                <span className="text-[var(--accent)]">accurate</span>.
+                <span className="text-[#0F172A] underline decoration-slate-300 underline-offset-8">accurate</span>.
               </h1>
             </motion.div>
 
             {/* Sub-text */}
             <motion.p
               variants={lineVariants}
-              className="mt-6 text-base sm:text-lg text-[var(--muted)] font-normal leading-relaxed max-w-xl"
+              className="mt-6 text-base sm:text-lg text-[#475569] font-normal leading-relaxed max-w-xl"
             >
               10+ years in technology strategy and solutions architecture. Currently engineering bulletproof RFID, Barcode, and WIP systems that synchronize factory floor operations with digital ERP ledgers.
             </motion.p>
 
-            {/* Direct Action Buttons */}
+            {/* Direct Action Buttons - Solid Heavy Flat Shapes */}
             <motion.div
               variants={lineVariants}
               className="mt-8 flex flex-wrap items-center gap-4"
             >
               <a
                 href="#contact"
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-[4px] bg-[var(--accent)] hover:bg-[var(--accent-hover)] text-[var(--accent-fg)] font-medium text-sm transition-all shadow-xs"
+                className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl bg-[#0F172A] hover:bg-[#1E293B] text-white font-medium text-sm transition-all shadow-sm"
               >
                 <span>Work with me</span>
                 <ArrowDownRight className="w-4 h-4" />
@@ -91,10 +91,10 @@ export const Hero: React.FC = () => {
                 href={person.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-[4px] bg-[var(--surface)] hover:bg-[var(--surface-alt)] text-[var(--ink)] border border-[var(--line)] hover:border-[var(--line-hover)] font-medium text-sm transition-colors"
+                className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl bg-white hover:bg-slate-50 text-[#0F172A] border border-slate-200 font-medium text-sm transition-colors shadow-xs"
               >
                 <span>LinkedIn</span>
-                <ExternalLink className="w-3.5 h-3.5 text-[var(--muted)]" />
+                <ExternalLink className="w-3.5 h-3.5 text-[#475569]" />
               </a>
             </motion.div>
           </div>
@@ -105,25 +105,25 @@ export const Hero: React.FC = () => {
               variants={photoVariants}
               className="relative max-w-[340px] sm:max-w-[380px] w-full"
             >
-              {/* Clean, minimalist framing without wireframes or spinning cubes */}
-              <div className="relative rounded-[8px] overflow-hidden border border-[var(--line)] bg-[var(--surface)] shadow-xl transition-all duration-300">
+              {/* Flat, crisp white card: bg-white border border-slate-100 rounded-2xl shadow-sm p-4 sm:p-5 */}
+              <div className="relative rounded-2xl overflow-hidden border border-slate-100 bg-white shadow-sm p-3 sm:p-4 transition-all duration-300">
                 {/* Minimalist Top Edge Strip */}
-                <div className="px-4 py-2.5 border-b border-[var(--line)] bg-[var(--surface-alt)] flex items-center justify-between font-mono text-[10px] uppercase tracking-wider text-[var(--muted)]">
-                  <span className="flex items-center gap-1.5 text-[var(--ink)] font-medium">
-                    <span className="w-2 h-2 rounded-full bg-[var(--accent)]" />
+                <div className="px-4 py-2.5 rounded-t-xl border-b border-slate-100 bg-slate-50 flex items-center justify-between font-mono text-[10px] uppercase tracking-wider text-[#475569]">
+                  <span className="flex items-center gap-1.5 text-[#0F172A] font-semibold">
+                    <span className="w-2 h-2 rounded-full bg-[#0F172A]" />
                     FOUNDER &amp; MANAGING DIRECTOR
                   </span>
                   <div className="flex items-center">
                     <img
                       src="/logos/zma.png"
                       alt="ZMA"
-                      className="h-4 w-auto object-contain bg-white rounded-[2px] px-1.5 py-0.5 border border-[var(--line)]"
+                      className="h-4 w-auto object-contain bg-white rounded px-1.5 py-0.5 border border-slate-200"
                     />
                   </div>
                 </div>
 
                 {/* High-contrast, Professional Portrait */}
-                <div className="relative aspect-[4/5] overflow-hidden bg-[var(--surface)]">
+                <div className="relative aspect-[4/5] overflow-hidden bg-slate-100">
                   <img
                     src={person.avatar || '/zain-portrait.jpg'}
                     alt={person.name}
@@ -131,29 +131,29 @@ export const Hero: React.FC = () => {
                     loading="eager"
                   />
                   {/* Soft subtle bottom gradient to blend into card surface */}
-                  <div className="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-[var(--surface)] to-transparent opacity-80" />
+                  <div className="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-white to-transparent opacity-80" />
                 </div>
 
                 {/* Clean Editorial Caption */}
-                <div className="p-4 border-t border-[var(--line)] bg-[var(--surface)]">
+                <div className="p-4 rounded-b-xl border-t border-slate-100 bg-white">
                   <div className="flex items-start justify-between gap-2">
                     <div>
-                      <div className="font-heading font-semibold text-base text-[var(--ink)]">
+                      <div className="font-heading font-semibold text-base text-[#0F172A]">
                         {person.name}
                       </div>
-                      <div className="text-xs text-[var(--accent)] font-medium mt-0.5">
+                      <div className="text-xs text-[#475569] font-medium mt-0.5">
                         Solutions Architect &amp; Consultant
                       </div>
                     </div>
                     <img
                       src="/logos/zma.png"
                       alt="ZMA"
-                      className="h-6 w-auto object-contain bg-white rounded p-0.5 border border-[var(--line)] shrink-0 shadow-xs"
+                      className="h-6 w-auto object-contain bg-white rounded p-0.5 border border-slate-200 shrink-0 shadow-xs"
                     />
                   </div>
-                  <div className="text-xs text-[var(--muted)] mt-2 pt-2 border-t border-[var(--line)] flex items-center justify-between font-mono text-[10px]">
+                  <div className="text-xs text-[#475569] mt-2 pt-2 border-t border-slate-100 flex items-center justify-between font-mono text-[10px]">
                     <span>Zaintegrated Solutions</span>
-                    <span className="text-[var(--ink)] font-medium">Lahore, PK</span>
+                    <span className="text-[#0F172A] font-medium">Lahore, PK</span>
                   </div>
                 </div>
               </div>
