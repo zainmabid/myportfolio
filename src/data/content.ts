@@ -104,15 +104,15 @@ export interface EducationItem {
 
 export type BadgeGroup =
   | 'All'
+  | 'Credly (PMI & IBM)'
   | 'Google Cloud & Gemini'
-  | 'Internet Society (ISOC)'
-  | 'Cloud, Security & Agile';
+  | 'Internet Society (ISOC)';
 
 export interface VerifiedBadge {
   id: string;
   title: string;
   issuer: string;
-  group: 'Google Cloud & Gemini' | 'Internet Society (ISOC)' | 'Cloud, Security & Agile';
+  group: 'Credly (PMI & IBM)' | 'Google Cloud & Gemini' | 'Internet Society (ISOC)' | 'Cloud, Security & Agile';
   date: string;
   badgeUrl: string;
   image: string;
@@ -156,6 +156,7 @@ export interface PortfolioData {
   certifications: CertificationItem[];
   googleBadges: GoogleBadge[];
   googleProfileUrl: string;
+  credlyProfileUrl: string;
   badges: VerifiedBadge[];
   education: EducationItem[];
 }
@@ -1128,8 +1129,45 @@ export const PORTFOLIO_DATA: PortfolioData = {
   ],
 
   googleProfileUrl: 'https://www.skills.google/public_profiles/14bbe981-af34-4dd0-b317-30eaf266f8e3',
+  credlyProfileUrl: 'https://www.credly.com/users/zain-abid.e89d7497/badges',
 
   badges: [
+        {
+                "id": "credly-pmi-agile",
+                "title": "Fundamentals of Agile Project Management",
+                "issuer": "Project Management Institute (PMI)",
+                "group": "Credly (PMI & IBM)",
+                "date": "Oct 10, 2023",
+                "badgeUrl": "https://www.credly.com/badges/8e4cddd0-444a-4591-8d8d-83d76ed8db8e",
+                "image": "/badges/credly/pmi-agile-kickoff.png",
+                "category": "Agile Frameworks & Scrum",
+                "verificationType": "Credly / PMI Verified",
+                "description": "Earners of Kickoff’s Fundamentals of Agile Project Management badge have demonstrated essential agile processes: establishing vision, high-performing teams, scrum boards, backlog grooming, sprint planning, daily standups, sprint reviews, and retrospectives."
+        },
+        {
+                "id": "credly-pmi-predictive",
+                "title": "Fundamentals of Predictive Project Management",
+                "issuer": "Project Management Institute (PMI)",
+                "group": "Credly (PMI & IBM)",
+                "date": "Oct 10, 2023",
+                "badgeUrl": "https://www.credly.com/badges/0ad612f0-4cac-46ab-93cd-977ffa0ba240",
+                "image": "/badges/credly/pmi-predictive-kickoff.png",
+                "category": "Predictive Project Governance",
+                "verificationType": "Credly / PMI Verified",
+                "description": "Earners of Kickoff’s Fundamentals of Predictive Project Management badge have demonstrated core predictive methodologies: building project charters, stakeholder management, requirement matrices, work breakdown schedules, risk mitigation, and formal project close-outs."
+        },
+        {
+                "id": "credly-ibm-cloud",
+                "title": "Cloud Essentials",
+                "issuer": "IBM",
+                "group": "Credly (PMI & IBM)",
+                "date": "Oct 06, 2023",
+                "badgeUrl": "https://www.credly.com/badges/245974d3-32f8-44ed-9a9c-807def3e3ca3",
+                "image": "/badges/credly/ibm-cloud-essentials.png",
+                "category": "Cloud Infrastructure & DevOps",
+                "verificationType": "Credly / IBM Verified",
+                "description": "Demonstrated understanding of foundational cloud technology, virtualization, containerization, VMs, microservices, serverless, hybrid multicloud deployment models, and hands-on resource provisioning on IBM Cloud."
+        },
     {
         "id": "google-gemini-draft-nda",
         "title": "Draft NDA Documents with Gemini",

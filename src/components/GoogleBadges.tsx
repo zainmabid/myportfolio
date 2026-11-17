@@ -15,13 +15,13 @@ import { BarcodeDivider } from './Barcode';
 
 const FILTER_GROUPS: BadgeGroup[] = [
   'All',
+  'Credly (PMI & IBM)',
   'Google Cloud & Gemini',
-  'Internet Society (ISOC)',
-  'Cloud, Security & Agile'
+  'Internet Society (ISOC)'
 ];
 
 export const GoogleBadges: React.FC = () => {
-  const { badges, googleProfileUrl } = PORTFOLIO_DATA;
+  const { badges, googleProfileUrl, credlyProfileUrl } = PORTFOLIO_DATA;
   const [selectedGroup, setSelectedGroup] = useState<BadgeGroup>('All');
 
   // Filtered badges based on group
@@ -55,8 +55,19 @@ export const GoogleBadges: React.FC = () => {
             </p>
           </div>
 
-          {/* Quick Profile Verification Link */}
+          {/* Quick Profile Verification Links */}
           <div className="shrink-0 flex flex-wrap items-center gap-2.5">
+            <a
+              href={credlyProfileUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-3.5 py-2 rounded-[4px] bg-[var(--bg)] border border-[var(--line)] hover:border-[var(--accent)] text-[var(--ink)] hover:text-[var(--accent)] text-xs font-mono font-medium transition-all shadow-xs group"
+            >
+              <ShieldCheck className="w-4 h-4 text-[var(--accent)]" />
+              <span>Credly Profile (PMI &amp; IBM)</span>
+              <ExternalLink className="w-3 h-3 text-[var(--muted)] group-hover:text-[var(--accent)] transition-colors" />
+            </a>
+
             <a
               href={googleProfileUrl}
               target="_blank"
@@ -286,7 +297,15 @@ export const GoogleBadges: React.FC = () => {
                       rel="noopener noreferrer"
                       className="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-[4px] bg-[var(--accent)] text-[var(--accent-fg)] font-mono text-xs font-bold hover:brightness-110 transition-all shadow-xs shrink-0"
                     >
-                      <span>Verify Credential</span>
+                      <span>
+                        {activeBadge.badgeUrl.includes('credly.com')
+                          ? 'Verify on Credly'
+                          : activeBadge.badgeUrl.includes('skills.google')
+                          ? 'Verify on Google Skills'
+                          : activeBadge.badgeUrl.includes('credential.net')
+                          ? 'Verify on Accredible'
+                          : 'Verify Credential'}
+                      </span>
                       <ExternalLink className="w-3.5 h-3.5" />
                     </a>
                   </div>
