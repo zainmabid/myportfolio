@@ -17,31 +17,31 @@ export const Contact: React.FC = () => {
   };
 
   return (
-    <footer id="contact" className="py-28 sm:py-36 bg-white text-left border-t border-slate-200">
+    <footer id="contact" className="py-28 sm:py-36 bg-[#0F172A] text-left border-t border-slate-800 text-white">
       <div className="max-w-[1140px] mx-auto px-4 sm:px-6 lg:px-8">
         {/* Bold, Simple, Highly Professional Closure Block */}
-        <div className="p-8 sm:p-12 lg:p-14 rounded-2xl bg-[#F8FAFC] border border-slate-200/90 shadow-sm relative overflow-hidden">
+        <div className="p-8 sm:p-12 lg:p-14 rounded-2xl bg-[#131B2E] border border-slate-800 shadow-xl relative overflow-hidden">
           <div className="max-w-2xl">
             {/* Tag / Capsule */}
             <div className="mb-4">
-              <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-slate-200 font-mono text-[11px] uppercase tracking-wider text-[#0F172A] shadow-xs">
+              <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-800/90 border border-slate-700 font-mono text-[11px] uppercase tracking-wider text-slate-200 shadow-xs">
                 [ DIRECT ENGAGEMENT ]
               </span>
             </div>
 
             {/* Title */}
-            <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-[#0F172A] leading-tight">
+            <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold tracking-[-0.02em] text-white leading-tight">
               Let's bypass the corporate techno-babble.
             </h2>
 
             {/* Sub-text */}
-            <p className="mt-5 text-base sm:text-lg text-[#475569] leading-relaxed font-normal">
+            <p className="mt-5 text-base sm:text-lg text-[#94A3B8] leading-relaxed font-normal">
               If your factory floor tracking isn’t updating your ERP, or you need an un-biased vendor evaluation for your hardware—let's discuss your roadmap.
             </p>
 
-            {/* CTA Buttons with Spring Micro-interaction - Solid Heavy Flat Shapes */}
+            {/* CTA Buttons with Spring Micro-interaction */}
             <div className="mt-8 flex flex-wrap items-center gap-4">
-              {/* Button: Connect on LinkedIn */}
+              {/* Button: Connect on LinkedIn (High-Contrast Pure White Solid Shape) */}
               <motion.a
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
@@ -49,11 +49,11 @@ export const Contact: React.FC = () => {
                 href={person.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2.5 px-7 py-3.5 rounded-xl bg-[#0F172A] hover:bg-[#1E293B] text-white font-medium text-sm transition-all shadow-sm"
+                className="inline-flex items-center gap-2.5 px-7 py-3.5 rounded-xl bg-white hover:bg-slate-100 text-[#090D16] font-semibold text-sm transition-all shadow-md"
               >
                 <LinkedInIcon className="w-4 h-4" />
                 <span>Connect on LinkedIn</span>
-                <ArrowUpRight className="w-4 h-4 opacity-80" />
+                <ArrowUpRight className="w-4 h-4 text-slate-600" />
               </motion.a>
 
               {/* Button: Schedule an Operational Review */}
@@ -62,9 +62,9 @@ export const Contact: React.FC = () => {
                 whileTap={{ scale: 0.98 }}
                 transition={{ type: 'spring', stiffness: 400, damping: 20 }}
                 href={`mailto:${person.email}?subject=${encodeURIComponent('Operational Review / RFID Evaluation')}`}
-                className="inline-flex items-center gap-2.5 px-7 py-3.5 rounded-xl bg-white hover:bg-slate-50 text-[#0F172A] border border-slate-200 font-medium text-sm transition-colors shadow-xs"
+                className="inline-flex items-center gap-2.5 px-7 py-3.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-white border border-slate-700 font-medium text-sm transition-colors shadow-xs"
               >
-                <Mail className="w-4 h-4 text-[#0F172A]" />
+                <Mail className="w-4 h-4 text-slate-300" />
                 <span>Schedule an Operational Review</span>
               </motion.a>
 
@@ -76,9 +76,9 @@ export const Contact: React.FC = () => {
                 href="https://wa.me/923205270594"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-white hover:bg-slate-50 text-[#0F172A] border border-slate-200 font-medium text-sm transition-colors shadow-xs"
+                className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-white border border-slate-700 font-medium text-sm transition-colors shadow-xs"
               >
-                <Phone className="w-4 h-4 text-[#0F172A]" />
+                <Phone className="w-4 h-4 text-slate-300" />
                 <span>WhatsApp Direct</span>
               </motion.a>
             </div>
@@ -86,15 +86,15 @@ export const Contact: React.FC = () => {
         </div>
 
         {/* Minimal Editorial Footer Strip */}
-        <div className="mt-16 pt-8 border-t border-slate-200 flex flex-col sm:flex-row items-center justify-between gap-6 text-xs text-[#475569]">
+        <div className="mt-16 pt-8 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-6 text-xs text-[#94A3B8]">
           <div className="flex items-center gap-3">
             <img
               src="/logos/zma.png"
               alt="ZMA"
-              className="h-6 w-auto object-contain bg-white rounded p-0.5 border border-slate-200 shadow-xs"
+              className="h-6 w-auto object-contain bg-white rounded p-0.5 border border-slate-700 shadow-xs"
             />
             <div>
-              <span className="font-heading font-semibold text-[#0F172A]">Zain Mashhood Abid</span>
+              <span className="font-heading font-semibold text-white">Zain Mashhood Abid</span>
               <span className="mx-2">•</span>
               <span>Founder &amp; MD, Zaintegrated Solutions</span>
             </div>
@@ -104,7 +104,7 @@ export const Contact: React.FC = () => {
             <span>© {new Date().getFullYear()} Zain Mashhood Abid. All rights reserved.</span>
             <button
               onClick={scrollToTop}
-              className="inline-flex items-center gap-1 text-[#475569] hover:text-[#0F172A] transition-colors cursor-pointer"
+              className="inline-flex items-center gap-1 text-[#94A3B8] hover:text-white transition-colors cursor-pointer"
               aria-label="Back to top"
             >
               <span>Back to Top</span>

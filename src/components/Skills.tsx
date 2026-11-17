@@ -13,14 +13,14 @@ export const Skills: React.FC = () => {
   const { skillGroups } = PORTFOLIO_DATA;
 
   return (
-    <section id="skills" className="py-28 sm:py-36 border-b border-slate-200 bg-white">
+    <section id="skills" className="py-28 sm:py-36 border-b border-[#E2E8F0] bg-[#FBFBFA]">
       <div className="max-w-[1140px] mx-auto px-4 sm:px-6 lg:px-8 text-left">
         {/* Section Heading */}
         <div className="max-w-2xl mb-12">
-          <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-50 border border-slate-200 font-mono text-[11px] uppercase tracking-wider text-[#0F172A] mb-3 shadow-xs">
+          <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-[#E2E8F0] font-mono text-[11px] uppercase tracking-wider text-[#090D16] mb-3 shadow-xs">
             05 // TECHNICAL CAPABILITIES
           </span>
-          <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-[#0F172A]">
+          <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold tracking-[-0.02em] text-[#090D16]">
             Skills and Hardware
           </h2>
           <p className="mt-3 text-base text-[#475569] leading-relaxed">
@@ -28,7 +28,7 @@ export const Skills: React.FC = () => {
           </p>
         </div>
 
-        {/* 3 Grouped Columns: Flat, crisp white cards: bg-white border border-slate-100 rounded-2xl shadow-sm p-8 */}
+        {/* 3 Grouped Columns: Flat, crisp white cards: bg-white border border-[#E2E8F0] rounded-2xl shadow-sm hover:shadow-md p-8 */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
           {skillGroups.map((group) => {
             const Icon = GROUP_ICONS[group.id] || Cpu;
@@ -36,14 +36,14 @@ export const Skills: React.FC = () => {
             return (
               <div
                 key={group.id}
-                className="bg-white border border-slate-100 rounded-2xl p-8 flex flex-col justify-between shadow-sm hover:border-slate-300 hover:shadow-md transition-all duration-200"
+                className="bg-white border border-[#E2E8F0] rounded-2xl p-8 flex flex-col justify-between shadow-sm hover:border-slate-300 hover:shadow-md transition-all duration-200"
               >
                 <div>
-                  <div className="flex items-center gap-3 mb-6 pb-4 border-b border-slate-100">
-                    <div className="w-9 h-9 rounded-lg bg-slate-50 border border-slate-200 flex items-center justify-center text-[#0F172A]">
+                  <div className="flex items-center gap-3 mb-6 pb-4 border-b border-[#E2E8F0]">
+                    <div className="w-9 h-9 rounded-lg bg-[#F4F4F0] border border-[#E2E8F0] flex items-center justify-center text-[#090D16]">
                       <Icon className="w-4 h-4" />
                     </div>
-                    <h3 className="font-heading text-lg font-bold tracking-tight text-[#0F172A]">
+                    <h3 className="font-heading text-lg font-bold tracking-[-0.02em] text-[#090D16]">
                       {group.category}
                     </h3>
                   </div>
@@ -52,7 +52,7 @@ export const Skills: React.FC = () => {
                     {group.skills.map((skill, idx) => (
                       <li
                         key={idx}
-                        className="flex items-center gap-3 text-xs sm:text-sm text-[#0F172A] font-normal"
+                        className="flex items-center gap-3 text-xs sm:text-sm text-[#090D16] font-normal"
                       >
                         <span className="w-1.5 h-1.5 rounded-full bg-[#0F172A] shrink-0" />
                         <span>{skill}</span>
@@ -61,7 +61,7 @@ export const Skills: React.FC = () => {
                   </ul>
                 </div>
 
-                <div className="mt-8 pt-4 border-t border-slate-100 font-mono text-[10px] uppercase tracking-wider text-slate-500">
+                <div className="mt-8 pt-4 border-t border-[#E2E8F0] font-mono text-[10px] uppercase tracking-wider text-slate-500">
                   {group.skills.length} Validated Capabilities
                 </div>
               </div>

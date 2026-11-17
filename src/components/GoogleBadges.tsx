@@ -38,15 +38,15 @@ export const GoogleBadges: React.FC = () => {
   const activeIdx = filteredBadges.findIndex((b) => b.id === activeBadge?.id);
 
   return (
-    <section id="badges" className="py-28 sm:py-36 border-b border-slate-200 bg-white">
+    <section id="badges" className="py-28 sm:py-36 border-b border-[#E2E8F0] bg-[#FBFBFA]">
       <div className="max-w-[1140px] mx-auto px-4 sm:px-6 lg:px-8 text-left">
         {/* Section Heading & Verification Profile CTA */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
           <div className="max-w-2xl">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-50 border border-slate-200 font-mono text-[11px] uppercase tracking-wider text-[#0F172A] mb-3 shadow-xs">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-[#E2E8F0] font-mono text-[11px] uppercase tracking-wider text-[#090D16] mb-3 shadow-xs">
               [ 06 // VERIFIED SKILL BADGES ]
             </div>
-            <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-[#0F172A]">
+            <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold tracking-[-0.02em] text-[#090D16]">
               Verified Badges &amp; Micro-Credentials
             </h2>
             <p className="mt-3 text-base text-[#475569] leading-relaxed">
@@ -60,28 +60,28 @@ export const GoogleBadges: React.FC = () => {
               href={credlyProfileUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-white border border-slate-200 hover:border-slate-400 text-[#0F172A] text-xs font-mono font-medium transition-all shadow-xs group"
+              className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-white border border-[#E2E8F0] hover:border-slate-400 text-[#090D16] text-xs font-mono font-medium transition-all shadow-xs group"
             >
               <ShieldCheck className="w-4 h-4 text-emerald-600" />
               <span>Credly Profile (PMI &amp; IBM)</span>
-              <ExternalLink className="w-3 h-3 text-slate-400 group-hover:text-[#0F172A] transition-colors" />
+              <ExternalLink className="w-3 h-3 text-slate-400 group-hover:text-[#090D16] transition-colors" />
             </a>
 
             <a
               href={googleProfileUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-white border border-slate-200 hover:border-slate-400 text-[#0F172A] text-xs font-mono font-medium transition-all shadow-xs group"
+              className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-white border border-[#E2E8F0] hover:border-slate-400 text-[#090D16] text-xs font-mono font-medium transition-all shadow-xs group"
             >
               <ShieldCheck className="w-4 h-4 text-emerald-600" />
               <span>Google Skills Profile</span>
-              <ExternalLink className="w-3 h-3 text-slate-400 group-hover:text-[#0F172A] transition-colors" />
+              <ExternalLink className="w-3 h-3 text-slate-400 group-hover:text-[#090D16] transition-colors" />
             </a>
           </div>
         </div>
 
         {/* Filter Category Chips */}
-        <div className="flex flex-wrap items-center gap-2 mb-8 pb-4 border-b border-slate-200">
+        <div className="flex flex-wrap items-center gap-2 mb-8 pb-4 border-b border-[#E2E8F0]">
           <span className="font-mono text-xs uppercase tracking-wider text-[#475569] mr-2 flex items-center gap-1.5">
             <Layers className="w-3.5 h-3.5 text-slate-600" />
             <span>Category:</span>
@@ -105,7 +105,7 @@ export const GoogleBadges: React.FC = () => {
                 className={`font-mono text-xs px-3.5 py-1.5 rounded-lg border transition-all duration-150 flex items-center gap-1.5 cursor-pointer ${
                   isSelected
                     ? 'bg-[#0F172A] text-white border-[#0F172A] font-semibold shadow-xs'
-                    : 'bg-white text-slate-600 border-slate-200 hover:border-slate-300 hover:text-[#0F172A]'
+                    : 'bg-white text-slate-600 border-[#E2E8F0] hover:border-slate-300 hover:text-[#090D16]'
                 }`}
               >
                 <span>{group}</span>
@@ -127,16 +127,16 @@ export const GoogleBadges: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-start">
           {/* Left Vertical Rail / Badges List */}
           <div className="lg:col-span-5 space-y-2">
-            <div className="font-mono text-[11px] uppercase tracking-wider text-[#475569] pb-2 mb-2 border-b border-slate-200 flex items-center justify-between">
+            <div className="font-mono text-[11px] uppercase tracking-wider text-[#475569] pb-2 mb-2 border-b border-[#E2E8F0] flex items-center justify-between">
               <span className="flex items-center gap-1.5">
-                <Award className="w-3.5 h-3.5 text-[#0F172A]" />
+                <Award className="w-3.5 h-3.5 text-[#090D16]" />
                 <span>Credentials ({filteredBadges.length})</span>
               </span>
               <span className="text-[10px] text-slate-600 font-semibold">Hover to Inspect</span>
             </div>
 
             {/* Scrollable list with node timeline */}
-            <div className="relative pl-4 sm:pl-6 border-l-2 border-slate-200 space-y-3 max-h-[640px] overflow-y-auto pr-2 custom-scrollbar">
+            <div className="relative pl-4 sm:pl-6 border-l-2 border-slate-300 space-y-3 max-h-[640px] overflow-y-auto pr-2 custom-scrollbar">
               {filteredBadges.map((badge) => {
                 const isActive = badge.id === activeBadge.id;
 
@@ -148,7 +148,7 @@ export const GoogleBadges: React.FC = () => {
                     className={`relative w-full text-left p-3.5 sm:p-4 rounded-xl border transition-all duration-200 group cursor-pointer block ${
                       isActive
                         ? 'bg-white border-[#0F172A] shadow-sm -translate-r-0.5'
-                        : 'bg-white/80 hover:bg-white border-slate-200 hover:border-slate-300'
+                        : 'bg-white/80 hover:bg-white border-[#E2E8F0] hover:border-slate-300'
                     }`}
                   >
                     {/* Node Dot on Left Vertical Line */}
@@ -163,7 +163,7 @@ export const GoogleBadges: React.FC = () => {
 
                     {/* Header Row: Issuer & Date */}
                     <div className="flex items-center justify-between gap-2 mb-1.5">
-                      <span className="font-mono text-[10px] uppercase font-bold tracking-wider text-slate-700 px-2 py-0.5 rounded-md bg-slate-100 border border-slate-200 truncate max-w-[170px]">
+                      <span className="font-mono text-[10px] uppercase font-bold tracking-wider text-slate-700 px-2 py-0.5 rounded-md bg-[#F4F4F0] border border-[#E2E8F0] truncate max-w-[170px]">
                         {badge.category}
                       </span>
                       <span className="font-mono text-[10px] text-slate-500 shrink-0 flex items-center gap-1">
@@ -174,7 +174,7 @@ export const GoogleBadges: React.FC = () => {
 
                     {/* Badge Title & Mini Preview */}
                     <div className="flex items-center gap-2.5">
-                      <div className="w-9 h-9 rounded-lg bg-slate-50 border border-slate-200 p-0.5 shrink-0 flex items-center justify-center overflow-hidden">
+                      <div className="w-9 h-9 rounded-lg bg-[#F4F4F0] border border-[#E2E8F0] p-0.5 shrink-0 flex items-center justify-center overflow-hidden">
                         <img
                           src={badge.image}
                           alt=""
@@ -185,7 +185,7 @@ export const GoogleBadges: React.FC = () => {
                       <div className="min-w-0 flex-1">
                         <div
                           className={`font-heading text-xs sm:text-sm font-bold tracking-tight line-clamp-1 transition-colors ${
-                            isActive ? 'text-[#0F172A]' : 'text-slate-700'
+                            isActive ? 'text-[#090D16]' : 'text-slate-700'
                           }`}
                         >
                           {badge.title}
@@ -210,14 +210,14 @@ export const GoogleBadges: React.FC = () => {
 
           {/* Right Column: Active Badge Detail Window (Sticky) - Flat Crisp White Card */}
           <div className="lg:col-span-7 sticky top-24">
-            <div className="relative rounded-2xl border border-slate-100 bg-white shadow-sm overflow-hidden min-h-[480px]">
+            <div className="relative rounded-2xl border border-[#E2E8F0] bg-white shadow-sm hover:shadow-md overflow-hidden min-h-[480px]">
               {/* Header Bar */}
-              <div className="px-5 py-3.5 border-b border-slate-100 bg-slate-50 flex items-center justify-between font-mono text-[11px] uppercase tracking-wider text-[#475569]">
+              <div className="px-5 py-3.5 border-b border-[#E2E8F0] bg-[#F4F4F0] flex items-center justify-between font-mono text-[11px] uppercase tracking-wider text-[#475569]">
                 <div className="flex items-center gap-2">
                   <span className="w-2 h-2 rounded-full bg-[#0F172A]" />
                   <span>CREDENTIAL // BADGE-0{activeIdx + 1}</span>
                 </div>
-                <div className="flex items-center gap-1.5 text-[#0F172A] font-semibold">
+                <div className="flex items-center gap-1.5 text-[#090D16] font-semibold">
                   <ShieldCheck className="w-3.5 h-3.5 text-emerald-600" />
                   <span>{activeBadge.verificationType || 'Verified Credential'}</span>
                 </div>
@@ -234,10 +234,10 @@ export const GoogleBadges: React.FC = () => {
                   className="p-6 sm:p-8"
                 >
                   {/* Badge Art Showcase & Metadata */}
-                  <div className="flex flex-col sm:flex-row items-center sm:items-start gap-6 pb-6 border-b border-slate-100">
+                  <div className="flex flex-col sm:flex-row items-center sm:items-start gap-6 pb-6 border-b border-[#E2E8F0]">
                     {/* Badge Artwork Container */}
                     <div className="relative shrink-0 group">
-                      <div className="relative w-32 h-32 sm:w-36 sm:h-36 rounded-2xl bg-slate-50 border border-slate-200 p-3 flex items-center justify-center shadow-xs">
+                      <div className="relative w-32 h-32 sm:w-36 sm:h-36 rounded-2xl bg-[#F4F4F0] border border-[#E2E8F0] p-3 flex items-center justify-center shadow-xs">
                         <img
                           src={activeBadge.image}
                           alt={activeBadge.title}
@@ -248,12 +248,12 @@ export const GoogleBadges: React.FC = () => {
 
                     {/* Header Info */}
                     <div className="flex-1 text-center sm:text-left min-w-0">
-                      <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-md bg-slate-100 border border-slate-200 font-mono text-[10px] uppercase tracking-wider text-[#0F172A] font-semibold mb-2">
+                      <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-md bg-[#F4F4F0] border border-[#E2E8F0] font-mono text-[10px] uppercase tracking-wider text-[#090D16] font-semibold mb-2">
                         <Calendar className="w-3 h-3" />
                         {activeBadge.date}
                       </div>
 
-                      <h3 className="font-heading text-xl sm:text-2xl font-extrabold tracking-tight text-[#0F172A] leading-snug">
+                      <h3 className="font-heading text-xl sm:text-2xl font-extrabold tracking-[-0.02em] text-[#090D16] leading-snug">
                         {activeBadge.title}
                       </h3>
 
@@ -261,14 +261,14 @@ export const GoogleBadges: React.FC = () => {
                         {activeBadge.issuer}
                       </div>
 
-                      <div className="mt-2.5 inline-block font-mono text-[10px] uppercase tracking-widest px-2.5 py-0.5 rounded-md bg-slate-50 border border-slate-200 text-slate-700">
+                      <div className="mt-2.5 inline-block font-mono text-[10px] uppercase tracking-widest px-2.5 py-0.5 rounded-md bg-[#F4F4F0] border border-[#E2E8F0] text-slate-700">
                         {activeBadge.category}
                       </div>
                     </div>
                   </div>
 
                   {/* Operational Summary Callout */}
-                  <div className="mt-5 p-4 rounded-xl bg-slate-50 border-l-4 border-[#0F172A] text-xs sm:text-sm text-[#0F172A] leading-relaxed">
+                  <div className="mt-5 p-4 rounded-xl bg-[#F4F4F0] border-l-4 border-[#0F172A] text-xs sm:text-sm text-[#090D16] leading-relaxed">
                     <div className="font-mono text-[10px] uppercase tracking-widest text-[#475569] mb-1 font-bold">
                       CURRICULUM &amp; VALIDATED EXPERTISE
                     </div>
@@ -276,7 +276,7 @@ export const GoogleBadges: React.FC = () => {
                   </div>
 
                   {/* Verification CTA Action Bar */}
-                  <div className="mt-6 pt-5 border-t border-slate-100 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                  <div className="mt-6 pt-5 border-t border-[#E2E8F0] flex flex-col sm:flex-row sm:items-center justify-between gap-4">
                     <div className="flex items-center gap-2">
                       <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
                       <span className="font-mono text-[11px] text-[#475569]">
@@ -304,12 +304,12 @@ export const GoogleBadges: React.FC = () => {
                   </div>
 
                   {/* Window Bottom Metadata Bar */}
-                  <div className="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between font-mono text-[10px] uppercase tracking-wider text-slate-500">
+                  <div className="mt-6 pt-4 border-t border-[#E2E8F0] flex items-center justify-between font-mono text-[10px] uppercase tracking-wider text-slate-500">
                     <span className="flex items-center gap-1.5">
                       <span className="w-1.5 h-1.5 rounded-full bg-[#0F172A]" />
                       {activeBadge.group}
                     </span>
-                    <span className="text-[#0F172A] font-semibold">
+                    <span className="text-[#090D16] font-semibold">
                       {activeIdx + 1} / {filteredBadges.length}
                     </span>
                   </div>

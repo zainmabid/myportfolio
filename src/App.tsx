@@ -17,7 +17,7 @@ import { Contact } from '@/components/Contact';
 export const App: React.FC = () => {
   return (
     <ThemeProvider>
-      <div className="relative min-h-screen bg-white text-[#0F172A] antialiased selection:bg-slate-200 selection:text-slate-900">
+      <div className="relative min-h-screen bg-[#FBFBFA] text-[#090D16] antialiased selection:bg-slate-200 selection:text-slate-900">
         <BackgroundEffects />
         <Navbar />
         <main className="relative z-10">

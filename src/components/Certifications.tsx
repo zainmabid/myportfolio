@@ -39,14 +39,14 @@ export const Certifications: React.FC = () => {
   const hasMoreThanEight = filteredItems.length > 8;
 
   return (
-    <section id="credentials" className="py-28 sm:py-36 border-b border-slate-200 bg-[#F8FAFC]">
+    <section id="credentials" className="py-28 sm:py-36 border-b border-[#E2E8F0] bg-[#F4F4F0]">
       <div className="max-w-[1140px] mx-auto px-4 sm:px-6 lg:px-8 text-left">
         {/* Section Heading */}
         <div className="max-w-2xl mb-12">
-          <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-slate-200 font-mono text-[11px] uppercase tracking-wider text-[#0F172A] mb-3 shadow-xs">
+          <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-[#E2E8F0] font-mono text-[11px] uppercase tracking-wider text-[#090D16] mb-3 shadow-xs">
             [ 05 // PROFESSIONAL CREDENTIALS ]
           </span>
-          <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-[#0F172A]">
+          <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold tracking-[-0.02em] text-[#090D16]">
             Accredited Certifications &amp; Licenses
           </h2>
           <p className="mt-3 text-base text-[#475569] leading-relaxed">
@@ -55,7 +55,7 @@ export const Certifications: React.FC = () => {
         </div>
 
         {/* Filter Controls Bar */}
-        <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-4 mb-8 pb-4 border-b border-slate-200">
+        <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-4 mb-8 pb-4 border-b border-[#E2E8F0]">
           {/* Group Chips */}
           <div className="flex flex-wrap items-center gap-2">
             {FILTER_GROUPS.map((group) => {
@@ -67,7 +67,7 @@ export const Certifications: React.FC = () => {
                   className={`px-3.5 py-1.5 rounded-lg font-mono text-xs uppercase tracking-wider transition-colors cursor-pointer ${
                     isActive
                       ? 'bg-[#0F172A] text-white font-bold shadow-xs'
-                      : 'bg-white text-slate-600 hover:text-[#0F172A] border border-slate-200 hover:border-slate-300'
+                      : 'bg-white text-slate-600 hover:text-[#090D16] border border-[#E2E8F0] hover:border-slate-300'
                   }`}
                 >
                   {group}
@@ -84,23 +84,23 @@ export const Certifications: React.FC = () => {
               placeholder="Search credentials..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full pl-9 pr-3 py-2 rounded-lg bg-white border border-slate-200 text-xs text-[#0F172A] placeholder-slate-400 focus:outline-none focus:border-slate-400 shadow-xs"
+              className="w-full pl-9 pr-3 py-2 rounded-lg bg-white border border-[#E2E8F0] text-xs text-[#090D16] placeholder-slate-400 focus:outline-none focus:border-slate-400 shadow-xs"
             />
           </div>
         </div>
 
-        {/* Certifications Grid: Flat crisp white cards: bg-white border border-slate-100 rounded-2xl shadow-sm p-6 */}
+        {/* Certifications Grid: Flat crisp white cards: bg-white border border-[#E2E8F0] rounded-2xl shadow-sm hover:shadow-md p-6 */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
           {visibleItems.map((item) => (
             <div
               key={item.id}
-              className="p-6 rounded-2xl bg-white border border-slate-100 hover:border-slate-300 hover:shadow-md transition-all duration-200 shadow-sm flex flex-col justify-between group text-left"
+              className="p-6 rounded-2xl bg-white border border-[#E2E8F0] hover:border-slate-300 hover:shadow-md transition-all duration-200 shadow-sm flex flex-col justify-between group text-left"
             >
               <div>
                 {/* Header label & Logo */}
-                <div className="flex items-center justify-between gap-2.5 mb-3.5 pb-2.5 border-b border-slate-100">
+                <div className="flex items-center justify-between gap-2.5 mb-3.5 pb-2.5 border-b border-[#E2E8F0]">
                   {item.issuerLogo ? (
-                    <div className="h-10 sm:h-11 px-2.5 py-1 rounded-lg bg-white border border-slate-200/90 flex items-center shadow-xs shrink-0 max-w-[185px]">
+                    <div className="h-10 sm:h-11 px-2.5 py-1 rounded-lg bg-white border border-[#E2E8F0] flex items-center shadow-xs shrink-0 max-w-[185px]">
                       <img
                         src={item.issuerLogo}
                         alt={`${item.issuer} logo`}
@@ -116,7 +116,7 @@ export const Certifications: React.FC = () => {
 
                   <div className="flex flex-col items-end text-right font-mono text-[11px] text-[#475569] shrink-0">
                     {item.year && (
-                      <span className="text-[10px] font-semibold text-[#475569] px-2 py-0.5 rounded-md bg-slate-50 border border-slate-200">
+                      <span className="text-[10px] font-semibold text-[#475569] px-2 py-0.5 rounded-md bg-[#F4F4F0] border border-[#E2E8F0]">
                         {item.year}
                       </span>
                     )}
@@ -125,7 +125,7 @@ export const Certifications: React.FC = () => {
 
                 {/* Badge Image if available */}
                 {item.image && (
-                  <div className="h-28 sm:h-32 flex items-center justify-center p-3 bg-slate-50 rounded-xl border border-slate-100 mb-3.5 group-hover:border-slate-300 transition-colors overflow-hidden">
+                  <div className="h-28 sm:h-32 flex items-center justify-center p-3 bg-[#F4F4F0] rounded-xl border border-[#E2E8F0] mb-3.5 group-hover:border-slate-300 transition-colors overflow-hidden">
                     <img
                       src={item.image}
                       alt={item.title}
@@ -141,13 +141,13 @@ export const Certifications: React.FC = () => {
                 </div>
 
                 {/* Credential Title */}
-                <h3 className="font-heading text-sm sm:text-base font-bold tracking-tight text-[#0F172A] leading-snug">
+                <h3 className="font-heading text-sm sm:text-base font-bold tracking-[-0.02em] text-[#090D16] leading-snug">
                   {item.title}
                 </h3>
               </div>
 
               {/* Bottom Row */}
-              <div className="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between text-[11px] font-mono">
+              <div className="mt-4 pt-3 border-t border-[#E2E8F0] flex items-center justify-between text-[11px] font-mono">
                 <span className="text-[10px] uppercase text-[#475569] truncate max-w-[130px]">
                   {item.group}
                 </span>
@@ -157,7 +157,7 @@ export const Certifications: React.FC = () => {
                     href={item.credentialUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1 text-[#0F172A] hover:underline font-semibold"
+                    className="inline-flex items-center gap-1 text-[#090D16] hover:underline font-semibold"
                   >
                     <span>Verify</span>
                     <ExternalLink className="w-3 h-3" />
@@ -172,9 +172,9 @@ export const Certifications: React.FC = () => {
 
         {/* Empty state if search returned 0 items */}
         {filteredItems.length === 0 && (
-          <div className="text-center py-12 bg-white border border-slate-200 rounded-2xl">
+          <div className="text-center py-12 bg-white border border-[#E2E8F0] rounded-2xl shadow-sm">
             <Award className="w-8 h-8 text-slate-400 mx-auto mb-2 opacity-50" />
-            <p className="font-heading font-bold text-sm text-[#0F172A]">No matching credentials found</p>
+            <p className="font-heading font-bold text-sm text-[#090D16]">No matching credentials found</p>
             <p className="font-mono text-xs text-[#475569] mt-1">Try resetting the search query or group filter.</p>
           </div>
         )}

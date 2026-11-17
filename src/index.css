@@ -2,34 +2,34 @@
 
 @layer base {
   :root {
-    --bg: #FFFFFF;
+    --bg: #FBFBFA;
     --surface: #FFFFFF;
-    --surface-alt: #F8FAFC;
-    --ink: #0F172A;
+    --surface-alt: #F4F4F0;
+    --ink: #090D16;
     --muted: #475569;
     --line: #E2E8F0;
     --line-hover: #CBD5E1;
     --accent: #0F172A;
     --accent-hover: #1E293B;
     --accent-fg: #FFFFFF;
-    --secondary: #0D7A80;
-    --secondary-hover: #096368;
+    --secondary: #0F172A;
+    --secondary-hover: #1E293B;
     --scan-line: #0F172A;
   }
 
   html.dark {
-    --bg: #FFFFFF;
+    --bg: #FBFBFA;
     --surface: #FFFFFF;
-    --surface-alt: #F8FAFC;
-    --ink: #0F172A;
+    --surface-alt: #F4F4F0;
+    --ink: #090D16;
     --muted: #475569;
     --line: #E2E8F0;
     --line-hover: #CBD5E1;
     --accent: #0F172A;
     --accent-hover: #1E293B;
     --accent-fg: #FFFFFF;
-    --secondary: #0D7A80;
-    --secondary-hover: #096368;
+    --secondary: #0F172A;
+    --secondary-hover: #1E293B;
     --scan-line: #0F172A;
   }
 
@@ -55,8 +55,8 @@
 
   h1, h2, h3, h4, h5, h6 {
     font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
-    letter-spacing: -0.028em;
-    color: var(--ink);
+    letter-spacing: -0.02em;
+    color: #090D16;
     font-weight: 700;
   }
 
@@ -71,19 +71,19 @@
   }
 }
 
-/* Executive Card Styling */
+/* Executive Physical Depth Card Styling */
 .asset-card {
   background-color: #FFFFFF;
-  border: 1px solid #F1F5F9;
+  border: 1px solid #E2E8F0;
   border-radius: 1rem;
-  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05), 0 1px 2px -1px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05), 0 1px 2px -1px rgba(0, 0, 0, 0.04);
   transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
 .asset-card:hover {
-  border-color: #E2E8F0;
+  border-color: #CBD5E1;
   transform: translateY(-2px);
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.06), 0 2px 4px -2px rgba(0, 0, 0, 0.04);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.07), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
 }
 
 /* Infinite Marquee Animations for Brands Section */
