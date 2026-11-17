@@ -111,15 +111,14 @@ export const Hero: React.FC = () => {
                 <div className="px-4 py-2.5 border-b border-[var(--line)] bg-[var(--surface-alt)] flex items-center justify-between font-mono text-[10px] uppercase tracking-wider text-[var(--muted)]">
                   <span className="flex items-center gap-1.5 text-[var(--ink)] font-medium">
                     <span className="w-2 h-2 rounded-full bg-[var(--accent)]" />
-                    FOUNDER &amp; MD
+                    FOUNDER &amp; MANAGING DIRECTOR
                   </span>
-                  <div className="flex items-center gap-1.5">
+                  <div className="flex items-center">
                     <img
                       src="/logos/zma.png"
                       alt="ZMA"
-                      className="h-3.5 w-auto object-contain bg-white rounded-[2px] px-1 py-0.5 border border-[var(--line)]"
+                      className="h-4 w-auto object-contain bg-white rounded-[2px] px-1.5 py-0.5 border border-[var(--line)]"
                     />
-                    <span className="text-[var(--ink)] font-semibold">ZMA</span>
                   </div>
                 </div>
 
