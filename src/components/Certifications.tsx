@@ -39,18 +39,18 @@ export const Certifications: React.FC = () => {
   const hasMoreThanEight = filteredItems.length > 8;
 
   return (
-    <section id="credentials" className="py-20 sm:py-28 border-b border-[var(--line)]">
-      <div className="max-w-[1100px] mx-auto px-4 sm:px-6 lg:px-8 text-left">
+    <section id="credentials" className="py-28 sm:py-36 border-b border-[var(--line)] bg-[var(--bg)]">
+      <div className="max-w-[1140px] mx-auto px-4 sm:px-6 lg:px-8 text-left">
         {/* Section Heading */}
-        <div className="max-w-2xl mb-10">
-          <span className="font-mono text-xs uppercase tracking-widest text-[var(--muted)] block mb-1">
-            06 // CREDENTIALS & LICENSES
+        <div className="max-w-2xl mb-12">
+          <span className="inline-flex items-center gap-2 px-3 py-1 rounded-[4px] bg-[var(--surface)] border border-[var(--line)] font-mono text-[11px] uppercase tracking-wider text-[var(--accent)] mb-3 shadow-xs">
+            [ 05 // PROFESSIONAL CREDENTIALS ]
           </span>
-          <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-[var(--ink)]">
-            Certifications, Badges and Training
+          <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-[var(--ink)]">
+            Accredited Certifications &amp; Licenses
           </h2>
           <p className="mt-3 text-base text-[var(--muted)] leading-relaxed">
-            Accredited qualifications across project frameworks, business analysis, cloud architecture, and industrial cybersecurity.
+            Formal qualifications across project delivery frameworks, business analysis, cloud systems, and cybersecurity standards.
           </p>
         </div>
 

@@ -61,14 +61,14 @@ export const Brands: React.FC = () => {
   }, [brands]);
 
   return (
-    <section className="py-16 sm:py-24 border-b border-[var(--line)] bg-[var(--surface)] overflow-hidden">
+    <section className="py-28 sm:py-36 border-b border-[var(--line)] bg-[var(--surface)] overflow-hidden">
       {/* Section Header: Styled consistently with all portfolio section headers */}
-      <div className="max-w-[1100px] mx-auto px-4 sm:px-6 lg:px-8 mb-10 sm:mb-14 text-left">
+      <div className="max-w-[1140px] mx-auto px-4 sm:px-6 lg:px-8 mb-12 sm:mb-16 text-left">
         <div className="max-w-3xl">
-          <span className="font-mono text-xs uppercase tracking-widest text-[var(--muted)] block mb-1">
-            01 // TRUSTED BY
+          <span className="inline-flex items-center gap-2 px-3 py-1 rounded-[4px] bg-[var(--bg)] border border-[var(--line)] font-mono text-[11px] uppercase tracking-wider text-[var(--accent)] mb-3 shadow-xs">
+            [ 01 // ENTERPRISE CLIENTS ]
           </span>
-          <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-[var(--ink)]">
+          <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-[var(--ink)]">
             Client &amp; Enterprise Deployments
           </h2>
           <p className="mt-3 text-base text-[var(--muted)] leading-relaxed">

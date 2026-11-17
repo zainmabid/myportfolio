@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Calendar, CheckCircle2, ChevronRight, Briefcase, MapPin, Layers, Compass } from 'lucide-react';
+import { Calendar, CheckCircle2, ChevronRight, Briefcase, MapPin } from 'lucide-react';
 import { PORTFOLIO_DATA, ExperienceItem } from '@/data/content';
-import { BarcodeDivider } from './Barcode';
 
 export const Experience: React.FC = () => {
-  const { experience, journey } = PORTFOLIO_DATA;
+  const { experience } = PORTFOLIO_DATA;
   const [selectedId, setSelectedId] = useState<string>(experience[0]?.id || '');
 
   const selectedItem: ExperienceItem =
@@ -13,234 +12,230 @@ export const Experience: React.FC = () => {
   const selectedIdx = experience.findIndex((item) => item.id === selectedId);
 
   return (
-    <section id="experience" className="py-20 sm:py-28 border-b border-[var(--line)] bg-[var(--bg)]">
-      <div className="max-w-[1100px] mx-auto px-4 sm:px-6 lg:px-8 text-left">
-        {/* Section Heading: The "About My Journey" Framework */}
-        <div className="max-w-3xl mb-12 sm:mb-16">
-          <span className="font-mono text-xs uppercase tracking-widest text-[var(--muted)] block mb-2">
-            04 // STRATEGY &amp; CAREER TRAJECTORY
+    <section id="experience" className="py-28 sm:py-36 border-b border-[var(--line)] bg-[var(--bg)]">
+      <div className="max-w-[1140px] mx-auto px-4 sm:px-6 lg:px-8 text-left">
+        {/* Section Tag Capsule */}
+        <div className="mb-4">
+          <span className="inline-flex items-center gap-2 px-3 py-1 rounded-[4px] bg-[var(--surface)] border border-[var(--line)] font-mono text-[11px] uppercase tracking-wider text-[var(--accent)] shadow-xs">
+            [ EVOLUTION MATRIX // AUTHORITY MAPPING ]
           </span>
-          <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-[var(--ink)] leading-tight">
-            {journey.headline}
-          </h2>
+        </div>
 
-          {/* The Human Narrative Story */}
-          <div className="mt-6 space-y-4 text-base sm:text-lg text-[var(--muted)] leading-relaxed font-normal">
-            {journey.paragraphs.map((p, idx) => (
-              <p key={idx} className={idx === 2 ? 'text-[var(--ink)] font-medium' : ''}>
-                {p}
+        {/* Heading */}
+        <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-[var(--ink)] leading-tight max-w-3xl">
+          A Decade of Software Strategy. Grounded on the Factory Floor.
+        </h2>
+
+        {/* Horizontal Line Trace Separator */}
+        <motion.div
+          initial={{ scaleX: 0 }}
+          whileInView={{ scaleX: 1 }}
+          viewport={{ once: true, margin: '-50px' }}
+          transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
+          className="origin-left h-[1px] bg-gradient-to-r from-[var(--accent)] via-[var(--line)] to-transparent my-12"
+        />
+
+        {/* The Evolution Matrix: Two Asymmetric Columns */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-20">
+          {/* COLUMN A - THE FOUNDATION (2014 - 2024) */}
+          <div className="p-8 rounded-[8px] border border-[var(--line)] bg-[var(--surface)]/70 flex flex-col justify-between shadow-xs">
+            <div>
+              <div className="flex items-center justify-between pb-3 mb-5 border-b border-[var(--line)]">
+                <span className="font-mono text-xs uppercase font-medium tracking-wider text-[var(--muted)]">
+                  [ THE FOUNDATION ]
+                </span>
+                <span className="font-mono text-xs text-[var(--muted)]">2014 — 2024</span>
+              </div>
+
+              <h3 className="font-heading text-xl font-bold text-[var(--ink)] mb-3">
+                Enterprise Tech &amp; Software Strategy
+              </h3>
+
+              <p className="text-base text-[var(--muted)] leading-relaxed font-normal">
+                Eight years operating at the intersection of enterprise tech. Architecting software solutions, driving corporate pre-sales, and aligning C-suite business goals with technical architecture.
               </p>
-            ))}
+            </div>
+
+            <div className="mt-6 pt-4 border-t border-[var(--line)] flex items-center gap-2 font-mono text-[11px] text-[var(--muted)]">
+              <span className="w-1.5 h-1.5 rounded-full bg-[var(--muted)]" />
+              <span>CRM • ERP • Enterprise Pre-sales • Scaled Systems</span>
+            </div>
+          </div>
+
+          {/* COLUMN B - THE FOCUS (2024 - PRESENT) */}
+          <div className="p-8 rounded-[8px] border border-[var(--accent)]/50 bg-[var(--surface)] flex flex-col justify-between shadow-sm relative overflow-hidden">
+            <div>
+              <div className="flex items-center justify-between pb-3 mb-5 border-b border-[var(--line)]">
+                <span className="font-mono text-xs uppercase font-semibold tracking-wider text-[var(--accent)]">
+                  [ THE FOCUS ]
+                </span>
+                <span className="font-mono text-xs font-semibold text-[var(--accent)]">2024 — PRESENT</span>
+              </div>
+
+              <h3 className="font-heading text-xl font-bold text-[var(--ink)] mb-3">
+                Raw Operational Execution &amp; Industry 4.0
+              </h3>
+
+              <p className="text-base text-[var(--ink)] leading-relaxed font-normal">
+                Transitioning execution directly to raw operations. Solving the physical-to-digital disconnect by deploying active WIP automation, custom barcode tracking, and deep RFID integration.
+              </p>
+            </div>
+
+            <div className="mt-6 pt-4 border-t border-[var(--line)] flex items-center gap-2 font-mono text-[11px] text-[var(--accent)] font-medium">
+              <span className="w-1.5 h-1.5 rounded-full bg-[var(--accent)]" />
+              <span>RFID Infrastructure • WIP Automation • Zero-Loss Traceability</span>
+            </div>
           </div>
         </div>
 
-        {/* Two-Milestone Strategic Evolution Framework */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16">
-          {journey.milestones.map((m, idx) => (
-            <div
-              key={idx}
-              className={`p-6 sm:p-7 rounded-[6px] border ${
-                idx === 1
-                  ? 'bg-[var(--surface)] border-[var(--accent)]/60 shadow-sm'
-                  : 'bg-[var(--surface)]/70 border-[var(--line)]'
-              }`}
-            >
-              <div className="flex items-center justify-between pb-3 mb-4 border-b border-[var(--line)]">
-                <span className="font-mono text-xs uppercase font-bold tracking-wider text-[var(--accent)] px-2 py-0.5 rounded-[2px] bg-[var(--accent)]/10 border border-[var(--accent)]/20">
-                  {m.period}
-                </span>
-                <span className="font-mono text-[11px] text-[var(--muted)]">
-                  {idx === 0 ? 'Foundation' : 'Specialization'}
-                </span>
-              </div>
-              <h3 className="font-heading text-lg font-bold text-[var(--ink)] tracking-tight mb-1">
-                {m.headline}
-              </h3>
-              <p className="text-xs text-[var(--muted)] mb-4">{m.subhead}</p>
-
-              <ul className="space-y-2">
-                {m.points.map((pt, pIdx) => (
-                  <li key={pIdx} className="flex items-start gap-2.5 text-xs text-[var(--ink)]">
-                    <CheckCircle2 className="w-3.5 h-3.5 text-[var(--accent)] shrink-0 mt-0.5" />
-                    <span>{pt}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
-        </div>
-
-        {/* Chronological Role Inspector Header */}
-        <div className="mb-6 flex items-center justify-between pb-2 border-b border-[var(--line)]">
-          <div className="flex items-center gap-2">
-            <Compass className="w-4 h-4 text-[var(--accent)]" />
-            <h3 className="font-heading text-lg font-bold text-[var(--ink)] tracking-tight">
+        {/* Master-Detail Interactive Chronology Inspector */}
+        <div className="pt-4">
+          <div className="mb-6 flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-3 border-b border-[var(--line)]">
+            <h3 className="font-heading text-xl font-bold text-[var(--ink)]">
               Chronological Track Record
             </h3>
+            <span className="font-mono text-xs text-[var(--muted)]">
+              Hover or tap a role to inspect operational deliverables
+            </span>
           </div>
-          <span className="font-mono text-xs text-[var(--muted)]">Hover or click to inspect role details</span>
-        </div>
 
-        {/* Master-Detail Layout: Left Rail + Right Interactive Window */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-start">
-          {/* Left Vertical Rail / Navigation Points */}
-          <div className="lg:col-span-5 space-y-2">
-            <div className="relative pl-4 sm:pl-6 border-l-2 border-[var(--line)] space-y-3">
-              {experience.map((item) => {
-                const isActive = item.id === selectedItem.id;
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-start">
+            {/* Left Rail / Role Navigation */}
+            <div className="lg:col-span-5 space-y-2.5">
+              <div className="relative pl-4 sm:pl-5 border-l-2 border-[var(--line)] space-y-3">
+                {experience.map((item) => {
+                  const isActive = item.id === selectedItem.id;
 
-                return (
-                  <button
-                    key={item.id}
-                    onMouseEnter={() => setSelectedId(item.id)}
-                    onClick={() => setSelectedId(item.id)}
-                    className={`relative w-full text-left p-3.5 sm:p-4 rounded-[6px] border transition-all duration-200 group cursor-pointer block ${
-                      isActive
-                        ? 'bg-[var(--surface)] border-[var(--accent)] shadow-sm'
-                        : 'bg-[var(--surface)]/70 hover:bg-[var(--surface)] border-[var(--line)] hover:border-[var(--muted)]'
-                    }`}
-                  >
-                    {/* Node Dot on Left Vertical Line */}
-                    <div
-                      className={`absolute -left-[23px] sm:-left-[31px] top-1/2 -translate-y-1/2 w-3 h-3 rounded-full border-2 transition-all duration-200 ${
+                  return (
+                    <button
+                      key={item.id}
+                      onMouseEnter={() => setSelectedId(item.id)}
+                      onClick={() => setSelectedId(item.id)}
+                      className={`relative w-full text-left p-4 rounded-[6px] border transition-all duration-150 cursor-pointer block ${
                         isActive
-                          ? 'bg-[var(--accent)] border-[var(--surface)] ring-4 ring-[var(--accent)]/20 scale-125'
-                          : 'bg-[var(--surface-alt)] border-[var(--line)] group-hover:border-[var(--accent)]'
-                      }`}
-                      aria-hidden="true"
-                    />
-
-                    {/* Header Row: Dates & Badge */}
-                    <div className="flex items-center justify-between gap-2 mb-1.5">
-                      <span className="font-mono text-[11px] text-[var(--muted)] flex items-center gap-1">
-                        <Calendar className="w-3 h-3 text-[var(--accent)]" />
-                        {item.dates}
-                      </span>
-                      {item.isCurrent && (
-                        <span className="font-mono text-[9px] uppercase font-bold tracking-wider px-1.5 py-0.5 rounded-[2px] bg-[var(--accent)] text-[var(--accent-fg)]">
-                          Present
-                        </span>
-                      )}
-                    </div>
-
-                    {/* Role Title */}
-                    <div
-                      className={`font-heading text-sm sm:text-base font-bold tracking-tight transition-colors ${
-                        isActive ? 'text-[var(--accent)]' : 'text-[var(--ink)]'
+                          ? 'bg-[var(--surface)] border-[var(--accent)] shadow-sm'
+                          : 'bg-[var(--surface)]/70 hover:bg-[var(--surface)] border-[var(--line)] hover:border-[var(--line-hover)]'
                       }`}
                     >
-                      {item.role}
-                    </div>
-
-                    {/* Company Name */}
-                    <div className="font-mono text-[11px] uppercase tracking-wider text-[var(--muted)] mt-0.5 flex items-center justify-between">
-                      <span className="truncate">{item.company}</span>
-                      <ChevronRight
-                        className={`w-3.5 h-3.5 shrink-0 transition-transform duration-200 ${
+                      {/* Node Dot on Left Vertical Line */}
+                      <div
+                        className={`absolute -left-[23px] sm:-left-[27px] top-1/2 -translate-y-1/2 w-2.5 h-2.5 rounded-full border-2 transition-all duration-150 ${
                           isActive
-                            ? 'text-[var(--accent)] translate-x-1'
-                            : 'opacity-0 group-hover:opacity-100 text-[var(--muted)]'
+                            ? 'bg-[var(--accent)] border-[var(--surface)] ring-4 ring-[var(--accent)]/20 scale-125'
+                            : 'bg-[var(--surface-alt)] border-[var(--line)] group-hover:border-[var(--accent)]'
                         }`}
+                        aria-hidden="true"
                       />
-                    </div>
-                  </button>
-                );
-              })}
-            </div>
-          </div>
 
-          {/* Right Column: Active Experience Detail Window */}
-          <div className="lg:col-span-7 sticky top-24">
-            <div className="relative rounded-[6px] border border-[var(--line)] bg-[var(--surface)] shadow-md overflow-hidden min-h-[420px]">
-              {/* Refined Corner Accent */}
-              <div className="absolute top-0 right-0 w-8 h-8 pointer-events-none">
-                <div className="absolute top-0 right-0 w-full h-[2px] bg-[var(--accent)]" />
-                <div className="absolute top-0 right-0 h-full w-[2px] bg-[var(--accent)]" />
-              </div>
-
-              {/* Dossier Header Bar */}
-              <div className="px-5 py-3 border-b border-[var(--line)] bg-[var(--surface-alt)] flex items-center justify-between font-mono text-[11px] uppercase tracking-wider text-[var(--muted)]">
-                <div className="flex items-center gap-2">
-                  <span className="w-2 h-2 rounded-full bg-[var(--accent)]" />
-                  <span>DOSSIER // EXP-0{selectedIdx + 1}</span>
-                </div>
-                <div className="flex items-center gap-1.5 text-[var(--ink)] font-semibold">
-                  <MapPin className="w-3 h-3 text-[var(--accent)]" />
-                  <span>{selectedItem.city}</span>
-                </div>
-              </div>
-
-              {/* Animated Content Panel */}
-              <AnimatePresence mode="wait">
-                <motion.div
-                  key={selectedItem.id}
-                  initial={{ opacity: 0, y: 8 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -8 }}
-                  transition={{ duration: 0.2, ease: 'easeOut' }}
-                  className="p-6 sm:p-8"
-                >
-                  {/* Role Title & Company Header */}
-                  <div>
-                    <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-[3px] bg-[var(--surface-alt)] border border-[var(--line)] font-mono text-[10px] uppercase tracking-wider text-[var(--accent)] font-semibold mb-2">
-                      <Briefcase className="w-3 h-3" />
-                      {selectedItem.dates}
-                    </div>
-
-                    <h3 className="font-heading text-2xl sm:text-3xl font-extrabold tracking-tight text-[var(--ink)] leading-snug">
-                      {selectedItem.role}
-                    </h3>
-
-                    <div className="font-mono text-xs sm:text-sm uppercase tracking-wider text-[var(--accent)] font-semibold mt-1">
-                      {selectedItem.company}
-                    </div>
-                  </div>
-
-                  {/* Operational Summary Callout */}
-                  <div className="mt-5 p-4 rounded-[4px] bg-[var(--surface-alt)]/60 border-l-3 border-[var(--accent)] text-sm sm:text-base text-[var(--muted)] leading-relaxed">
-                    {selectedItem.summary}
-                  </div>
-
-                  {/* Key Deliverables & Responsibilities */}
-                  {selectedItem.details && selectedItem.details.length > 0 && (
-                    <div className="mt-6 pt-5 border-t border-[var(--line)]">
-                      <div className="font-mono text-[10px] uppercase tracking-widest text-[var(--muted)] mb-3">
-                        KEY DELIVERABLES &amp; IMPACT
+                      {/* Header Row: Dates */}
+                      <div className="flex items-center justify-between gap-2 mb-1.5">
+                        <span className="font-mono text-[11px] text-[var(--muted)] flex items-center gap-1">
+                          <Calendar className="w-3 h-3 text-[var(--accent)]" />
+                          {item.dates}
+                        </span>
+                        {item.isCurrent && (
+                          <span className="font-mono text-[9px] uppercase font-bold tracking-wider px-1.5 py-0.5 rounded-[2px] bg-[var(--accent)] text-[var(--accent-fg)]">
+                            Active
+                          </span>
+                        )}
                       </div>
 
-                      <ul className="space-y-2.5">
-                        {selectedItem.details.map((detail, idx) => (
-                          <li
-                            key={idx}
-                            className="flex items-start gap-3 text-xs sm:text-sm text-[var(--ink)] leading-relaxed"
-                          >
-                            <CheckCircle2 className="w-4 h-4 text-[var(--accent)] shrink-0 mt-0.5" />
-                            <span>{detail}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  )}
+                      {/* Role Title */}
+                      <div
+                        className={`font-heading text-sm sm:text-base font-semibold tracking-tight transition-colors ${
+                          isActive ? 'text-[var(--accent)]' : 'text-[var(--ink)]'
+                        }`}
+                      >
+                        {item.role}
+                      </div>
 
-                  {/* Window Bottom Metadata Bar */}
-                  <div className="mt-8 pt-4 border-t border-[var(--line)] flex items-center justify-between font-mono text-[10px] uppercase tracking-wider text-[var(--muted)]">
-                    <span className="flex items-center gap-1.5">
-                      <span className="w-1.5 h-1.5 rounded-full bg-[var(--accent)]" />
-                      Traceable Operational Record
-                    </span>
-                    <span className="text-[var(--accent)] font-semibold">
-                      {selectedIdx + 1} / {experience.length}
-                    </span>
+                      {/* Company Name */}
+                      <div className="text-xs text-[var(--muted)] mt-0.5 flex items-center justify-between">
+                        <span className="truncate">{item.company}</span>
+                        <ChevronRight
+                          className={`w-3.5 h-3.5 shrink-0 transition-transform ${
+                            isActive
+                              ? 'text-[var(--accent)] translate-x-1'
+                              : 'opacity-0 text-[var(--muted)]'
+                          }`}
+                        />
+                      </div>
+                    </button>
+                  );
+                })}
+              </div>
+            </div>
+
+            {/* Right Column: Active Role Detail Window */}
+            <div className="lg:col-span-7 sticky top-24">
+              <div className="relative rounded-[8px] border border-[var(--line)] bg-[var(--surface)] shadow-md overflow-hidden min-h-[400px]">
+                {/* Minimal Header Bar */}
+                <div className="px-5 py-3 border-b border-[var(--line)] bg-[var(--surface-alt)] flex items-center justify-between font-mono text-[11px] uppercase tracking-wider text-[var(--muted)]">
+                  <div className="flex items-center gap-2">
+                    <span className="w-2 h-2 rounded-full bg-[var(--accent)]" />
+                    <span>ROLE // EXP-0{selectedIdx + 1}</span>
                   </div>
-                </motion.div>
-              </AnimatePresence>
+                  <div className="flex items-center gap-1.5 text-[var(--ink)] font-medium">
+                    <MapPin className="w-3 h-3 text-[var(--accent)]" />
+                    <span>{selectedItem.city}</span>
+                  </div>
+                </div>
+
+                {/* Animated Content Panel */}
+                <AnimatePresence mode="wait">
+                  <motion.div
+                    key={selectedItem.id}
+                    initial={{ opacity: 0, y: 6 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -6 }}
+                    transition={{ duration: 0.18, ease: 'easeOut' }}
+                    className="p-6 sm:p-8"
+                  >
+                    <div>
+                      <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-[3px] bg-[var(--surface-alt)] border border-[var(--line)] font-mono text-[10px] uppercase tracking-wider text-[var(--accent)] font-semibold mb-2">
+                        <Briefcase className="w-3 h-3" />
+                        {selectedItem.dates}
+                      </div>
+
+                      <h3 className="font-heading text-2xl font-bold tracking-tight text-[var(--ink)] leading-snug">
+                        {selectedItem.role}
+                      </h3>
+
+                      <div className="text-sm font-medium text-[var(--accent)] mt-1">
+                        {selectedItem.company}
+                      </div>
+                    </div>
+
+                    {/* Operational Summary Callout */}
+                    <div className="mt-5 p-4 rounded-[4px] bg-[var(--surface-alt)]/60 border-l-2 border-[var(--accent)] text-sm text-[var(--muted)] leading-relaxed">
+                      {selectedItem.summary}
+                    </div>
+
+                    {/* Key Deliverables */}
+                    {selectedItem.details && selectedItem.details.length > 0 && (
+                      <div className="mt-6 pt-5 border-t border-[var(--line)]">
+                        <div className="font-mono text-[10px] uppercase tracking-widest text-[var(--muted)] mb-3">
+                          KEY DELIVERABLES
+                        </div>
+
+                        <ul className="space-y-2.5">
+                          {selectedItem.details.map((detail, idx) => (
+                            <li
+                              key={idx}
+                              className="flex items-start gap-2.5 text-xs sm:text-sm text-[var(--ink)] leading-relaxed"
+                            >
+                              <CheckCircle2 className="w-4 h-4 text-[var(--accent)] shrink-0 mt-0.5" />
+                              <span>{detail}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    )}
+                  </motion.div>
+                </AnimatePresence>
+              </div>
             </div>
           </div>
-        </div>
-
-        {/* Section Divider */}
-        <div className="mt-16">
-          <BarcodeDivider />
         </div>
       </div>
     </section>

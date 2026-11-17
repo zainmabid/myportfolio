@@ -1,193 +1,107 @@
 import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { CheckCircle2, ArrowUpRight, Filter } from 'lucide-react';
-import { PORTFOLIO_DATA, Project, ProjectTag } from '@/data/content';
+import { ArrowUpRight } from 'lucide-react';
+import { PORTFOLIO_DATA, Project } from '@/data/content';
 import { ProjectModal } from './ProjectModal';
-import { BarcodeDivider } from './Barcode';
-
-const FILTER_TAGS: ProjectTag[] = [
-  'All',
-  'RFID',
-  'Barcode',
-  'Asset tracking',
-  'WIP automation',
-  'Warehouse',
-  'ERP'
-];
 
 export const Projects: React.FC = () => {
   const { projects } = PORTFOLIO_DATA;
-  const [selectedTag, setSelectedTag] = useState<ProjectTag>('All');
   const [activeProject, setActiveProject] = useState<Project | null>(null);
 
-  const filteredProjects = projects.filter((project) => {
-    if (selectedTag === 'All') return true;
-    return project.tags.includes(selectedTag);
-  });
-
   return (
-    <section id="work" className="py-20 sm:py-28 border-b border-[var(--line)]">
-      <div className="max-w-[1100px] mx-auto px-4 sm:px-6 lg:px-8 text-left">
+    <section id="work" className="py-28 sm:py-36 border-b border-[var(--line)] bg-[var(--bg)]">
+      <div className="max-w-[1140px] mx-auto px-4 sm:px-6 lg:px-8 text-left">
         {/* Section Heading */}
-        <div className="max-w-2xl mb-10">
-          <span className="font-mono text-xs uppercase tracking-widest text-[var(--muted)] block mb-1">
-            02 // CASE STUDIES & IMPLEMENTATIONS
+        <div className="max-w-2xl mb-14">
+          <span className="inline-flex items-center gap-2 px-3 py-1 rounded-[4px] bg-[var(--surface)] border border-[var(--line)] font-mono text-[11px] uppercase tracking-wider text-[var(--accent)] mb-3 shadow-xs">
+            [ CASE STUDIES // FIELD REALITY ]
           </span>
-          <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-[var(--ink)]">
-            Selected Work
+          <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-[var(--ink)] leading-tight">
+            Selected Enterprise Deployments
           </h2>
-          <p className="mt-3 text-base text-[var(--muted)] leading-relaxed">
-            Enterprise Auto-ID architectures, shop-floor traceability rollouts, and hardware engineering engagements.
+          <p className="mt-4 text-base text-[var(--muted)] leading-relaxed">
+            Eliminating physical-to-digital inventory discrepancies across high-throughput industrial and consumer goods operations.
           </p>
         </div>
 
-        {/* Filter Chip Bar */}
-        <div className="flex flex-wrap items-center gap-2 mb-10 pb-4 border-b border-[var(--line)]">
-          <span className="font-mono text-xs text-[var(--muted)] uppercase tracking-wider mr-2 hidden sm:inline-flex items-center gap-1">
-            <Filter className="w-3.5 h-3.5 text-[var(--secondary)]" /> Filter:
-          </span>
-          {FILTER_TAGS.map((tag) => {
-            const isActive = selectedTag === tag;
-            return (
-              <button
-                key={tag}
-                onClick={() => setSelectedTag(tag)}
-                className={`px-3.5 py-1.5 rounded-[3px] font-mono text-xs uppercase tracking-wider transition-colors cursor-pointer ${
-                  isActive
-                    ? 'bg-[var(--accent)] text-[var(--accent-fg)] font-bold shadow-xs'
-                    : 'bg-[var(--surface)] text-[var(--muted)] hover:text-[var(--ink)] border border-[var(--line)] hover:border-[var(--muted)]'
-                }`}
-              >
-                {tag}
-              </button>
-            );
-          })}
-        </div>
-
-        {/* Project Cards Grid with Layout Animations */}
-        <motion.div layout className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
-          <AnimatePresence>
-            {filteredProjects.map((project) => (
-              <motion.article
-                key={project.id}
-                layout
-                initial={{ opacity: 0, scale: 0.98 }}
-                animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 0.98 }}
-                transition={{ duration: 0.25 }}
-                onClick={() => setActiveProject(project)}
-                className="asset-card p-6 sm:p-7 flex flex-col justify-between cursor-pointer group select-none text-left"
-              >
-                <div>
-                  {/* Top Shipping / Asset Label Header */}
-                  <div className="flex items-center justify-between gap-3 mb-4 pb-3 border-b border-[var(--line)]">
-                    <div className="flex items-center gap-2">
-                      <span className="font-mono text-[10px] uppercase font-bold tracking-widest px-2 py-0.5 rounded-[2px] bg-[var(--accent)] text-[var(--accent-fg)]">
-                        {project.industry}
-                      </span>
-                      <span className="font-mono text-xs uppercase tracking-wider text-[var(--muted)]">
-                        Client: <strong className="text-[var(--ink)] font-semibold">{project.client}</strong>
-                      </span>
-                    </div>
-
-                    <div className="p-1 rounded-[3px] text-[var(--muted)] group-hover:text-[var(--secondary)] group-hover:bg-[var(--surface-alt)] transition-colors">
-                      <ArrowUpRight className="w-4 h-4" />
-                    </div>
-                  </div>
-
-                  {/* Project Name */}
-                  <h3 className="font-heading text-xl sm:text-2xl font-bold tracking-tight text-[var(--ink)] group-hover:text-[var(--secondary)] transition-colors leading-snug">
-                    {project.title}
-                  </h3>
-
-                  {/* One-line Description */}
-                  <p className="mt-2.5 text-sm text-[var(--muted)] leading-relaxed line-clamp-2">
-                    {project.description}
-                  </p>
-
-                  {/* 3 Bullet Outcomes */}
-                  <div className="mt-5 pt-4 border-t border-[var(--line)]">
-                    <span className="font-mono text-[10px] uppercase tracking-widest text-[var(--muted)] block mb-2">
-                      Key Outcomes:
-                    </span>
-                    <ul className="space-y-2">
-                      {project.outcomes.slice(0, 3).map((outcome, idx) => (
-                        <li key={idx} className="flex items-start gap-2 text-xs sm:text-[13px] text-[var(--ink)] leading-snug">
-                          <CheckCircle2 className="w-3.5 h-3.5 text-[var(--secondary)] shrink-0 mt-0.5" />
-                          <span>{outcome}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
-
-                {/* Bottom Tag Row */}
-                <div className="mt-6 pt-4 border-t border-[var(--line)] flex flex-wrap items-center justify-between gap-2">
-                  <div className="flex flex-wrap gap-1.5">
+        {/* Bento Realism Grid: Clean interactive cards with ample padding */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
+          {projects.map((project) => (
+            <article
+              key={project.id}
+              onClick={() => setActiveProject(project)}
+              className="group relative flex flex-col justify-between p-7 sm:p-8 rounded-[8px] border border-[var(--line)] bg-[var(--surface)]/70 hover:bg-[#161B22] hover:border-[var(--line-hover)] transition-all duration-200 cursor-pointer shadow-sm"
+            >
+              <div>
+                {/* Top Labels Row: Monospace capsule tags & Arrow */}
+                <div className="flex items-center justify-between gap-3 mb-5">
+                  <div className="flex flex-wrap items-center gap-2">
                     {project.tags.map((tag) => (
                       <span
                         key={tag}
-                        className="font-mono text-[10px] uppercase px-2 py-0.5 rounded-[2px] bg-[var(--surface-alt)] border border-[var(--line)] text-[var(--muted)] font-medium"
+                        className="font-mono text-[10px] uppercase font-medium px-2.5 py-1 rounded-[3px] bg-[var(--bg)] border border-[var(--line)] text-[var(--muted)] tracking-wider"
                       >
-                        {tag}
+                        [ {tag} ]
                       </span>
                     ))}
                   </div>
 
-                  <span className="font-mono text-[11px] text-[var(--secondary)] font-semibold group-hover:underline flex items-center gap-0.5">
-                    View Details
-                  </span>
+                  {/* Structural Diagonal Arrow */}
+                  <div className="w-8 h-8 rounded-[4px] bg-[var(--bg)] border border-[var(--line)] group-hover:border-[var(--accent)] flex items-center justify-center text-[var(--muted)] group-hover:text-[var(--accent)] transition-all duration-200 shrink-0">
+                    <ArrowUpRight className="w-4 h-4 transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                  </div>
                 </div>
-              </motion.article>
-            ))}
-          </AnimatePresence>
-        </motion.div>
 
-        {/* Real Proof: Field Operations & Whiteboard-to-Floor Reality */}
-        <div className="mt-14 p-6 sm:p-8 rounded-[6px] bg-[var(--surface)] border border-[var(--line)]">
-          <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-4 mb-6 border-b border-[var(--line)]">
-            <div>
-              <span className="font-mono text-[10px] uppercase font-bold tracking-wider text-[var(--accent)] px-2 py-0.5 rounded-[2px] bg-[var(--accent)]/10 border border-[var(--accent)]/20">
-                FIELD EXECUTION &amp; REALITY
-              </span>
-              <h3 className="font-heading text-xl font-bold text-[var(--ink)] tracking-tight mt-1.5">
-                How Implementations Actually Happen
-              </h3>
-            </div>
-            <p className="text-xs text-[var(--muted)] max-w-md">
-              No theoretical software decks. Real solutions require walking the factory floor, mapping physical touchpoints with operators, and aligning ERP schemas on the whiteboard.
-            </p>
-          </div>
+                {/* Title & Client */}
+                <div className="mb-6">
+                  <span className="text-xs text-[var(--muted)] font-mono uppercase tracking-wider block mb-1">
+                    {project.client} • {project.industry}
+                  </span>
+                  <h3 className="font-heading text-xl sm:text-2xl font-bold text-[var(--ink)] group-hover:text-[var(--ink)] tracking-tight leading-snug">
+                    {project.title}
+                  </h3>
+                </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
-            <div className="p-4 rounded-[4px] bg-[var(--bg)] border border-[var(--line)]">
-              <span className="font-mono text-[10px] text-[var(--accent)] font-bold block mb-1">01 // WHITEBOARD ARCHITECTURE</span>
-              <h4 className="font-heading text-sm font-bold text-[var(--ink)] mb-1">System &amp; Schema Mapping</h4>
-              <p className="text-xs text-[var(--muted)] leading-relaxed">
-                Working directly with tech leads to translate physical scan events into clean, real-time database transactions without slowing ERP performance.
-              </p>
-            </div>
+                {/* The 3 Punchy Fragments (Context / Fix / Reality) */}
+                <div className="space-y-3.5 pt-5 border-t border-[var(--line)]">
+                  <div className="text-sm">
+                    <span className="font-mono text-[10px] uppercase tracking-wider text-[var(--accent)] font-semibold block mb-0.5">
+                      The Context:
+                    </span>
+                    <p className="text-[var(--muted)] leading-relaxed font-normal">
+                      {project.bento.context}
+                    </p>
+                  </div>
 
-            <div className="p-4 rounded-[4px] bg-[var(--bg)] border border-[var(--line)]">
-              <span className="font-mono text-[10px] text-[var(--accent)] font-bold block mb-1">02 // SHOP-FLOOR TESTING</span>
-              <h4 className="font-heading text-sm font-bold text-[var(--ink)] mb-1">Tag Tuning &amp; RF Audits</h4>
-              <p className="text-xs text-[var(--muted)] leading-relaxed">
-                Testing antenna polarizations and tag placement directly against metal containers, chemical drums, and fast forklift movements.
-              </p>
-            </div>
+                  <div className="text-sm">
+                    <span className="font-mono text-[10px] uppercase tracking-wider text-[var(--accent)] font-semibold block mb-0.5">
+                      The Fix:
+                    </span>
+                    <p className="text-[var(--ink)] leading-relaxed font-normal">
+                      {project.bento.fix}
+                    </p>
+                  </div>
 
-            <div className="p-4 rounded-[4px] bg-[var(--bg)] border border-[var(--line)]">
-              <span className="font-mono text-[10px] text-[var(--accent)] font-bold block mb-1">03 // OPERATOR ADOPTION</span>
-              <h4 className="font-heading text-sm font-bold text-[var(--ink)] mb-1">Human-First Workflows</h4>
-              <p className="text-xs text-[var(--muted)] leading-relaxed">
-                Training warehouse and line workers so scanning takes seconds, minimizing fatigue and eliminating manual paperwork compliance friction.
-              </p>
-            </div>
-          </div>
+                  <div className="text-sm">
+                    <span className="font-mono text-[10px] uppercase tracking-wider text-[var(--accent)] font-semibold block mb-0.5">
+                      The Reality:
+                    </span>
+                    <p className="text-[var(--muted)] leading-relaxed font-normal">
+                      {project.bento.reality}
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Card Footer: Subtle Read Prompt */}
+              <div className="mt-8 pt-4 border-t border-[var(--line)] flex items-center justify-between text-xs font-mono text-[var(--muted)]">
+                <span>View Full Architecture Spec</span>
+                <span className="text-[var(--accent)] font-medium group-hover:translate-x-1 transition-transform">
+                  Inspect Case Study ↗
+                </span>
+              </div>
+            </article>
+          ))}
         </div>
-
-        {/* Barcode Divider */}
-        <BarcodeDivider label="SECTION // 02-03" />
       </div>
 
       {/* Accessible Detail Modal */}

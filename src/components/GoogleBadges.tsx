@@ -39,20 +39,19 @@ export const GoogleBadges: React.FC = () => {
   const activeIdx = filteredBadges.findIndex((b) => b.id === activeBadge?.id);
 
   return (
-    <section id="badges" className="py-20 sm:py-28 border-b border-[var(--line)] bg-[var(--surface)]">
-      <div className="max-w-[1100px] mx-auto px-4 sm:px-6 lg:px-8 text-left">
+    <section id="badges" className="py-28 sm:py-36 border-b border-[var(--line)] bg-[var(--surface)]">
+      <div className="max-w-[1140px] mx-auto px-4 sm:px-6 lg:px-8 text-left">
         {/* Section Heading & Verification Profile CTA */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10">
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
           <div className="max-w-2xl">
-            <div className="inline-flex items-center gap-2 px-2.5 py-1 rounded-[4px] bg-[var(--accent)]/10 border border-[var(--accent)]/30 text-[var(--accent)] text-xs font-mono mb-3">
-              <Sparkles className="w-3.5 h-3.5" />
-              <span>07 // VERIFIED SKILL BADGES &amp; CREDENTIALS</span>
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-[4px] bg-[var(--bg)] border border-[var(--line)] font-mono text-[11px] uppercase tracking-wider text-[var(--accent)] mb-3 shadow-xs">
+              [ 06 // VERIFIED SKILL BADGES ]
             </div>
-            <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-[var(--ink)]">
+            <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-[var(--ink)]">
               Verified Badges &amp; Micro-Credentials
             </h2>
             <p className="mt-3 text-base text-[var(--muted)] leading-relaxed">
-              Official verifiable credentials spanning Google Cloud &amp; Gemini enterprise AI, Internet Society global digital governance, and accredited cybersecurity &amp; agile frameworks.
+              Official credentials spanning Google Cloud enterprise AI, Internet Society digital governance, and industry-standard cybersecurity frameworks.
             </p>
           </div>
 

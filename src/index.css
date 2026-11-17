@@ -17,17 +17,18 @@
   }
 
   html.dark {
-    --bg: #0C1015;
-    --surface: #141A22;
-    --surface-alt: #1B232D;
-    --ink: #EDF3F8;
-    --muted: #8898A7;
-    --line: #222D3B;
+    --bg: #0D1117;
+    --surface: #161B22;
+    --surface-alt: #1C2128;
+    --ink: #F0F6FC;
+    --muted: #8B949E;
+    --line: #21262D;
+    --line-hover: #30363D;
     --accent: #20C4BA;
-    --accent-hover: #3DE0D6;
-    --accent-fg: #081116;
-    --secondary: #3D8C8E;
-    --secondary-hover: #20C4BA;
+    --accent-hover: #32DDD3;
+    --accent-fg: #0D1117;
+    --secondary: #58A6FF;
+    --secondary-hover: #79C0FF;
     --scan-line: #20C4BA;
   }
 
@@ -37,7 +38,7 @@
 
   html {
     scroll-behavior: smooth;
-    font-family: 'Plus Jakarta Sans', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-family: 'Inter', 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     color: var(--ink);
     background-color: var(--bg);
   }
@@ -52,8 +53,8 @@
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Archivo', -apple-system, BlinkMacSystemFont, sans-serif;
-    letter-spacing: -0.025em;
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    letter-spacing: -0.028em;
     color: var(--ink);
     font-weight: 700;
   }

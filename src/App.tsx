@@ -5,6 +5,7 @@ import { Navbar } from '@/components/Navbar';
 import { Hero } from '@/components/Hero';
 import { Brands } from '@/components/Brands';
 import { Projects } from '@/components/Projects';
+import { PhilosophyCallout } from '@/components/PhilosophyCallout';
 import { Industries } from '@/components/Industries';
 import { Experience } from '@/components/Experience';
 import { Skills } from '@/components/Skills';
@@ -23,6 +24,7 @@ export const App: React.FC = () => {
           <Hero />
           <Brands />
           <Projects />
+          <PhilosophyCallout />
           <Industries />
           <Experience />
           <Skills />

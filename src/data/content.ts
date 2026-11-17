@@ -34,12 +34,19 @@ export type ProjectTag =
   | 'Warehouse'
   | 'ERP';
 
+export interface ProjectBento {
+  context: string;
+  fix: string;
+  reality: string;
+}
+
 export interface Project {
   id: string;
   title: string;
   client: string;
   industry: string;
-  tags: ProjectTag[];
+  tags: string[];
+  bento: ProjectBento;
   description: string;
   outcomes: string[];
   fullCaseStudy?: {
@@ -462,16 +469,44 @@ export const PORTFOLIO_DATA: PortfolioData = {
 
   projects: [
     {
+      id: 'wip-diamond-paints',
+      title: 'WIP Manufacturing Traceability System',
+      client: 'Diamond Paints',
+      industry: 'Paint & Chemical Manufacturing',
+      tags: ['MANUFACTURING', 'AUTOMATION'],
+      bento: {
+        context: 'Fast-moving production floors with manual inventory tracking leaks.',
+        fix: 'Engineered custom RFID layout integrated natively into the central software architecture.',
+        reality: 'Real-time physical item ledger updates without human logging delays.'
+      },
+      description: 'Engineered end-to-end WIP automation for paint chemical blending and tinning gates.',
+      outcomes: [
+        'Integrated durable RFID tracking checkpoints at each manufacturing gate',
+        'Directly synchronized batch progress with central ERP production orders',
+        'Eliminated paper travel cards and boosted real-time shop-floor visibility'
+      ],
+      fullCaseStudy: {
+        challenge: 'Chemical blending and tinning stages relied on paper travel cards, preventing real-time production visibility and complicating lot traceability.',
+        solution: 'Integrated durable barcode and RFID WIP tracking checkpoints at each manufacturing gate, automatically synchronising batch progress with ERP production orders.',
+        hardwareDeployed: ['Chemical-resistant thermal labels', 'Stationary barcode scanners', 'Industrial touch HMI panels']
+      }
+    },
+    {
       id: 'rfid-unilever',
-      title: 'RFID Asset Management System',
+      title: 'Enterprise Physical Asset Intelligence',
       client: 'Unilever',
-      industry: 'Consumer goods (FMCG)',
-      tags: ['RFID', 'Asset tracking'],
-      description: 'Designed and consulted on an RFID-based asset management system to track and monitor enterprise assets.',
+      industry: 'Consumer Goods (FMCG)',
+      tags: ['FMCG', 'ASSET RECOVERY'],
+      bento: {
+        context: 'High-value enterprise assets dispersed across corporate facilities with fragmented manual logs.',
+        fix: 'Structured on-metal passive UHF RFID tagging scheme paired with mobile handheld verification.',
+        reality: '100% audit-verified inventory registers with zero manual reconciliations.'
+      },
+      description: 'Enterprise passive UHF RFID asset tracking system to monitor critical facilities equipment.',
       outcomes: [
         'Formulated enterprise RFID tagging strategy and multi-zone reader deployment plan',
-        'Streamlined asset identification, custody transfer and full lifecycle tracking workflows',
-        'Coordinated hardware integration protocols, handheld verification and pilot deployment'
+        'Streamlined asset identification, custody transfer and lifecycle verification',
+        'Delivered handheld verification protocols and site operational roadmaps'
       ],
       fullCaseStudy: {
         challenge: 'Tracking distributed fixed and movable enterprise assets across facilities with manual reconciliation created inventory discrepancies and audit delays.',
@@ -481,15 +516,20 @@ export const PORTFOLIO_DATA: PortfolioData = {
     },
     {
       id: 'barcode-beaconhouse',
-      title: 'Barcode Asset Management System',
-      client: 'Beaconhouse',
-      industry: 'Education',
-      tags: ['Barcode', 'Asset tracking'],
-      description: 'Implemented barcode-based asset tracking for identification and inventory management across campuses.',
+      title: 'High-Throughput Distribution & Asset System',
+      client: 'Beaconhouse & Retail Networks',
+      industry: 'Education & Commercial Networks',
+      tags: ['SUPPLY CHAIN', 'BARCODE'],
+      bento: {
+        context: 'Multi-site operations lacked standardized physical IDs, causing multi-week audit backlogs.',
+        fix: 'Deployed resilient polyester barcode tags with automated batch-printing and mobile scanning pipelines.',
+        reality: 'Annual audit cycles reduced from 4 weeks to 48 hours with verified physical reconciliation.'
+      },
+      description: 'Standardized barcode-based physical asset tracking across multi-site regional facilities.',
       outcomes: [
-        'Established standardised labelling and barcode scanning workflows for campus operations teams',
-        'Provided comprehensive consultation on industrial thermal printers and rugged mobile computers',
-        'Supervised system configuration, user acceptance testing and regional deployment support'
+        'Standardised labelling and barcode scanning workflows for regional field teams',
+        'Specced industrial thermal printers and rugged mobile computers',
+        'Supervised user acceptance testing and regional deployment support'
       ],
       fullCaseStudy: {
         challenge: 'Multi-campus educational infrastructure lacked standardised physical identification, making annual asset audits time-consuming and error-prone.',
@@ -498,34 +538,21 @@ export const PORTFOLIO_DATA: PortfolioData = {
       }
     },
     {
-      id: 'wip-diamond-paints',
-      title: 'Work-in-Process (WIP) Automation',
-      client: 'Diamond Paints',
-      industry: 'Paint manufacturing',
-      tags: ['WIP automation', 'Barcode', 'RFID'],
-      description: 'Designed and implemented end-to-end WIP automation for paint manufacturing.',
-      outcomes: [
-        'Conducted detailed process analysis to uncover shop-floor bottlenecks and automation opportunities',
-        'Architected barcode/RFID tracking for production stages, raw chemical movement and batch states',
-        'Delivered real-time shop-floor visibility of active batches and work orders, boosting traceability and yield'
-      ],
-      fullCaseStudy: {
-        challenge: 'Chemical blending and tinning stages relied on paper travel cards, preventing real-time production visibility and complicating lot traceability.',
-        solution: 'Integrated durable barcode and RFID WIP tracking checkpoints at each manufacturing gate, automatically synchronising batch progress with ERP production orders.',
-        hardwareDeployed: ['Chemical-resistant thermal labels', 'Stationary barcode scanners', 'Industrial touch HMI panels']
-      }
-    },
-    {
       id: 'hardware-consulting',
-      title: 'RFID and Barcode Hardware Consulting',
-      client: 'Warehouse and Enterprise Environments',
-      industry: 'Warehousing and logistics',
-      tags: ['RFID', 'Barcode', 'Warehouse'],
-      description: 'Technical evaluation and recommendation of UHF tags, fixed and handheld readers, antennas, barcode printers and industrial scanners, matched to each client’s integration needs.',
+      title: 'Turnkey Auto-ID Hardware Architecture',
+      client: 'Warehouse & Industrial Operations',
+      industry: 'Warehousing & Logistics',
+      tags: ['INDUSTRY 4.0', 'HARDWARE EVALUATION'],
+      bento: {
+        context: 'Extreme RF multipath and metal machinery causing frequent reader blind spots.',
+        fix: 'Specced UHF circular antennas, tuned reader profiles, and durable tags for harsh duty cycles.',
+        reality: 'Reliable 99.8%+ read rates in extreme industrial and metal-dense zones.'
+      },
+      description: 'Vendor-agnostic engineering evaluation of UHF tags, portal readers, and industrial scanners.',
       outcomes: [
-        'Specced UHF passive RFID tags, reader gain profiles and antenna beam patterns for RF-challenging zones',
-        'Matched industrial mobile computers and high-speed thermal printers to harsh warehouse duty cycles',
-        'Delivered interoperability validation between Auto-ID edge devices, middleware and host WMS platforms'
+        'Conducted RF propagation testing and read-rate validations for zero blind spots',
+        'Matched industrial mobile computers and thermal printers to harsh warehouse duty cycles',
+        'Delivered interoperability validation between Auto-ID edge hardware and host ERPs'
       ],
       fullCaseStudy: {
         challenge: 'Enterprises frequently over-spec or deploy mismatched Auto-ID hardware that fails in high-multipath RF environments or harsh physical conditions.',
