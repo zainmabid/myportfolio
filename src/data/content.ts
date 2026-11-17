@@ -95,6 +95,17 @@ export interface EducationItem {
   status?: string;
 }
 
+export interface GoogleBadge {
+  id: string;
+  title: string;
+  issuer: string;
+  date: string;
+  badgeUrl: string;
+  image: string;
+  category: string;
+  description: string;
+}
+
 export interface PortfolioData {
   person: PersonInfo;
   brands: Brand[];
@@ -103,6 +114,8 @@ export interface PortfolioData {
   experience: ExperienceItem[];
   skillGroups: SkillGroup[];
   certifications: CertificationItem[];
+  googleBadges: GoogleBadge[];
+  googleProfileUrl: string;
   education: EducationItem[];
 }
 
@@ -1020,6 +1033,66 @@ export const PORTFOLIO_DATA: PortfolioData = {
      *   image: '/path/to/badge.png' // optional: badge art URL or local image
      * },
      * -------------------------------------------------------------------------- */
+  ],
+
+  googleProfileUrl: 'https://www.skills.google/public_profiles/14bbe981-af34-4dd0-b317-30eaf266f8e3',
+
+  googleBadges: [
+    {
+      id: 'google-gemini-draft-nda',
+      title: 'Draft NDA Documents with Gemini',
+      issuer: 'Google Cloud & Google Skills',
+      date: 'Earned Nov 17, 2026',
+      badgeUrl: 'https://www.skills.google/public_profiles/14bbe981-af34-4dd0-b317-30eaf266f8e3/badges/29706992',
+      image: '/badges/google/gemini-draft-nda.png',
+      category: 'Legal AI & Documentation',
+      description:
+        'Leverage Gemini to draft standard Non-Disclosure Agreements aligned with corporate guidelines. Learn how to generate and format contracts conforming to baseline playbooks while drastically shortening legal review cycles.'
+    },
+    {
+      id: 'google-gemini-redact-legal',
+      title: 'Use Gemini to Redact Legal Documents',
+      issuer: 'Google Cloud & Google Skills',
+      date: 'Earned Nov 17, 2026',
+      badgeUrl: 'https://www.skills.google/public_profiles/14bbe981-af34-4dd0-b317-30eaf266f8e3/badges/29706984',
+      image: '/badges/google/gemini-redact-legal.png',
+      category: 'Data Privacy & Litigation',
+      description:
+        'Automate and streamline high-stakes litigation workflows. Utilize structured prompts and connectors to reliably detect Personally Identifiable Information (PII), generate sanitized court-ready PDFs, and compile automated privilege logs.'
+    },
+    {
+      id: 'google-gemini-contract-review',
+      title: 'Contract Review and Playbook Creation with Gemini',
+      issuer: 'Google Cloud & Google Skills',
+      date: 'Earned Nov 17, 2026',
+      badgeUrl: 'https://www.skills.google/public_profiles/14bbe981-af34-4dd0-b317-30eaf266f8e3/badges/29706965',
+      image: '/badges/google/gemini-contract-review.png',
+      category: 'Contracts & Playbook Analysis',
+      description:
+        'Establish standardized contracting rules and rapidly benchmark incoming counterparty agreements against corporate negotiation playbooks to minimize liability and accelerate deal closings.'
+    },
+    {
+      id: 'google-gemini-legal-dsar',
+      title: 'Use Gemini for Legal Data and DSAR Responses',
+      issuer: 'Google Cloud & Google Skills',
+      date: 'Earned Nov 17, 2026',
+      badgeUrl: 'https://www.skills.google/public_profiles/14bbe981-af34-4dd0-b317-30eaf266f8e3/badges/29706910',
+      image: '/badges/google/gemini-legal-dsar.png',
+      category: 'Compliance & DSAR Requests',
+      description:
+        'Leverage Gemini to audit unstructured legal data repositories and formulate compliant Data Subject Access Request (DSAR) responses that strictly fulfill global privacy and governance standards.'
+    },
+    {
+      id: 'google-gemini-regulatory-scanning',
+      title: 'Use Gemini for Legal Regulatory Horizon Scanning',
+      issuer: 'Google Cloud & Google Skills',
+      date: 'Earned Nov 17, 2026',
+      badgeUrl: 'https://www.skills.google/public_profiles/14bbe981-af34-4dd0-b317-30eaf266f8e3/badges/29706897',
+      image: '/badges/google/gemini-regulatory-scanning.png',
+      category: 'Regulatory Horizon Scanning',
+      description:
+        'Implement proactive compliance tracking and horizon scanning using Gemini to systematically monitor legislative updates, evaluate statutory revisions, and maintain audit readiness.'
+    }
   ],
 
   education: [

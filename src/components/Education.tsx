@@ -12,7 +12,7 @@ export const Education: React.FC = () => {
         {/* Section Heading */}
         <div className="max-w-2xl mb-10">
           <span className="font-mono text-xs uppercase tracking-widest text-[var(--muted)] block mb-1">
-            07 // ACADEMIC BACKGROUND
+            08 // ACADEMIC BACKGROUND
           </span>
           <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-[var(--ink)]">
             Education
