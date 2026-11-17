@@ -95,6 +95,25 @@ export interface EducationItem {
   status?: string;
 }
 
+export type BadgeGroup =
+  | 'All'
+  | 'Google Cloud & Gemini'
+  | 'Internet Society (ISOC)'
+  | 'Cloud, Security & Agile';
+
+export interface VerifiedBadge {
+  id: string;
+  title: string;
+  issuer: string;
+  group: 'Google Cloud & Gemini' | 'Internet Society (ISOC)' | 'Cloud, Security & Agile';
+  date: string;
+  badgeUrl: string;
+  image: string;
+  category: string;
+  verificationType?: string;
+  description: string;
+}
+
 export interface GoogleBadge {
   id: string;
   title: string;
@@ -116,6 +135,7 @@ export interface PortfolioData {
   certifications: CertificationItem[];
   googleBadges: GoogleBadge[];
   googleProfileUrl: string;
+  badges: VerifiedBadge[];
   education: EducationItem[];
 }
 
@@ -1036,6 +1056,333 @@ export const PORTFOLIO_DATA: PortfolioData = {
   ],
 
   googleProfileUrl: 'https://www.skills.google/public_profiles/14bbe981-af34-4dd0-b317-30eaf266f8e3',
+
+  badges: [
+    {
+        "id": "google-gemini-draft-nda",
+        "title": "Draft NDA Documents with Gemini",
+        "issuer": "Google Cloud & Google Skills",
+        "group": "Google Cloud & Gemini",
+        "date": "Nov 17, 2026",
+        "badgeUrl": "https://www.skills.google/public_profiles/14bbe981-af34-4dd0-b317-30eaf266f8e3/badges/29706992",
+        "image": "/badges/google/gemini-draft-nda.png",
+        "category": "Legal AI & Documentation",
+        "verificationType": "Google Cloud Verified",
+        "description": "Leverage Gemini to draft standard Non-Disclosure Agreements aligned with corporate guidelines. Generate and format contracts conforming to baseline playbooks while drastically shortening legal review cycles."
+    },
+    {
+        "id": "google-gemini-redact-legal",
+        "title": "Use Gemini to Redact Legal Documents",
+        "issuer": "Google Cloud & Google Skills",
+        "group": "Google Cloud & Gemini",
+        "date": "Nov 17, 2026",
+        "badgeUrl": "https://www.skills.google/public_profiles/14bbe981-af34-4dd0-b317-30eaf266f8e3/badges/29706984",
+        "image": "/badges/google/gemini-redact-legal.png",
+        "category": "Data Privacy & Litigation",
+        "verificationType": "Google Cloud Verified",
+        "description": "Automate and streamline high-stakes litigation workflows. Utilize structured prompts and connectors to reliably detect Personally Identifiable Information (PII), generate sanitized court-ready PDFs, and compile automated privilege logs."
+    },
+    {
+        "id": "google-gemini-contract-review",
+        "title": "Contract Review and Playbook Creation with Gemini",
+        "issuer": "Google Cloud & Google Skills",
+        "group": "Google Cloud & Gemini",
+        "date": "Nov 17, 2026",
+        "badgeUrl": "https://www.skills.google/public_profiles/14bbe981-af34-4dd0-b317-30eaf266f8e3/badges/29706965",
+        "image": "/badges/google/gemini-contract-review.png",
+        "category": "Contracts & Playbook Analysis",
+        "verificationType": "Google Cloud Verified",
+        "description": "Establish standardized contracting rules and rapidly benchmark incoming counterparty agreements against corporate negotiation playbooks to minimize liability and accelerate deal closings."
+    },
+    {
+        "id": "google-gemini-legal-dsar",
+        "title": "Use Gemini for Legal Data and DSAR Responses",
+        "issuer": "Google Cloud & Google Skills",
+        "group": "Google Cloud & Gemini",
+        "date": "Nov 17, 2026",
+        "badgeUrl": "https://www.skills.google/public_profiles/14bbe981-af34-4dd0-b317-30eaf266f8e3/badges/29706910",
+        "image": "/badges/google/gemini-legal-dsar.png",
+        "category": "Compliance & DSAR Requests",
+        "verificationType": "Google Cloud Verified",
+        "description": "Leverage Gemini to audit unstructured legal data repositories and formulate compliant Data Subject Access Request (DSAR) responses that strictly fulfill global privacy and governance standards."
+    },
+    {
+        "id": "google-gemini-regulatory-scanning",
+        "title": "Use Gemini for Legal Regulatory Horizon Scanning",
+        "issuer": "Google Cloud & Google Skills",
+        "group": "Google Cloud & Gemini",
+        "date": "Nov 17, 2026",
+        "badgeUrl": "https://www.skills.google/public_profiles/14bbe981-af34-4dd0-b317-30eaf266f8e3/badges/29706897",
+        "image": "/badges/google/gemini-regulatory-scanning.png",
+        "category": "Regulatory Horizon Scanning",
+        "verificationType": "Google Cloud Verified",
+        "description": "Implement proactive compliance tracking and horizon scanning using Gemini to systematically monitor legislative updates, evaluate statutory revisions, and maintain audit readiness."
+    },
+    {
+        "id": "badge-fortinet-cybersecurity",
+        "title": "Fortinet Certified Fundamentals in Cybersecurity",
+        "issuer": "Fortinet Training Institute",
+        "group": "Cloud, Security & Agile",
+        "date": "2025",
+        "badgeUrl": "/certifications/Fortinet Certified Fundamentals in Cybersecurity.pdf",
+        "image": "/certifications/badges/fortinet-certified-fundamentals.png",
+        "category": "Cybersecurity Fundamentals",
+        "verificationType": "Fortinet Certified",
+        "description": "Core cybersecurity fundamentals, enterprise network defense, attack surface reduction, and threat intelligence landscape."
+    },
+    {
+        "id": "badge-ibm-cloud-essentials",
+        "title": "IBM Cloud Essentials",
+        "issuer": "IBM",
+        "group": "Cloud, Security & Agile",
+        "date": "2023",
+        "badgeUrl": "/certifications/IBM_Cloud_Core_Certified.pdf",
+        "image": "/certifications/badges/IBM%20-%20Cloud%20Essentials.png",
+        "category": "Cloud Infrastructure",
+        "verificationType": "IBM Certified",
+        "description": "Foundational cloud architecture, virtualization, hybrid cloud models, microservices, and enterprise cloud operations."
+    },
+    {
+        "id": "badge-scrum-master-smc",
+        "title": "Scrum Master Certified (SMC)",
+        "issuer": "SCRUMstudy",
+        "group": "Cloud, Security & Agile",
+        "date": "2023",
+        "badgeUrl": "/certifications/Scrum_Fundamentals_Certified-ZainAbid-1173277.pdf",
+        "image": "/certifications/badges/scrum-master-certified-smc.png",
+        "category": "Agile & Scrum Delivery",
+        "verificationType": "SCRUMstudy Certified",
+        "description": "Agile methodologies, sprint ceremonies, backlog grooming, cross-functional servant leadership, and iterative product delivery."
+    },
+    {
+        "id": "badge-pmi-atp",
+        "title": "PMI Authorized Training Partner Program",
+        "issuer": "Project Management Institute (PMI)",
+        "group": "Cloud, Security & Agile",
+        "date": "2021",
+        "badgeUrl": "/certifications/Agile Development Practices (PMI).pdf",
+        "image": "/certifications/badges/pmi-authorized-training-partner.jpg",
+        "category": "Project Management Frameworks",
+        "verificationType": "PMI Accredited",
+        "description": "Accredited PMI framework covering predictive, agile, and hybrid delivery lifecycles for complex enterprise programs."
+    },
+    {
+        "id": "isoc-chapter-specialist",
+        "title": "Chapter Specialist",
+        "issuer": "Internet Society",
+        "group": "Internet Society (ISOC)",
+        "date": "Oct 31, 2026",
+        "badgeUrl": "https://www.credential.net/f044b399-6d2b-40e1-9a3e-4a0e6b0e59e0",
+        "image": "/badges/accredible/chapter-specialist.png",
+        "category": "Project Leadership & Grants",
+        "verificationType": "W3C Verifiable Credential",
+        "description": "This module will explore the main aspects of a chapter charter and the importance of the charter letter. Learners will have the chance to understand the key differences and responsibilities of Internet Society chapter leaders, while adhering to the requirements of the organization to maintain a chapter in good standing."
+    },
+    {
+        "id": "isoc-commercial-context-of-digital-footprint",
+        "title": "Commercial Context of Digital Footprint",
+        "issuer": "Internet Society",
+        "group": "Internet Society (ISOC)",
+        "date": "Oct 31, 2026",
+        "badgeUrl": "https://www.credential.net/da9c2327-7d27-4c1e-a348-2fa3857ac0e4",
+        "image": "/badges/accredible/commercial-context-of-digital-footprint.png",
+        "category": "Digital Privacy & Governance",
+        "verificationType": "W3C Verifiable Credential",
+        "description": "The commercial context of digital footprints: advertisers, publishers, and aggregators"
+    },
+    {
+        "id": "isoc-data-protection-laws",
+        "title": "Data Protection Laws",
+        "issuer": "Internet Society",
+        "group": "Internet Society (ISOC)",
+        "date": "Oct 31, 2026",
+        "badgeUrl": "https://www.credential.net/41e4ce57-a999-4446-a10b-2161ca68b0c9",
+        "image": "/badges/accredible/data-protection-laws.png",
+        "category": "Digital Privacy & Governance",
+        "verificationType": "W3C Verifiable Credential",
+        "description": "Challenges related to national privacy laws, cultural norms,  and cross-border data protection"
+    },
+    {
+        "id": "isoc-digital-footprints-and-different-devices",
+        "title": "Digital Footprints and Different Devices",
+        "issuer": "Internet Society",
+        "group": "Internet Society (ISOC)",
+        "date": "Oct 31, 2026",
+        "badgeUrl": "https://www.credential.net/2fe23149-907e-4647-8582-c6e8c5ab9d68",
+        "image": "/badges/accredible/digital-footprints-and-different-devices.png",
+        "category": "Digital Privacy & Governance",
+        "verificationType": "W3C Verifiable Credential",
+        "description": "Different footprints from different types of devices. "
+    },
+    {
+        "id": "isoc-dynamics-governing-the-online-world",
+        "title": "Dynamics Governing the Online World",
+        "issuer": "Internet Society",
+        "group": "Internet Society (ISOC)",
+        "date": "Oct 31, 2026",
+        "badgeUrl": "https://www.credential.net/d5dcf745-3be9-4c0c-9dcb-5999f416e03d",
+        "image": "/badges/accredible/dynamics-governing-the-online-world.png",
+        "category": "Project Leadership & Grants",
+        "verificationType": "W3C Verifiable Credential",
+        "description": "Different dynamics that govern the online world"
+    },
+    {
+        "id": "isoc-economic-value-of-digital-footprints",
+        "title": "Economic Value of Digital Footprints",
+        "issuer": "Internet Society",
+        "group": "Internet Society (ISOC)",
+        "date": "Oct 31, 2026",
+        "badgeUrl": "https://www.credential.net/4c02d61d-d463-4279-bb7f-9ac3f946ace9",
+        "image": "/badges/accredible/economic-value-of-digital-footprints.png",
+        "category": "Digital Privacy & Governance",
+        "verificationType": "W3C Verifiable Credential",
+        "description": "In this module you will learn about the Digital footprints' economic value"
+    },
+    {
+        "id": "isoc-grant-application",
+        "title": "Grant Application",
+        "issuer": "Internet Society",
+        "group": "Internet Society (ISOC)",
+        "date": "Oct 31, 2026",
+        "badgeUrl": "https://www.credential.net/087bc4ba-fe4b-477d-bad2-ad1653e81452",
+        "image": "/badges/accredible/grant-application.png",
+        "category": "Project Leadership & Grants",
+        "verificationType": "W3C Verifiable Credential",
+        "description": "This module will guide you through the process of  thinking and planning for the sustainability of your project, and writing your project narrative.  "
+    },
+    {
+        "id": "isoc-how-to-manage-and-control-our-digital-footprints",
+        "title": "How to manage and control our digital footprints",
+        "issuer": "Internet Society",
+        "group": "Internet Society (ISOC)",
+        "date": "Oct 31, 2026",
+        "badgeUrl": "https://www.credential.net/92c8a32b-5e66-4d98-9760-c89aed9b4baa",
+        "image": "/badges/accredible/how-to-manage-and-control-our-digital-footprints.png",
+        "category": "Digital Privacy & Governance",
+        "verificationType": "W3C Verifiable Credential",
+        "description": "This module provides the learner with hands-on practice using the package management tool of FreeBSD. It guides the learner on how to install software on FreeBSD. The learner will follow step-by-step guides in interactive walkthroughs and demos to install the following software: Perl, Python, and VIM."
+    },
+    {
+        "id": "isoc-importance-of-digital-footprints",
+        "title": "Importance of Digital Footprints",
+        "issuer": "Internet Society",
+        "group": "Internet Society (ISOC)",
+        "date": "Oct 31, 2026",
+        "badgeUrl": "https://www.credential.net/5df622b1-e612-4b0e-8c17-ccbf0db61893",
+        "image": "/badges/accredible/importance-of-digital-footprints.png",
+        "category": "Digital Privacy & Governance",
+        "verificationType": "W3C Verifiable Credential",
+        "description": "The module explains the importance of explicit and implicit digital footprints   "
+    },
+    {
+        "id": "isoc-individual-privacy-rights-it-s-complicated",
+        "title": "Individual Privacy Rights: It’s Complicated",
+        "issuer": "Internet Society",
+        "group": "Internet Society (ISOC)",
+        "date": "Oct 31, 2026",
+        "badgeUrl": "https://www.credential.net/de70cd68-fd81-481e-a461-c7e4bd254dbf",
+        "image": "/badges/accredible/individual-privacy-rights-it-s-complicated.png",
+        "category": "Digital Privacy & Governance",
+        "verificationType": "W3C Verifiable Credential",
+        "description": "Having looked at the national and international dimension in the previous module, this module considers the perspective of the individual, their rights, and the role of informed consent. "
+    },
+    {
+        "id": "isoc-introductions-to-online-privacy",
+        "title": "Introductions to Online Privacy",
+        "issuer": "Internet Society",
+        "group": "Internet Society (ISOC)",
+        "date": "Oct 31, 2026",
+        "badgeUrl": "https://www.credential.net/8bf88359-d3e2-49e0-a92e-13a49feb3eae",
+        "image": "/badges/accredible/introductions-to-online-privacy.png",
+        "category": "Digital Privacy & Governance",
+        "verificationType": "W3C Verifiable Credential",
+        "description": "This module introduces the topic of online privacy, relating it to our understanding of real-world privacy and explaining why it is so important in a digital society."
+    },
+    {
+        "id": "isoc-monitoring-evaluation-learning-and-communication",
+        "title": "Monitoring, Evaluation, Learning and Communication",
+        "issuer": "Internet Society",
+        "group": "Internet Society (ISOC)",
+        "date": "Oct 31, 2026",
+        "badgeUrl": "https://www.credential.net/a89d9153-b35e-47a6-a456-f40a8ac2b2bf",
+        "image": "/badges/accredible/monitoring-evaluation-learning-and-communication.png",
+        "category": "Project Leadership & Grants",
+        "verificationType": "W3C Verifiable Credential",
+        "description": "This module will guide you through the process of  incorporating monitoring, evaluation, and learning (MEL) principles, as well as communication,  into the implementation of a project. It is likely that you and your team are already conducting a lot of these practices informally, through conversations and interactions among staff and partners that you would consider project implementation. This guidance will support you in formalizing some of these practices into processes to ensure consistency and comprehensiveness of the information you are gathering and communicating around your project."
+    },
+    {
+        "id": "isoc-performance-indicators-and-budgeting",
+        "title": "Performance Indicators and Budgeting",
+        "issuer": "Internet Society",
+        "group": "Internet Society (ISOC)",
+        "date": "Oct 31, 2026",
+        "badgeUrl": "https://www.credential.net/c7739d0c-3f57-4e0a-bd3b-b69c366d40b6",
+        "image": "/badges/accredible/performance-indicators-and-budgeting.png",
+        "category": "Project Leadership & Grants",
+        "verificationType": "W3C Verifiable Credential",
+        "description": "This module will guide you through the process of  defining and developing key performance indicators (KPIs) for your project, and creating a budget."
+    },
+    {
+        "id": "isoc-privacy-frameworks",
+        "title": "Privacy Frameworks",
+        "issuer": "Internet Society",
+        "group": "Internet Society (ISOC)",
+        "date": "Oct 31, 2026",
+        "badgeUrl": "https://www.credential.net/f83cacec-dbad-496c-bf53-8e7601a60cae",
+        "image": "/badges/accredible/privacy-frameworks.png",
+        "category": "Digital Privacy & Governance",
+        "verificationType": "W3C Verifiable Credential",
+        "description": "This module describes the role of privacy and data protection laws in regulating the collection and use of personal data. It also highlights the issues arising from cross-border transfers of data, and gives examples of multi-national approaches to this problem."
+    },
+    {
+        "id": "isoc-project-design",
+        "title": "Project Design",
+        "issuer": "Internet Society",
+        "group": "Internet Society (ISOC)",
+        "date": "Oct 31, 2026",
+        "badgeUrl": "https://www.credential.net/aeeb7705-4007-465e-8f93-c1b7d346d9e6",
+        "image": "/badges/accredible/project-design.png",
+        "category": "Project Leadership & Grants",
+        "verificationType": "W3C Verifiable Credential",
+        "description": "This module will guide you through the process of developing a problem statement, establishing a theory of change, and setting goals and activities for your project. "
+    },
+    {
+        "id": "isoc-protecting-online-privacy-through-ethical-data-collection",
+        "title": "Protecting Online Privacy Through Ethical Data Collection",
+        "issuer": "Internet Society",
+        "group": "Internet Society (ISOC)",
+        "date": "Oct 31, 2026",
+        "badgeUrl": "https://www.credential.net/7a0f401e-169a-4648-ac12-fe59399828d8",
+        "image": "/badges/accredible/protecting-online-privacy-through-ethical-data-collection.png",
+        "category": "Digital Privacy & Governance",
+        "verificationType": "W3C Verifiable Credential",
+        "description": "By now it will be clear that online privacy is subject to regulatory and commercial pressures, with multiple stakeholders whose priorities and motivations may conflict. This module examines the importance of the ethical dimension in collecting and processing personal data."
+    },
+    {
+        "id": "isoc-the-effects-of-the-loss-of-privacy",
+        "title": "The Effects of the Loss of Privacy",
+        "issuer": "Internet Society",
+        "group": "Internet Society (ISOC)",
+        "date": "Oct 31, 2026",
+        "badgeUrl": "https://www.credential.net/bcf14846-88b7-4a02-983b-6fd8ec5dff1c",
+        "image": "/badges/accredible/the-effects-of-the-loss-of-privacy.png",
+        "category": "Digital Privacy & Governance",
+        "verificationType": "W3C Verifiable Credential",
+        "description": "The loss of privacy and anonymity's effects"
+    },
+    {
+        "id": "isoc-what-is-a-digital-footprint",
+        "title": "What is a Digital Footprint?",
+        "issuer": "Internet Society",
+        "group": "Internet Society (ISOC)",
+        "date": "Oct 31, 2026",
+        "badgeUrl": "https://www.credential.net/bff4f16a-6d82-4adc-8ade-ba8ed5094729",
+        "image": "/badges/accredible/what-is-a-digital-footprint.png",
+        "category": "Digital Privacy & Governance",
+        "verificationType": "W3C Verifiable Credential",
+        "description": "In a digital society, everything we do online (and even, increasingly, offline), leaves digital traces. These traces accumulate into a “digital footprint” that we never see, and which we do not control. This module will help you understand what your digital footprint is, and its implications for you."
+    }
+],
 
   googleBadges: [
     {
