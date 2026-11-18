@@ -66,13 +66,13 @@ export const Brands: React.FC = () => {
       <div className="max-w-[1140px] mx-auto px-4 sm:px-6 lg:px-8 mb-12 sm:mb-16 text-left">
         <div className="max-w-3xl">
           <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-800/90 border border-slate-700 font-mono text-[11px] uppercase tracking-wider text-slate-200 mb-3 shadow-xs">
-            [ 01 // ENTERPRISE CLIENTS ]
+            [ 01 // PROFESSIONAL FOOTPRINT ]
           </span>
           <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold tracking-[-0.02em] text-white">
-            Client &amp; Enterprise Deployments
+            Professional Footprint &amp; Engagements
           </h2>
           <p className="mt-3 text-base text-[#94A3B8] leading-relaxed">
-            National &amp; multinational corporate, governmental and institutional partners.
+            High-impact projects delivered through strategic institutional collaborations, enterprise employers, and independent consulting advisory.
           </p>
         </div>
       </div>
