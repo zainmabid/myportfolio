@@ -109,6 +109,7 @@ export interface ExperienceItem {
 export interface SkillGroup {
   id: string;
   category: string;
+  coreFocus: string;
   skills: string[];
 }
 
@@ -912,44 +913,48 @@ export const PORTFOLIO_DATA: PortfolioData = {
   skillGroups: [
     {
       id: 'autoid-hardware',
-      category: 'Auto-ID and hardware',
+      category: 'Auto-ID & Hardware Engineering',
+      coreFocus: 'End-to-end industrial edge device planning and RF physics configuration.',
       skills: [
-        'UHF passive RFID tags',
-        'Fixed RFID readers',
-        'Handheld RFID scanners',
-        'RFID antennas & beam tuning',
-        'Industrial barcode printers',
-        'Industrial barcode scanners (1D/2D)',
-        'Forklift terminals & mobile printers',
-        'On-metal tag engineering'
+        'UHF Passive RFID',
+        'Fixed RFID Readers',
+        'Handheld Scanners',
+        'Antenna Beam Tuning',
+        'On-Metal Tagging',
+        'Forklift Terminals',
+        'Industrial Barcode Printers',
+        '1D/2D Scanners'
       ]
     },
     {
       id: 'systems-integration',
-      category: 'Systems and integration',
+      category: 'Systems Architecture & Integration',
+      coreFocus: 'Middleware engineering and seamless cross-platform enterprise synchronization.',
       skills: [
-        'RFID middleware integration',
-        'WMS (Warehouse Management) integration',
-        'Enterprise ERP systems',
-        'SQL databases & query design',
-        'Linux / Ubuntu administration',
-        'Enterprise mobility solutions',
-        'REST APIs & webhook feeds',
-        'Network topologies (CCNA)'
+        'RFID Middleware',
+        'WMS Integration',
+        'Enterprise ERP',
+        'SQL Query Design',
+        'Linux/Ubuntu Admin',
+        'REST APIs',
+        'Webhook Feeds',
+        'Network Topologies',
+        'Edge Connectivity'
       ]
     },
     {
       id: 'consulting-delivery',
-      category: 'Consulting and delivery',
+      category: 'Consulting & Enterprise Delivery',
+      coreFocus: 'Scaling organizational execution through technical governance and process audits.',
       skills: [
-        'Solution architecture',
-        'Process automation & workflow analysis',
-        'Proof-of-Concept (POC) design',
-        'Technical documentation & SOPs',
-        'Client onboarding & training',
-        'Vendor-neutral hardware evaluation',
-        'Agile project delivery (CSM / PMI)',
-        'Change management & adoption'
+        'Solution Architecture',
+        'Process Automation',
+        'Workflow Audits',
+        'POC Prototyping',
+        'Technical SOPs',
+        'Vendor Evaluation',
+        'Agile Governance',
+        'Change Management'
       ]
     }
   ],
