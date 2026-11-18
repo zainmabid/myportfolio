@@ -733,15 +733,6 @@ export const PORTFOLIO_DATA: PortfolioData = {
 
   impactVerticals: [
     {
-      id: 'strategic-defense',
-      iconName: 'Shield',
-      title: 'Strategic & Defense Organizations',
-      description: 'High-security infrastructure, zero-trust digital solutions, and secure workflow deployment.',
-      tag: 'STRATEGIC // HIGH-SECURITY',
-      statusTag: 'Classified Scope',
-      canExpand: false
-    },
-    {
       id: 'gov-tax',
       iconName: 'Landmark',
       title: 'Government & Tax Authorities',
@@ -819,6 +810,15 @@ export const PORTFOLIO_DATA: PortfolioData = {
           iconName: 'Warehouse'
         }
       ]
+    },
+    {
+      id: 'strategic-defense',
+      iconName: 'Shield',
+      title: 'Strategic & Defense Organizations',
+      description: 'High-security infrastructure, zero-trust digital solutions, and secure workflow deployment.',
+      tag: 'STRATEGIC // HIGH-SECURITY',
+      statusTag: 'Classified Scope',
+      canExpand: false
     }
   ],
 
