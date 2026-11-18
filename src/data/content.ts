@@ -131,7 +131,11 @@ export interface EducationItem {
   degree: string;
   institution: string;
   location: string;
-  dates: string;
+  badgeTag: string;
+  timeline: string;
+  coreValue: string;
+  badgeStyle?: 'foundation' | 'governance';
+  dates?: string;
   status?: string;
 }
 
@@ -1807,15 +1811,22 @@ export const PORTFOLIO_DATA: PortfolioData = {
       degree: 'BS, Computer Science',
       institution: 'PMAS University Institute of Information Technology',
       location: 'Rawalpindi, Pakistan',
-      dates: '2011 to 2015'
+      badgeTag: 'Engineering Foundation',
+      timeline: 'Graduated: 2015',
+      badgeStyle: 'foundation',
+      coreValue:
+        'Specialized in Systems Architecture, Relational Databases, and Network Topologies—forming the technical engineering foundation for complex Auto-ID & Middleware deployments.'
     },
     {
       id: 'ms-pm',
       degree: 'MS, Project Management',
       institution: 'COMSATS University Islamabad',
       location: 'Islamabad, Pakistan',
-      dates: 'Enrolled',
-      status: 'On hold'
+      badgeTag: 'Enterprise Governance',
+      timeline: 'Graduate Studies',
+      badgeStyle: 'governance',
+      coreValue:
+        'Focused on Advanced Procurement Governance, Risk Mitigation, and Agile Methodologies—enabling precise execution of high-stakes public sector (PPRA) and international (UN) compliance bids.'
     }
   ]
 };
