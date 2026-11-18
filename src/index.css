@@ -1,11 +1,18 @@
 @import "tailwindcss";
 
+@theme {
+  --font-heading: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-subheading: 'Manrope', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-sans: 'Manrope', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'Space Mono', monospace;
+}
+
 @layer base {
   :root {
     --bg: #FBFBFA;
     --surface: #FFFFFF;
     --surface-alt: #F4F4F0;
-    --ink: #090D16;
+    --ink: #1A1A1A;
     --muted: #475569;
     --line: #E2E8F0;
     --line-hover: #CBD5E1;
@@ -21,7 +28,7 @@
     --bg: #FBFBFA;
     --surface: #FFFFFF;
     --surface-alt: #F4F4F0;
-    --ink: #090D16;
+    --ink: #1A1A1A;
     --muted: #475569;
     --line: #E2E8F0;
     --line-hover: #CBD5E1;
@@ -39,7 +46,7 @@
 
   html {
     scroll-behavior: smooth;
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-family: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     color: var(--ink);
     background-color: var(--bg);
   }
@@ -49,15 +56,23 @@
     background-color: var(--bg);
     color: var(--ink);
     line-height: 1.6;
+    font-family: 'Manrope', -apple-system, BlinkMacSystemFont, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
 
-  h1, h2, h3, h4, h5, h6 {
-    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  /* Titles / Main Headings: Space Grotesk */
+  h1, h2 {
+    font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
     letter-spacing: -0.02em;
-    color: #090D16;
     font-weight: 700;
+  }
+
+  /* Sub-headings: Manrope (Medium / Semi-Bold) */
+  h3, h4, h5, h6 {
+    font-family: 'Manrope', -apple-system, BlinkMacSystemFont, sans-serif;
+    letter-spacing: -0.015em;
+    font-weight: 600;
   }
 
   /* Accessibility: visible focus states */
@@ -69,6 +84,18 @@
     outline: 2px solid var(--accent);
     outline-offset: 3px;
   }
+}
+
+.font-heading {
+  font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.font-subheading {
+  font-family: 'Manrope', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.font-mono {
+  font-family: 'Space Mono', monospace;
 }
 
 /* Executive Physical Depth Card Styling */

@@ -95,7 +95,7 @@ export const Barcode: React.FC<BarcodeProps> = ({
                   y={0}
                   width={bar.width}
                   height={height}
-                  className="fill-[#090D16]"
+                  className="fill-[#1A1A1A]"
                 />
               );
             });
@@ -105,7 +105,7 @@ export const Barcode: React.FC<BarcodeProps> = ({
 
       {/* Monospace Human Readable Text */}
       {showText && (
-        <div className="text-center font-mono text-[11px] sm:text-xs tracking-[0.25em] text-[#090D16] mt-1.5 uppercase font-medium">
+        <div className="text-center font-mono text-[11px] sm:text-xs tracking-[0.25em] text-[#1A1A1A] mt-1.5 uppercase font-medium">
           *{value}*
         </div>
       )}

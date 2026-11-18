@@ -66,7 +66,7 @@ export const Certifications: React.FC = () => {
                   onClick={() => setSelectedGroup(group)}
                   className={`px-3.5 py-1.5 rounded-lg font-mono text-xs uppercase tracking-wider transition-colors cursor-pointer ${
                     isActive
-                      ? 'bg-white text-[#090D16] font-bold shadow-sm'
+                      ? 'bg-white text-[#1A1A1A] font-bold shadow-sm'
                       : 'bg-[#131B2E] text-slate-300 hover:text-white border border-slate-800 hover:border-slate-700'
                   }`}
                 >
@@ -141,7 +141,7 @@ export const Certifications: React.FC = () => {
                 </div>
 
                 {/* Credential Title */}
-                <h3 className="font-heading text-sm sm:text-base font-bold tracking-[-0.02em] text-white leading-snug">
+                <h3 className="font-subheading text-sm sm:text-base font-bold tracking-[-0.015em] text-white leading-snug">
                   {item.title}
                 </h3>
               </div>
@@ -184,10 +184,10 @@ export const Certifications: React.FC = () => {
           <div className="mt-8 text-center">
             <button
               onClick={() => setShowAll(!showAll)}
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-white hover:bg-slate-100 text-[#090D16] text-xs font-mono uppercase tracking-wider font-semibold transition-colors cursor-pointer shadow-md"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-white hover:bg-slate-100 text-[#1A1A1A] text-xs font-mono uppercase tracking-wider font-semibold transition-colors cursor-pointer shadow-md"
             >
               <span>{showAll ? 'Show Fewer Credentials' : `Show All Credentials (${filteredItems.length})`}</span>
-              {showAll ? <ChevronUp className="w-4 h-4 text-[#090D16]" /> : <ChevronDown className="w-4 h-4 text-[#090D16]" />}
+              {showAll ? <ChevronUp className="w-4 h-4 text-[#1A1A1A]" /> : <ChevronDown className="w-4 h-4 text-[#1A1A1A]" />}
             </button>
           </div>
         )}

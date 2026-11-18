@@ -52,7 +52,7 @@ export const Hero: React.FC = () => {
           <div className="lg:col-span-7 flex flex-col justify-center">
             {/* Tag / Capsule */}
             <motion.div variants={lineVariants} className="mb-6">
-              <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-[#E2E8F0] font-mono text-[11px] uppercase tracking-wider text-[#090D16] shadow-xs">
+              <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-[#E2E8F0] font-mono text-[11px] uppercase tracking-wider text-[#1A1A1A] shadow-xs">
                 <span className="w-1.5 h-1.5 rounded-full bg-[#0F172A]" aria-hidden="true" />
                 [ STRATEGY &amp; OPERATIONS ]
               </span>
@@ -60,9 +60,9 @@ export const Hero: React.FC = () => {
 
             {/* Main Headline */}
             <motion.div variants={lineVariants} className="overflow-hidden">
-              <h1 className="font-heading text-4xl sm:text-5xl lg:text-[3.5rem] font-bold tracking-[-0.02em] text-[#090D16] leading-[1.12]">
+              <h1 className="font-heading text-4xl sm:text-5xl lg:text-[3.5rem] font-bold tracking-[-0.02em] text-[#1A1A1A] leading-[1.12]">
                 I build the physical tracking workflows that keep enterprise software{' '}
-                <span className="text-[#090D16] underline decoration-slate-300 underline-offset-8">accurate</span>.
+                <span className="text-[#1A1A1A] underline decoration-slate-300 underline-offset-8">accurate</span>.
               </h1>
             </motion.div>
 
@@ -91,7 +91,7 @@ export const Hero: React.FC = () => {
                 href={person.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl bg-white hover:bg-slate-50 text-[#090D16] border border-[#E2E8F0] font-medium text-sm transition-colors shadow-xs"
+                className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl bg-white hover:bg-slate-50 text-[#1A1A1A] border border-[#E2E8F0] font-medium text-sm transition-colors shadow-xs"
               >
                 <span>LinkedIn</span>
                 <ExternalLink className="w-3.5 h-3.5 text-[#475569]" />
@@ -109,7 +109,7 @@ export const Hero: React.FC = () => {
               <div className="relative rounded-2xl overflow-hidden border border-[#E2E8F0] bg-white shadow-sm hover:shadow-md p-3 sm:p-4 transition-all duration-300">
                 {/* Minimalist Top Edge Strip */}
                 <div className="px-4 py-2.5 rounded-t-xl border-b border-[#E2E8F0] bg-[#F4F4F0] flex items-center justify-between font-mono text-[10px] uppercase tracking-wider text-[#475569]">
-                  <span className="flex items-center gap-1.5 text-[#090D16] font-semibold">
+                  <span className="flex items-center gap-1.5 text-[#1A1A1A] font-semibold">
                     <span className="w-2 h-2 rounded-full bg-[#0F172A]" />
                     FOUNDER &amp; MANAGING DIRECTOR
                   </span>
@@ -138,7 +138,7 @@ export const Hero: React.FC = () => {
                 <div className="p-4 rounded-b-xl border-t border-[#E2E8F0] bg-white">
                   <div className="flex items-start justify-between gap-2">
                     <div>
-                      <div className="font-heading font-semibold text-base text-[#090D16]">
+                      <div className="font-heading font-semibold text-base text-[#1A1A1A]">
                         {person.name}
                       </div>
                       <div className="text-xs text-[#475569] font-medium mt-0.5">
@@ -153,7 +153,7 @@ export const Hero: React.FC = () => {
                   </div>
                   <div className="text-xs text-[#475569] mt-2 pt-2 border-t border-[#E2E8F0] flex items-center justify-between font-mono text-[10px]">
                     <span>Zaintegrated Solutions</span>
-                    <span className="text-[#090D16] font-medium">Lahore, PK</span>
+                    <span className="text-[#1A1A1A] font-medium">Lahore, PK</span>
                   </div>
                 </div>
               </div>

@@ -17,20 +17,20 @@ export const Contact: React.FC = () => {
   };
 
   return (
-    <footer id="contact" className="py-28 sm:py-36 bg-[#FBFBFA] text-left border-t border-[#E2E8F0] text-[#090D16]">
+    <footer id="contact" className="py-28 sm:py-36 bg-[#FBFBFA] text-left border-t border-[#E2E8F0] text-[#1A1A1A]">
       <div className="max-w-[1140px] mx-auto px-4 sm:px-6 lg:px-8">
         {/* Bold, Simple, Highly Professional Closure Block */}
         <div className="p-8 sm:p-12 lg:p-14 rounded-2xl bg-white border border-[#E2E8F0] shadow-sm relative overflow-hidden">
           <div className="max-w-2xl">
             {/* Tag / Capsule */}
             <div className="mb-4">
-              <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#F4F4F0] border border-[#E2E8F0] font-mono text-[11px] uppercase tracking-wider text-[#090D16] shadow-xs">
+              <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#F4F4F0] border border-[#E2E8F0] font-mono text-[11px] uppercase tracking-wider text-[#1A1A1A] shadow-xs">
                 [ DIRECT ENGAGEMENT ]
               </span>
             </div>
 
             {/* Title */}
-            <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold tracking-[-0.02em] text-[#090D16] leading-tight">
+            <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold tracking-[-0.02em] text-[#1A1A1A] leading-tight">
               Let's bypass the corporate techno-babble.
             </h2>
 
@@ -49,7 +49,7 @@ export const Contact: React.FC = () => {
                 href={person.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2.5 px-7 py-3.5 rounded-xl bg-[#0F172A] hover:bg-[#1E293B] text-white font-medium text-sm transition-all shadow-sm"
+                className="inline-flex items-center gap-2.5 px-7 py-3.5 rounded-xl bg-[#0F172A] hover:bg-[#1E293B] text-white font-semibold text-sm transition-all shadow-sm"
               >
                 <LinkedInIcon className="w-4 h-4" />
                 <span>Connect on LinkedIn</span>
@@ -62,9 +62,9 @@ export const Contact: React.FC = () => {
                 whileTap={{ scale: 0.98 }}
                 transition={{ type: 'spring', stiffness: 400, damping: 20 }}
                 href={`mailto:${person.email}?subject=${encodeURIComponent('Operational Review / RFID Evaluation')}`}
-                className="inline-flex items-center gap-2.5 px-7 py-3.5 rounded-xl bg-white hover:bg-slate-50 text-[#090D16] border border-[#E2E8F0] font-medium text-sm transition-colors shadow-xs"
+                className="inline-flex items-center gap-2.5 px-7 py-3.5 rounded-xl bg-white hover:bg-slate-50 text-[#1A1A1A] border border-[#E2E8F0] font-semibold text-sm transition-colors shadow-xs"
               >
-                <Mail className="w-4 h-4 text-[#090D16]" />
+                <Mail className="w-4 h-4 text-[#1A1A1A]" />
                 <span>Schedule an Operational Review</span>
               </motion.a>
 
@@ -76,9 +76,9 @@ export const Contact: React.FC = () => {
                 href="https://wa.me/923205270594"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-white hover:bg-slate-50 text-[#090D16] border border-[#E2E8F0] font-medium text-sm transition-colors shadow-xs"
+                className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-white hover:bg-slate-50 text-[#1A1A1A] border border-[#E2E8F0] font-semibold text-sm transition-colors shadow-xs"
               >
-                <Phone className="w-4 h-4 text-[#090D16]" />
+                <Phone className="w-4 h-4 text-[#1A1A1A]" />
                 <span>WhatsApp Direct</span>
               </motion.a>
             </div>
@@ -94,7 +94,7 @@ export const Contact: React.FC = () => {
               className="h-6 w-auto object-contain bg-white rounded p-0.5 border border-[#E2E8F0] shadow-xs"
             />
             <div>
-              <span className="font-heading font-semibold text-[#090D16]">Zain Mashhood Abid</span>
+              <span className="font-heading font-semibold text-[#1A1A1A]">Zain Mashhood Abid</span>
               <span className="mx-2">•</span>
               <span>Founder &amp; MD, Zaintegrated Solutions</span>
             </div>
@@ -104,7 +104,7 @@ export const Contact: React.FC = () => {
             <span>© {new Date().getFullYear()} Zain Mashhood Abid. All rights reserved.</span>
             <button
               onClick={scrollToTop}
-              className="inline-flex items-center gap-1 text-[#475569] hover:text-[#090D16] transition-colors cursor-pointer"
+              className="inline-flex items-center gap-1 text-[#475569] hover:text-[#1A1A1A] transition-colors cursor-pointer"
               aria-label="Back to top"
             >
               <span>Back to Top</span>

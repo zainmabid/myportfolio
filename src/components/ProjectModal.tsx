@@ -43,18 +43,18 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
         <div className="flex items-start justify-between gap-4 pb-4 border-b border-[#E2E8F0]">
           <div>
             <div className="flex items-center gap-2 mb-1.5">
-              <span className="font-mono text-[10px] uppercase tracking-widest px-2.5 py-0.5 rounded-md bg-[#F4F4F0] border border-[#E2E8F0] text-[#090D16] font-semibold">
+              <span className="font-mono text-[10px] uppercase tracking-widest px-2.5 py-0.5 rounded-md bg-[#F4F4F0] border border-[#E2E8F0] text-[#1A1A1A] font-semibold">
                 {project.industry}
               </span>
             </div>
-            <h2 id="modal-project-title" className="font-heading text-2xl sm:text-3xl font-bold tracking-[-0.02em] text-[#090D16]">
+            <h2 id="modal-project-title" className="font-heading text-2xl sm:text-3xl font-bold tracking-[-0.02em] text-[#1A1A1A]">
               {project.title}
             </h2>
           </div>
 
           <button
             onClick={onClose}
-            className="p-1.5 rounded-lg border border-[#E2E8F0] hover:bg-slate-100 text-slate-500 hover:text-[#090D16] transition-colors cursor-pointer"
+            className="p-1.5 rounded-lg border border-[#E2E8F0] hover:bg-slate-100 text-slate-500 hover:text-[#1A1A1A] transition-colors cursor-pointer"
             aria-label="Close project modal"
           >
             <X className="w-5 h-5" />
@@ -66,7 +66,7 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
           <h3 className="font-mono text-[11px] uppercase tracking-widest text-[#475569] mb-2 font-semibold">
             Scope &amp; Overview
           </h3>
-          <p className="text-[#090D16] text-base leading-relaxed">
+          <p className="text-[#1A1A1A] text-base leading-relaxed">
             {project.description}
           </p>
         </div>
@@ -84,10 +84,10 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
             </div>
 
             <div>
-              <h4 className="font-mono text-[11px] uppercase tracking-widest text-[#090D16] mb-1.5 font-semibold">
+              <h4 className="font-mono text-[11px] uppercase tracking-widest text-[#1A1A1A] mb-1.5 font-semibold">
                 Engineered Solution
               </h4>
-              <p className="text-sm text-[#090D16] leading-relaxed">
+              <p className="text-sm text-[#1A1A1A] leading-relaxed">
                 {project.fullCaseStudy.solution}
               </p>
             </div>
@@ -105,7 +105,7 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
               {project.fullCaseStudy.hardwareDeployed.map((hw, idx) => (
                 <span
                   key={idx}
-                  className="font-mono text-xs px-2.5 py-1 rounded-md bg-[#F4F4F0] border border-[#E2E8F0] text-[#090D16]"
+                  className="font-mono text-xs px-2.5 py-1 rounded-md bg-[#F4F4F0] border border-[#E2E8F0] text-[#1A1A1A]"
                 >
                   {hw}
                 </span>
@@ -121,7 +121,7 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
           </h4>
           <ul className="space-y-2.5">
             {project.outcomes.map((outcome, idx) => (
-              <li key={idx} className="flex items-start gap-2.5 text-sm text-[#090D16] leading-normal">
+              <li key={idx} className="flex items-start gap-2.5 text-sm text-[#1A1A1A] leading-normal">
                 <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
                 <span>{outcome}</span>
               </li>

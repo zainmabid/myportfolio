@@ -12,10 +12,10 @@ export const Projects: React.FC = () => {
       <div className="max-w-[1140px] mx-auto px-4 sm:px-6 lg:px-8 text-left">
         {/* Section Heading */}
         <div className="max-w-2xl mb-14">
-          <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-[#E2E8F0] font-mono text-[11px] uppercase tracking-wider text-[#090D16] mb-3 shadow-xs">
+          <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-[#E2E8F0] font-mono text-[11px] uppercase tracking-wider text-[#1A1A1A] mb-3 shadow-xs">
             [ CASE STUDIES // FIELD REALITY ]
           </span>
-          <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold tracking-[-0.02em] text-[#090D16] leading-tight">
+          <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold tracking-[-0.02em] text-[#1A1A1A] leading-tight">
             Selected Enterprise Deployments
           </h2>
           <p className="mt-4 text-base text-[#475569] leading-relaxed">
@@ -46,7 +46,7 @@ export const Projects: React.FC = () => {
                   </div>
 
                   {/* Structural Diagonal Arrow */}
-                  <div className="w-8 h-8 rounded-lg bg-[#F4F4F0] border border-[#E2E8F0] group-hover:border-slate-400 flex items-center justify-center text-slate-500 group-hover:text-[#090D16] transition-all duration-200 shrink-0">
+                  <div className="w-8 h-8 rounded-lg bg-[#F4F4F0] border border-[#E2E8F0] group-hover:border-slate-400 flex items-center justify-center text-slate-500 group-hover:text-[#1A1A1A] transition-all duration-200 shrink-0">
                     <ArrowUpRight className="w-4 h-4 transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                   </div>
                 </div>
@@ -56,7 +56,7 @@ export const Projects: React.FC = () => {
                   <span className="text-xs text-[#475569] font-mono uppercase tracking-wider block mb-1">
                     {project.industry}
                   </span>
-                  <h3 className="font-heading text-xl sm:text-2xl font-bold text-[#090D16] tracking-[-0.02em] leading-snug">
+                  <h3 className="font-subheading text-xl sm:text-2xl font-bold text-[#1A1A1A] tracking-[-0.015em] leading-snug">
                     {project.title}
                   </h3>
                 </div>
@@ -73,10 +73,10 @@ export const Projects: React.FC = () => {
                   </div>
 
                   <div className="text-sm">
-                    <span className="font-mono text-[10px] uppercase tracking-wider text-[#090D16] font-semibold block mb-0.5">
+                    <span className="font-mono text-[10px] uppercase tracking-wider text-[#1A1A1A] font-semibold block mb-0.5">
                       The Fix:
                     </span>
-                    <p className="text-[#090D16] leading-relaxed font-normal">
+                    <p className="text-[#1A1A1A] leading-relaxed font-normal">
                       {project.bento.fix}
                     </p>
                   </div>
@@ -95,7 +95,7 @@ export const Projects: React.FC = () => {
               {/* Card Footer: Subtle Read Prompt */}
               <div className="mt-8 pt-4 border-t border-[#E2E8F0] flex items-center justify-between text-xs font-mono text-slate-500">
                 <span>View Full Architecture Spec</span>
-                <span className="text-[#090D16] font-semibold group-hover:translate-x-1 transition-transform">
+                <span className="text-[#1A1A1A] font-semibold group-hover:translate-x-1 transition-transform">
                   Inspect Case Study ↗
                 </span>
               </div>

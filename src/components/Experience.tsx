@@ -134,7 +134,7 @@ export const Experience: React.FC = () => {
                           {item.dates}
                         </span>
                         {item.isCurrent && (
-                          <span className="font-mono text-[9px] uppercase font-bold tracking-wider px-1.5 py-0.5 rounded-md bg-white text-[#090D16]">
+                          <span className="font-mono text-[9px] uppercase font-bold tracking-wider px-1.5 py-0.5 rounded-md bg-white text-[#1A1A1A]">
                             Active
                           </span>
                         )}

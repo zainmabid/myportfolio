@@ -17,10 +17,10 @@ export const Skills: React.FC = () => {
       <div className="max-w-[1140px] mx-auto px-4 sm:px-6 lg:px-8 text-left">
         {/* Section Heading */}
         <div className="max-w-2xl mb-12">
-          <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-[#E2E8F0] font-mono text-[11px] uppercase tracking-wider text-[#090D16] mb-3 shadow-xs">
+          <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-[#E2E8F0] font-mono text-[11px] uppercase tracking-wider text-[#1A1A1A] mb-3 shadow-xs">
             05 // TECHNICAL CAPABILITIES
           </span>
-          <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold tracking-[-0.02em] text-[#090D16]">
+          <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold tracking-[-0.02em] text-[#1A1A1A]">
             Skills and Hardware
           </h2>
           <p className="mt-3 text-base text-[#475569] leading-relaxed">
@@ -40,10 +40,10 @@ export const Skills: React.FC = () => {
               >
                 <div>
                   <div className="flex items-center gap-3 mb-6 pb-4 border-b border-[#E2E8F0]">
-                    <div className="w-9 h-9 rounded-lg bg-[#F4F4F0] border border-[#E2E8F0] flex items-center justify-center text-[#090D16]">
+                    <div className="w-9 h-9 rounded-lg bg-[#F4F4F0] border border-[#E2E8F0] flex items-center justify-center text-[#1A1A1A]">
                       <Icon className="w-4 h-4" />
                     </div>
-                    <h3 className="font-heading text-lg font-bold tracking-[-0.02em] text-[#090D16]">
+                    <h3 className="font-subheading text-lg font-bold tracking-[-0.015em] text-[#1A1A1A]">
                       {group.category}
                     </h3>
                   </div>
@@ -52,7 +52,7 @@ export const Skills: React.FC = () => {
                     {group.skills.map((skill, idx) => (
                       <li
                         key={idx}
-                        className="flex items-center gap-3 text-xs sm:text-sm text-[#090D16] font-normal"
+                        className="flex items-center gap-3 text-xs sm:text-sm text-[#1A1A1A] font-normal"
                       >
                         <span className="w-1.5 h-1.5 rounded-full bg-[#0F172A] shrink-0" />
                         <span>{skill}</span>

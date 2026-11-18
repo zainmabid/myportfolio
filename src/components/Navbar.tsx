@@ -50,7 +50,7 @@ export const Navbar: React.FC = () => {
               />
             </div>
             <div className="flex flex-col text-left">
-              <span className="font-heading font-extrabold text-sm sm:text-base tracking-[-0.02em] text-[#090D16] group-hover:text-slate-700 transition-colors">
+              <span className="font-heading font-extrabold text-sm sm:text-base tracking-[-0.02em] text-[#1A1A1A] group-hover:text-slate-700 transition-colors">
                 {PORTFOLIO_DATA.person.name}
               </span>
               <span className="font-mono text-[9px] sm:text-[10px] uppercase tracking-wider text-[#475569]">
@@ -66,7 +66,7 @@ export const Navbar: React.FC = () => {
                 <a
                   key={link.href}
                   href={link.href}
-                  className="text-xs uppercase font-mono tracking-wider text-[#475569] hover:text-[#090D16] transition-colors font-medium py-1"
+                  className="text-xs uppercase font-mono tracking-wider text-[#475569] hover:text-[#1A1A1A] transition-colors font-medium py-1"
                 >
                   {link.label}
                 </a>
@@ -78,13 +78,13 @@ export const Navbar: React.FC = () => {
             {/* Clean Minimalist Theme Action */}
             <button
               onClick={toggleTheme}
-              className="p-2 rounded-lg border border-[#E2E8F0] bg-white text-[#090D16] hover:border-slate-300 transition-colors cursor-pointer shadow-xs"
+              className="p-2 rounded-lg border border-[#E2E8F0] bg-white text-[#1A1A1A] hover:border-slate-300 transition-colors cursor-pointer shadow-xs"
               aria-label={`Switch to ${theme === 'light' ? 'dark' : 'light'} theme`}
             >
               {theme === 'light' ? (
                 <Moon className="w-4 h-4 text-[#475569]" />
               ) : (
-                <Sun className="w-4 h-4 text-[#090D16]" />
+                <Sun className="w-4 h-4 text-[#1A1A1A]" />
               )}
             </button>
           </div>
@@ -93,15 +93,15 @@ export const Navbar: React.FC = () => {
           <div className="flex items-center gap-2 md:hidden">
             <button
               onClick={toggleTheme}
-              className="p-2 rounded-lg border border-[#E2E8F0] bg-white text-[#090D16]"
+              className="p-2 rounded-lg border border-[#E2E8F0] bg-white text-[#1A1A1A]"
               aria-label={`Switch to ${theme === 'light' ? 'dark' : 'light'} theme`}
             >
-              {theme === 'light' ? <Moon className="w-4 h-4 text-[#475569]" /> : <Sun className="w-4 h-4 text-[#090D16]" />}
+              {theme === 'light' ? <Moon className="w-4 h-4 text-[#475569]" /> : <Sun className="w-4 h-4 text-[#1A1A1A]" />}
             </button>
 
             <button
               onClick={() => setMobileOpen(!mobileOpen)}
-              className="p-2 rounded-lg border border-[#E2E8F0] bg-white text-[#090D16]"
+              className="p-2 rounded-lg border border-[#E2E8F0] bg-white text-[#1A1A1A]"
               aria-label="Toggle navigation menu"
               aria-expanded={mobileOpen}
             >
@@ -120,7 +120,7 @@ export const Navbar: React.FC = () => {
                 key={link.href}
                 href={link.href}
                 onClick={() => setMobileOpen(false)}
-                className="font-mono text-xs uppercase tracking-wider text-[#475569] hover:text-[#090D16] py-1.5 transition-colors"
+                className="font-mono text-xs uppercase tracking-wider text-[#475569] hover:text-[#1A1A1A] py-1.5 transition-colors"
               >
                 {link.label}
               </a>
