@@ -1,10 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import { Sun, Moon, Menu, X } from 'lucide-react';
-import { useTheme } from './ThemeContext';
+import { Menu, X } from 'lucide-react';
 import { PORTFOLIO_DATA } from '@/data/content';
 
 export const Navbar: React.FC = () => {
-  const { theme, toggleTheme } = useTheme();
   const [mobileOpen, setMobileOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
@@ -72,33 +70,10 @@ export const Navbar: React.FC = () => {
                 </a>
               ))}
             </nav>
-
-            <div className="w-[1px] h-4 bg-[#E2E8F0]" aria-hidden="true" />
-
-            {/* Clean Minimalist Theme Action */}
-            <button
-              onClick={toggleTheme}
-              className="p-2 rounded-lg border border-[#E2E8F0] bg-white text-[#1A1A1A] hover:border-slate-300 transition-colors cursor-pointer shadow-xs"
-              aria-label={`Switch to ${theme === 'light' ? 'dark' : 'light'} theme`}
-            >
-              {theme === 'light' ? (
-                <Moon className="w-4 h-4 text-[#475569]" />
-              ) : (
-                <Sun className="w-4 h-4 text-[#1A1A1A]" />
-              )}
-            </button>
           </div>
 
-          {/* Mobile menu and theme toggle */}
-          <div className="flex items-center gap-2 md:hidden">
-            <button
-              onClick={toggleTheme}
-              className="p-2 rounded-lg border border-[#E2E8F0] bg-white text-[#1A1A1A]"
-              aria-label={`Switch to ${theme === 'light' ? 'dark' : 'light'} theme`}
-            >
-              {theme === 'light' ? <Moon className="w-4 h-4 text-[#475569]" /> : <Sun className="w-4 h-4 text-[#1A1A1A]" />}
-            </button>
-
+          {/* Mobile menu button */}
+          <div className="flex items-center md:hidden">
             <button
               onClick={() => setMobileOpen(!mobileOpen)}
               className="p-2 rounded-lg border border-[#E2E8F0] bg-white text-[#1A1A1A]"
