@@ -74,14 +74,11 @@ export const Education: React.FC = () => {
                   </div>
                 </div>
 
-                {/* Bottom Row: Location & Credential Tag */}
-                <div className="mt-8 pt-4 border-t border-slate-800 flex items-center justify-between font-mono text-xs text-[#94A3B8]">
+                {/* Bottom Row: Location */}
+                <div className="mt-8 pt-4 border-t border-slate-800 flex items-center font-mono text-xs text-[#94A3B8]">
                   <span className="flex items-center gap-1.5">
                     <MapPin className="w-3.5 h-3.5 text-slate-400" />
                     <span>{item.location}</span>
-                  </span>
-                  <span className="text-[10px] uppercase text-slate-500 font-semibold">
-                    [ VERIFIED DEGREE ]
                   </span>
                 </div>
               </div>
