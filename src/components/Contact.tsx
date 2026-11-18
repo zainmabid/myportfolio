@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Mail, ArrowUpRight, ArrowUp, Phone } from 'lucide-react';
+import { Mail, ArrowUpRight, ArrowUp, Phone, ShieldCheck } from 'lucide-react';
 import { PORTFOLIO_DATA } from '@/data/content';
 
 const LinkedInIcon: React.FC<{ className?: string }> = ({ className = 'w-4 h-4' }) => (
@@ -82,6 +82,21 @@ export const Contact: React.FC = () => {
                 <span>WhatsApp Direct</span>
               </motion.a>
             </div>
+          </div>
+        </div>
+
+        {/* Confidentiality Footer Disclaimer */}
+        <div className="mt-10 p-5 rounded-2xl bg-white border border-[#E2E8F0] shadow-xs flex items-start gap-3.5 text-left">
+          <div className="p-2 rounded-xl bg-[#F4F4F0] border border-[#E2E8F0] text-[#1A1A1A] shrink-0 mt-0.5">
+            <ShieldCheck className="w-4 h-4 text-slate-700" />
+          </div>
+          <div className="text-xs leading-relaxed text-[#475569]">
+            <span className="font-mono text-[11px] uppercase tracking-wider font-bold text-[#1A1A1A] block sm:inline sm:mr-2">
+              Engagement Compliance Note:
+            </span>
+            <span>
+              To uphold strict non-disclosure agreements (NDAs) and national security compliance, specific project architectures, entity titles, and internal tech frameworks for strategic defense and certain state institutions are completely anonymized.
+            </span>
           </div>
         </div>
 
