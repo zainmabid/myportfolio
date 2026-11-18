@@ -76,6 +76,14 @@ export interface IndustryItem {
   iconName: 'Package' | 'GraduationCap' | 'Paintbrush' | 'Factory' | 'Warehouse' | 'Landmark' | 'Building2';
 }
 
+export interface ImpactVertical {
+  id: string;
+  iconName: 'Shield' | 'Landmark' | 'GraduationCap' | 'Factory';
+  title: string;
+  description: string;
+  tag: string;
+}
+
 export interface ExperienceItem {
   id: string;
   role: string;
@@ -165,6 +173,7 @@ export interface PortfolioData {
   pillars: PillarItem[];
   projects: Project[];
   industries: IndustryItem[];
+  impactVerticals: ImpactVertical[];
   experience: ExperienceItem[];
   skillGroups: SkillGroup[];
   certifications: CertificationItem[];
@@ -702,6 +711,37 @@ export const PORTFOLIO_DATA: PortfolioData = {
       title: 'Enterprise and government',
       description: 'Solution sales, compliance and technical demonstrations',
       iconName: 'Building2'
+    }
+  ],
+
+  impactVerticals: [
+    {
+      id: 'strategic-defense',
+      iconName: 'Shield',
+      title: 'Strategic & Defense Organizations',
+      description: 'High-security infrastructure, zero-trust digital solutions, and secure workflow deployment.',
+      tag: 'STRATEGIC // HIGH-SECURITY'
+    },
+    {
+      id: 'gov-tax',
+      iconName: 'Landmark',
+      title: 'Government & Tax Authorities',
+      description: 'Public tech consultations, data pipeline digitization, and administrative efficiency frameworks.',
+      tag: 'GOVTECH // PUBLIC SECTOR'
+    },
+    {
+      id: 'higher-education',
+      iconName: 'GraduationCap',
+      title: 'Higher Education Institutes',
+      description: 'Enterprise resource planning, university management software, and campus-wide systems integration.',
+      tag: 'EDTECH // ERP SYSTEMS'
+    },
+    {
+      id: 'manufacturing-logistics',
+      iconName: 'Factory',
+      title: 'Manufacturing & Logistics (Industry 4.0)',
+      description: 'Industrial IoT applications, enterprise asset optimization, and supply chain automation.',
+      tag: 'INDUSTRY 4.0 // AUTOMATION'
     }
   ],
 
