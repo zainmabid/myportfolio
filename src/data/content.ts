@@ -767,6 +767,7 @@ export const PORTFOLIO_DATA: PortfolioData = {
       title: 'Certified ScrumMaster® (CSM)',
       year: '2023',
       credentialUrl: '/certifications/Certified%20ScrumMaster_SCRUM%20ALLIANCE.pdf',
+      image: '/certifications/badges/certified-scrummaster-csm.png',
       issuerLogo: '/logos/scrum-alliance.png'
     },
     {
@@ -1263,6 +1264,18 @@ export const PORTFOLIO_DATA: PortfolioData = {
         "category": "Cloud Infrastructure",
         "verificationType": "IBM Certified",
         "description": "Foundational cloud architecture, virtualization, hybrid cloud models, microservices, and enterprise cloud operations."
+    },
+    {
+        "id": "badge-scrum-master-csm",
+        "title": "Certified ScrumMaster® (CSM)",
+        "issuer": "Scrum Alliance",
+        "group": "Cloud, Security & Agile",
+        "date": "2023",
+        "badgeUrl": "/certifications/Certified%20ScrumMaster_SCRUM%20ALLIANCE.pdf",
+        "image": "/certifications/badges/certified-scrummaster-csm.png",
+        "category": "Agile & Scrum Delivery",
+        "verificationType": "Scrum Alliance Certified",
+        "description": "Certified ScrumMaster® credential issued by Scrum Alliance. Advanced agile project management, sprint planning, cross-functional leadership, and empirical process control."
     },
     {
         "id": "badge-scrum-master-smc",
