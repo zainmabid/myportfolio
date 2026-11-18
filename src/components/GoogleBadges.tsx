@@ -328,6 +328,8 @@ export const GoogleBadges: React.FC = () => {
                       <span>
                         {activeBadge.badgeUrl.includes('credly.com')
                           ? 'Verify on Credly'
+                          : activeBadge.badgeUrl.includes('developers.google')
+                          ? 'Verify on Google Developers'
                           : activeBadge.badgeUrl.includes('skills.google')
                           ? 'Verify on Google Skills'
                           : activeBadge.badgeUrl.includes('credential.net')
