@@ -1825,7 +1825,7 @@ export const PORTFOLIO_DATA: PortfolioData = {
       institution: 'COMSATS University Islamabad',
       location: 'Islamabad, Pakistan',
       badgeTag: 'Enterprise Governance',
-      timeline: 'Graduate Studies',
+      timeline: 'Coursework Completed',
       badgeStyle: 'governance',
       coreValue:
         'Focused on Advanced Procurement Governance, Risk Mitigation, and Agile Methodologies—enabling precise execution of high-stakes public sector (PPRA) and international (UN) compliance bids.'
