@@ -76,12 +76,23 @@ export interface IndustryItem {
   iconName: 'Package' | 'GraduationCap' | 'Paintbrush' | 'Factory' | 'Warehouse' | 'Landmark' | 'Building2';
 }
 
+export interface SubSectorItem {
+  id: string;
+  title: string;
+  description: string;
+  statusTag: 'Active Scope' | 'Deployed Use-Case';
+  iconName: 'Building2' | 'Database' | 'GraduationCap' | 'QrCode' | 'Package' | 'Paintbrush' | 'Warehouse';
+}
+
 export interface ImpactVertical {
   id: string;
   iconName: 'Shield' | 'Landmark' | 'GraduationCap' | 'Factory';
   title: string;
   description: string;
   tag: string;
+  statusTag?: string;
+  canExpand?: boolean;
+  subSectors?: SubSectorItem[];
 }
 
 export interface ExperienceItem {
@@ -720,28 +731,88 @@ export const PORTFOLIO_DATA: PortfolioData = {
       iconName: 'Shield',
       title: 'Strategic & Defense Organizations',
       description: 'High-security infrastructure, zero-trust digital solutions, and secure workflow deployment.',
-      tag: 'STRATEGIC // HIGH-SECURITY'
+      tag: 'STRATEGIC // HIGH-SECURITY',
+      statusTag: 'Classified Scope',
+      canExpand: false
     },
     {
       id: 'gov-tax',
       iconName: 'Landmark',
       title: 'Government & Tax Authorities',
       description: 'Public tech consultations, data pipeline digitization, and administrative efficiency frameworks.',
-      tag: 'GOVTECH // PUBLIC SECTOR'
+      tag: 'GOVTECH // PUBLIC SECTOR',
+      canExpand: true,
+      subSectors: [
+        {
+          id: 'gov-sub-a',
+          title: 'Enterprise Government Solutions',
+          description: 'Solution sales, compliance structures, and technical workflow demonstrations.',
+          statusTag: 'Active Scope',
+          iconName: 'Building2'
+        },
+        {
+          id: 'gov-sub-b',
+          title: 'Public Data Digitization',
+          description: 'Engineering structural tech consultations and data pipeline deployments.',
+          statusTag: 'Deployed Use-Case',
+          iconName: 'Database'
+        }
+      ]
     },
     {
       id: 'higher-education',
       iconName: 'GraduationCap',
       title: 'Higher Education Institutes',
       description: 'Enterprise resource planning, university management software, and campus-wide systems integration.',
-      tag: 'EDTECH // ERP SYSTEMS'
+      tag: 'EDTECH // ERP SYSTEMS',
+      canExpand: true,
+      subSectors: [
+        {
+          id: 'edu-sub-a',
+          title: 'Academic ERP Deployments',
+          description: 'Integrating university management software and cross-campus resource planning.',
+          statusTag: 'Active Scope',
+          iconName: 'GraduationCap'
+        },
+        {
+          id: 'edu-sub-b',
+          title: 'Campus Asset Visibility',
+          description: 'Implementing barcode tracking and automated inventory workflows for large distributed campuses.',
+          statusTag: 'Deployed Use-Case',
+          iconName: 'QrCode'
+        }
+      ]
     },
     {
       id: 'manufacturing-logistics',
       iconName: 'Factory',
       title: 'Manufacturing & Logistics (Industry 4.0)',
       description: 'Industrial IoT applications, enterprise asset optimization, and supply chain automation.',
-      tag: 'INDUSTRY 4.0 // AUTOMATION'
+      tag: 'INDUSTRY 4.0 // AUTOMATION',
+      canExpand: true,
+      subSectors: [
+        {
+          id: 'mfg-sub-a',
+          title: 'Consumer Goods & FMCG',
+          description: 'Deploying RFID asset management and real-time enterprise supply chain visibility.',
+          statusTag: 'Deployed Use-Case',
+          iconName: 'Package'
+        },
+        {
+          id: 'mfg-sub-b',
+          title: 'Paint & Chemical Processing',
+          description: 'Engineering Work-in-Progress (WIP) automation and strict batch production traceability loops.',
+          statusTag: 'Active Scope',
+          iconName: 'Paintbrush'
+        },
+        {
+          id: 'mfg-sub-c',
+          title: 'Warehousing & WMS',
+          description: 'Integrating operational Auto-ID hardware directly with core Warehouse Management Systems.',
+          statusTag: 'Deployed Use-Case',
+          iconName: 'Warehouse'
+        }
+      ]
     }
   ],
 
