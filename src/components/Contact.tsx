@@ -19,29 +19,30 @@ export const Contact: React.FC = () => {
   return (
     <footer id="contact" className="py-28 sm:py-36 bg-[#FBFBFA] text-left border-t border-[#E2E8F0] text-[#1A1A1A]">
       <div className="max-w-[1140px] mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Bold, Simple, Highly Professional Closure Block */}
-        <div className="p-8 sm:p-12 lg:p-14 rounded-2xl bg-white border border-[#E2E8F0] shadow-sm relative overflow-hidden">
-          <div className="max-w-2xl">
+        {/* Bold, Simple, Highly Professional Closure Block - Dark Executive Card */}
+        <div className="p-8 sm:p-12 lg:p-14 rounded-2xl bg-[#0F172A] border border-slate-800 shadow-xl relative overflow-hidden text-left">
+          <div className="max-w-2xl relative z-10">
             {/* Tag / Capsule */}
             <div className="mb-4">
-              <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#F4F4F0] border border-[#E2E8F0] font-mono text-[11px] uppercase tracking-wider text-[#1A1A1A] shadow-xs">
+              <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-800/90 border border-slate-700 font-mono text-[11px] uppercase tracking-wider text-slate-200 shadow-xs">
+                <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" aria-hidden="true" />
                 [ DIRECT ENGAGEMENT ]
               </span>
             </div>
 
             {/* Title */}
-            <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold tracking-[-0.02em] text-[#1A1A1A] leading-tight">
+            <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold tracking-[-0.02em] text-white leading-tight">
               Let's bypass the corporate techno-babble.
             </h2>
 
             {/* Sub-text */}
-            <p className="mt-5 text-base sm:text-lg text-[#475569] leading-relaxed font-normal">
+            <p className="mt-5 text-base sm:text-lg text-[#94A3B8] leading-relaxed font-normal">
               If your factory floor tracking isn’t updating your ERP, or you need an un-biased vendor evaluation for your hardware—let's discuss your roadmap.
             </p>
 
             {/* CTA Buttons with Spring Micro-interaction */}
             <div className="mt-8 flex flex-wrap items-center gap-4">
-              {/* Button: Connect on LinkedIn */}
+              {/* Button: Connect on LinkedIn - High Contrast White Button */}
               <motion.a
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
@@ -49,11 +50,11 @@ export const Contact: React.FC = () => {
                 href={person.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2.5 px-7 py-3.5 rounded-xl bg-[#0F172A] hover:bg-[#1E293B] text-white font-semibold text-sm transition-all shadow-sm"
+                className="inline-flex items-center gap-2.5 px-7 py-3.5 rounded-xl bg-white hover:bg-slate-100 text-[#0F172A] font-semibold text-sm transition-all shadow-md"
               >
-                <LinkedInIcon className="w-4 h-4" />
+                <LinkedInIcon className="w-4 h-4 text-[#0F172A]" />
                 <span>Connect on LinkedIn</span>
-                <ArrowUpRight className="w-4 h-4 opacity-80" />
+                <ArrowUpRight className="w-4 h-4 text-[#0F172A]" />
               </motion.a>
 
               {/* Button: Schedule an Operational Review */}
@@ -62,9 +63,9 @@ export const Contact: React.FC = () => {
                 whileTap={{ scale: 0.98 }}
                 transition={{ type: 'spring', stiffness: 400, damping: 20 }}
                 href={`mailto:${person.email}?subject=${encodeURIComponent('Operational Review / RFID Evaluation')}`}
-                className="inline-flex items-center gap-2.5 px-7 py-3.5 rounded-xl bg-white hover:bg-slate-50 text-[#1A1A1A] border border-[#E2E8F0] font-semibold text-sm transition-colors shadow-xs"
+                className="inline-flex items-center gap-2.5 px-7 py-3.5 rounded-xl bg-[#1E293B] hover:bg-slate-800 text-white border border-slate-700 font-semibold text-sm transition-colors shadow-xs"
               >
-                <Mail className="w-4 h-4 text-[#1A1A1A]" />
+                <Mail className="w-4 h-4 text-white" />
                 <span>Schedule an Operational Review</span>
               </motion.a>
 
@@ -76,9 +77,9 @@ export const Contact: React.FC = () => {
                 href="https://wa.me/923205270594"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-white hover:bg-slate-50 text-[#1A1A1A] border border-[#E2E8F0] font-semibold text-sm transition-colors shadow-xs"
+                className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-[#1E293B] hover:bg-slate-800 text-white border border-slate-700 font-semibold text-sm transition-colors shadow-xs"
               >
-                <Phone className="w-4 h-4 text-[#1A1A1A]" />
+                <Phone className="w-4 h-4 text-emerald-400" />
                 <span>WhatsApp Direct</span>
               </motion.a>
             </div>
