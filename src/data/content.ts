@@ -196,6 +196,7 @@ export interface PortfolioData {
   googleBadges: GoogleBadge[];
   googleProfileUrl: string;
   credlyProfileUrl: string;
+  isocProfileUrl: string;
   badges: VerifiedBadge[];
   education: EducationItem[];
 }
@@ -1348,6 +1349,7 @@ export const PORTFOLIO_DATA: PortfolioData = {
 
   googleProfileUrl: 'https://www.skills.google/public_profiles/14bbe981-af34-4dd0-b317-30eaf266f8e3',
   credlyProfileUrl: 'https://www.credly.com/users/zain-abid.e89d7497/badges',
+  isocProfileUrl: 'https://www.credential.net/profile/zainabid193990/wallet',
 
   badges: [
         {

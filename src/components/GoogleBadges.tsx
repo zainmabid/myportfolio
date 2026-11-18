@@ -20,7 +20,7 @@ const FILTER_GROUPS: BadgeGroup[] = [
 ];
 
 export const GoogleBadges: React.FC = () => {
-  const { badges, googleProfileUrl, credlyProfileUrl } = PORTFOLIO_DATA;
+  const { badges, googleProfileUrl, credlyProfileUrl, isocProfileUrl } = PORTFOLIO_DATA;
   const [selectedGroup, setSelectedGroup] = useState<BadgeGroup>('All');
 
   // Filtered badges based on group
@@ -63,7 +63,7 @@ export const GoogleBadges: React.FC = () => {
               className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-white border border-[#E2E8F0] hover:border-slate-400 text-[#1A1A1A] text-xs font-mono font-medium transition-all shadow-xs group"
             >
               <ShieldCheck className="w-4 h-4 text-emerald-600" />
-              <span>Credly Profile (PMI &amp; IBM)</span>
+              <span>PMI &amp; IBM</span>
               <ExternalLink className="w-3 h-3 text-slate-400 group-hover:text-[#1A1A1A] transition-colors" />
             </a>
 
@@ -74,7 +74,18 @@ export const GoogleBadges: React.FC = () => {
               className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-white border border-[#E2E8F0] hover:border-slate-400 text-[#1A1A1A] text-xs font-mono font-medium transition-all shadow-xs group"
             >
               <ShieldCheck className="w-4 h-4 text-emerald-600" />
-              <span>Google Skills Profile</span>
+              <span>Google</span>
+              <ExternalLink className="w-3 h-3 text-slate-400 group-hover:text-[#1A1A1A] transition-colors" />
+            </a>
+
+            <a
+              href={isocProfileUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-white border border-[#E2E8F0] hover:border-slate-400 text-[#1A1A1A] text-xs font-mono font-medium transition-all shadow-xs group"
+            >
+              <ShieldCheck className="w-4 h-4 text-emerald-600" />
+              <span>Internet Society</span>
               <ExternalLink className="w-3 h-3 text-slate-400 group-hover:text-[#1A1A1A] transition-colors" />
             </a>
           </div>
