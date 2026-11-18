@@ -41,8 +41,8 @@ export const GoogleBadges: React.FC = () => {
     <section id="badges" className="py-28 sm:py-36 border-b border-[#E2E8F0] bg-[#FBFBFA]">
       <div className="max-w-[1140px] mx-auto px-4 sm:px-6 lg:px-8 text-left">
         {/* Section Heading & Verification Profile CTA */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
-          <div className="max-w-2xl">
+        <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-8 mb-12">
+          <div className="max-w-xl">
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-[#E2E8F0] font-mono text-[11px] uppercase tracking-wider text-[#1A1A1A] mb-3 shadow-xs">
               [ 06 // VERIFIED SKILL BADGES ]
             </div>
@@ -54,52 +54,60 @@ export const GoogleBadges: React.FC = () => {
             </p>
           </div>
 
-          {/* Quick Profile Verification Links */}
-          <div className="shrink-0 flex flex-wrap items-center gap-2.5">
+          {/* Quick Profile Verification Links: 2 Rows to preserve layout rhythm */}
+          <div className="shrink-0 grid grid-cols-1 sm:grid-cols-2 gap-2.5 w-full sm:w-auto">
             <a
               href={credlyProfileUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-white border border-[#E2E8F0] hover:border-slate-400 text-[#1A1A1A] text-xs font-mono font-medium transition-all shadow-xs group"
+              className="inline-flex items-center justify-between gap-3 px-4 py-2.5 rounded-xl bg-white border border-[#E2E8F0] hover:border-slate-400 text-[#1A1A1A] text-xs font-mono font-medium transition-all shadow-xs group"
             >
-              <ShieldCheck className="w-4 h-4 text-emerald-600" />
-              <span>PMI &amp; IBM</span>
-              <ExternalLink className="w-3 h-3 text-slate-400 group-hover:text-[#1A1A1A] transition-colors" />
+              <div className="flex items-center gap-2">
+                <ShieldCheck className="w-4 h-4 text-emerald-600 shrink-0" />
+                <span>PMI &amp; IBM</span>
+              </div>
+              <ExternalLink className="w-3 h-3 text-slate-400 group-hover:text-[#1A1A1A] transition-colors shrink-0" />
             </a>
 
             <a
               href={googleDevProfileUrl || 'https://me.developers.google.com/u/zainmabid'}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-white border border-[#E2E8F0] hover:border-slate-400 text-[#1A1A1A] text-xs font-mono font-medium transition-all shadow-xs group"
+              className="inline-flex items-center justify-between gap-3 px-4 py-2.5 rounded-xl bg-white border border-[#E2E8F0] hover:border-slate-400 text-[#1A1A1A] text-xs font-mono font-medium transition-all shadow-xs group"
               title="Google Developer Profile"
             >
-              <ShieldCheck className="w-4 h-4 text-emerald-600" />
-              <span>Google Developers</span>
-              <ExternalLink className="w-3 h-3 text-slate-400 group-hover:text-[#1A1A1A] transition-colors" />
+              <div className="flex items-center gap-2">
+                <ShieldCheck className="w-4 h-4 text-emerald-600 shrink-0" />
+                <span>Google Developers</span>
+              </div>
+              <ExternalLink className="w-3 h-3 text-slate-400 group-hover:text-[#1A1A1A] transition-colors shrink-0" />
             </a>
 
             <a
               href={googleProfileUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-white border border-[#E2E8F0] hover:border-slate-400 text-[#1A1A1A] text-xs font-mono font-medium transition-all shadow-xs group"
+              className="inline-flex items-center justify-between gap-3 px-4 py-2.5 rounded-xl bg-white border border-[#E2E8F0] hover:border-slate-400 text-[#1A1A1A] text-xs font-mono font-medium transition-all shadow-xs group"
               title="Google Cloud Skills Boost Profile"
             >
-              <ShieldCheck className="w-4 h-4 text-emerald-600" />
-              <span>Google Skills</span>
-              <ExternalLink className="w-3 h-3 text-slate-400 group-hover:text-[#1A1A1A] transition-colors" />
+              <div className="flex items-center gap-2">
+                <ShieldCheck className="w-4 h-4 text-emerald-600 shrink-0" />
+                <span>Google Skills</span>
+              </div>
+              <ExternalLink className="w-3 h-3 text-slate-400 group-hover:text-[#1A1A1A] transition-colors shrink-0" />
             </a>
 
             <a
               href={isocProfileUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-white border border-[#E2E8F0] hover:border-slate-400 text-[#1A1A1A] text-xs font-mono font-medium transition-all shadow-xs group"
+              className="inline-flex items-center justify-between gap-3 px-4 py-2.5 rounded-xl bg-white border border-[#E2E8F0] hover:border-slate-400 text-[#1A1A1A] text-xs font-mono font-medium transition-all shadow-xs group"
             >
-              <ShieldCheck className="w-4 h-4 text-emerald-600" />
-              <span>Internet Society</span>
-              <ExternalLink className="w-3 h-3 text-slate-400 group-hover:text-[#1A1A1A] transition-colors" />
+              <div className="flex items-center gap-2">
+                <ShieldCheck className="w-4 h-4 text-emerald-600 shrink-0" />
+                <span>Internet Society</span>
+              </div>
+              <ExternalLink className="w-3 h-3 text-slate-400 group-hover:text-[#1A1A1A] transition-colors shrink-0" />
             </a>
           </div>
         </div>
