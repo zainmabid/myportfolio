@@ -496,7 +496,7 @@ export const PORTFOLIO_DATA: PortfolioData = {
       id: 'pillar-industry-4',
       number: '01',
       tag: 'INDUSTRY 4.0 & IOT',
-      title: 'Pillar 1: Industry 4.0 & IoT Architecture',
+      title: 'Industry 4.0 & IoT Architecture',
       points: [
         {
           title: 'Smart Ecosystems',
@@ -516,7 +516,7 @@ export const PORTFOLIO_DATA: PortfolioData = {
       id: 'pillar-defense-govtech',
       number: '02',
       tag: 'DEFENSE & GOVTECH',
-      title: 'Pillar 2: Strategic Defense & GovTech Consulting',
+      title: 'Strategic Defense & GovTech Consulting',
       points: [
         {
           title: 'Mission-Critical Systems',
@@ -536,7 +536,7 @@ export const PORTFOLIO_DATA: PortfolioData = {
       id: 'pillar-enterprise-erp',
       number: '03',
       tag: 'ENTERPRISE & ERP',
-      title: 'Pillar 3: Enterprise Solutions & ERP Management',
+      title: 'Enterprise Solutions & ERP Management',
       points: [
         {
           title: 'System Auditing',
@@ -556,7 +556,7 @@ export const PORTFOLIO_DATA: PortfolioData = {
       id: 'pillar-procurement-tenders',
       number: '04',
       tag: 'PROCUREMENT & TENDERS',
-      title: 'Pillar 4: Procurement Excellence & Tender Bidding',
+      title: 'Procurement Excellence & Tender Bidding',
       points: [
         {
           title: 'PPRA Compliance',
