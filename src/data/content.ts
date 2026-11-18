@@ -56,6 +56,19 @@ export interface Project {
   };
 }
 
+export interface PillarPoint {
+  title: string;
+  description: string;
+}
+
+export interface PillarItem {
+  id: string;
+  number: string;
+  tag: string;
+  title: string;
+  points: PillarPoint[];
+}
+
 export interface IndustryItem {
   id: string;
   title: string;
@@ -149,6 +162,7 @@ export interface PortfolioData {
   person: PersonInfo;
   journey: JourneyData;
   brands: Brand[];
+  pillars: PillarItem[];
   projects: Project[];
   industries: IndustryItem[];
   experience: ExperienceItem[];
@@ -465,6 +479,89 @@ export const PORTFOLIO_DATA: PortfolioData = {
       name: 'PAF Hospital (Islamabad)',
       descriptor: 'Military Healthcare & Clinical Services',
       logo: '/brands/paf-hospital.png'
+    }
+  ],
+
+  pillars: [
+    {
+      id: 'pillar-industry-4',
+      number: '01',
+      tag: 'INDUSTRY 4.0 & IOT',
+      title: 'Pillar 1: Industry 4.0 & IoT Architecture',
+      points: [
+        {
+          title: 'Smart Ecosystems',
+          description: 'Designing and deploying IoT-enabled frameworks, automated inventory loops, and real-time tracking systems.'
+        },
+        {
+          title: 'Auto-ID Integration',
+          description: 'Bridging operational hardware (RFID, Barcoding, Sensors) seamlessly with backend enterprise layers.'
+        },
+        {
+          title: 'Workflow Automation',
+          description: 'Re-engineering manual legacy processes into high-speed, automated digital systems.'
+        }
+      ]
+    },
+    {
+      id: 'pillar-defense-govtech',
+      number: '02',
+      tag: 'DEFENSE & GOVTECH',
+      title: 'Pillar 2: Strategic Defense & GovTech Consulting',
+      points: [
+        {
+          title: 'Mission-Critical Systems',
+          description: 'Consulting on high-security software deployments for state enterprises and strategic defense sectors under strict NDAs.'
+        },
+        {
+          title: 'Public Sector Digitization',
+          description: 'Modernizing operations for public IT, administrative bodies, and tech/tax compliance institutions.'
+        },
+        {
+          title: 'EdTech Infrastructure',
+          description: 'Transforming university management networks, student ERP lifecycles, and institutional workflows.'
+        }
+      ]
+    },
+    {
+      id: 'pillar-enterprise-erp',
+      number: '03',
+      tag: 'ENTERPRISE & ERP',
+      title: 'Pillar 3: Enterprise Solutions & ERP Management',
+      points: [
+        {
+          title: 'System Auditing',
+          description: 'Conducting comprehensive diagnostic evaluations of existing corporate and institutional tech stacks.'
+        },
+        {
+          title: 'ERP Deployment',
+          description: 'Guiding the selection, customization, and deployment of scalable ERP suites for cross-department synchronization.'
+        },
+        {
+          title: 'Data-Driven Operations',
+          description: 'Structuring management systems that turn messy operational data into clean, actionable leadership dashboards.'
+        }
+      ]
+    },
+    {
+      id: 'pillar-procurement-tenders',
+      number: '04',
+      tag: 'PROCUREMENT & TENDERS',
+      title: 'Pillar 4: Procurement Excellence & Tender Bidding',
+      points: [
+        {
+          title: 'PPRA Compliance',
+          description: 'Masterful navigation of Pakistan’s public procurement frameworks, handling technical compliance and institutional protocols.'
+        },
+        {
+          title: 'Global Frameworks (UNGM)',
+          description: 'Structuring airtight technical proposals aligned with international vetting and United Nations procurement criteria.'
+        },
+        {
+          title: 'End-to-End Bid Management',
+          description: 'Managing technical evaluation response documents to capture and win high-stakes public tenders.'
+        }
+      ]
     }
   ],
 

@@ -1,114 +1,116 @@
-import React, { useState } from 'react';
-import { ArrowUpRight } from 'lucide-react';
-import { PORTFOLIO_DATA, Project } from '@/data/content';
-import { ProjectModal } from './ProjectModal';
+import React from 'react';
+import { Cpu, Shield, Server, FileCheck } from 'lucide-react';
+import { PORTFOLIO_DATA, PillarItem } from '@/data/content';
 
 export const Projects: React.FC = () => {
-  const { projects } = PORTFOLIO_DATA;
-  const [activeProject, setActiveProject] = useState<Project | null>(null);
+  const { pillars } = PORTFOLIO_DATA;
+
+  // Icon mapping for each pillar
+  const getPillarIcon = (number: string) => {
+    switch (number) {
+      case '01':
+        return <Cpu className="w-5 h-5 text-[#1A1A1A]" />;
+      case '02':
+        return <Shield className="w-5 h-5 text-[#1A1A1A]" />;
+      case '03':
+        return <Server className="w-5 h-5 text-[#1A1A1A]" />;
+      case '04':
+        return <FileCheck className="w-5 h-5 text-[#1A1A1A]" />;
+      default:
+        return <Cpu className="w-5 h-5 text-[#1A1A1A]" />;
+    }
+  };
+
+  const getPillarFooterTag = (number: string) => {
+    switch (number) {
+      case '01':
+        return 'REAL-TIME AUTOMATION';
+      case '02':
+        return 'HIGH-SECURITY & GOVTECH';
+      case '03':
+        return 'SCALABLE ERP SUITES';
+      case '04':
+        return 'PPRA & UNGM VETTING';
+      default:
+        return 'STRATEGIC ARCHITECTURE';
+    }
+  };
 
   return (
     <section id="work" className="py-28 sm:py-36 border-b border-[#E2E8F0] bg-[#FBFBFA]">
-      <div className="max-w-[1140px] mx-auto px-4 sm:px-6 lg:px-8 text-left">
+      <div id="expertise" className="max-w-[1140px] mx-auto px-4 sm:px-6 lg:px-8 text-left">
         {/* Section Heading */}
         <div className="max-w-2xl mb-14">
           <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-[#E2E8F0] font-mono text-[11px] uppercase tracking-wider text-[#1A1A1A] mb-3 shadow-xs">
-            [ CASE STUDIES // FIELD REALITY ]
+            [ CORE PILLARS // STRATEGIC ARCHITECTURE ]
           </span>
           <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold tracking-[-0.02em] text-[#1A1A1A] leading-tight">
-            Selected Enterprise Deployments
+            Core Pillars of Expertise
           </h2>
           <p className="mt-4 text-base text-[#475569] leading-relaxed">
-            Eliminating physical-to-digital inventory discrepancies across high-throughput industrial and consumer goods operations.
+            Bridging operational factory floor hardware, mission-critical GovTech deployments, enterprise ERP suites, and competitive public procurement.
           </p>
         </div>
 
-        {/* Bento Realism Grid: Flat, crisp white cards: bg-white border border-[#E2E8F0] rounded-2xl shadow-sm hover:shadow-md p-8 */}
+        {/* 4 Distinct Boxes / Grid Layout */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
-          {projects.map((project) => (
+          {pillars.map((pillar: PillarItem) => (
             <article
-              key={project.id}
-              onClick={() => setActiveProject(project)}
-              className="group relative flex flex-col justify-between p-8 rounded-2xl border border-[#E2E8F0] bg-white hover:border-slate-300 hover:shadow-md transition-all duration-200 cursor-pointer shadow-sm"
+              key={pillar.id}
+              className="group relative flex flex-col justify-between p-8 sm:p-9 rounded-2xl border border-[#E2E8F0] bg-white hover:border-slate-300 hover:shadow-md transition-all duration-200 shadow-sm"
             >
               <div>
-                {/* Top Labels Row: Monospace capsule tags & Arrow */}
+                {/* Top Labels Row: Monospace capsule tag & Icon */}
                 <div className="flex items-center justify-between gap-3 mb-5">
-                  <div className="flex flex-wrap items-center gap-2">
-                    {project.tags.map((tag) => (
-                      <span
-                        key={tag}
-                        className="font-mono text-[10px] uppercase font-medium px-2.5 py-1 rounded-md bg-[#F4F4F0] border border-[#E2E8F0] text-slate-600 tracking-wider"
-                      >
-                        [ {tag} ]
-                      </span>
-                    ))}
+                  <div className="flex items-center gap-2">
+                    <span className="font-mono text-[10px] uppercase font-bold px-2.5 py-1 rounded-md bg-[#F4F4F0] border border-[#E2E8F0] text-[#1A1A1A] tracking-wider">
+                      [ PILLAR {pillar.number} ]
+                    </span>
+                    <span className="font-mono text-[10px] uppercase font-medium px-2.5 py-1 rounded-md bg-[#F4F4F0] border border-[#E2E8F0] text-slate-600 tracking-wider">
+                      [ {pillar.tag} ]
+                    </span>
                   </div>
 
-                  {/* Structural Diagonal Arrow */}
-                  <div className="w-8 h-8 rounded-lg bg-[#F4F4F0] border border-[#E2E8F0] group-hover:border-slate-400 flex items-center justify-center text-slate-500 group-hover:text-[#1A1A1A] transition-all duration-200 shrink-0">
-                    <ArrowUpRight className="w-4 h-4 transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                  <div className="w-10 h-10 rounded-xl bg-[#F4F4F0] border border-[#E2E8F0] flex items-center justify-center shrink-0 group-hover:border-slate-400 group-hover:scale-105 transition-all duration-200">
+                    {getPillarIcon(pillar.number)}
                   </div>
                 </div>
 
-                {/* Title & Industry Domain */}
-                <div className="mb-6">
-                  <span className="text-xs text-[#475569] font-mono uppercase tracking-wider block mb-1">
-                    {project.industry}
-                  </span>
-                  <h3 className="font-subheading text-xl sm:text-2xl font-bold text-[#1A1A1A] tracking-[-0.015em] leading-snug">
-                    {project.title}
+                {/* Pillar Title */}
+                <div className="mb-6 pb-4 border-b border-[#E2E8F0]">
+                  <h3 className="font-heading text-xl sm:text-2xl font-bold text-[#1A1A1A] tracking-[-0.02em] leading-snug">
+                    {pillar.title}
                   </h3>
                 </div>
 
-                {/* The 3 Punchy Fragments (Context / Fix / Reality) */}
-                <div className="space-y-3.5 pt-5 border-t border-[#E2E8F0]">
-                  <div className="text-sm">
-                    <span className="font-mono text-[10px] uppercase tracking-wider text-slate-500 font-semibold block mb-0.5">
-                      The Context:
-                    </span>
-                    <p className="text-[#475569] leading-relaxed font-normal">
-                      {project.bento.context}
-                    </p>
-                  </div>
-
-                  <div className="text-sm">
-                    <span className="font-mono text-[10px] uppercase tracking-wider text-[#1A1A1A] font-semibold block mb-0.5">
-                      The Fix:
-                    </span>
-                    <p className="text-[#1A1A1A] leading-relaxed font-normal">
-                      {project.bento.fix}
-                    </p>
-                  </div>
-
-                  <div className="text-sm">
-                    <span className="font-mono text-[10px] uppercase tracking-wider text-slate-500 font-semibold block mb-0.5">
-                      The Reality:
-                    </span>
-                    <p className="text-[#475569] leading-relaxed font-normal">
-                      {project.bento.reality}
-                    </p>
-                  </div>
+                {/* Bullet Points */}
+                <div className="space-y-4">
+                  {pillar.points.map((point, idx) => (
+                    <div key={idx} className="text-sm leading-relaxed">
+                      <span className="font-subheading font-bold text-[#1A1A1A] block mb-1">
+                        • {point.title}:
+                      </span>
+                      <p className="text-[#475569] font-normal leading-relaxed pl-3 border-l-2 border-slate-200">
+                        {point.description}
+                      </p>
+                    </div>
+                  ))}
                 </div>
               </div>
 
-              {/* Card Footer: Subtle Read Prompt */}
+              {/* Card Footer */}
               <div className="mt-8 pt-4 border-t border-[#E2E8F0] flex items-center justify-between text-xs font-mono text-slate-500">
-                <span>View Full Architecture Spec</span>
-                <span className="text-[#1A1A1A] font-semibold group-hover:translate-x-1 transition-transform">
-                  Inspect Case Study ↗
+                <span className="text-[10px] uppercase tracking-wider text-[#94A3B8]">
+                  DOMAIN FOCUS
+                </span>
+                <span className="text-[#1A1A1A] font-semibold text-[11px] tracking-wide">
+                  [ {getPillarFooterTag(pillar.number)} ]
                 </span>
               </div>
             </article>
           ))}
         </div>
       </div>
-
-      {/* Accessible Detail Modal */}
-      <ProjectModal
-        project={activeProject}
-        onClose={() => setActiveProject(null)}
-      />
     </section>
   );
 };
