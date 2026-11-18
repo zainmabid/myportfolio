@@ -108,18 +108,11 @@ export const Hero: React.FC = () => {
               {/* Pure White Card with 1px border #E2E8F0 and subtle depth shadow */}
               <div className="relative rounded-2xl overflow-hidden border border-[#E2E8F0] bg-white shadow-sm hover:shadow-md p-3 sm:p-4 transition-all duration-300">
                 {/* Minimalist Top Edge Strip */}
-                <div className="px-4 py-2.5 rounded-t-xl border-b border-[#E2E8F0] bg-[#F4F4F0] flex items-center justify-between font-mono text-[10px] uppercase tracking-wider text-[#475569]">
+                <div className="px-4 py-2.5 rounded-t-xl border-b border-[#E2E8F0] bg-[#F4F4F0] flex items-center font-mono text-[10px] uppercase tracking-wider text-[#475569]">
                   <span className="flex items-center gap-1.5 text-[#1A1A1A] font-semibold">
                     <span className="w-2 h-2 rounded-full bg-[#0F172A]" />
                     FOUNDER &amp; MANAGING DIRECTOR
                   </span>
-                  <div className="flex items-center">
-                    <img
-                      src="/logos/zma.png"
-                      alt="ZMA"
-                      className="h-4 w-auto object-contain bg-white rounded px-1.5 py-0.5 border border-[#E2E8F0]"
-                    />
-                  </div>
                 </div>
 
                 {/* High-contrast, Professional Portrait */}
