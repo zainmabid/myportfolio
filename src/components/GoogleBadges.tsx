@@ -158,8 +158,8 @@ export const GoogleBadges: React.FC = () => {
                     onClick={() => setSelectedId(badge.id)}
                     className={`relative w-full text-left p-3.5 sm:p-4 rounded-xl border transition-all duration-200 group cursor-pointer block ${
                       isActive
-                        ? 'bg-white border-[#0F172A] shadow-sm -translate-r-0.5'
-                        : 'bg-white/80 hover:bg-white border-[#E2E8F0] hover:border-slate-300'
+                        ? 'bg-white border-2 border-[#0F172A] shadow-md ring-2 ring-slate-900/10 -translate-r-0.5'
+                        : 'bg-[#FAFAFA] hover:bg-white border-[#E2E8F0] hover:border-slate-300'
                     }`}
                   >
                     {/* Node Dot on Left Vertical Line */}
@@ -196,12 +196,12 @@ export const GoogleBadges: React.FC = () => {
                       <div className="min-w-0 flex-1">
                         <div
                           className={`font-subheading text-xs sm:text-sm font-bold tracking-tight line-clamp-1 transition-colors ${
-                            isActive ? 'text-[#1A1A1A]' : 'text-slate-700'
+                            isActive ? 'text-[#0F172A]' : 'text-slate-700'
                           }`}
                         >
                           {badge.title}
                         </div>
-                        <div className="font-mono text-[10px] uppercase tracking-wider text-slate-500 truncate mt-0.5">
+                        <div className="font-mono text-[10px] uppercase tracking-wider text-[#475569] truncate mt-0.5">
                           {badge.issuer}
                         </div>
                       </div>
@@ -259,31 +259,34 @@ export const GoogleBadges: React.FC = () => {
 
                     {/* Header Info */}
                     <div className="flex-1 text-center sm:text-left min-w-0">
-                      <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-md bg-[#F4F4F0] border border-[#E2E8F0] font-mono text-[10px] uppercase tracking-wider text-[#1A1A1A] font-semibold mb-2">
-                        <Calendar className="w-3 h-3" />
+                      <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-md bg-[#F1F5F9] border border-[#E2E8F0] font-mono text-[10px] uppercase tracking-wider text-[#475569] font-semibold mb-2">
+                        <Calendar className="w-3 h-3 text-slate-500" />
                         {activeBadge.date}
                       </div>
 
-                      <h3 className="font-heading text-xl sm:text-2xl font-extrabold tracking-[-0.02em] text-[#1A1A1A] leading-snug">
+                      <h3 className="font-heading text-xl sm:text-2xl font-bold tracking-[-0.02em] text-[#0F172A] leading-snug">
                         {activeBadge.title}
                       </h3>
 
-                      <div className="font-mono text-xs uppercase tracking-wider text-slate-500 font-semibold mt-1">
+                      <div className="font-mono text-xs uppercase tracking-wider text-[#475569] font-semibold mt-1">
                         {activeBadge.issuer}
                       </div>
 
-                      <div className="mt-2.5 inline-block font-mono text-[10px] uppercase tracking-widest px-2.5 py-0.5 rounded-md bg-[#F4F4F0] border border-[#E2E8F0] text-slate-700">
+                      <div className="mt-2.5 inline-block font-mono text-[10px] uppercase tracking-wider px-2.5 py-1 rounded-md bg-[#F1F5F9] border border-[#E2E8F0] text-[#475569] font-medium">
                         {activeBadge.category}
                       </div>
                     </div>
                   </div>
 
-                  {/* Operational Summary Callout */}
-                  <div className="mt-5 p-4 rounded-xl bg-[#F4F4F0] border-l-4 border-[#0F172A] text-xs sm:text-sm text-[#1A1A1A] leading-relaxed">
-                    <div className="font-mono text-[10px] uppercase tracking-widest text-[#475569] mb-1 font-bold">
-                      CURRICULUM &amp; VALIDATED EXPERTISE
+                  {/* Operational Summary Callout - Isolated Offset Box with Software Shadow */}
+                  <div className="mt-5 p-5 rounded-xl bg-[#F1F5F9] border border-[#E2E8F0] border-l-4 border-l-[#0F172A] shadow-[0_4px_6px_-1px_rgba(0,0,0,0.05)] text-left">
+                    <div className="font-mono text-[10px] uppercase tracking-widest text-[#475569] mb-1.5 font-bold flex items-center gap-2">
+                      <span className="w-1.5 h-1.5 rounded-full bg-[#0F172A]" />
+                      <span>CURRICULUM &amp; VALIDATED EXPERTISE</span>
                     </div>
-                    {activeBadge.description}
+                    <p className="text-xs sm:text-sm text-[#0F172A] leading-relaxed font-normal">
+                      {activeBadge.description}
+                    </p>
                   </div>
 
                   {/* Verification CTA Action Bar */}
