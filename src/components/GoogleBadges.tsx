@@ -20,7 +20,7 @@ const FILTER_GROUPS: BadgeGroup[] = [
 ];
 
 export const GoogleBadges: React.FC = () => {
-  const { badges, googleProfileUrl, credlyProfileUrl, isocProfileUrl } = PORTFOLIO_DATA;
+  const { badges, googleProfileUrl, googleDevProfileUrl, credlyProfileUrl, isocProfileUrl } = PORTFOLIO_DATA;
   const [selectedGroup, setSelectedGroup] = useState<BadgeGroup>('All');
 
   // Filtered badges based on group
@@ -68,13 +68,26 @@ export const GoogleBadges: React.FC = () => {
             </a>
 
             <a
+              href={googleDevProfileUrl || 'https://me.developers.google.com/u/zainmabid'}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-white border border-[#E2E8F0] hover:border-slate-400 text-[#1A1A1A] text-xs font-mono font-medium transition-all shadow-xs group"
+              title="Google Developer Profile"
+            >
+              <ShieldCheck className="w-4 h-4 text-emerald-600" />
+              <span>Google Developers</span>
+              <ExternalLink className="w-3 h-3 text-slate-400 group-hover:text-[#1A1A1A] transition-colors" />
+            </a>
+
+            <a
               href={googleProfileUrl}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-white border border-[#E2E8F0] hover:border-slate-400 text-[#1A1A1A] text-xs font-mono font-medium transition-all shadow-xs group"
+              title="Google Cloud Skills Boost Profile"
             >
               <ShieldCheck className="w-4 h-4 text-emerald-600" />
-              <span>Google</span>
+              <span>Google Skills</span>
               <ExternalLink className="w-3 h-3 text-slate-400 group-hover:text-[#1A1A1A] transition-colors" />
             </a>
 
