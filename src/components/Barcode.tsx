@@ -18,7 +18,6 @@ export const Barcode: React.FC<BarcodeProps> = ({
   height = 54,
   className = '',
   showText = true,
-  withScanLine = false,
   subText
 }) => {
   // Generate a deterministic sequence of bar widths and gaps
@@ -67,14 +66,14 @@ export const Barcode: React.FC<BarcodeProps> = ({
     <div className={`relative inline-block select-none ${className}`}>
       {/* Industrial Tag Header if subtext provided */}
       {subText && (
-        <div className="flex items-center justify-between text-[10px] uppercase font-mono tracking-widest text-[var(--muted)] mb-1.5 px-0.5">
+        <div className="flex items-center justify-between text-[10px] uppercase font-mono tracking-widest text-[#475569] mb-1.5 px-0.5">
           <span>SPEC-ID // AUTO-ID</span>
           <span>{subText}</span>
         </div>
       )}
 
       {/* Barcode Frame */}
-      <div className="relative overflow-hidden bg-[var(--surface)] p-2.5 sm:p-3 border border-[var(--line)] rounded-[4px] shadow-sm">
+      <div className="relative overflow-hidden bg-white p-2.5 sm:p-3 border border-[#E2E8F0] rounded-xl shadow-xs">
         {/* SVG Bars */}
         <svg
           viewBox={`0 0 ${totalWidth} ${height}`}
@@ -96,25 +95,17 @@ export const Barcode: React.FC<BarcodeProps> = ({
                   y={0}
                   width={bar.width}
                   height={height}
-                  className="fill-[var(--ink)]"
+                  className="fill-[#090D16]"
                 />
               );
             });
           })()}
         </svg>
-
-        {/* Laser Scan-line (single sweep on load) */}
-        {withScanLine && (
-          <div
-            className="barcode-laser absolute left-0 right-0 h-[2px] bg-[var(--scan-line)] shadow-[0_0_8px_#EF4444] pointer-events-none z-10"
-            aria-hidden="true"
-          />
-        )}
       </div>
 
       {/* Monospace Human Readable Text */}
       {showText && (
-        <div className="text-center font-mono text-[11px] sm:text-xs tracking-[0.25em] text-[var(--ink)] mt-1.5 uppercase font-medium">
+        <div className="text-center font-mono text-[11px] sm:text-xs tracking-[0.25em] text-[#090D16] mt-1.5 uppercase font-medium">
           *{value}*
         </div>
       )}
@@ -127,27 +118,27 @@ export const Barcode: React.FC<BarcodeProps> = ({
  */
 export const BarcodeDivider: React.FC<{ label?: string }> = ({ label }) => {
   return (
-    <div className="py-12 flex items-center gap-4 text-[var(--line)] opacity-80 select-none overflow-hidden" aria-hidden="true">
-      <div className="flex-1 h-[1px] bg-[var(--line)]" />
+    <div className="py-12 flex items-center gap-4 opacity-40 select-none overflow-hidden" aria-hidden="true">
+      <div className="flex-1 h-[1px] bg-current" />
       <div className="flex items-center gap-2">
         <div className="flex items-center gap-[2px] h-3">
-          <span className="w-[1px] h-full bg-[var(--line)]" />
-          <span className="w-[3px] h-full bg-[var(--line)]" />
-          <span className="w-[1px] h-full bg-[var(--line)]" />
-          <span className="w-[2px] h-full bg-[var(--line)]" />
-          <span className="w-[1px] h-full bg-[var(--line)]" />
-          <span className="w-[4px] h-full bg-[var(--line)]" />
-          <span className="w-[2px] h-full bg-[var(--line)]" />
-          <span className="w-[1px] h-full bg-[var(--line)]" />
-          <span className="w-[3px] h-full bg-[var(--line)]" />
+          <span className="w-[1px] h-full bg-current" />
+          <span className="w-[3px] h-full bg-current" />
+          <span className="w-[1px] h-full bg-current" />
+          <span className="w-[2px] h-full bg-current" />
+          <span className="w-[1px] h-full bg-current" />
+          <span className="w-[4px] h-full bg-current" />
+          <span className="w-[2px] h-full bg-current" />
+          <span className="w-[1px] h-full bg-current" />
+          <span className="w-[3px] h-full bg-current" />
         </div>
         {label && (
-          <span className="font-mono text-[10px] tracking-widest uppercase text-[var(--muted)]">
+          <span className="font-mono text-[10px] tracking-widest uppercase font-medium">
             {label}
           </span>
         )}
       </div>
-      <div className="flex-1 h-[1px] bg-[var(--line)]" />
+      <div className="flex-1 h-[1px] bg-current" />
     </div>
   );
 };

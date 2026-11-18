@@ -12,17 +12,17 @@ export const Experience: React.FC = () => {
   const selectedIdx = experience.findIndex((item) => item.id === selectedId);
 
   return (
-    <section id="experience" className="py-28 sm:py-36 border-b border-[#E2E8F0] bg-[#F4F4F0]">
+    <section id="experience" className="py-28 sm:py-36 border-b border-slate-800 bg-[#0F172A] text-white">
       <div className="max-w-[1140px] mx-auto px-4 sm:px-6 lg:px-8 text-left">
         {/* Section Tag Capsule */}
         <div className="mb-4">
-          <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-[#E2E8F0] font-mono text-[11px] uppercase tracking-wider text-[#090D16] shadow-xs">
+          <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-800/90 border border-slate-700 font-mono text-[11px] uppercase tracking-wider text-slate-200 shadow-xs">
             [ EVOLUTION MATRIX // AUTHORITY MAPPING ]
           </span>
         </div>
 
         {/* Heading */}
-        <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold tracking-[-0.02em] text-[#090D16] leading-tight max-w-3xl">
+        <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold tracking-[-0.02em] text-white leading-tight max-w-3xl">
           A Decade of Software Strategy. Grounded on the Factory Floor.
         </h2>
 
@@ -32,57 +32,57 @@ export const Experience: React.FC = () => {
           whileInView={{ scaleX: 1 }}
           viewport={{ once: true, margin: '-50px' }}
           transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
-          className="origin-left h-[1px] bg-slate-300 my-12"
+          className="origin-left h-[1px] bg-slate-800 my-12"
         />
 
-        {/* The Evolution Matrix: Two Asymmetric Flat Crisp White Cards */}
+        {/* The Evolution Matrix: Two Asymmetric Flat Crisp Dark Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-20">
           {/* COLUMN A - THE FOUNDATION (2014 - 2024) */}
-          <div className="p-8 rounded-2xl border border-[#E2E8F0] bg-white flex flex-col justify-between shadow-sm hover:border-slate-300 hover:shadow-md transition-all duration-200">
+          <div className="p-8 rounded-2xl border border-slate-800 bg-[#131B2E] flex flex-col justify-between shadow-md hover:border-slate-700 transition-all duration-200">
             <div>
-              <div className="flex items-center justify-between pb-3 mb-5 border-b border-[#E2E8F0]">
-                <span className="font-mono text-xs uppercase font-medium tracking-wider text-[#475569]">
+              <div className="flex items-center justify-between pb-3 mb-5 border-b border-slate-800">
+                <span className="font-mono text-xs uppercase font-medium tracking-wider text-[#94A3B8]">
                   [ THE FOUNDATION ]
                 </span>
-                <span className="font-mono text-xs text-[#475569]">2014 — 2024</span>
+                <span className="font-mono text-xs text-[#94A3B8]">2014 — 2024</span>
               </div>
 
-              <h3 className="font-heading text-xl font-bold text-[#090D16] tracking-[-0.02em] mb-3">
+              <h3 className="font-heading text-xl font-bold text-white tracking-[-0.02em] mb-3">
                 Enterprise Tech &amp; Software Strategy
               </h3>
 
-              <p className="text-base text-[#475569] leading-relaxed font-normal">
+              <p className="text-base text-[#94A3B8] leading-relaxed font-normal">
                 Eight years operating at the intersection of enterprise tech. Architecting software solutions, driving corporate pre-sales, and aligning C-suite business goals with technical architecture.
               </p>
             </div>
 
-            <div className="mt-6 pt-4 border-t border-[#E2E8F0] flex items-center gap-2 font-mono text-[11px] text-[#475569]">
-              <span className="w-1.5 h-1.5 rounded-full bg-slate-400" />
+            <div className="mt-6 pt-4 border-t border-slate-800 flex items-center gap-2 font-mono text-[11px] text-[#94A3B8]">
+              <span className="w-1.5 h-1.5 rounded-full bg-slate-500" />
               <span>CRM • ERP • Enterprise Pre-sales • Scaled Systems</span>
             </div>
           </div>
 
           {/* COLUMN B - THE FOCUS (2024 - PRESENT) */}
-          <div className="p-8 rounded-2xl border border-slate-300 bg-white flex flex-col justify-between shadow-sm hover:border-slate-500 hover:shadow-md transition-all duration-200">
+          <div className="p-8 rounded-2xl border border-slate-700 bg-[#162035] flex flex-col justify-between shadow-md hover:border-slate-600 transition-all duration-200">
             <div>
-              <div className="flex items-center justify-between pb-3 mb-5 border-b border-[#E2E8F0]">
-                <span className="font-mono text-xs uppercase font-semibold tracking-wider text-[#090D16]">
+              <div className="flex items-center justify-between pb-3 mb-5 border-b border-slate-700">
+                <span className="font-mono text-xs uppercase font-semibold tracking-wider text-white">
                   [ THE FOCUS ]
                 </span>
-                <span className="font-mono text-xs font-semibold text-[#090D16]">2024 — PRESENT</span>
+                <span className="font-mono text-xs font-semibold text-white">2024 — PRESENT</span>
               </div>
 
-              <h3 className="font-heading text-xl font-bold text-[#090D16] tracking-[-0.02em] mb-3">
+              <h3 className="font-heading text-xl font-bold text-white tracking-[-0.02em] mb-3">
                 Raw Operational Execution &amp; Industry 4.0
               </h3>
 
-              <p className="text-base text-[#090D16] leading-relaxed font-normal">
+              <p className="text-base text-slate-100 leading-relaxed font-normal">
                 Transitioning execution directly to raw operations. Solving the physical-to-digital disconnect by deploying active WIP automation, custom barcode tracking, and deep RFID integration.
               </p>
             </div>
 
-            <div className="mt-6 pt-4 border-t border-[#E2E8F0] flex items-center gap-2 font-mono text-[11px] text-[#090D16] font-medium">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#0F172A]" />
+            <div className="mt-6 pt-4 border-t border-slate-700 flex items-center gap-2 font-mono text-[11px] text-slate-200 font-medium">
+              <span className="w-1.5 h-1.5 rounded-full bg-white" />
               <span>RFID Infrastructure • WIP Automation • Zero-Loss Traceability</span>
             </div>
           </div>
@@ -90,11 +90,11 @@ export const Experience: React.FC = () => {
 
         {/* Master-Detail Interactive Chronology Inspector */}
         <div className="pt-4">
-          <div className="mb-6 flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-3 border-b border-[#E2E8F0]">
-            <h3 className="font-heading text-xl font-bold tracking-[-0.02em] text-[#090D16]">
+          <div className="mb-6 flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-3 border-b border-slate-800">
+            <h3 className="font-heading text-xl font-bold tracking-[-0.02em] text-white">
               Chronological Track Record
             </h3>
-            <span className="font-mono text-xs text-[#475569]">
+            <span className="font-mono text-xs text-[#94A3B8]">
               Hover or tap a role to inspect operational deliverables
             </span>
           </div>
@@ -102,7 +102,7 @@ export const Experience: React.FC = () => {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-start">
             {/* Left Rail / Role Navigation */}
             <div className="lg:col-span-5 space-y-2.5">
-              <div className="relative pl-4 sm:pl-5 border-l-2 border-slate-300 space-y-3">
+              <div className="relative pl-4 sm:pl-5 border-l-2 border-slate-800 space-y-3">
                 {experience.map((item) => {
                   const isActive = item.id === selectedItem.id;
 
@@ -113,28 +113,28 @@ export const Experience: React.FC = () => {
                       onClick={() => setSelectedId(item.id)}
                       className={`relative w-full text-left p-4 rounded-xl border transition-all duration-150 cursor-pointer block ${
                         isActive
-                          ? 'bg-white border-[#0F172A] shadow-sm'
-                          : 'bg-white/80 hover:bg-white border-[#E2E8F0] hover:border-slate-300'
+                          ? 'bg-[#1E293B] border-slate-600 shadow-md'
+                          : 'bg-[#131B2E]/90 hover:bg-[#1E293B]/70 border-slate-800 hover:border-slate-700'
                       }`}
                     >
                       {/* Node Dot on Left Vertical Line */}
                       <div
                         className={`absolute -left-[23px] sm:-left-[27px] top-1/2 -translate-y-1/2 w-2.5 h-2.5 rounded-full border-2 transition-all duration-150 ${
                           isActive
-                            ? 'bg-[#0F172A] border-white ring-4 ring-slate-200 scale-125'
-                            : 'bg-slate-300 border-white'
+                            ? 'bg-white border-[#0F172A] ring-4 ring-slate-700 scale-125'
+                            : 'bg-slate-700 border-[#0F172A]'
                         }`}
                         aria-hidden="true"
                       />
 
                       {/* Header Row: Dates */}
                       <div className="flex items-center justify-between gap-2 mb-1.5">
-                        <span className="font-mono text-[11px] text-[#475569] flex items-center gap-1">
-                          <Calendar className="w-3 h-3 text-[#0F172A]" />
+                        <span className="font-mono text-[11px] text-[#94A3B8] flex items-center gap-1">
+                          <Calendar className="w-3 h-3 text-slate-300" />
                           {item.dates}
                         </span>
                         {item.isCurrent && (
-                          <span className="font-mono text-[9px] uppercase font-bold tracking-wider px-1.5 py-0.5 rounded-md bg-[#0F172A] text-white">
+                          <span className="font-mono text-[9px] uppercase font-bold tracking-wider px-1.5 py-0.5 rounded-md bg-white text-[#090D16]">
                             Active
                           </span>
                         )}
@@ -143,20 +143,20 @@ export const Experience: React.FC = () => {
                       {/* Role Title */}
                       <div
                         className={`font-heading text-sm sm:text-base font-semibold tracking-tight transition-colors ${
-                          isActive ? 'text-[#090D16]' : 'text-slate-700'
+                          isActive ? 'text-white' : 'text-slate-300'
                         }`}
                       >
                         {item.role}
                       </div>
 
                       {/* Company Name */}
-                      <div className="text-xs text-[#475569] mt-0.5 flex items-center justify-between">
+                      <div className="text-xs text-[#94A3B8] mt-0.5 flex items-center justify-between">
                         <span className="truncate">{item.company}</span>
                         <ChevronRight
                           className={`w-3.5 h-3.5 shrink-0 transition-transform ${
                             isActive
-                              ? 'text-[#0F172A] translate-x-1'
-                              : 'opacity-0 text-[#475569]'
+                              ? 'text-white translate-x-1'
+                              : 'opacity-0 text-[#94A3B8]'
                           }`}
                         />
                       </div>
@@ -168,15 +168,15 @@ export const Experience: React.FC = () => {
 
             {/* Right Column: Active Role Detail Window */}
             <div className="lg:col-span-7 sticky top-24">
-              <div className="relative rounded-2xl border border-[#E2E8F0] bg-white shadow-sm hover:shadow-md overflow-hidden min-h-[400px]">
+              <div className="relative rounded-2xl border border-slate-800 bg-[#131B2E] shadow-xl overflow-hidden min-h-[400px]">
                 {/* Minimal Header Bar */}
-                <div className="px-5 py-3 border-b border-[#E2E8F0] bg-[#F4F4F0] flex items-center justify-between font-mono text-[11px] uppercase tracking-wider text-[#475569]">
+                <div className="px-5 py-3 border-b border-slate-800 bg-[#0B1120] flex items-center justify-between font-mono text-[11px] uppercase tracking-wider text-[#94A3B8]">
                   <div className="flex items-center gap-2">
-                    <span className="w-2 h-2 rounded-full bg-[#0F172A]" />
+                    <span className="w-2 h-2 rounded-full bg-emerald-400" />
                     <span>ROLE // EXP-0{selectedIdx + 1}</span>
                   </div>
-                  <div className="flex items-center gap-1.5 text-[#090D16] font-medium">
-                    <MapPin className="w-3 h-3 text-[#0F172A]" />
+                  <div className="flex items-center gap-1.5 text-white font-medium">
+                    <MapPin className="w-3 h-3 text-slate-300" />
                     <span>{selectedItem.city}</span>
                   </div>
                 </div>
@@ -192,29 +192,29 @@ export const Experience: React.FC = () => {
                     className="p-6 sm:p-8"
                   >
                     <div>
-                      <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-md bg-[#F4F4F0] border border-[#E2E8F0] font-mono text-[10px] uppercase tracking-wider text-[#090D16] font-semibold mb-2">
+                      <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-md bg-slate-800 border border-slate-700 font-mono text-[10px] uppercase tracking-wider text-slate-200 font-semibold mb-2">
                         <Briefcase className="w-3 h-3" />
                         {selectedItem.dates}
                       </div>
 
-                      <h3 className="font-heading text-2xl font-bold tracking-[-0.02em] text-[#090D16] leading-snug">
+                      <h3 className="font-heading text-2xl font-bold tracking-[-0.02em] text-white leading-snug">
                         {selectedItem.role}
                       </h3>
 
-                      <div className="text-sm font-medium text-slate-700 mt-1">
+                      <div className="text-sm font-medium text-slate-300 mt-1">
                         {selectedItem.company}
                       </div>
                     </div>
 
                     {/* Operational Summary Callout */}
-                    <div className="mt-5 p-4 rounded-xl bg-[#F4F4F0] border-l-4 border-[#0F172A] text-sm text-[#475569] leading-relaxed">
+                    <div className="mt-5 p-4 rounded-xl bg-[#0B1120] border-l-4 border-slate-400 text-sm text-slate-300 leading-relaxed">
                       {selectedItem.summary}
                     </div>
 
                     {/* Key Deliverables */}
                     {selectedItem.details && selectedItem.details.length > 0 && (
-                      <div className="mt-6 pt-5 border-t border-[#E2E8F0]">
-                        <div className="font-mono text-[10px] uppercase tracking-widest text-[#475569] mb-3 font-semibold">
+                      <div className="mt-6 pt-5 border-t border-slate-800">
+                        <div className="font-mono text-[10px] uppercase tracking-widest text-[#94A3B8] mb-3 font-semibold">
                           KEY DELIVERABLES
                         </div>
 
@@ -222,9 +222,9 @@ export const Experience: React.FC = () => {
                           {selectedItem.details.map((detail, idx) => (
                             <li
                               key={idx}
-                              className="flex items-start gap-2.5 text-xs sm:text-sm text-[#090D16] leading-relaxed"
+                              className="flex items-start gap-2.5 text-xs sm:text-sm text-slate-200 leading-relaxed"
                             >
-                              <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
+                              <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
                               <span>{detail}</span>
                             </li>
                           ))}
