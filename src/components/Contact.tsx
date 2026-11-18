@@ -21,7 +21,7 @@ export const Contact: React.FC = () => {
       <div className="max-w-[1140px] mx-auto px-4 sm:px-6 lg:px-8">
         {/* Bold, Simple, Highly Professional Closure Block - Dark Executive Card */}
         <div className="p-8 sm:p-12 lg:p-14 rounded-2xl bg-[#0F172A] border border-slate-800 shadow-xl relative overflow-hidden text-left">
-          <div className="max-w-2xl relative z-10">
+          <div className="relative z-10">
             {/* Tag / Capsule */}
             <div className="mb-4">
               <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-800/90 border border-slate-700 font-mono text-[11px] uppercase tracking-wider text-slate-200 shadow-xs">
@@ -31,17 +31,19 @@ export const Contact: React.FC = () => {
             </div>
 
             {/* Title */}
-            <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold tracking-[-0.02em] text-white leading-tight">
-              Let's bypass the corporate techno-babble.
-            </h2>
+            <div className="max-w-2xl">
+              <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold tracking-[-0.02em] text-white leading-tight">
+                Let's bypass the corporate techno-babble.
+              </h2>
 
-            {/* Sub-text */}
-            <p className="mt-5 text-base sm:text-lg text-[#94A3B8] leading-relaxed font-normal">
-              If your factory floor tracking isn’t updating your ERP, or you need an un-biased vendor evaluation for your hardware—let's discuss your roadmap.
-            </p>
+              {/* Sub-text */}
+              <p className="mt-5 text-base sm:text-lg text-[#94A3B8] leading-relaxed font-normal">
+                If your factory floor tracking isn’t updating your ERP, or you need an un-biased vendor evaluation for your hardware—let's discuss your roadmap.
+              </p>
+            </div>
 
-            {/* CTA Buttons with Spring Micro-interaction */}
-            <div className="mt-8 flex flex-wrap items-center gap-4">
+            {/* CTA Buttons in a single row */}
+            <div className="mt-8 flex flex-wrap items-center gap-3 sm:gap-4">
               {/* Button: Connect on LinkedIn - High Contrast White Button */}
               <motion.a
                 whileHover={{ scale: 1.02 }}
@@ -50,7 +52,7 @@ export const Contact: React.FC = () => {
                 href={person.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2.5 px-7 py-3.5 rounded-xl bg-white hover:bg-slate-100 text-[#0F172A] font-semibold text-sm transition-all shadow-md"
+                className="inline-flex items-center gap-2 px-5 sm:px-6 py-3.5 rounded-xl bg-white hover:bg-slate-100 text-[#0F172A] font-semibold text-sm transition-all shadow-md shrink-0"
               >
                 <LinkedInIcon className="w-4 h-4 text-[#0F172A]" />
                 <span>Connect on LinkedIn</span>
@@ -63,13 +65,13 @@ export const Contact: React.FC = () => {
                 whileTap={{ scale: 0.98 }}
                 transition={{ type: 'spring', stiffness: 400, damping: 20 }}
                 href={`mailto:${person.email}?subject=${encodeURIComponent('Operational Review / RFID Evaluation')}`}
-                className="inline-flex items-center gap-2.5 px-7 py-3.5 rounded-xl bg-[#1E293B] hover:bg-slate-800 text-white border border-slate-700 font-semibold text-sm transition-colors shadow-xs"
+                className="inline-flex items-center gap-2 px-5 sm:px-6 py-3.5 rounded-xl bg-[#1E293B] hover:bg-slate-800 text-white border border-slate-700 font-semibold text-sm transition-colors shadow-xs shrink-0"
               >
                 <Mail className="w-4 h-4 text-white" />
                 <span>Schedule an Operational Review</span>
               </motion.a>
 
-              {/* WhatsApp direct pill */}
+              {/* WhatsApp direct button - In the same line */}
               <motion.a
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
@@ -77,7 +79,7 @@ export const Contact: React.FC = () => {
                 href="https://wa.me/923205270594"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-[#1E293B] hover:bg-slate-800 text-white border border-slate-700 font-semibold text-sm transition-colors shadow-xs"
+                className="inline-flex items-center gap-2 px-5 sm:px-6 py-3.5 rounded-xl bg-[#1E293B] hover:bg-slate-800 text-white border border-slate-700 font-semibold text-sm transition-colors shadow-xs shrink-0"
               >
                 <Phone className="w-4 h-4 text-emerald-400" />
                 <span>WhatsApp Direct</span>
