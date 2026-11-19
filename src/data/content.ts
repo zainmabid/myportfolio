@@ -1306,8 +1306,8 @@ export const PORTFOLIO_DATA: PortfolioData = {
       id: "cert-open-university",
       group: "Business and project",
       issuer: "The Open University",
-      title: "Institute of Education Academic Statement",
-      year: "2021",
+      title: "Internet of Everything",
+      year: "2026",
       credentialUrl: "/certifications/IOE_1_statement.pdf",
       issuerLogo: "/logos/open-university.png"
     },
