@@ -4,7 +4,8 @@ import {
   Calendar,
   CheckCircle2,
   MapPin,
-  Sparkles
+  Sparkles,
+  ChevronRight
 } from 'lucide-react';
 import { PORTFOLIO_DATA } from '@/data/content';
 
@@ -13,6 +14,7 @@ interface CareerMilestone {
   num: string;
   phase: string;
   role: string;
+  designation: string;
   company: string;
   city: string;
   dates: string;
@@ -32,6 +34,7 @@ export const Experience: React.FC = () => {
       num: '01',
       phase: '01 — GENESIS',
       role: 'Engineering Intern (Refinery Operations & Technical Services)',
+      designation: 'Engineering Intern',
       company: 'Attock Refinery Limited',
       city: 'Rawalpindi, Pakistan',
       dates: 'Aug 2009 — Oct 2009',
@@ -51,6 +54,7 @@ export const Experience: React.FC = () => {
       num: '02',
       phase: '02 — FOUNDATION',
       role: 'Operations & IT Systems Lead',
+      designation: 'Operations & IT Systems Lead',
       company: 'Rational Engineering Pvt. Ltd.',
       city: 'Islamabad / Rawalpindi, Pakistan',
       dates: 'May 2011 — Jan 2015',
@@ -71,6 +75,7 @@ export const Experience: React.FC = () => {
       num: '03',
       phase: '03 — INFRASTRUCTURE',
       role: 'Admin Manager IT',
+      designation: 'Admin Manager IT',
       company: 'Tri Tech (Pvt.) Ltd.',
       city: 'Lahore, Pakistan',
       dates: 'Nov 2015 — May 2017',
@@ -89,6 +94,7 @@ export const Experience: React.FC = () => {
       num: '04',
       phase: '04 — GOVERNANCE',
       role: 'Project Coordinator and IT Consultant',
+      designation: 'Project Coordinator & IT Consultant',
       company: 'Eccountax',
       city: 'Lahore, Pakistan',
       dates: 'Jun 2017 — Jun 2019',
@@ -107,6 +113,7 @@ export const Experience: React.FC = () => {
       num: '05',
       phase: '05 — EXPANSION',
       role: 'Technical Sales and Solutions Manager',
+      designation: 'Technical Sales & Solutions Manager',
       company: 'Nexus Technologies',
       city: 'Islamabad, Pakistan',
       dates: 'Nov 2019 — Oct 2023',
@@ -126,6 +133,7 @@ export const Experience: React.FC = () => {
       num: '06',
       phase: '06 — ARCHITECTURE',
       role: 'ERP Pre-Sales & Consultancy',
+      designation: 'ERP Pre-Sales & Consultancy',
       company: 'Confidential',
       city: 'Lahore, Pakistan',
       dates: 'May 2024 — May 2025',
@@ -146,6 +154,7 @@ export const Experience: React.FC = () => {
       num: '07',
       phase: '07 — EXECUTION',
       role: 'COO/CSO and Project Delivery Lead',
+      designation: 'COO / CSO & Delivery Lead',
       company: 'EmergTech Solutions Pvt. Ltd.',
       city: 'Lahore, Pakistan',
       dates: 'Apr 2025 — Jan 2026',
@@ -165,6 +174,7 @@ export const Experience: React.FC = () => {
       num: '08',
       phase: '08 — TODAY',
       role: 'Founder & Managing Director',
+      designation: 'Founder & Managing Director',
       company: 'Zaintegrated Solutions',
       city: 'Lahore, Pakistan',
       dates: 'Current',
@@ -387,13 +397,13 @@ export const Experience: React.FC = () => {
             </div>
           </div>
 
-          {/* RIGHT COLUMN: INTERACTIVE CAREER WAVE (IN PLACE OF TABS) */}
-          <div className="lg:col-span-5 relative rounded-3xl border border-slate-800 bg-[#131B2E] p-5 sm:p-6 min-h-[540px] flex flex-col justify-between overflow-hidden shadow-2xl">
-            {/* Background SVG Wave Curve running continuously behind nodes */}
+          {/* RIGHT COLUMN: EXECUTIVE CAREER WAVE (ALIGNED DESIGNATIONS) */}
+          <div className="lg:col-span-5 relative rounded-3xl border border-slate-800 bg-[#131B2E] p-4 sm:p-5 min-h-[540px] flex flex-col justify-between overflow-hidden shadow-2xl">
+            {/* Background SVG Wave Curve passing through the 76px wave rail */}
             <svg
-              className="absolute inset-0 w-full h-full pointer-events-none"
+              className="absolute left-4 sm:left-5 top-0 w-20 h-full pointer-events-none"
               preserveAspectRatio="none"
-              viewBox="0 0 400 540"
+              viewBox="0 0 80 540"
             >
               <defs>
                 <linearGradient id="verticalWaveGradient" x1="0%" y1="0%" x2="0%" y2="100%">
@@ -402,9 +412,9 @@ export const Experience: React.FC = () => {
                   <stop offset="100%" stopColor="#CBD5E1" />
                 </linearGradient>
               </defs>
-              {/* Smooth alternating sine-wave path snaking vertically */}
+              {/* Smooth alternating sine-wave path snaking through circles */}
               <path
-                d="M 32,34 C 32,67 64,67 64,101 C 64,135 32,135 32,168 C 32,202 64,202 64,235 C 64,269 32,269 32,302 C 32,336 64,336 64,369 C 64,403 32,403 32,436 C 32,470 64,470 64,503"
+                d="M 24,34 C 24,67 56,67 56,101 C 56,135 24,135 24,168 C 24,202 56,202 56,235 C 56,269 24,269 24,302 C 24,336 56,336 56,369 C 56,403 24,403 24,436 C 24,470 56,470 56,503"
                 fill="none"
                 stroke="url(#verticalWaveGradient)"
                 strokeWidth="2.5"
@@ -412,11 +422,11 @@ export const Experience: React.FC = () => {
               />
             </svg>
 
-            {/* 8 Interactive Milestone Rows positioned along the wave */}
+            {/* 8 Interactive Milestone Rows: Consistent Text Alignment & Clean Designations */}
             <div className="relative z-10 flex flex-col justify-between h-full space-y-1">
               {milestones.map((m, idx) => {
                 const isActive = m.id === activeMilestone.id;
-                // Alternating horizontal wave displacement: even indices (0, 2, 4, 6) at x=32, odd indices (1, 3, 5, 7) at x=64
+                // Alternating node circle placement on the wave track: even at x=24, odd at x=56
                 const isAlternate = idx % 2 === 1;
 
                 return (
@@ -424,40 +434,56 @@ export const Experience: React.FC = () => {
                     key={m.id}
                     onMouseEnter={() => setSelectedId(m.id)}
                     onClick={() => setSelectedId(m.id)}
-                    className="relative flex items-center gap-3.5 py-1.5 cursor-pointer group transition-all duration-150"
+                    className={`relative flex items-center py-2 px-2.5 rounded-xl cursor-pointer group transition-all duration-150 ${
+                      isActive
+                        ? 'bg-[#1E293B]/90 border border-slate-700/80 shadow-md'
+                        : 'hover:bg-slate-800/40 border border-transparent'
+                    }`}
                   >
-                    {/* Node Circle along Wave Path */}
-                    <div
-                      className={`relative flex items-center justify-center shrink-0 transition-all duration-200 ${
-                        isAlternate ? 'ml-[46px]' : 'ml-[14px]'
-                      }`}
-                    >
-                      {/* Active Outer Pulse Ring */}
-                      {isActive && (
-                        <div className="absolute -inset-1.5 rounded-full bg-white/20 animate-pulse pointer-events-none" />
-                      )}
-
-                      {/* Numbered Bubble */}
+                    {/* Fixed-width Wave Chamber (80px): houses the alternating node circle */}
+                    <div className="w-20 shrink-0 relative flex items-center">
                       <div
-                        className={`w-9 h-9 rounded-full flex items-center justify-center font-mono text-xs font-bold transition-all duration-200 ${
-                          isActive
-                            ? 'bg-white text-slate-950 border-2 border-white shadow-lg scale-110'
-                            : 'bg-[#0F172A] text-slate-400 border border-slate-700 group-hover:border-slate-500 group-hover:text-white'
+                        className={`relative flex items-center justify-center shrink-0 transition-all duration-200 ${
+                          isAlternate ? 'ml-[38px]' : 'ml-[6px]'
                         }`}
                       >
-                        {m.num}
+                        {/* Active Outer Pulse Ring */}
+                        {isActive && (
+                          <div className="absolute -inset-1.5 rounded-full bg-white/20 animate-pulse pointer-events-none" />
+                        )}
+
+                        {/* Numbered Bubble */}
+                        <div
+                          className={`w-9 h-9 rounded-full flex items-center justify-center font-mono text-xs font-bold transition-all duration-200 ${
+                            isActive
+                              ? 'bg-white text-slate-950 border-2 border-white shadow-lg scale-110'
+                              : 'bg-[#0F172A] text-slate-400 border border-slate-700 group-hover:border-slate-500 group-hover:text-white'
+                          }`}
+                        >
+                          {m.num}
+                        </div>
                       </div>
                     </div>
 
-                    {/* Designation Only next to Wave Node */}
-                    <div className="min-w-0 flex-1 pl-2">
+                    {/* Perfectly Aligned Clean Designation (No Clipping / Ellipses) */}
+                    <div className="min-w-0 flex-1 pl-1 pr-2 flex items-center justify-between">
                       <div
-                        className={`font-heading text-sm sm:text-[15px] font-semibold truncate transition-colors ${
-                          isActive ? 'text-white font-bold' : 'text-slate-300 group-hover:text-white'
+                        className={`font-heading text-sm sm:text-[15px] font-semibold leading-snug transition-colors ${
+                          isActive
+                            ? 'text-white font-bold'
+                            : 'text-slate-300 group-hover:text-white'
                         }`}
                       >
-                        {m.role}
+                        {m.designation}
                       </div>
+
+                      <ChevronRight
+                        className={`w-4 h-4 shrink-0 transition-transform duration-200 ${
+                          isActive
+                            ? 'text-emerald-400 translate-x-1 opacity-100'
+                            : 'opacity-0 group-hover:opacity-60 text-slate-400'
+                        }`}
+                      />
                     </div>
                   </div>
                 );
