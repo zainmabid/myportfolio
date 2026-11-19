@@ -1456,19 +1456,19 @@ export const PORTFOLIO_DATA: PortfolioData = {
       issuerLogo: "/logos/pmi.png"
     },
     {
-      id: "cert-studying-for-the-certified-business-analysis-professional-cbap",
+      id: "cert-cbap-iiba",
       group: "Business and project",
       issuer: "International Institute of Business Analysis (IIBA)",
-      title: "Studying for the Certified Business Analysis Professional CBAP",
+      title: "Certified Business Analysis Professional (CBAP)",
       year: "2021",
       credentialUrl: "/certifications/Studying%20for%20the%20Certified%20Business%20Analysis%20Professional%20CBAP%20(IIBA).pdf",
       issuerLogo: "/logos/iiba.png"
     },
     {
-      id: "cert-studying-for-the-certified-business-analysis-professional-cbap",
+      id: "cert-cbap-pmi",
       group: "Business and project",
       issuer: "Project Management Institute (PMI)",
-      title: "Studying for the Certified Business Analysis Professional CBAP",
+      title: "Certified Business Analysis Professional (CBAP)",
       year: "2021",
       credentialUrl: "/certifications/Studying%20for%20the%20Certified%20Business%20Analysis%20Professional%20CBAP%20(PMI).pdf",
       issuerLogo: "/logos/pmi.png"
