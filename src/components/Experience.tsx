@@ -449,37 +449,11 @@ export const Experience: React.FC = () => {
                       </div>
                     </div>
 
-                    {/* Metadata Label next to Wave Node */}
-                    <div className="min-w-0 flex-1 pl-1">
-                      <div className="flex items-center gap-2">
-                        <span
-                          className={`font-mono text-[10px] uppercase font-bold tracking-wider ${
-                            isActive ? 'text-emerald-400' : 'text-slate-400'
-                          }`}
-                        >
-                          {m.year}
-                        </span>
-                        <span className="text-slate-700">•</span>
-                        <span
-                          className={`font-mono text-[9px] uppercase tracking-wider truncate ${
-                            isActive ? 'text-slate-300' : 'text-slate-400'
-                          }`}
-                        >
-                          {m.phase.split('—')[1]?.trim() || m.phase}
-                        </span>
-                      </div>
-
+                    {/* Designation Only next to Wave Node */}
+                    <div className="min-w-0 flex-1 pl-2">
                       <div
-                        className={`font-heading text-sm font-semibold truncate leading-tight mt-0.5 transition-colors ${
-                          isActive ? 'text-white' : 'text-slate-300 group-hover:text-white'
-                        }`}
-                      >
-                        {m.company}
-                      </div>
-
-                      <div
-                        className={`text-[11px] truncate leading-tight transition-colors ${
-                          isActive ? 'text-slate-300' : 'text-slate-400'
+                        className={`font-heading text-sm sm:text-[15px] font-semibold truncate transition-colors ${
+                          isActive ? 'text-white font-bold' : 'text-slate-300 group-hover:text-white'
                         }`}
                       >
                         {m.role}
