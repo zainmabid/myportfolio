@@ -1789,18 +1789,6 @@ export const PORTFOLIO_DATA: PortfolioData = {
         "description": "Agile methodologies, sprint ceremonies, backlog grooming, cross-functional servant leadership, and iterative product delivery."
     },
     {
-        "id": "badge-pmi-atp",
-        "title": "PMI Authorized Training Partner Program",
-        "issuer": "Project Management Institute (PMI)",
-        "group": "Cloud, Security & Agile",
-        "date": "2021",
-        "badgeUrl": "/certifications/Agile Development Practices (PMI).pdf",
-        "image": "/certifications/badges/pmi-authorized-training-partner.jpg",
-        "category": "Project Management Frameworks",
-        "verificationType": "PMI Accredited",
-        "description": "Accredited PMI framework covering predictive, agile, and hybrid delivery lifecycles for complex enterprise programs."
-    },
-    {
         "id": "isoc-chapter-specialist",
         "title": "Chapter Specialist",
         "issuer": "Internet Society",
