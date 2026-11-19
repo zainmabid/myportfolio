@@ -1262,56 +1262,51 @@ export const PORTFOLIO_DATA: PortfolioData = {
     },
 
     /* ==========================================================================
-       ADDITIONAL ACCREDITED VERIFIABLE BADGES & CERTIFICATES
+       INTERNET SOCIETY (ISOC) ACCREDITED CERTIFICATES OF COMPLETION
        ========================================================================== */
     {
-      id: 'badge-isoc-privacy-frameworks',
+      id: 'cert-isoc-network-operations',
       group: 'Cloud, network and security',
       issuer: 'Internet Society',
-      title: 'Privacy Frameworks & Data Protection',
+      title: 'Introduction to Network Operations',
       year: '2026',
-      credentialUrl: 'https://www.credential.net/f83cacec-dbad-496c-bf53-8e7601a60cae',
-      image: 'https://api.accredible.com/v1/credentials/p5pe0pbn/artifact/badge',
+      credentialUrl: 'https://www.credential.net/b78c11c4-7158-4acf-981b-6609dc3cab83#acc.3MlZcCRy',
       issuerLogo: '/logos/isoc.png'
     },
     {
-      id: 'badge-isoc-data-protection',
-      group: 'Cloud, network and security',
-      issuer: 'Internet Society',
-      title: 'Data Protection Laws & International Standards',
-      year: '2026',
-      credentialUrl: 'https://www.credential.net/41e4ce57-a999-4446-a10b-2161ca68b0c9',
-      image: 'https://api.accredible.com/v1/credentials/ispr2y0j/artifact/badge',
-      issuerLogo: '/logos/isoc.png'
-    },
-    {
-      id: 'badge-isoc-digital-footprint',
-      group: 'Cloud, network and security',
-      issuer: 'Internet Society',
-      title: 'Digital Footprint Management & Control',
-      year: '2026',
-      credentialUrl: 'https://www.credential.net/92c8a32b-5e66-4d98-9760-c89aed9b4baa',
-      image: 'https://api.accredible.com/v1/credentials/ozthpwse/artifact/badge',
-      issuerLogo: '/logos/isoc.png'
-    },
-    {
-      id: 'badge-isoc-project-design',
+      id: 'cert-isoc-grant-ready',
       group: 'Business and project',
       issuer: 'Internet Society',
-      title: 'Project Design & Strategic Sustainability',
+      title: 'Grant Ready: Building Your Grant Application',
       year: '2026',
-      credentialUrl: 'https://www.credential.net/aeeb7705-4007-465e-8f93-c1b7d346d9e6',
-      image: 'https://api.accredible.com/v1/credentials/fpda7icy/artifact/badge',
+      credentialUrl: 'https://www.credential.net/01a0ea97-ed08-4760-8407-333e7f35047a#acc.cN89zpi1',
       issuerLogo: '/logos/isoc.png'
     },
     {
-      id: 'badge-isoc-kpi-budgeting',
-      group: 'Business and project',
+      id: 'cert-isoc-digital-footprints',
+      group: 'Cloud, network and security',
       issuer: 'Internet Society',
-      title: 'Performance Indicators and Budgeting',
+      title: 'Digital Footprints',
       year: '2026',
-      credentialUrl: 'https://www.credential.net/c7739d0c-3f57-4e0a-bd3b-b69c366d40b6',
-      image: 'https://api.accredible.com/v1/credentials/emim2fur/artifact/badge',
+      credentialUrl: 'https://www.credential.net/0f3dd5cb-fde7-4dbb-acf2-c2198f3b9f46#acc.EFtWLShO',
+      issuerLogo: '/logos/isoc.png'
+    },
+    {
+      id: 'cert-isoc-internet-security',
+      group: 'Cloud, network and security',
+      issuer: 'Internet Society',
+      title: 'Internet Security',
+      year: '2026',
+      credentialUrl: 'https://www.credential.net/157ef85c-7dab-4e21-afca-a254cd94d143#acc.vrIhDau5',
+      issuerLogo: '/logos/isoc.png'
+    },
+    {
+      id: 'cert-isoc-privacy',
+      group: 'Cloud, network and security',
+      issuer: 'Internet Society',
+      title: 'Privacy',
+      year: '2026',
+      credentialUrl: 'https://www.credential.net/707a9836-8a5f-4090-939f-589df5adc276#acc.tGWNJD0Y',
       issuerLogo: '/logos/isoc.png'
     }
 
