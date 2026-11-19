@@ -1,6 +1,6 @@
-# Zain Mashhood Abid (ZMA) — Executive Portfolio
+# Zain M. Abid (ZMA) — Executive Portfolio
 
-A refined, industrial-editorial personal portfolio website for **Zain Mashhood Abid**, Founder & Managing Director at **Zaintegrated Solutions**, Solutions Architect & Consultant for RFID, Auto-ID, Warehouse Automation, and ERP.
+A refined, industrial-editorial personal portfolio website for **Zain M. Abid**, Founder & Managing Director at **Zaintegrated Solutions**, Solutions Architect & Consultant for RFID, Auto-ID, Warehouse Automation, and ERP.
 
 Built with **Vite + React 19 + TypeScript**, **Tailwind CSS v4**, **Framer Motion**, and **lucide-react** icons.
 
@@ -72,7 +72,7 @@ No content is hard-coded inside React components.
 Edit the `person` object in `src/data/content.ts`:
 ```ts
 person: {
-  name: 'Zain Mashhood Abid',
+  name: 'Zain M. Abid',
   headline: 'RFID, Auto-ID and Enterprise Automation Consultant | Founder, Zaintegrate',
   location: 'Lahore, Pakistan',
   relocationStatus: 'Open to relocation',

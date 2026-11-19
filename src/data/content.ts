@@ -204,7 +204,7 @@ export interface PortfolioData {
 
 export const PORTFOLIO_DATA: PortfolioData = {
   person: {
-    name: 'Zain Mashhood Abid',
+    name: 'Zain M. Abid',
     headline: 'Founder & Managing Director, Zaintegrated Solutions | Connecting Physical Operations with Digital ERP',
     location: 'Lahore, Pakistan',
     relocationStatus: 'Open to relocation',

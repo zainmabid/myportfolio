@@ -112,14 +112,14 @@ export const Contact: React.FC = () => {
               className="h-6 w-auto object-contain bg-white rounded p-0.5 border border-[#E2E8F0] shadow-xs"
             />
             <div>
-              <span className="font-heading font-semibold text-[#1A1A1A]">Zain Mashhood Abid</span>
+              <span className="font-heading font-semibold text-[#1A1A1A]">{person.name}</span>
               <span className="mx-2">•</span>
               <span>Founder &amp; MD, Zaintegrated Solutions</span>
             </div>
           </div>
 
           <div className="flex items-center gap-6">
-            <span>© {new Date().getFullYear()} Zain Mashhood Abid. All rights reserved.</span>
+            <span>© {new Date().getFullYear()} {person.name}. All rights reserved.</span>
             <button
               onClick={scrollToTop}
               className="inline-flex items-center gap-1 text-[#475569] hover:text-[#1A1A1A] transition-colors cursor-pointer"
