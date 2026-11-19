@@ -18,7 +18,7 @@ export const Certifications: React.FC = () => {
 
   const filteredItems = useMemo(() => {
     const q = searchQuery.toLowerCase().trim();
-    return certifications.filter((item) => {
+    const filtered = certifications.filter((item) => {
       // Group filter
       if (selectedGroup !== 'All' && item.group !== selectedGroup) {
         return false;
@@ -32,6 +32,16 @@ export const Certifications: React.FC = () => {
         );
       }
       return true;
+    });
+
+    // Sort by year: latest first, oldest last
+    return [...filtered].sort((a, b) => {
+      const yearA = parseInt(a.year || '0', 10);
+      const yearB = parseInt(b.year || '0', 10);
+      if (yearB !== yearA) {
+        return yearB - yearA; // Latest first
+      }
+      return a.title.localeCompare(b.title);
     });
   }, [certifications, selectedGroup, searchQuery]);
 
@@ -128,18 +138,6 @@ export const Certifications: React.FC = () => {
                     )}
                   </div>
                 </div>
-
-                {/* Badge Image if available */}
-                {item.image && (
-                  <div className="h-28 sm:h-32 flex items-center justify-center p-3 bg-[#0B1120] rounded-xl border border-slate-800 mb-3.5 group-hover:border-slate-700 transition-colors overflow-hidden">
-                    <img
-                      src={item.image}
-                      alt={item.title}
-                      className="max-h-full max-w-full object-contain filter drop-shadow-sm group-hover:scale-105 transition-transform duration-200"
-                      loading="lazy"
-                    />
-                  </div>
-                )}
 
                 {/* Issuer Subtitle */}
                 {item.issuerLogo && (
