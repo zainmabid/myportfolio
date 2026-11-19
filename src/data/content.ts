@@ -853,29 +853,17 @@ export const PORTFOLIO_DATA: PortfolioData = {
       ]
     },
     {
-      id: 'finexcloud',
-      role: 'BDM and Consultant',
-      company: 'FineXcloud',
+      id: 'erp-presales-consultancy',
+      role: 'ERP Pre-Sales & Consultancy',
+      company: 'Confidential',
       city: 'Lahore, Pakistan',
-      dates: 'Dec 2024 to May 2025',
-      summary: 'Technical consultations, requirement analysis, demos and proof-of-concept setups for enterprise automation and ERP clients.',
+      dates: 'May 2024 to May 2025',
+      summary: 'Delivered end-to-end ERP consultancy, pre-sales architecture, business requirement engineering, and system integration roadmaps for enterprise automation and ERP migration clients.',
       details: [
-        'Formulated enterprise business requirements into actionable software and automation blueprints',
-        'Conducted high-impact executive demonstrations and technical scoping sessions for ERP migration prospects',
-        'Collaborated with engineering to establish API integration paths between legacy databases and cloud systems'
-      ]
-    },
-    {
-      id: 'gluon',
-      role: 'ERP Consultant',
-      company: 'Gluon Pvt. Ltd.',
-      city: 'Lahore, Pakistan',
-      dates: 'May 2024 to Oct 2024',
-      summary: 'Assessed ERP needs, deployed and integrated customised ERP solutions, trained end users and documented deployments.',
-      details: [
-        'Conducted operational gap analysis across inventory, procurement, and production accounting modules',
-        'Coordinated data migration schemas, user roles, and custom report builders for enterprise clients',
-        'Designed comprehensive SOP documentation and delivered hands-on training for management and floor teams'
+        'Spearheaded technical pre-sales, executive requirement scoping, and high-impact proof-of-concept demonstrations for ERP migration clients',
+        'Conducted operational gap analysis across inventory, procurement, supply chain, and production accounting workflows',
+        'Collaborated with engineering to architect API integration paths between legacy databases, edge devices, and cloud ERP systems',
+        'Directed data migration schemas, custom reporting engines, SOP documentation, and hands-on end-user training'
       ]
     },
     {
