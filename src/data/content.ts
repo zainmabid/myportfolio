@@ -1513,7 +1513,8 @@ export const PORTFOLIO_DATA: PortfolioData = {
         "issuer": "NTB - ISB",
         "title": "3D Studio Max Architectural Visualization & Modeling",
         "year": "2011",
-        "credentialUrl": "/certifications/3D%20Max_Certificate.jpg"
+        "credentialUrl": "/certifications/3D%20Max_Certificate.jpg",
+        "issuerLogo": "/logos/ntb.png"
     }
   ],
 
