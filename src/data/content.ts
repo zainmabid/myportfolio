@@ -914,6 +914,33 @@ export const PORTFOLIO_DATA: PortfolioData = {
         'Instituted baseline IT infrastructure security controls, user permission hierarchies, and backup redundancy',
         'Drafted company-wide IT compliance documentation and hardware maintenance protocols'
       ]
+    },
+    {
+      id: 'rational-engineering',
+      role: 'Operations & IT Systems Lead',
+      company: 'Rational Engineering Pvt. Ltd.',
+      city: 'Islamabad / Rawalpindi, Pakistan',
+      dates: 'May 2011 to Jan 2015',
+      summary: 'Formative multi-disciplinary leadership within the family-owned industrial engineering enterprise. Spearheaded internal IT infrastructure, administrative workflows, corporate documentation, web presence, and digital marketing while mastering grassroots business execution.',
+      details: [
+        'Managed end-to-end administrative operations, corporate documentation, regulatory compliance, and client contracts across engineering projects',
+        'Architected and maintained the internal IT network, workstation deployments, systems backup, and digital communications pipelines',
+        'Designed and launched the company’s corporate website, digital brand presence, and social media marketing strategy from the ground up',
+        'Served as the hands-on operational hub connecting technical site teams, procurement, and management — forging deep expertise in commercial acumen, vendor handling, and real-world business resilience'
+      ]
+    },
+    {
+      id: 'attock-refinery',
+      role: 'Engineering Intern (Refinery Operations & Technical Services)',
+      company: 'Attock Refinery Limited',
+      city: 'Rawalpindi, Pakistan',
+      dates: 'Aug 2009 to Oct 2009',
+      summary: 'Hands-on industrial engineering internship at Pakistan’s premier crude oil refining complex. Gained foundational exposure to large-scale continuous manufacturing, plant instrumentation, and high-stakes safety protocols.',
+      details: [
+        'Rotated across refinery technical operations, process flow monitoring, and industrial safety compliance departments',
+        'Analyzed preventive maintenance workflows, plant floor instrumentation, and operational standard operating procedures (SOPs)',
+        'Gained foundational grounding in industrial engineering discipline, process safety management, and heavy operational resilience'
+      ]
     }
   ],
 

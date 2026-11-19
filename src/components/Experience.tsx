@@ -44,7 +44,7 @@ export const Experience: React.FC = () => {
                 <span className="font-mono text-xs uppercase font-medium tracking-wider text-[#94A3B8]">
                   [ THE FOUNDATION ]
                 </span>
-                <span className="font-mono text-xs text-[#94A3B8]">2014 — 2024</span>
+                <span className="font-mono text-xs text-[#94A3B8]">2009 — 2024</span>
               </div>
 
               <h3 className="font-heading text-xl font-bold text-white tracking-[-0.02em] mb-3">
@@ -52,7 +52,7 @@ export const Experience: React.FC = () => {
               </h3>
 
               <p className="text-base text-[#94A3B8] leading-relaxed font-normal">
-                Eight years operating at the intersection of enterprise tech. Architecting software solutions, driving corporate pre-sales, and aligning C-suite business goals with technical architecture.
+                Over a decade operating across industrial operations, enterprise software, and systems integration. Grounded in grassroots engineering management, C-suite business alignment, and scaled architectures.
               </p>
             </div>
 
