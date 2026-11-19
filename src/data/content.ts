@@ -1186,11 +1186,11 @@ export const PORTFOLIO_DATA: PortfolioData = {
     {
       id: "cert-dmm",
       group: "Sales and marketing",
-      issuer: "Digital Media Institute",
-      title: "Digital Marketing & Enterprise Media Management",
-      year: "2021",
+      issuer: "PITAC",
+      title: "Certified Social Media Marketing Expert",
+      year: "2020",
       credentialUrl: "/certifications/DMM_Certificate.jpg",
-      issuerLogo: "/logos/linkedin-learning.png"
+      issuerLogo: "/logos/pitac.png"
     },
     {
       id: "cert-empathy-for-sales-professionals",
