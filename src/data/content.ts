@@ -968,6 +968,15 @@ export const PORTFOLIO_DATA: PortfolioData = {
 
   certifications: [
     {
+        "id": "cert-unido-industry-4",
+        "group": "Business and project",
+        "issuer": "United Nations (UNIDO)",
+        "title": "Industry 4.0",
+        "year": "2026",
+        "credentialUrl": "/certifications/Industry%204.0%20-%20UNIDO.pdf",
+        "issuerLogo": "/logos/unido.svg"
+    },
+    {
         "id": "cert-alison-digital-manufacturing",
         "group": "Business and project",
         "issuer": "Alison",
