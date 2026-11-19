@@ -1,18 +1,230 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Calendar, CheckCircle2, ChevronRight, Briefcase, MapPin } from 'lucide-react';
-import { PORTFOLIO_DATA, ExperienceItem } from '@/data/content';
+import {
+  Calendar,
+  CheckCircle2,
+  MapPin,
+  ArrowUpRight,
+  Sparkles,
+  Layers
+} from 'lucide-react';
+import { PORTFOLIO_DATA } from '@/data/content';
+
+interface CareerMilestone {
+  id: string;
+  num: string;
+  phase: string;
+  tabTitle: string;
+  role: string;
+  company: string;
+  city: string;
+  dates: string;
+  year: string;
+  isCurrent?: boolean;
+  signalTag: string;
+  signalValue: string;
+  summary: string;
+  details: string[];
+  x: number;
+  y: number;
+}
 
 export const Experience: React.FC = () => {
   const { experience } = PORTFOLIO_DATA;
-  const [selectedId, setSelectedId] = useState<string>(experience[0]?.id || '');
 
-  const selectedItem: ExperienceItem =
-    experience.find((item) => item.id === selectedId) || experience[0];
-  const selectedIdx = experience.findIndex((item) => item.id === selectedId);
+  // 8 Career Milestones mapped chronologically (01 Genesis -> 08 Today)
+  const milestones: CareerMilestone[] = [
+    {
+      id: 'attock-refinery',
+      num: '01',
+      phase: '01 — GENESIS',
+      tabTitle: 'Heavy Industrial & Refinery Systems',
+      role: 'Engineering Intern (Refinery Operations & Technical Services)',
+      company: 'Attock Refinery Limited',
+      city: 'Rawalpindi, Pakistan',
+      dates: 'Aug 2009 — Oct 2009',
+      year: '2009',
+      signalTag: 'SIGNAL // INDUSTRIAL ROOTS',
+      signalValue: 'Process Engineering & Safety Protocols',
+      summary:
+        'Formative industrial immersion within Pakistan’s premier crude oil refining complex. Gained firsthand operational exposure to heavy process engineering, distributed instrumentation, cross-functional safety protocols, and rigorous quality inspection on live plant floors.',
+      details: [
+        'Shadowed senior process engineers across crude distillation units, monitoring flow rates, temperature gradients, and pressure differentials',
+        'Inspected electrical, mechanical, and safety instrumentation across active hydrocarbon processing units',
+        'Documented preventative maintenance routines, emergency shutdown protocols, and industrial environmental safety SOPs'
+      ],
+      x: 60,
+      y: 95
+    },
+    {
+      id: 'rational-engineering',
+      num: '02',
+      phase: '02 — FOUNDATION',
+      tabTitle: 'Grassroots Operations & Systems Setup',
+      role: 'Operations & IT Systems Lead',
+      company: 'Rational Engineering Pvt. Ltd.',
+      city: 'Islamabad / Rawalpindi, Pakistan',
+      dates: 'May 2011 — Jan 2015',
+      year: '2011–15',
+      signalTag: 'SIGNAL // OPERATIONAL RESILIENCE',
+      signalValue: 'Full-Spectrum Business Execution',
+      summary:
+        'Formative multi-disciplinary leadership within the family-owned industrial engineering enterprise. Spearheaded internal IT infrastructure, administrative workflows, corporate documentation, web presence, and digital marketing while mastering grassroots business execution.',
+      details: [
+        'Managed end-to-end administrative operations, corporate documentation, regulatory compliance, and client contracts across engineering projects',
+        'Architected and maintained the internal IT network, workstation deployments, systems backup, and digital communications pipelines',
+        'Designed and launched the company’s corporate website, digital brand presence, and social media marketing strategy from the ground up',
+        'Served as the hands-on operational hub connecting technical site teams, procurement, and management — forging deep expertise in commercial acumen, vendor handling, and real-world business resilience'
+      ],
+      x: 185,
+      y: 35
+    },
+    {
+      id: 'tritech',
+      num: '03',
+      phase: '03 — INFRASTRUCTURE',
+      tabTitle: 'IT Infrastructure & Systems SOPs',
+      role: 'Admin Manager IT',
+      company: 'Tri Tech (Pvt.) Ltd.',
+      city: 'Lahore, Pakistan',
+      dates: 'Nov 2015 — May 2017',
+      year: '2015–17',
+      signalTag: 'SIGNAL // SYSTEMS GOVERNANCE',
+      signalValue: 'Infrastructure SOPs & Redundancy',
+      summary:
+        'Introduced SOPs and documentation, managed user access and storage, set up backup and restore procedures, and maintained structured IT service continuity.',
+      details: [
+        'Instituted baseline IT infrastructure security controls, user permission hierarchies, and backup redundancy',
+        'Drafted company-wide IT compliance documentation, workstation provisioning guidelines, and hardware maintenance protocols'
+      ],
+      x: 310,
+      y: 95
+    },
+    {
+      id: 'eccountax',
+      num: '04',
+      phase: '04 — GOVERNANCE',
+      tabTitle: 'Project Delivery & IT Roadmaps',
+      role: 'Project Coordinator and IT Consultant',
+      company: 'Eccountax',
+      city: 'Lahore, Pakistan',
+      dates: 'Jun 2017 — Jun 2019',
+      year: '2017–19',
+      signalTag: 'SIGNAL // CLIENT DELIVERY',
+      signalValue: 'Milestone Governance & Digital Roadmaps',
+      summary:
+        'Coordinated project timelines and stakeholders; advised clients on technical solutions, cloud migrations, and workflow optimizations.',
+      details: [
+        'Maintained structured project milestones, risk registers, and cross-departmental delivery schedules',
+        'Facilitated client alignment workshops, converting operational requirements into structured IT tasks'
+      ],
+      x: 435,
+      y: 35
+    },
+    {
+      id: 'nexus',
+      num: '05',
+      phase: '05 — EXPANSION',
+      tabTitle: 'Enterprise Software & Strategic Presales',
+      role: 'Technical Sales and Solutions Manager',
+      company: 'Nexus Technologies',
+      city: 'Islamabad, Pakistan',
+      dates: 'Nov 2019 — Oct 2023',
+      year: '2019–23',
+      signalTag: 'SIGNAL // ENTERPRISE SCALE',
+      signalValue: 'Multi-Year Software Strategy',
+      summary:
+        'Led business development and enterprise solution sales across industries; architected high-impact technical demonstrations for ERP and automation systems.',
+      details: [
+        'Managed multi-year client relationships, expanding accounts across industrial, commercial, and government sectors',
+        'Led solution architecture presentations, bid tenders, and RFP technical compliance responses',
+        'Bridged commercial targets with technical viability, ensuring zero margin slippage during implementation handoffs'
+      ],
+      x: 560,
+      y: 95
+    },
+    {
+      id: 'erp-presales-consultancy',
+      num: '06',
+      phase: '06 — ARCHITECTURE',
+      tabTitle: 'ERP Pre-Sales & Integration Architecture',
+      role: 'ERP Pre-Sales & Consultancy',
+      company: 'Confidential',
+      city: 'Lahore, Pakistan',
+      dates: 'May 2024 — May 2025',
+      year: '2024–25',
+      signalTag: 'SIGNAL // ERP INTEGRATION',
+      signalValue: 'Process Gap Analysis & API Integration',
+      summary:
+        'Delivered end-to-end ERP consultancy, pre-sales architecture, business requirement engineering, and system integration roadmaps for enterprise automation and ERP migration clients.',
+      details: [
+        'Spearheaded technical pre-sales, executive requirement scoping, and high-impact proof-of-concept demonstrations for ERP migration clients',
+        'Conducted operational gap analysis across inventory, procurement, supply chain, and production accounting workflows',
+        'Collaborated with engineering to architect API integration paths between legacy databases, edge devices, and cloud ERP systems',
+        'Directed data migration schemas, custom reporting engines, SOP documentation, and hands-on end-user training'
+      ],
+      x: 685,
+      y: 35
+    },
+    {
+      id: 'emergtech',
+      num: '07',
+      phase: '07 — EXECUTION',
+      tabTitle: 'RFID Deployments & Operations Leadership',
+      role: 'COO/CSO and Project Delivery Lead',
+      company: 'EmergTech Solutions Pvt. Ltd.',
+      city: 'Lahore, Pakistan',
+      dates: 'Apr 2025 — Jan 2026',
+      year: '2025–26',
+      signalTag: 'SIGNAL // FIELD AUTOMATION',
+      signalValue: 'WIP Tracking & Turnkey RFID Portals',
+      summary:
+        'Ran operational strategy and delivery for RFID, barcode and warehouse automation; led solution design, POCs and deployment coordination; supervised the RFID hardware integration teams on active factory floors.',
+      details: [
+        'Directed cross-functional engineering and installation teams on large-scale RFID portal and handheld rollouts',
+        'Spearheaded technical presales, architectural proof-of-concepts, and client requirement validations',
+        'Established standard operating procedures for UHF tag tuning, reader antenna placement, and site RF surveys'
+      ],
+      x: 810,
+      y: 95
+    },
+    {
+      id: 'zaintegrated-solutions',
+      num: '08',
+      phase: '08 — TODAY',
+      tabTitle: 'Enterprise Auto-ID & Industry 4.0 Solutions',
+      role: 'Founder & Managing Director',
+      company: 'Zaintegrated Solutions',
+      city: 'Lahore, Pakistan',
+      dates: 'Current',
+      year: 'Current',
+      isCurrent: true,
+      signalTag: 'SIGNAL // ACTIVE LEADERSHIP',
+      signalValue: 'Zero-Loss Traceability & Industry 4.0',
+      summary:
+        'Directing enterprise operations consulting, Auto-ID engineering, and software products. Consultant and technical advisor to multiple national and international organizations on physical asset visibility, warehouse automation, and ERP integrations.',
+      details: [
+        'Directing strategic consulting for national and international enterprises scaling physical asset tracking, inventory counts, and supply chain visibility',
+        'Architecting integrated solutions connecting RFID/barcode edge devices with modern cloud ERP and inventory systems',
+        'Delivering vendor-neutral hardware evaluations, middleware architectures, RF site surveys, and turnkey execution roadmaps'
+      ],
+      x: 935,
+      y: 35
+    }
+  ];
+
+  // Default to the current Founder & MD role (08)
+  const [selectedId, setSelectedId] = useState<string>('zaintegrated-solutions');
+
+  const activeMilestone =
+    milestones.find((m) => m.id === selectedId) || milestones[milestones.length - 1];
 
   return (
-    <section id="experience" data-section-theme="dark" className="py-28 sm:py-36 border-b border-slate-800 bg-[#0F172A] text-white">
+    <section
+      id="experience"
+      data-section-theme="dark"
+      className="py-28 sm:py-36 border-b border-slate-800 bg-[#0F172A] text-white"
+    >
       <div className="max-w-[1140px] mx-auto px-4 sm:px-6 lg:px-8 text-left">
         {/* Section Tag Capsule */}
         <div className="mb-4">
@@ -36,8 +248,8 @@ export const Experience: React.FC = () => {
         />
 
         {/* The Evolution Matrix: Two Asymmetric Flat Crisp Dark Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-20">
-          {/* COLUMN A - THE FOUNDATION (2014 - 2024) */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+          {/* COLUMN A - THE FOUNDATION (2009 - 2024) */}
           <div className="p-8 rounded-2xl border border-slate-800 bg-[#131B2E] flex flex-col justify-between shadow-md hover:border-slate-700 transition-all duration-200">
             <div>
               <div className="flex items-center justify-between pb-3 mb-5 border-b border-slate-800">
@@ -88,138 +300,89 @@ export const Experience: React.FC = () => {
           </div>
         </div>
 
-        {/* Master-Detail Interactive Chronology Inspector */}
-        <div className="pt-4">
-          <div className="mb-6 flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-3 border-b border-slate-800">
-            <h3 className="font-heading text-xl font-bold tracking-[-0.02em] text-white">
-              Chronological Track Record
-            </h3>
-            <span className="font-mono text-xs text-[#94A3B8]">
-              Hover or tap a role to inspect operational deliverables
-            </span>
-          </div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-start">
-            {/* Left Rail / Role Navigation */}
-            <div className="lg:col-span-5 space-y-2.5">
-              <div className="relative pl-4 sm:pl-5 border-l-2 border-slate-800 space-y-3">
-                {experience.map((item) => {
-                  const isActive = item.id === selectedItem.id;
-
-                  return (
-                    <button
-                      key={item.id}
-                      onMouseEnter={() => setSelectedId(item.id)}
-                      onClick={() => setSelectedId(item.id)}
-                      className={`relative w-full text-left p-4 rounded-xl border transition-all duration-150 cursor-pointer block ${
-                        isActive
-                          ? 'bg-[#1E293B] border-slate-600 shadow-md'
-                          : 'bg-[#131B2E]/90 hover:bg-[#1E293B]/70 border-slate-800 hover:border-slate-700'
-                      }`}
-                    >
-                      {/* Node Dot on Left Vertical Line */}
-                      <div
-                        className={`absolute -left-[23px] sm:-left-[27px] top-1/2 -translate-y-1/2 w-2.5 h-2.5 rounded-full border-2 transition-all duration-150 ${
-                          isActive
-                            ? 'bg-white border-[#0F172A] ring-4 ring-slate-700 scale-125'
-                            : 'bg-slate-700 border-[#0F172A]'
-                        }`}
-                        aria-hidden="true"
-                      />
-
-                      {/* Header Row: Dates */}
-                      <div className="flex items-center justify-between gap-2 mb-1.5">
-                        <span className="font-mono text-[11px] text-[#94A3B8] flex items-center gap-1">
-                          <Calendar className="w-3 h-3 text-slate-300" />
-                          {item.dates}
-                        </span>
-                        {item.isCurrent && (
-                          <span className="font-mono text-[9px] uppercase font-bold tracking-wider px-1.5 py-0.5 rounded-md bg-white text-[#1A1A1A]">
-                            Active
-                          </span>
-                        )}
-                      </div>
-
-                      {/* Role Title */}
-                      <div
-                        className={`font-heading text-sm sm:text-base font-semibold tracking-tight transition-colors ${
-                          isActive ? 'text-white' : 'text-slate-300'
-                        }`}
-                      >
-                        {item.role}
-                      </div>
-
-                      {/* Company Name */}
-                      <div className="text-xs text-[#94A3B8] mt-0.5 flex items-center justify-between">
-                        <span className="truncate">{item.company}</span>
-                        <ChevronRight
-                          className={`w-3.5 h-3.5 shrink-0 transition-transform ${
-                            isActive
-                              ? 'text-white translate-x-1'
-                              : 'opacity-0 text-[#94A3B8]'
-                          }`}
-                        />
-                      </div>
-                    </button>
-                  );
-                })}
-              </div>
+        {/* SECTION HEADER FOR INTERACTIVE TIMELINE */}
+        <div className="mb-8 flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-4 border-b border-slate-800">
+          <div>
+            <div className="font-mono text-[11px] uppercase tracking-wider text-slate-400 font-semibold mb-1 flex items-center gap-2">
+              <Sparkles className="w-3.5 h-3.5 text-slate-300" />
+              <span>CAREER CHRONOLOGY // 8 MILESTONES</span>
             </div>
+            <h3 className="font-heading text-2xl font-bold tracking-tight text-white">
+              Interactive Career Trajectory
+            </h3>
+          </div>
+          <p className="font-mono text-xs text-[#94A3B8] max-w-sm sm:text-right">
+            Hover over the bottom timeline nodes or click any milestone tab to inspect full operational details.
+          </p>
+        </div>
 
-            {/* Right Column: Active Role Detail Window */}
-            <div className="lg:col-span-7 sticky top-24">
-              <div className="relative rounded-2xl border border-slate-800 bg-[#131B2E] shadow-xl overflow-hidden min-h-[400px]">
-                {/* Minimal Header Bar */}
-                <div className="px-5 py-3 border-b border-slate-800 bg-[#0B1120] flex items-center justify-between font-mono text-[11px] uppercase tracking-wider text-[#94A3B8]">
-                  <div className="flex items-center gap-2">
-                    <span className="w-2 h-2 rounded-full bg-emerald-400" />
-                    <span>ROLE // EXP-0{selectedIdx + 1}</span>
-                  </div>
-                  <div className="flex items-center gap-1.5 text-white font-medium">
-                    <MapPin className="w-3 h-3 text-slate-300" />
-                    <span>{selectedItem.city}</span>
-                  </div>
-                </div>
+        {/* --- MAIN INTERACTIVE SHOWCASE (MATCHING THE SCREENSHOT) --- */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start mb-12">
+          {/* LEFT COLUMN: FEATURED DETAIL CARD */}
+          <div className="lg:col-span-7">
+            <div className="relative rounded-3xl border border-slate-800 bg-[#131B2E] shadow-2xl p-7 sm:p-9 flex flex-col justify-between min-h-[520px] overflow-hidden">
+              {/* Subtle Ambient Radial Glow */}
+              <div
+                className="absolute -top-24 -left-24 w-72 h-72 rounded-full bg-slate-700/20 blur-3xl pointer-events-none"
+                aria-hidden="true"
+              />
 
-                {/* Animated Content Panel */}
-                <AnimatePresence mode="wait">
-                  <motion.div
-                    key={selectedItem.id}
-                    initial={{ opacity: 0, y: 6 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: -6 }}
-                    transition={{ duration: 0.18, ease: 'easeOut' }}
-                    className="p-6 sm:p-8"
-                  >
-                    <div>
-                      <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-md bg-slate-800 border border-slate-700 font-mono text-[10px] uppercase tracking-wider text-slate-200 font-semibold mb-2">
-                        <Briefcase className="w-3 h-3" />
-                        {selectedItem.dates}
-                      </div>
-
-                      <h3 className="font-heading text-2xl font-bold tracking-[-0.02em] text-white leading-snug">
-                        {selectedItem.role}
-                      </h3>
-
-                      <div className="text-sm font-medium text-slate-300 mt-1">
-                        {selectedItem.company}
-                      </div>
+              <AnimatePresence mode="wait">
+                <motion.div
+                  key={activeMilestone.id}
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -10 }}
+                  transition={{ duration: 0.22, ease: 'easeOut' }}
+                  className="relative z-10 flex flex-col justify-between h-full"
+                >
+                  <div>
+                    {/* Top Tag & Location Pill */}
+                    <div className="flex items-center justify-between gap-3 mb-4">
+                      <span className="font-mono text-xs uppercase tracking-widest text-slate-400 font-bold">
+                        {activeMilestone.phase}
+                      </span>
+                      <span className="font-mono text-[11px] text-slate-400 flex items-center gap-1.5 bg-[#0B1120] px-3 py-1 rounded-full border border-slate-800">
+                        <MapPin className="w-3 h-3 text-slate-400" />
+                        <span>{activeMilestone.city}</span>
+                      </span>
                     </div>
 
-                    {/* Operational Summary Callout */}
-                    <div className="mt-5 p-4 rounded-xl bg-[#0B1120] border-l-4 border-slate-400 text-sm text-slate-300 leading-relaxed">
-                      {selectedItem.summary}
+                    {/* Prominent Role Title Heading */}
+                    <h3 className="font-heading text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-white mb-2 leading-tight">
+                      {activeMilestone.role}
+                    </h3>
+
+                    {/* Company & Period Badge Row */}
+                    <div className="flex flex-wrap items-center gap-2 mb-6">
+                      <span className="text-sm sm:text-base font-semibold text-slate-200">
+                        {activeMilestone.company}
+                      </span>
+                      <span className="text-slate-600">•</span>
+                      <span className="font-mono text-xs text-slate-400 flex items-center gap-1">
+                        <Calendar className="w-3 h-3 text-slate-400" />
+                        {activeMilestone.dates}
+                      </span>
+                      {activeMilestone.isCurrent && (
+                        <span className="font-mono text-[10px] uppercase font-bold tracking-wider px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">
+                          Active Leadership
+                        </span>
+                      )}
                     </div>
 
-                    {/* Key Deliverables */}
-                    {selectedItem.details && selectedItem.details.length > 0 && (
-                      <div className="mt-6 pt-5 border-t border-slate-800">
+                    {/* Narrative Summary Callout */}
+                    <div className="p-4 sm:p-5 rounded-xl bg-[#0B1120] border-l-4 border-slate-400 text-sm sm:text-base text-slate-300 leading-relaxed mb-6 font-normal">
+                      {activeMilestone.summary}
+                    </div>
+
+                    {/* Key Operational Deliverables Checklist */}
+                    {activeMilestone.details && activeMilestone.details.length > 0 && (
+                      <div>
                         <div className="font-mono text-[10px] uppercase tracking-widest text-[#94A3B8] mb-3 font-semibold">
-                          KEY DELIVERABLES
+                          KEY OPERATIONAL DELIVERABLES
                         </div>
-
                         <ul className="space-y-2.5">
-                          {selectedItem.details.map((detail, idx) => (
+                          {activeMilestone.details.map((detail, idx) => (
                             <li
                               key={idx}
                               className="flex items-start gap-2.5 text-xs sm:text-sm text-slate-200 leading-relaxed"
@@ -231,9 +394,208 @@ export const Experience: React.FC = () => {
                         </ul>
                       </div>
                     )}
-                  </motion.div>
-                </AnimatePresence>
-              </div>
+                  </div>
+
+                  {/* Bottom Signal Badge Container (Exactly like the uploaded screenshot) */}
+                  <div className="mt-8 pt-5 border-t border-slate-800 flex flex-wrap items-center justify-between gap-4">
+                    <div className="inline-flex items-center gap-3 px-4 py-2.5 rounded-xl bg-[#0B1120] border border-slate-800 shadow-inner">
+                      <div>
+                        <div className="font-mono text-[9px] uppercase tracking-widest text-slate-400 font-bold">
+                          {activeMilestone.signalTag}
+                        </div>
+                        <div className="text-xs sm:text-sm font-bold text-white tracking-tight mt-0.5">
+                          {activeMilestone.signalValue}
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="font-mono text-xs text-slate-400">
+                      MILESTONE // {activeMilestone.num} OF 08
+                    </div>
+                  </div>
+                </motion.div>
+              </AnimatePresence>
+            </div>
+          </div>
+
+          {/* RIGHT COLUMN: STACKED INTERACTIVE TABS */}
+          <div className="lg:col-span-5 space-y-2.5 max-h-[540px] overflow-y-auto pr-1">
+            {milestones.map((m) => {
+              const isActive = m.id === activeMilestone.id;
+
+              return (
+                <div
+                  key={m.id}
+                  onMouseEnter={() => setSelectedId(m.id)}
+                  onClick={() => setSelectedId(m.id)}
+                  className={`group relative w-full text-left p-3.5 sm:p-4 rounded-2xl border transition-all duration-200 cursor-pointer flex items-center justify-between gap-3 ${
+                    isActive
+                      ? 'bg-white text-slate-950 border-white shadow-2xl scale-[1.02]'
+                      : 'bg-[#131B2E] hover:bg-[#1A243B] border-slate-800 hover:border-slate-700 text-slate-200'
+                  }`}
+                >
+                  <div className="flex items-center gap-3.5 min-w-0">
+                    {/* Circular Number Badge */}
+                    <div
+                      className={`w-9 h-9 rounded-full flex items-center justify-center font-mono text-xs font-bold shrink-0 transition-all duration-200 ${
+                        isActive
+                          ? 'border-2 border-slate-300 bg-slate-100 text-slate-950 shadow-xs'
+                          : 'border border-slate-700 bg-slate-800/80 text-slate-400 group-hover:text-white group-hover:border-slate-500'
+                      }`}
+                    >
+                      {m.num}
+                    </div>
+
+                    {/* Tab Header & Title */}
+                    <div className="min-w-0">
+                      <div
+                        className={`font-mono text-[10px] uppercase font-bold tracking-wider truncate ${
+                          isActive ? 'text-slate-500' : 'text-slate-400'
+                        }`}
+                      >
+                        {m.phase}
+                      </div>
+                      <div
+                        className={`font-heading text-sm sm:text-base font-bold truncate leading-tight mt-0.5 ${
+                          isActive ? 'text-slate-950' : 'text-white'
+                        }`}
+                      >
+                        {m.tabTitle}
+                      </div>
+                      <div
+                        className={`text-xs truncate mt-0.5 ${
+                          isActive ? 'text-slate-600 font-medium' : 'text-slate-400'
+                        }`}
+                      >
+                        {m.company} • {m.year}
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Right Arrow Icon */}
+                  <div className="shrink-0 pl-1">
+                    <div
+                      className={`w-7 h-7 rounded-lg flex items-center justify-center transition-colors ${
+                        isActive
+                          ? 'bg-slate-100 text-slate-950'
+                          : 'bg-slate-800/50 text-slate-500 group-hover:text-slate-300'
+                      }`}
+                    >
+                      <ArrowUpRight className="w-3.5 h-3.5" />
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+
+        {/* --- BOTTOM INTERACTIVE WAVY TIMELINE TRACK --- */}
+        <div className="pt-8 border-t border-slate-800">
+          <div className="flex items-center justify-between mb-4">
+            <div className="font-mono text-xs uppercase tracking-wider text-slate-300 flex items-center gap-2">
+              <span className="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse" />
+              <span className="font-semibold text-white">Interactive Career Wave</span>
+              <span className="text-slate-500 hidden sm:inline">— Hover over nodes to navigate</span>
+            </div>
+            <div className="font-mono text-[11px] text-slate-400">
+              2009 (Genesis) ➔ 2026+ (Active MD)
+            </div>
+          </div>
+
+          {/* SVG Wavy Path with Interactive Milestone Nodes */}
+          <div className="w-full overflow-x-auto pb-4 pt-2">
+            <div className="min-w-[760px] relative px-4">
+              <svg
+                viewBox="0 0 1000 130"
+                className="w-full h-auto overflow-visible select-none"
+              >
+                <defs>
+                  <linearGradient id="waveLineGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" stopColor="#334155" />
+                    <stop offset="50%" stopColor="#64748B" />
+                    <stop offset="100%" stopColor="#CBD5E1" />
+                  </linearGradient>
+                </defs>
+
+                {/* Continuous Undulating Connecting Curve */}
+                <path
+                  d="M 60,95 C 120,95 125,35 185,35 C 245,35 250,95 310,95 C 370,95 375,35 435,35 C 495,35 500,95 560,95 C 620,95 625,35 685,35 C 745,35 750,95 810,95 C 870,95 875,35 935,35"
+                  fill="none"
+                  stroke="url(#waveLineGradient)"
+                  strokeWidth="2.5"
+                  strokeLinecap="round"
+                />
+
+                {/* Interactive Milestone Nodes */}
+                {milestones.map((node) => {
+                  const isActive = node.id === activeMilestone.id;
+
+                  return (
+                    <g
+                      key={node.id}
+                      className="cursor-pointer group"
+                      onMouseEnter={() => setSelectedId(node.id)}
+                      onClick={() => setSelectedId(node.id)}
+                    >
+                      {/* Invisible larger hit target circle for effortless hovering */}
+                      <circle cx={node.x} cy={node.y} r="32" fill="transparent" />
+
+                      {/* Outer Glow Halo when active */}
+                      {isActive && (
+                        <circle
+                          cx={node.x}
+                          cy={node.y}
+                          r="25"
+                          fill="none"
+                          stroke="#FFFFFF"
+                          strokeWidth="2"
+                          strokeOpacity="0.4"
+                        />
+                      )}
+
+                      {/* Node Circle */}
+                      <circle
+                        cx={node.x}
+                        cy={node.y}
+                        r={isActive ? 20 : 16}
+                        fill={isActive ? '#FFFFFF' : '#0F172A'}
+                        stroke={isActive ? '#FFFFFF' : '#475569'}
+                        strokeWidth={isActive ? '3' : '2'}
+                        className="transition-all duration-200"
+                      />
+
+                      {/* Number Text inside Circle */}
+                      <text
+                        x={node.x}
+                        y={node.y + 4.5}
+                        textAnchor="middle"
+                        fontSize={isActive ? '12' : '11'}
+                        fontWeight="700"
+                        fontFamily="monospace"
+                        fill={isActive ? '#0F172A' : '#94A3B8'}
+                        className="pointer-events-none select-none transition-all duration-200"
+                      >
+                        {node.num}
+                      </text>
+
+                      {/* Year Label above/below alternating based on curve y */}
+                      <text
+                        x={node.x}
+                        y={node.y > 60 ? node.y + 26 : node.y - 18}
+                        textAnchor="middle"
+                        fontSize="10"
+                        fontWeight={isActive ? '700' : '500'}
+                        fontFamily="monospace"
+                        fill={isActive ? '#FFFFFF' : '#64748B'}
+                        className="pointer-events-none select-none uppercase tracking-wider transition-colors duration-200"
+                      >
+                        {node.year}
+                      </text>
+                    </g>
+                  );
+                })}
+              </svg>
             </div>
           </div>
         </div>
