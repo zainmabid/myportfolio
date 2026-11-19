@@ -974,7 +974,7 @@ export const PORTFOLIO_DATA: PortfolioData = {
         "title": "Smart Manufacturing and Industry 4.0",
         "year": "2026",
         "credentialUrl": "/certifications/Smart%20Manufacturing%20and%20Industry%204.0%20-%20UNIDO.pdf",
-        "issuerLogo": "/logos/unido.svg"
+        "issuerLogo": "/logos/unido.png"
     },
     {
         "id": "cert-unido-business-alliances",
@@ -983,7 +983,7 @@ export const PORTFOLIO_DATA: PortfolioData = {
         "title": "International Business Alliances",
         "year": "2026",
         "credentialUrl": "/certifications/International%20Business%20Alliances%20-%20UNIDO.pdf",
-        "issuerLogo": "/logos/unido.svg"
+        "issuerLogo": "/logos/unido.png"
     },
     {
         "id": "cert-unido-industry-4",
@@ -992,7 +992,7 @@ export const PORTFOLIO_DATA: PortfolioData = {
         "title": "Industry 4.0",
         "year": "2026",
         "credentialUrl": "/certifications/Industry%204.0%20-%20UNIDO.pdf",
-        "issuerLogo": "/logos/unido.svg"
+        "issuerLogo": "/logos/unido.png"
     },
     {
         "id": "cert-alison-digital-manufacturing",
