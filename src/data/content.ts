@@ -1169,7 +1169,7 @@ export const PORTFOLIO_DATA: PortfolioData = {
       id: "cert-cisa-landscape",
       group: "Cloud, network and security",
       issuer: "US CISA",
-      title: "Cybersecurity Landscape for Executive Managers",
+      title: "ICS Cybersecurity Landscape for Managers (FRE2115)",
       year: "2026",
       credentialUrl: "/certifications/Cybersecurity_Landscape%20for%20Managers%20-%20US%20CISA.pdf",
       issuerLogo: "/logos/cisa.png"
