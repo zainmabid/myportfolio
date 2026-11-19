@@ -1234,14 +1234,6 @@ export const PORTFOLIO_DATA: PortfolioData = {
       issuerLogo: '/logos/pitac.png'
     },
     {
-      id: 'cert-iacet-ceus',
-      group: 'Business and project',
-      issuer: 'IACET Accredited Provider',
-      title: 'Accredited Continuing Education Units (CEUs)',
-      year: '2026',
-      issuerLogo: '/logos/iacet.png'
-    },
-    {
       id: 'cert-nasba',
       group: 'Sales and marketing',
       issuer: 'NASBA',
@@ -1258,14 +1250,6 @@ export const PORTFOLIO_DATA: PortfolioData = {
       year: '2021',
       credentialUrl: '/certifications/kEY%20aCCOUNT%20mANAGEMENT%20(NASBA).pdf',
       issuerLogo: '/logos/nasba.png'
-    },
-    {
-      id: 'cert-cpe-qas',
-      group: 'Sales and marketing',
-      issuer: 'National Registry of CPE Sponsors',
-      title: 'QAS Continuing Professional Education (CPE)',
-      year: '2021',
-      issuerLogo: '/logos/cpe-qas.png'
     },
     {
       id: 'cert-open-university',
