@@ -1004,15 +1004,6 @@ export const PORTFOLIO_DATA: PortfolioData = {
         "issuerLogo": "/logos/alison.png"
     },
     {
-        "id": "cert-agile-project-management-with-microsoft-project",
-        "group": "Business and project",
-        "issuer": "LinkedIn Learning",
-        "title": "Agile Project Management with Microsoft Project",
-        "year": "2026",
-        "credentialUrl": "/certifications/Agile%20Project%20Management%20with%20Microsoft%20Project.pdf",
-        "issuerLogo": "/logos/linkedin-learning.png"
-    },
-    {
         "id": "cert-hpi-edge-ai",
         "group": "Cloud, network and security",
         "issuer": "Hasso Plattner Institute (openHPI)",
@@ -1245,6 +1236,15 @@ export const PORTFOLIO_DATA: PortfolioData = {
         "year": "2023",
         "credentialUrl": "/certifications/IBM_Cloud_Core_Certified.pdf",
         "issuerLogo": "/logos/ibm.png"
+    },
+    {
+        "id": "cert-agile-project-management-with-microsoft-project",
+        "group": "Business and project",
+        "issuer": "LinkedIn Learning",
+        "title": "Agile Project Management with Microsoft Project",
+        "year": "2021",
+        "credentialUrl": "/certifications/Agile%20Project%20Management%20with%20Microsoft%20Project.pdf",
+        "issuerLogo": "/logos/linkedin-learning.png"
     },
     {
         "id": "cert-15-secrets-successful-people-know-about-time-management",
