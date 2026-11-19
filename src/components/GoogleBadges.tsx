@@ -272,17 +272,19 @@ export const GoogleBadges: React.FC = () => {
                     </h3>
                   </div>
 
-                  {/* Card Bottom Row: Clean Single Action Verification Link */}
-                  <div className="pt-3.5 mt-4 border-t border-slate-800 flex items-center justify-between">
+                  {/* Card Bottom Row: Clean Single Action Verification Link (Strictly Single Line) */}
+                  <div className="pt-3.5 mt-4 border-t border-slate-800 flex items-center justify-between min-w-0">
                     <a
                       href={badge.badgeUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1.5 text-xs font-mono text-emerald-400 hover:text-emerald-300 font-semibold transition-colors group/link"
+                      className="w-full flex items-center justify-between gap-1.5 text-[11px] sm:text-xs font-mono text-emerald-400 hover:text-emerald-300 font-semibold transition-colors group/link whitespace-nowrap overflow-hidden"
                     >
-                      <ShieldCheck className="w-3.5 h-3.5 shrink-0 text-emerald-400" />
-                      <span>{getVerificationLabel(badge.badgeUrl)}</span>
-                      <ExternalLink className="w-3 h-3 text-slate-400 group-hover/link:text-emerald-300 shrink-0" />
+                      <div className="flex items-center gap-1.5 min-w-0 truncate">
+                        <ShieldCheck className="w-3.5 h-3.5 shrink-0 text-emerald-400" />
+                        <span className="truncate whitespace-nowrap">{getVerificationLabel(badge.badgeUrl)}</span>
+                      </div>
+                      <ExternalLink className="w-3 h-3 text-slate-400 group-hover/link:text-emerald-300 shrink-0 ml-1" />
                     </a>
                   </div>
                 </div>
