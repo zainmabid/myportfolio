@@ -1118,7 +1118,7 @@ export const PORTFOLIO_DATA: PortfolioData = {
       title: 'Cloud Core Certified',
       year: '2023',
       credentialUrl: '/certifications/IBM_Cloud_Core_Certified.pdf',
-      image: '/certifications/badges/IBM%20-%20Cloud%20Essentials.png',
+      image: '/certifications/badges/ibm-cloud-core.png',
       issuerLogo: '/logos/ibm.png'
     },
     {
@@ -1572,12 +1572,12 @@ export const PORTFOLIO_DATA: PortfolioData = {
     },
     {
         "id": "badge-ibm-cloud-essentials",
-        "title": "IBM Cloud Essentials",
+        "title": "IBM Cloud Core Certified",
         "issuer": "IBM",
         "group": "Cloud, Security & Agile",
         "date": "2023",
         "badgeUrl": "/certifications/IBM_Cloud_Core_Certified.pdf",
-        "image": "/certifications/badges/IBM%20-%20Cloud%20Essentials.png",
+        "image": "/certifications/badges/ibm-cloud-core.png",
         "category": "Cloud Infrastructure",
         "verificationType": "IBM Certified",
         "description": "Foundational cloud architecture, virtualization, hybrid cloud models, microservices, and enterprise cloud operations."
