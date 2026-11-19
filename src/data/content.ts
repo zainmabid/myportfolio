@@ -968,6 +968,15 @@ export const PORTFOLIO_DATA: PortfolioData = {
 
   certifications: [
     {
+        "id": "cert-unido-business-alliances",
+        "group": "Business and project",
+        "issuer": "United Nations (UNIDO)",
+        "title": "International Business Alliances",
+        "year": "2026",
+        "credentialUrl": "/certifications/International%20Business%20Alliances%20-%20UNIDO.pdf",
+        "issuerLogo": "/logos/unido.svg"
+    },
+    {
         "id": "cert-unido-industry-4",
         "group": "Business and project",
         "issuer": "United Nations (UNIDO)",
