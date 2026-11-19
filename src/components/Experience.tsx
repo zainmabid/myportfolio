@@ -4,9 +4,7 @@ import {
   Calendar,
   CheckCircle2,
   MapPin,
-  ArrowUpRight,
-  Sparkles,
-  Layers
+  Sparkles
 } from 'lucide-react';
 import { PORTFOLIO_DATA } from '@/data/content';
 
@@ -14,7 +12,6 @@ interface CareerMilestone {
   id: string;
   num: string;
   phase: string;
-  tabTitle: string;
   role: string;
   company: string;
   city: string;
@@ -25,20 +22,15 @@ interface CareerMilestone {
   signalValue: string;
   summary: string;
   details: string[];
-  x: number;
-  y: number;
 }
 
 export const Experience: React.FC = () => {
-  const { experience } = PORTFOLIO_DATA;
-
   // 8 Career Milestones mapped chronologically (01 Genesis -> 08 Today)
   const milestones: CareerMilestone[] = [
     {
       id: 'attock-refinery',
       num: '01',
       phase: '01 — GENESIS',
-      tabTitle: 'Heavy Industrial & Refinery Systems',
       role: 'Engineering Intern (Refinery Operations & Technical Services)',
       company: 'Attock Refinery Limited',
       city: 'Rawalpindi, Pakistan',
@@ -52,15 +44,12 @@ export const Experience: React.FC = () => {
         'Shadowed senior process engineers across crude distillation units, monitoring flow rates, temperature gradients, and pressure differentials',
         'Inspected electrical, mechanical, and safety instrumentation across active hydrocarbon processing units',
         'Documented preventative maintenance routines, emergency shutdown protocols, and industrial environmental safety SOPs'
-      ],
-      x: 60,
-      y: 95
+      ]
     },
     {
       id: 'rational-engineering',
       num: '02',
       phase: '02 — FOUNDATION',
-      tabTitle: 'Grassroots Operations & Systems Setup',
       role: 'Operations & IT Systems Lead',
       company: 'Rational Engineering Pvt. Ltd.',
       city: 'Islamabad / Rawalpindi, Pakistan',
@@ -75,15 +64,12 @@ export const Experience: React.FC = () => {
         'Architected and maintained the internal IT network, workstation deployments, systems backup, and digital communications pipelines',
         'Designed and launched the company’s corporate website, digital brand presence, and social media marketing strategy from the ground up',
         'Served as the hands-on operational hub connecting technical site teams, procurement, and management — forging deep expertise in commercial acumen, vendor handling, and real-world business resilience'
-      ],
-      x: 185,
-      y: 35
+      ]
     },
     {
       id: 'tritech',
       num: '03',
       phase: '03 — INFRASTRUCTURE',
-      tabTitle: 'IT Infrastructure & Systems SOPs',
       role: 'Admin Manager IT',
       company: 'Tri Tech (Pvt.) Ltd.',
       city: 'Lahore, Pakistan',
@@ -96,15 +82,12 @@ export const Experience: React.FC = () => {
       details: [
         'Instituted baseline IT infrastructure security controls, user permission hierarchies, and backup redundancy',
         'Drafted company-wide IT compliance documentation, workstation provisioning guidelines, and hardware maintenance protocols'
-      ],
-      x: 310,
-      y: 95
+      ]
     },
     {
       id: 'eccountax',
       num: '04',
       phase: '04 — GOVERNANCE',
-      tabTitle: 'Project Delivery & IT Roadmaps',
       role: 'Project Coordinator and IT Consultant',
       company: 'Eccountax',
       city: 'Lahore, Pakistan',
@@ -117,15 +100,12 @@ export const Experience: React.FC = () => {
       details: [
         'Maintained structured project milestones, risk registers, and cross-departmental delivery schedules',
         'Facilitated client alignment workshops, converting operational requirements into structured IT tasks'
-      ],
-      x: 435,
-      y: 35
+      ]
     },
     {
       id: 'nexus',
       num: '05',
       phase: '05 — EXPANSION',
-      tabTitle: 'Enterprise Software & Strategic Presales',
       role: 'Technical Sales and Solutions Manager',
       company: 'Nexus Technologies',
       city: 'Islamabad, Pakistan',
@@ -139,15 +119,12 @@ export const Experience: React.FC = () => {
         'Managed multi-year client relationships, expanding accounts across industrial, commercial, and government sectors',
         'Led solution architecture presentations, bid tenders, and RFP technical compliance responses',
         'Bridged commercial targets with technical viability, ensuring zero margin slippage during implementation handoffs'
-      ],
-      x: 560,
-      y: 95
+      ]
     },
     {
       id: 'erp-presales-consultancy',
       num: '06',
       phase: '06 — ARCHITECTURE',
-      tabTitle: 'ERP Pre-Sales & Integration Architecture',
       role: 'ERP Pre-Sales & Consultancy',
       company: 'Confidential',
       city: 'Lahore, Pakistan',
@@ -162,15 +139,12 @@ export const Experience: React.FC = () => {
         'Conducted operational gap analysis across inventory, procurement, supply chain, and production accounting workflows',
         'Collaborated with engineering to architect API integration paths between legacy databases, edge devices, and cloud ERP systems',
         'Directed data migration schemas, custom reporting engines, SOP documentation, and hands-on end-user training'
-      ],
-      x: 685,
-      y: 35
+      ]
     },
     {
       id: 'emergtech',
       num: '07',
       phase: '07 — EXECUTION',
-      tabTitle: 'RFID Deployments & Operations Leadership',
       role: 'COO/CSO and Project Delivery Lead',
       company: 'EmergTech Solutions Pvt. Ltd.',
       city: 'Lahore, Pakistan',
@@ -184,15 +158,12 @@ export const Experience: React.FC = () => {
         'Directed cross-functional engineering and installation teams on large-scale RFID portal and handheld rollouts',
         'Spearheaded technical presales, architectural proof-of-concepts, and client requirement validations',
         'Established standard operating procedures for UHF tag tuning, reader antenna placement, and site RF surveys'
-      ],
-      x: 810,
-      y: 95
+      ]
     },
     {
       id: 'zaintegrated-solutions',
       num: '08',
       phase: '08 — TODAY',
-      tabTitle: 'Enterprise Auto-ID & Industry 4.0 Solutions',
       role: 'Founder & Managing Director',
       company: 'Zaintegrated Solutions',
       city: 'Lahore, Pakistan',
@@ -207,9 +178,7 @@ export const Experience: React.FC = () => {
         'Directing strategic consulting for national and international enterprises scaling physical asset tracking, inventory counts, and supply chain visibility',
         'Architecting integrated solutions connecting RFID/barcode edge devices with modern cloud ERP and inventory systems',
         'Delivering vendor-neutral hardware evaluations, middleware architectures, RF site surveys, and turnkey execution roadmaps'
-      ],
-      x: 935,
-      y: 35
+      ]
     }
   ];
 
@@ -301,26 +270,26 @@ export const Experience: React.FC = () => {
         </div>
 
         {/* SECTION HEADER FOR INTERACTIVE TIMELINE */}
-        <div className="mb-8 flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-4 border-b border-slate-800">
+        <div className="mb-8 flex items-center justify-between pb-4 border-b border-slate-800">
           <div>
             <div className="font-mono text-[11px] uppercase tracking-wider text-slate-400 font-semibold mb-1 flex items-center gap-2">
               <Sparkles className="w-3.5 h-3.5 text-slate-300" />
-              <span>CAREER CHRONOLOGY // 8 MILESTONES</span>
+              <span>CAREER TRAJECTORY // 8 MILESTONES</span>
             </div>
             <h3 className="font-heading text-2xl font-bold tracking-tight text-white">
-              Interactive Career Trajectory
+              Chronological Track Record
             </h3>
           </div>
-          <p className="font-mono text-xs text-[#94A3B8] max-w-sm sm:text-right">
-            Hover over the bottom timeline nodes or click any milestone tab to inspect full operational details.
-          </p>
+          <div className="font-mono text-xs text-[#94A3B8] hidden sm:block">
+            2009 (Genesis) ➔ 2026+ (Active Leadership)
+          </div>
         </div>
 
-        {/* --- MAIN INTERACTIVE SHOWCASE (MATCHING THE SCREENSHOT) --- */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start mb-12">
+        {/* --- MAIN INTERACTIVE SHOWCASE: LEFT CARD + RIGHT WAVE --- */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
           {/* LEFT COLUMN: FEATURED DETAIL CARD */}
           <div className="lg:col-span-7">
-            <div className="relative rounded-3xl border border-slate-800 bg-[#131B2E] shadow-2xl p-7 sm:p-9 flex flex-col justify-between min-h-[520px] overflow-hidden">
+            <div className="relative rounded-3xl border border-slate-800 bg-[#131B2E] shadow-2xl p-7 sm:p-9 flex flex-col justify-between min-h-[540px] overflow-hidden">
               {/* Subtle Ambient Radial Glow */}
               <div
                 className="absolute -top-24 -left-24 w-72 h-72 rounded-full bg-slate-700/20 blur-3xl pointer-events-none"
@@ -333,7 +302,7 @@ export const Experience: React.FC = () => {
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -10 }}
-                  transition={{ duration: 0.22, ease: 'easeOut' }}
+                  transition={{ duration: 0.2, ease: 'easeOut' }}
                   className="relative z-10 flex flex-col justify-between h-full"
                 >
                   <div>
@@ -396,7 +365,7 @@ export const Experience: React.FC = () => {
                     )}
                   </div>
 
-                  {/* Bottom Signal Badge Container (Exactly like the uploaded screenshot) */}
+                  {/* Bottom Signal Badge Container */}
                   <div className="mt-8 pt-5 border-t border-slate-800 flex flex-wrap items-center justify-between gap-4">
                     <div className="inline-flex items-center gap-3 px-4 py-2.5 rounded-xl bg-[#0B1120] border border-slate-800 shadow-inner">
                       <div>
@@ -418,184 +387,107 @@ export const Experience: React.FC = () => {
             </div>
           </div>
 
-          {/* RIGHT COLUMN: STACKED INTERACTIVE TABS */}
-          <div className="lg:col-span-5 space-y-2.5 max-h-[540px] overflow-y-auto pr-1">
-            {milestones.map((m) => {
-              const isActive = m.id === activeMilestone.id;
+          {/* RIGHT COLUMN: INTERACTIVE CAREER WAVE (IN PLACE OF TABS) */}
+          <div className="lg:col-span-5 relative rounded-3xl border border-slate-800 bg-[#131B2E] p-5 sm:p-6 min-h-[540px] flex flex-col justify-between overflow-hidden shadow-2xl">
+            {/* Background SVG Wave Curve running continuously behind nodes */}
+            <svg
+              className="absolute inset-0 w-full h-full pointer-events-none"
+              preserveAspectRatio="none"
+              viewBox="0 0 400 540"
+            >
+              <defs>
+                <linearGradient id="verticalWaveGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                  <stop offset="0%" stopColor="#334155" />
+                  <stop offset="50%" stopColor="#64748B" />
+                  <stop offset="100%" stopColor="#CBD5E1" />
+                </linearGradient>
+              </defs>
+              {/* Smooth alternating sine-wave path snaking vertically */}
+              <path
+                d="M 32,34 C 32,67 64,67 64,101 C 64,135 32,135 32,168 C 32,202 64,202 64,235 C 64,269 32,269 32,302 C 32,336 64,336 64,369 C 64,403 32,403 32,436 C 32,470 64,470 64,503"
+                fill="none"
+                stroke="url(#verticalWaveGradient)"
+                strokeWidth="2.5"
+                strokeLinecap="round"
+              />
+            </svg>
 
-              return (
-                <div
-                  key={m.id}
-                  onMouseEnter={() => setSelectedId(m.id)}
-                  onClick={() => setSelectedId(m.id)}
-                  className={`group relative w-full text-left p-3.5 sm:p-4 rounded-2xl border transition-all duration-200 cursor-pointer flex items-center justify-between gap-3 ${
-                    isActive
-                      ? 'bg-white text-slate-950 border-white shadow-2xl scale-[1.02]'
-                      : 'bg-[#131B2E] hover:bg-[#1A243B] border-slate-800 hover:border-slate-700 text-slate-200'
-                  }`}
-                >
-                  <div className="flex items-center gap-3.5 min-w-0">
-                    {/* Circular Number Badge */}
+            {/* 8 Interactive Milestone Rows positioned along the wave */}
+            <div className="relative z-10 flex flex-col justify-between h-full space-y-1">
+              {milestones.map((m, idx) => {
+                const isActive = m.id === activeMilestone.id;
+                // Alternating horizontal wave displacement: even indices (0, 2, 4, 6) at x=32, odd indices (1, 3, 5, 7) at x=64
+                const isAlternate = idx % 2 === 1;
+
+                return (
+                  <div
+                    key={m.id}
+                    onMouseEnter={() => setSelectedId(m.id)}
+                    onClick={() => setSelectedId(m.id)}
+                    className="relative flex items-center gap-3.5 py-1.5 cursor-pointer group transition-all duration-150"
+                  >
+                    {/* Node Circle along Wave Path */}
                     <div
-                      className={`w-9 h-9 rounded-full flex items-center justify-center font-mono text-xs font-bold shrink-0 transition-all duration-200 ${
-                        isActive
-                          ? 'border-2 border-slate-300 bg-slate-100 text-slate-950 shadow-xs'
-                          : 'border border-slate-700 bg-slate-800/80 text-slate-400 group-hover:text-white group-hover:border-slate-500'
+                      className={`relative flex items-center justify-center shrink-0 transition-all duration-200 ${
+                        isAlternate ? 'ml-[46px]' : 'ml-[14px]'
                       }`}
                     >
-                      {m.num}
-                    </div>
-
-                    {/* Tab Header & Title */}
-                    <div className="min-w-0">
-                      <div
-                        className={`font-mono text-[10px] uppercase font-bold tracking-wider truncate ${
-                          isActive ? 'text-slate-500' : 'text-slate-400'
-                        }`}
-                      >
-                        {m.phase}
-                      </div>
-                      <div
-                        className={`font-heading text-sm sm:text-base font-bold truncate leading-tight mt-0.5 ${
-                          isActive ? 'text-slate-950' : 'text-white'
-                        }`}
-                      >
-                        {m.tabTitle}
-                      </div>
-                      <div
-                        className={`text-xs truncate mt-0.5 ${
-                          isActive ? 'text-slate-600 font-medium' : 'text-slate-400'
-                        }`}
-                      >
-                        {m.company} • {m.year}
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Right Arrow Icon */}
-                  <div className="shrink-0 pl-1">
-                    <div
-                      className={`w-7 h-7 rounded-lg flex items-center justify-center transition-colors ${
-                        isActive
-                          ? 'bg-slate-100 text-slate-950'
-                          : 'bg-slate-800/50 text-slate-500 group-hover:text-slate-300'
-                      }`}
-                    >
-                      <ArrowUpRight className="w-3.5 h-3.5" />
-                    </div>
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-
-        {/* --- BOTTOM INTERACTIVE WAVY TIMELINE TRACK --- */}
-        <div className="pt-8 border-t border-slate-800">
-          <div className="flex items-center justify-between mb-4">
-            <div className="font-mono text-xs uppercase tracking-wider text-slate-300 flex items-center gap-2">
-              <span className="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse" />
-              <span className="font-semibold text-white">Interactive Career Wave</span>
-              <span className="text-slate-500 hidden sm:inline">— Hover over nodes to navigate</span>
-            </div>
-            <div className="font-mono text-[11px] text-slate-400">
-              2009 (Genesis) ➔ 2026+ (Active MD)
-            </div>
-          </div>
-
-          {/* SVG Wavy Path with Interactive Milestone Nodes */}
-          <div className="w-full overflow-x-auto pb-4 pt-2">
-            <div className="min-w-[760px] relative px-4">
-              <svg
-                viewBox="0 0 1000 130"
-                className="w-full h-auto overflow-visible select-none"
-              >
-                <defs>
-                  <linearGradient id="waveLineGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                    <stop offset="0%" stopColor="#334155" />
-                    <stop offset="50%" stopColor="#64748B" />
-                    <stop offset="100%" stopColor="#CBD5E1" />
-                  </linearGradient>
-                </defs>
-
-                {/* Continuous Undulating Connecting Curve */}
-                <path
-                  d="M 60,95 C 120,95 125,35 185,35 C 245,35 250,95 310,95 C 370,95 375,35 435,35 C 495,35 500,95 560,95 C 620,95 625,35 685,35 C 745,35 750,95 810,95 C 870,95 875,35 935,35"
-                  fill="none"
-                  stroke="url(#waveLineGradient)"
-                  strokeWidth="2.5"
-                  strokeLinecap="round"
-                />
-
-                {/* Interactive Milestone Nodes */}
-                {milestones.map((node) => {
-                  const isActive = node.id === activeMilestone.id;
-
-                  return (
-                    <g
-                      key={node.id}
-                      className="cursor-pointer group"
-                      onMouseEnter={() => setSelectedId(node.id)}
-                      onClick={() => setSelectedId(node.id)}
-                    >
-                      {/* Invisible larger hit target circle for effortless hovering */}
-                      <circle cx={node.x} cy={node.y} r="32" fill="transparent" />
-
-                      {/* Outer Glow Halo when active */}
+                      {/* Active Outer Pulse Ring */}
                       {isActive && (
-                        <circle
-                          cx={node.x}
-                          cy={node.y}
-                          r="25"
-                          fill="none"
-                          stroke="#FFFFFF"
-                          strokeWidth="2"
-                          strokeOpacity="0.4"
-                        />
+                        <div className="absolute -inset-1.5 rounded-full bg-white/20 animate-pulse pointer-events-none" />
                       )}
 
-                      {/* Node Circle */}
-                      <circle
-                        cx={node.x}
-                        cy={node.y}
-                        r={isActive ? 20 : 16}
-                        fill={isActive ? '#FFFFFF' : '#0F172A'}
-                        stroke={isActive ? '#FFFFFF' : '#475569'}
-                        strokeWidth={isActive ? '3' : '2'}
-                        className="transition-all duration-200"
-                      />
-
-                      {/* Number Text inside Circle */}
-                      <text
-                        x={node.x}
-                        y={node.y + 4.5}
-                        textAnchor="middle"
-                        fontSize={isActive ? '12' : '11'}
-                        fontWeight="700"
-                        fontFamily="monospace"
-                        fill={isActive ? '#0F172A' : '#94A3B8'}
-                        className="pointer-events-none select-none transition-all duration-200"
+                      {/* Numbered Bubble */}
+                      <div
+                        className={`w-9 h-9 rounded-full flex items-center justify-center font-mono text-xs font-bold transition-all duration-200 ${
+                          isActive
+                            ? 'bg-white text-slate-950 border-2 border-white shadow-lg scale-110'
+                            : 'bg-[#0F172A] text-slate-400 border border-slate-700 group-hover:border-slate-500 group-hover:text-white'
+                        }`}
                       >
-                        {node.num}
-                      </text>
+                        {m.num}
+                      </div>
+                    </div>
 
-                      {/* Year Label above/below alternating based on curve y */}
-                      <text
-                        x={node.x}
-                        y={node.y > 60 ? node.y + 26 : node.y - 18}
-                        textAnchor="middle"
-                        fontSize="10"
-                        fontWeight={isActive ? '700' : '500'}
-                        fontFamily="monospace"
-                        fill={isActive ? '#FFFFFF' : '#64748B'}
-                        className="pointer-events-none select-none uppercase tracking-wider transition-colors duration-200"
+                    {/* Metadata Label next to Wave Node */}
+                    <div className="min-w-0 flex-1 pl-1">
+                      <div className="flex items-center gap-2">
+                        <span
+                          className={`font-mono text-[10px] uppercase font-bold tracking-wider ${
+                            isActive ? 'text-emerald-400' : 'text-slate-400'
+                          }`}
+                        >
+                          {m.year}
+                        </span>
+                        <span className="text-slate-700">•</span>
+                        <span
+                          className={`font-mono text-[9px] uppercase tracking-wider truncate ${
+                            isActive ? 'text-slate-300' : 'text-slate-400'
+                          }`}
+                        >
+                          {m.phase.split('—')[1]?.trim() || m.phase}
+                        </span>
+                      </div>
+
+                      <div
+                        className={`font-heading text-sm font-semibold truncate leading-tight mt-0.5 transition-colors ${
+                          isActive ? 'text-white' : 'text-slate-300 group-hover:text-white'
+                        }`}
                       >
-                        {node.year}
-                      </text>
-                    </g>
-                  );
-                })}
-              </svg>
+                        {m.company}
+                      </div>
+
+                      <div
+                        className={`text-[11px] truncate leading-tight transition-colors ${
+                          isActive ? 'text-slate-300' : 'text-slate-400'
+                        }`}
+                      >
+                        {m.role}
+                      </div>
+                    </div>
+                  </div>
+                );
+              })}
             </div>
           </div>
         </div>
