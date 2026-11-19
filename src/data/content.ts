@@ -1022,6 +1022,15 @@ export const PORTFOLIO_DATA: PortfolioData = {
         "issuerLogo": "/logos/isoc.png"
     },
     {
+        "id": "cert-alison-digital-manufacturing",
+        "group": "Business and project",
+        "issuer": "Alison",
+        "title": "Digital Manufacturing and Industry 4.0",
+        "year": "2026",
+        "credentialUrl": "https://alison.com/verify/6710b5a7b7",
+        "issuerLogo": "/logos/alison.png"
+    },
+    {
         "id": "cert-hpi-sustainability",
         "group": "Business and project",
         "issuer": "Hasso Plattner Institute (openHPI)",
