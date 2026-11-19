@@ -262,36 +262,27 @@ export const GoogleBadges: React.FC = () => {
                     </div>
 
                     {/* Issuer Subtitle */}
-                    <div className="font-mono text-[11px] uppercase tracking-wider text-slate-400 font-semibold mb-1">
+                    <div className="font-mono text-[10px] uppercase tracking-wider text-slate-400 font-semibold mb-1">
                       {badge.issuer}
                     </div>
 
                     {/* Badge Title */}
-                    <h3 className="font-subheading text-sm sm:text-base font-bold text-white tracking-[-0.015em] leading-snug mb-2 group-hover:text-slate-100 transition-colors">
+                    <h3 className="font-subheading text-sm sm:text-base font-bold text-white tracking-[-0.015em] leading-snug group-hover:text-slate-100 transition-colors">
                       {badge.title}
                     </h3>
-
-                    {/* Validated Expertise Description */}
-                    <p className="text-xs text-slate-300 leading-relaxed font-normal line-clamp-3 mb-4">
-                      {badge.description}
-                    </p>
                   </div>
 
-                  {/* Card Bottom Row: Verified Status & Action Button */}
-                  <div className="pt-3 border-t border-slate-800 flex items-center justify-between text-[11px] font-mono">
-                    <span className="inline-flex items-center gap-1 text-[10px] text-emerald-400 font-semibold truncate max-w-[125px]">
-                      <ShieldCheck className="w-3.5 h-3.5 shrink-0 text-emerald-400" />
-                      <span className="truncate">{badge.verificationType || 'Verified'}</span>
-                    </span>
-
+                  {/* Card Bottom Row: Clean Single Action Verification Link */}
+                  <div className="pt-3.5 mt-4 border-t border-slate-800 flex items-center justify-between">
                     <a
                       href={badge.badgeUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1 text-white hover:text-slate-200 font-semibold text-xs hover:underline shrink-0"
+                      className="inline-flex items-center gap-1.5 text-xs font-mono text-emerald-400 hover:text-emerald-300 font-semibold transition-colors group/link"
                     >
+                      <ShieldCheck className="w-3.5 h-3.5 shrink-0 text-emerald-400" />
                       <span>{getVerificationLabel(badge.badgeUrl)}</span>
-                      <ExternalLink className="w-3 h-3" />
+                      <ExternalLink className="w-3 h-3 text-slate-400 group-hover/link:text-emerald-300 shrink-0" />
                     </a>
                   </div>
                 </div>
@@ -323,7 +314,6 @@ export const GoogleBadges: React.FC = () => {
                   <Award className="w-3.5 h-3.5 text-slate-700" />
                   <span>Credentials ({filteredBadges.length})</span>
                 </span>
-                <span className="text-[10px] text-slate-500 font-semibold">Hover or tap to inspect</span>
               </div>
 
               {/* Scrollable list with clean dark cards */}
