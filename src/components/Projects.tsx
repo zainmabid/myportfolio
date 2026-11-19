@@ -37,7 +37,7 @@ export const Projects: React.FC = () => {
   };
 
   return (
-    <section id="work" className="py-28 sm:py-36 border-b border-[#E2E8F0] bg-[#FBFBFA]">
+    <section id="work" data-section-theme="light" className="py-28 sm:py-36 border-b border-[#E2E8F0] bg-[#FBFBFA]">
       <div id="expertise" className="max-w-[1140px] mx-auto px-4 sm:px-6 lg:px-8 text-left">
         {/* Section Heading */}
         <div className="max-w-2xl mb-14">

@@ -61,7 +61,7 @@ export const Brands: React.FC = () => {
   }, [brands]);
 
   return (
-    <section className="py-28 sm:py-36 border-b border-slate-800 bg-[#0F172A] overflow-hidden">
+    <section data-section-theme="dark" className="py-28 sm:py-36 border-b border-slate-800 bg-[#0F172A] overflow-hidden">
       {/* Section Header */}
       <div className="max-w-[1140px] mx-auto px-4 sm:px-6 lg:px-8 mb-12 sm:mb-16 text-left">
         <div className="max-w-3xl">

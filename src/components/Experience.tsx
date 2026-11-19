@@ -12,7 +12,7 @@ export const Experience: React.FC = () => {
   const selectedIdx = experience.findIndex((item) => item.id === selectedId);
 
   return (
-    <section id="experience" className="py-28 sm:py-36 border-b border-slate-800 bg-[#0F172A] text-white">
+    <section id="experience" data-section-theme="dark" className="py-28 sm:py-36 border-b border-slate-800 bg-[#0F172A] text-white">
       <div className="max-w-[1140px] mx-auto px-4 sm:px-6 lg:px-8 text-left">
         {/* Section Tag Capsule */}
         <div className="mb-4">

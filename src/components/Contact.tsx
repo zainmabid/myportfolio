@@ -17,7 +17,7 @@ export const Contact: React.FC = () => {
   };
 
   return (
-    <footer id="contact" className="py-28 sm:py-36 bg-[#FBFBFA] text-left border-t border-[#E2E8F0] text-[#1A1A1A]">
+    <footer id="contact" data-section-theme="light" className="py-28 sm:py-36 bg-[#FBFBFA] text-left border-t border-[#E2E8F0] text-[#1A1A1A]">
       <div className="max-w-[1140px] mx-auto px-4 sm:px-6 lg:px-8">
         {/* Bold, Simple, Highly Professional Closure Block - Dark Executive Card */}
         <div className="p-8 sm:p-12 lg:p-14 rounded-2xl bg-[#0F172A] border border-slate-800 shadow-xl relative overflow-hidden text-left">

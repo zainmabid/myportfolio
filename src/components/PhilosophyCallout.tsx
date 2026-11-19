@@ -17,6 +17,7 @@ export const PhilosophyCallout: React.FC = () => {
   return (
     <section
       ref={containerRef}
+      data-section-theme="dark"
       className="py-28 sm:py-36 lg:py-40 border-y border-slate-800 bg-[#0F172A] relative overflow-hidden"
     >
       <div className="max-w-[1000px] mx-auto px-4 sm:px-6 lg:px-8 text-center">

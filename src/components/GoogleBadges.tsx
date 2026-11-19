@@ -39,7 +39,7 @@ export const GoogleBadges: React.FC = () => {
   const activeIdx = filteredBadges.findIndex((b) => b.id === activeBadge?.id);
 
   return (
-    <section id="badges" className="py-28 sm:py-36 border-b border-[#E2E8F0] bg-[#FBFBFA]">
+    <section id="badges" data-section-theme="light" className="py-28 sm:py-36 border-b border-[#E2E8F0] bg-[#FBFBFA]">
       <div className="max-w-[1140px] mx-auto px-4 sm:px-6 lg:px-8 text-left">
         {/* Section Heading & Verification Profile CTA */}
         <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-8 mb-12">

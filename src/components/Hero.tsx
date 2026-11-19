@@ -39,7 +39,7 @@ export const Hero: React.FC = () => {
   };
 
   return (
-    <section className="pt-32 pb-24 sm:pt-44 sm:pb-36 border-b border-[#E2E8F0] bg-[#FBFBFA]">
+    <section data-section-theme="light" className="pt-32 pb-24 sm:pt-44 sm:pb-36 border-b border-[#E2E8F0] bg-[#FBFBFA]">
       <motion.div
         className="max-w-[1140px] mx-auto px-4 sm:px-6 lg:px-8 text-left"
         variants={containerVariants}

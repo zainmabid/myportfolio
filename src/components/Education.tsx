@@ -7,7 +7,7 @@ export const Education: React.FC = () => {
   const { education } = PORTFOLIO_DATA;
 
   return (
-    <section id="education" className="py-28 sm:py-36 border-b border-slate-800 bg-[#0F172A] text-white">
+    <section id="education" data-section-theme="dark" className="py-28 sm:py-36 border-b border-slate-800 bg-[#0F172A] text-white">
       <div className="max-w-[1140px] mx-auto px-4 sm:px-6 lg:px-8 text-left">
         {/* Section Heading */}
         <div className="max-w-3xl mb-14">
