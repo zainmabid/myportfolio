@@ -1477,7 +1477,7 @@ export const PORTFOLIO_DATA: PortfolioData = {
       id: "cert-hpi-sustainability",
       group: "Business and project",
       issuer: "Hasso Plattner Institute (openHPI)",
-      title: "Sustainability in the Digital Age",
+      title: "Energy-Efficient Software Development",
       year: "2026",
       credentialUrl: "/certifications/Sustainability%20in%20the%20digital%20age_Hasso_Plattner_Institute.pdf",
       issuerLogo: "/logos/hpi.png"
