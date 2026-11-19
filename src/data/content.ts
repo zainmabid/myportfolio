@@ -968,6 +968,15 @@ export const PORTFOLIO_DATA: PortfolioData = {
 
   certifications: [
     {
+        "id": "cert-alison-digital-manufacturing",
+        "group": "Business and project",
+        "issuer": "Alison",
+        "title": "Digital Manufacturing and Industry 4.0",
+        "year": "2026",
+        "credentialUrl": "/certifications/Digital%20Manufacturing%20and%20Industry%204.0%20-%20Alison.pdf",
+        "issuerLogo": "/logos/alison.png"
+    },
+    {
         "id": "cert-agile-project-management-with-microsoft-project",
         "group": "Business and project",
         "issuer": "LinkedIn Learning",
@@ -1020,15 +1029,6 @@ export const PORTFOLIO_DATA: PortfolioData = {
         "year": "2026",
         "credentialUrl": "https://www.credential.net/0f3dd5cb-fde7-4dbb-acf2-c2198f3b9f46#acc.EFtWLShO",
         "issuerLogo": "/logos/isoc.png"
-    },
-    {
-        "id": "cert-alison-digital-manufacturing",
-        "group": "Business and project",
-        "issuer": "Alison",
-        "title": "Digital Manufacturing and Industry 4.0",
-        "year": "2026",
-        "credentialUrl": "https://alison.com/verify/6710b5a7b7",
-        "issuerLogo": "/logos/alison.png"
     },
     {
         "id": "cert-hpi-sustainability",

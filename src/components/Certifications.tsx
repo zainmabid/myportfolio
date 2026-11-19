@@ -34,14 +34,14 @@ export const Certifications: React.FC = () => {
       return true;
     });
 
-    // Sort by year: latest first, oldest last
+    // Sort by year: latest first, oldest last; preserve insertion order for same year
     return [...filtered].sort((a, b) => {
       const yearA = parseInt(a.year || '0', 10);
       const yearB = parseInt(b.year || '0', 10);
       if (yearB !== yearA) {
         return yearB - yearA; // Latest first
       }
-      return a.title.localeCompare(b.title);
+      return 0; // Preserves exact data order so latest added cert is #1
     });
   }, [certifications, selectedGroup, searchQuery]);
 
