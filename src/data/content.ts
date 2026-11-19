@@ -1369,7 +1369,7 @@ export const PORTFOLIO_DATA: PortfolioData = {
       id: "cert-pmp",
       group: "Business and project",
       issuer: "Project Management Institute (PMI)",
-      title: "Project Management Professional (PMP)® Exam Prep",
+      title: "Project Management Professional (PMP)®",
       year: "2021",
       credentialUrl: "/certifications/PMP%20Zain%20M.%20Abid.jpeg",
       issuerLogo: "/logos/pmi.png"
