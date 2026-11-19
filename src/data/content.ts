@@ -966,365 +966,559 @@ export const PORTFOLIO_DATA: PortfolioData = {
   ],
 
   certifications: [
-    /* ==========================================================================
-       BUSINESS AND PROJECT MANAGEMENT
-       ========================================================================== */
     {
-      id: 'cert-pmp',
-      group: 'Business and project',
-      issuer: 'PMI',
-      title: 'PMP® — Project Management Professional',
-      year: '2023',
-      credentialUrl: '/certifications/PMP%20Zain%20M.%20Abid.jpeg',
-      image: '/certifications/badges/pmi-authorized-training-partner.jpg',
-      issuerLogo: '/logos/pmi.png'
+      id: "cert-15-secrets-successful-people-know-about-time-management",
+      group: "Business and project",
+      issuer: "LinkedIn Learning",
+      title: "15 Secrets Successful People Know about Time Management",
+      year: "2021",
+      credentialUrl: "/certifications/15%20Secrets%20Successful%20People%20Know%20about%20Time%20Management%20getAbstract%20Summary.pdf",
+      issuerLogo: "/logos/linkedin-learning.png"
     },
     {
-      id: 'cert-scrum-master',
-      group: 'Business and project',
-      issuer: 'Scrum Alliance',
-      title: 'Certified ScrumMaster® (CSM)',
-      year: '2023',
-      credentialUrl: '/certifications/Certified%20ScrumMaster_SCRUM%20ALLIANCE.pdf',
-      image: '/certifications/badges/certified-scrummaster-csm.png',
-      issuerLogo: '/logos/scrum-alliance.png'
+      id: "cert-3d-max",
+      group: "Business and project",
+      issuer: "Autodesk Authorized Training",
+      title: "3D Studio Max Architectural Visualization & Modeling",
+      year: "2023",
+      credentialUrl: "/certifications/3D%20Max_Certificate.jpg",
+      issuerLogo: "/logos/open-university.png"
     },
     {
-      id: 'cert-smc',
-      group: 'Business and project',
-      issuer: 'SCRUMstudy',
-      title: 'Scrum Master Certified (SMC®)',
-      year: '2023',
-      credentialUrl: '/certifications/Scrum_Fundamentals_Certified-ZainAbid-1173277.pdf',
-      image: '/certifications/badges/scrum-master-certified-smc.png',
-      issuerLogo: '/logos/scrumstudy.png'
+      id: "cert-agile-development-practices",
+      group: "Business and project",
+      issuer: "Project Management Institute (PMI)",
+      title: "Agile Development Practices",
+      year: "2021",
+      credentialUrl: "/certifications/Agile%20Development%20Practices%20(PMI).pdf",
+      issuerLogo: "/logos/pmi.png"
     },
     {
-      id: 'cert-scrum-scale',
-      group: 'Business and project',
-      issuer: 'Scrum@Scale',
-      title: 'Certified Scrum Scale Practitioner',
-      year: '2023',
-      credentialUrl: '/certifications/Certified%20Scrum%20Scale%20Practitioner%20by%20Scrum@Scale.pdf',
-      issuerLogo: '/logos/scrum-at-scale.png'
+      id: "cert-agile-project-management-with-microsoft-project",
+      group: "Business and project",
+      issuer: "Microsoft Project",
+      title: "Agile Project Management with Microsoft Project",
+      year: "2026",
+      credentialUrl: "/certifications/Agile%20Project%20Management%20with%20Microsoft%20Project.pdf",
+      issuerLogo: "/logos/microsoft.png"
     },
     {
-      id: 'cert-cbap',
-      group: 'Business and project',
-      issuer: 'IIBA',
-      title: 'CBAP, Certified Business Analysis Professional',
-      year: '2021',
-      credentialUrl: '/certifications/Business%20Analysis%20Foundations%20(IIBA).pdf',
-      issuerLogo: '/logos/iiba.png'
+      id: "cert-hpi-edge-ai",
+      group: "Cloud, network and security",
+      issuer: "Hasso Plattner Institute (openHPI)",
+      title: "Applied Edge AI: Deep Learning Outside of the Cloud",
+      year: "2026",
+      credentialUrl: "/certifications/Applied%20Edge%20AI-Deep%20Learning%20Outside%20of%20the%20CloudHasso_Plattner_Institute.pdf",
+      issuerLogo: "/logos/hpi.png"
     },
     {
-      id: 'cert-pmi-leadership',
-      group: 'Business and project',
-      issuer: 'PMI',
-      title: 'Project Leadership',
-      year: '2021',
-      credentialUrl: '/certifications/Project%20Leadership%20(PMI).pdf',
-      issuerLogo: '/logos/pmi.png'
+      id: "cert-become-a-project-management-entrepreneur",
+      group: "Business and project",
+      issuer: "Project Management Institute (PMI)",
+      title: "Become a Project Management Entrepreneur",
+      year: "2021",
+      credentialUrl: "/certifications/Become%20a%20Project%20Management%20Entrepreneur%20(PMI).pdf",
+      issuerLogo: "/logos/pmi.png"
     },
     {
-      id: 'cert-pmi-agile',
-      group: 'Business and project',
-      issuer: 'PMI',
-      title: 'Fundamentals of Agile and Predictive Project Management',
-      year: '2021',
-      credentialUrl: '/certifications/Agile%20Development%20Practices%20(PMI).pdf',
-      issuerLogo: '/logos/pmi.png'
+      id: "cert-becoming-head-of-sales-developing-your-playbook",
+      group: "Sales and marketing",
+      issuer: "LinkedIn Learning",
+      title: "Becoming Head of Sales Developing Your Playbook",
+      year: "2021",
+      credentialUrl: "/certifications/Becoming%20Head%20of%20Sales%20Developing%20Your%20Playbook.pdf",
+      issuerLogo: "/logos/linkedin-learning.png"
     },
     {
-      id: 'cert-mindlabs',
-      group: 'Business and project',
-      issuer: 'Mind Labs',
-      title: 'Professional Training & Management Consultancy (Content Writing)',
-      year: '2023',
-      credentialUrl: '/certifications/certificate-on-content-writing-mind-labs.png',
-      issuerLogo: '/logos/mindlabs.png'
+      id: "cert-undss-besafe",
+      group: "Business and project",
+      issuer: "United Nations DSS",
+      title: "BSAFE Global Operational Field Security Protocol",
+      year: "2026",
+      credentialUrl: "/certifications/BESAFE_%20Certificate%20UNDSS.pdf",
+      issuerLogo: "/logos/undss.png"
     },
     {
-      id: 'cert-scrumstudy',
-      group: 'Business and project',
-      issuer: 'SCRUMstudy',
-      title: 'Scrum Fundamentals Certified (SFC™)',
-      year: '2023',
-      credentialUrl: '/certifications/Scrum_Fundamentals_Certified-ZainAbid-1173277.pdf',
-      issuerLogo: '/logos/scrumstudy.png'
+      id: "cert-building-a-product-roadmap",
+      group: "Business and project",
+      issuer: "Project Management Institute (PMI)",
+      title: "Building a Product Roadmap",
+      year: "2021",
+      credentialUrl: "/certifications/Building%20a%20Product%20Roadmap%20(PMI).pdf",
+      issuerLogo: "/logos/pmi.png"
     },
     {
-      id: 'cert-microsoft-project',
-      group: 'Business and project',
-      issuer: 'Microsoft',
-      title: 'Agile Project Management with Microsoft Project',
-      year: '2021',
-      credentialUrl: '/certifications/Agile%20Project%20Management%20with%20Microsoft%20Project.pdf',
-      issuerLogo: '/logos/microsoft.png'
+      id: "cert-business-analysis-for-project-managers",
+      group: "Business and project",
+      issuer: "Project Management Institute (PMI)",
+      title: "Business Analysis for Project Managers",
+      year: "2021",
+      credentialUrl: "/certifications/Business%20Analysis%20for%20Project%20Managers%20(PMI).pdf",
+      issuerLogo: "/logos/pmi.png"
     },
     {
-      id: 'cert-asana',
-      group: 'Business and project',
-      issuer: 'Asana',
-      title: 'Project Management with Asana',
-      year: '2021',
-      credentialUrl: '/certifications/Mastering%20Project%20Management%20with%20Asana.pdf',
-      issuerLogo: '/logos/asana.png'
+      id: "cert-business-analysis-foundations",
+      group: "Business and project",
+      issuer: "International Institute of Business Analysis (IIBA)",
+      title: "Business Analysis Foundations",
+      year: "2021",
+      credentialUrl: "/certifications/Business%20Analysis%20Foundations%20(IIBA).pdf",
+      issuerLogo: "/logos/iiba.png"
     },
     {
-      id: 'cert-adbi-cyber',
-      group: 'Cloud, network and security',
-      issuer: 'Asian Development Bank Institute (ADBI)',
-      title: 'Cybersecurity Principles & Governance in Asia',
-      year: '2026',
-      credentialUrl: '/certifications/Zain-Abid%E2%80%93Cybersecurity%E2%80%93Cybersecurity%E2%80%93ADBI-E-Learning.pdf',
-      issuerLogo: '/logos/adbi.png'
+      id: "cert-business-analyst-and-project-manager-collaboration",
+      group: "Business and project",
+      issuer: "Project Management Institute (PMI)",
+      title: "Business Analyst and Project Manager Collaboration",
+      year: "2021",
+      credentialUrl: "/certifications/Business%20Analyst%20and%20Project%20Manager%20Collaboration%20(PMI).pdf",
+      issuerLogo: "/logos/pmi.png"
     },
     {
-      id: 'cert-linkedin-selling',
-      group: 'Sales and marketing',
-      issuer: 'LinkedIn Learning',
-      title: 'Virtual Selling & Sales Executive Foundations',
-      year: '2021',
-      credentialUrl: '/certifications/Virtual%20Selling%20for%20Sales%20Professionals.pdf',
-      issuerLogo: '/logos/linkedin-learning.png'
-    },
-
-    /* ==========================================================================
-       CLOUD, NETWORK AND SECURITY
-       ========================================================================== */
-    {
-      id: 'cert-ccna',
-      group: 'Cloud, network and security',
-      issuer: 'Cisco Systems',
-      title: 'Certified Network Associate (CCNA Routing & Switching)',
-      year: '2023',
-      credentialUrl: '/certifications/CCNA_Certificate.jpg',
-      issuerLogo: '/logos/cisco.png'
+      id: "cert-business-analyst-and-project-manager-collaboration",
+      group: "Business and project",
+      issuer: "International Institute of Business Analysis (IIBA)",
+      title: "Business Analyst and Project Manager Collaboration",
+      year: "2021",
+      credentialUrl: "/certifications/Business%20Analyst%20and%20Project%20Manager%20Collaboration(IIBA).pdf",
+      issuerLogo: "/logos/iiba.png"
     },
     {
-      id: 'cert-corvit-networking',
-      group: 'Cloud, network and security',
-      issuer: 'Corvit Systems',
-      title: 'Enterprise Routing, Switching & Network Topologies',
-      year: '2023',
-      credentialUrl: '/certifications/CCNA_Certificate.jpg',
-      issuerLogo: '/logos/corvit.png'
+      id: "cert-ccna",
+      group: "Cloud, network and security",
+      issuer: "Cisco Systems",
+      title: "Certified Network Associate (CCNA Routing & Switching)",
+      year: "2023",
+      credentialUrl: "/certifications/CCNA_Certificate.jpg",
+      issuerLogo: "/logos/cisco.png"
     },
     {
-      id: 'cert-ibm-cloud',
-      group: 'Cloud, network and security',
-      issuer: 'IBM',
-      title: 'Cloud Core Certified',
-      year: '2023',
-      credentialUrl: '/certifications/IBM_Cloud_Core_Certified.pdf',
-      image: '/certifications/badges/ibm-cloud-core.png',
-      issuerLogo: '/logos/ibm.png'
+      id: "cert-mind-labs-content",
+      group: "Sales and marketing",
+      issuer: "Mind Labs",
+      title: "Advanced Technical & Commercial Content Strategy",
+      year: "2023",
+      credentialUrl: "/certifications/certificate-on-content-writing-mind-labs.png",
+      issuerLogo: "/logos/mindlabs.png"
     },
     {
-      id: 'cert-fortinet',
-      group: 'Cloud, network and security',
-      issuer: 'Fortinet',
-      title: 'Certified Fundamentals in Cybersecurity',
-      year: '2025',
-      credentialUrl: '/certifications/Fortinet%20Certified%20Fundamentals%20in%20Cybersecurity.pdf',
-      image: '/certifications/badges/fortinet-certified-fundamentals.png',
-      issuerLogo: '/logos/fortinet.png'
+      id: "cert-scrum-scale",
+      group: "Business and project",
+      issuer: "Scrum@Scale",
+      title: "Certified Scrum@Scale Practitioner",
+      year: "2023",
+      credentialUrl: "/certifications/Certified%20Scrum%20Scale%20Practitioner%20by%20Scrum%40Scale.pdf",
+      image: "/certifications/badges/certified-scrum-scale-practitioner.png",
+      issuerLogo: "/logos/scrum-at-scale.png"
     },
     {
-      id: 'cert-fortinet-threat',
-      group: 'Cloud, network and security',
-      issuer: 'Fortinet',
-      title: 'Introduction to Threat Landscape 3.0',
-      year: '2025',
-      credentialUrl: '/certifications/Fortinet_Introduction%20to%20Threat%20Landscape%203.0.pdf',
-      issuerLogo: '/logos/fortinet.png'
+      id: "cert-scrum-master",
+      group: "Business and project",
+      issuer: "Scrum Alliance",
+      title: "Certified ScrumMaster® (CSM)",
+      year: "2023",
+      credentialUrl: "/certifications/Certified%20ScrumMaster_SCRUM%20ALLIANCE.pdf",
+      image: "/certifications/badges/certified-scrummaster-csm.png",
+      issuerLogo: "/logos/scrum-alliance.png"
     },
     {
-      id: 'cert-cpanel-cpp',
-      group: 'Cloud, network and security',
-      issuer: 'cPanel',
-      title: 'cPanel Professional Certification (CPP)',
-      year: '2021',
-      credentialUrl: '/certifications/cPanel-Professional-Certification-CPP-zainmabid.pdf',
-      issuerLogo: '/logos/cpanel.png'
+      id: "cert-hubspot-sales-hub",
+      group: "Sales and marketing",
+      issuer: "HubSpot Academy",
+      title: "HubSpot Sales Hub Enterprise Certification",
+      year: "2026",
+      credentialUrl: "/certifications/Certified_HubSpot%20Sales%20Hub%20Certified.png",
+      issuerLogo: "/logos/hubspot.png"
     },
     {
-      id: 'cert-cpanel-litespeed',
-      group: 'Cloud, network and security',
-      issuer: 'cPanel',
-      title: 'cPanel LiteSpeed Acceleration Specialist',
-      year: '2021',
-      credentialUrl: '/certifications/cPanel%20LiteSpeed-Certification-zainmabid.pdf',
-      issuerLogo: '/logos/cpanel.png'
+      id: "cert-cisa-ics-components",
+      group: "Cloud, network and security",
+      issuer: "US CISA & Idaho National Laboratory",
+      title: "Industrial Control Systems (ICS): Common Components (210W-03)",
+      year: "2026",
+      credentialUrl: "/certifications/Common%20ICS%20Components%20(210W-03)%20US%20CISA.pdf",
+      issuerLogo: "/logos/cisa.png"
     },
     {
-      id: 'cert-hpi-edge-ai',
-      group: 'Cloud, network and security',
-      issuer: 'Hasso Plattner Institut',
-      title: 'Applied Edge AI — Deep Learning Outside of the Cloud',
-      year: '2026',
-      credentialUrl: '/certifications/Applied%20Edge%20AI-Deep%20Learning%20Outside%20of%20the%20CloudHasso_Plattner_Institute.pdf',
-      issuerLogo: '/logos/hpi.png'
+      id: "cert-cpanel-litespeed",
+      group: "Cloud, network and security",
+      issuer: "cPanel & LiteSpeed Technologies",
+      title: "LiteSpeed Web Server Technical Deployment Certification",
+      year: "2021",
+      credentialUrl: "/certifications/cPanel%20LiteSpeed-Certification-zainmabid.pdf",
+      issuerLogo: "/logos/cpanel.png"
     },
     {
-      id: 'cert-undss-besafe',
-      group: 'Cloud, network and security',
-      issuer: 'UNDSS',
-      title: 'BESAFE Operational Security Certificate',
-      year: '2026',
-      credentialUrl: '/certifications/BESAFE_%20Certificate%20UNDSS.pdf',
-      issuerLogo: '/logos/undss.png'
+      id: "cert-cpanel-cpsp",
+      group: "Sales and marketing",
+      issuer: "cPanel",
+      title: "cPanel & WHM Sales Professional (CPSP)",
+      year: "2021",
+      credentialUrl: "/certifications/cPanel-%26-WHM-Sales-Professional-CPSP-zainmabid.pdf",
+      issuerLogo: "/logos/cpanel.png"
     },
     {
-      id: 'cert-cisa-ics',
-      group: 'Cloud, network and security',
-      issuer: 'US CISA',
-      title: 'Common ICS Components (210W-03)',
-      year: '2026',
-      credentialUrl: '/certifications/Common%20ICS%20Components%20(210W-03)%20US%20CISA.pdf',
-      issuerLogo: '/logos/cisa.png'
+      id: "cert-cpanel-cpp",
+      group: "Cloud, network and security",
+      issuer: "cPanel",
+      title: "cPanel Professional Certification (CPP)",
+      year: "2021",
+      credentialUrl: "/certifications/cPanel-Professional-Certification-CPP-zainmabid.pdf",
+      issuerLogo: "/logos/cpanel.png"
     },
     {
-      id: 'cert-cisa-manager',
-      group: 'Cloud, network and security',
-      issuer: 'U.S. Dept of Homeland Security (CISA)',
-      title: 'Cybersecurity Landscape for Managers',
-      year: '2026',
-      credentialUrl: '/certifications/Cybersecurity_Landscape%20for%20Managers%20-%20US%20CISA.pdf',
-      issuerLogo: '/logos/dhs.png'
+      id: "cert-cisa-landscape",
+      group: "Cloud, network and security",
+      issuer: "US CISA",
+      title: "Cybersecurity Landscape for Executive Managers",
+      year: "2026",
+      credentialUrl: "/certifications/Cybersecurity_Landscape%20for%20Managers%20-%20US%20CISA.pdf",
+      issuerLogo: "/logos/cisa.png"
     },
     {
-      id: 'cert-inl-cyber',
-      group: 'Cloud, network and security',
-      issuer: 'Idaho National Laboratory (INL)',
-      title: 'Industrial Control Systems (ICS) Cybersecurity',
-      year: '2026',
-      credentialUrl: '/certifications/Common%20ICS%20Components%20(210W-03)%20US%20CISA.pdf',
-      issuerLogo: '/logos/inl.png'
-    },
-
-    /* ==========================================================================
-       SALES AND MARKETING
-       ========================================================================= */
-    {
-      id: 'cert-hubspot-sales',
-      group: 'Sales and marketing',
-      issuer: 'HubSpot Academy',
-      title: 'Sales Hub Certified',
-      year: '2026',
-      credentialUrl: '/certifications/Certified_HubSpot%20Sales%20Hub%20Certified.png',
-      issuerLogo: '/logos/hubspot.png'
+      id: "cert-digital-marketing-foundations",
+      group: "Sales and marketing",
+      issuer: "LinkedIn Learning",
+      title: "Digital Marketing Foundations",
+      year: "2021",
+      credentialUrl: "/certifications/Digital%20Marketing%20Foundations.pdf",
+      issuerLogo: "/logos/linkedin-learning.png"
     },
     {
-      id: 'cert-cpanel-cpsp',
-      group: 'Sales and marketing',
-      issuer: 'cPanel',
-      title: 'cPanel & WHM Sales Professional (CPSP)',
-      year: '2021',
-      credentialUrl: '/certifications/cPanel-%26-WHM-Sales-Professional-CPSP-zainmabid.pdf',
-      issuerLogo: '/logos/cpanel.png'
+      id: "cert-dmm",
+      group: "Sales and marketing",
+      issuer: "Digital Media Institute",
+      title: "Digital Marketing & Enterprise Media Management",
+      year: "2021",
+      credentialUrl: "/certifications/DMM_Certificate.jpg",
+      issuerLogo: "/logos/linkedin-learning.png"
     },
     {
-      id: 'cert-pitac',
-      group: 'Sales and marketing',
-      issuer: 'PITAC',
-      title: 'Social Media Marketing Expert',
-      year: '2020',
-      issuerLogo: '/logos/pitac.png'
+      id: "cert-empathy-for-sales-professionals",
+      group: "Sales and marketing",
+      issuer: "LinkedIn Learning",
+      title: "Empathy for Sales Professionals",
+      year: "2021",
+      credentialUrl: "/certifications/Empathy%20for%20Sales%20Professionals.pdf",
+      issuerLogo: "/logos/linkedin-learning.png"
     },
     {
-      id: 'cert-nasba',
-      group: 'Sales and marketing',
-      issuer: 'NASBA',
-      title: 'Sales Management Foundations',
-      year: '2021',
-      credentialUrl: '/certifications/Sales%20Management%20Foundations%20(NASBA).pdf',
-      issuerLogo: '/logos/nasba.png'
+      id: "cert-fortinet-fundamentals",
+      group: "Cloud, network and security",
+      issuer: "Fortinet",
+      title: "Certified Fundamentals in Cybersecurity",
+      year: "2025",
+      credentialUrl: "/certifications/Fortinet%20Certified%20Fundamentals%20in%20Cybersecurity.pdf",
+      image: "/certifications/badges/fortinet-certified-fundamentals.png",
+      issuerLogo: "/logos/fortinet.png"
     },
     {
-      id: 'cert-nasba-kam',
-      group: 'Sales and marketing',
-      issuer: 'NASBA',
-      title: 'Key Account Management Strategy',
-      year: '2021',
-      credentialUrl: '/certifications/kEY%20aCCOUNT%20mANAGEMENT%20(NASBA).pdf',
-      issuerLogo: '/logos/nasba.png'
+      id: "cert-fortinet-getting-started",
+      group: "Cloud, network and security",
+      issuer: "Fortinet",
+      title: "Getting Started with Cybersecurity 3.0",
+      year: "2025",
+      credentialUrl: "/certifications/Fortinet_Getting%20Started%20with%20Cybersecurity%203.0.pdf",
+      issuerLogo: "/logos/fortinet.png"
     },
     {
-      id: 'cert-open-university',
-      group: 'Business and project',
-      issuer: 'The Open University',
-      title: 'Institute of Education Academic Statement',
-      year: '2021',
-      credentialUrl: '/certifications/IOE_1_statement.pdf',
-      issuerLogo: '/logos/open-university.png'
-    },
-
-    /* ==========================================================================
-       INTERNET SOCIETY (ISOC) ACCREDITED CERTIFICATES OF COMPLETION
-       ========================================================================== */
-    {
-      id: 'cert-isoc-network-operations',
-      group: 'Cloud, network and security',
-      issuer: 'Internet Society',
-      title: 'Introduction to Network Operations',
-      year: '2026',
-      credentialUrl: 'https://www.credential.net/b78c11c4-7158-4acf-981b-6609dc3cab83#acc.3MlZcCRy',
-      issuerLogo: '/logos/isoc.png'
+      id: "cert-fortinet-threat",
+      group: "Cloud, network and security",
+      issuer: "Fortinet",
+      title: "Introduction to Threat Landscape 3.0",
+      year: "2025",
+      credentialUrl: "/certifications/Fortinet_Introduction%20to%20Threat%20Landscape%203.0.pdf",
+      issuerLogo: "/logos/fortinet.png"
     },
     {
-      id: 'cert-isoc-grant-ready',
-      group: 'Business and project',
-      issuer: 'Internet Society',
-      title: 'Grant Ready: Building Your Grant Application',
-      year: '2026',
-      credentialUrl: 'https://www.credential.net/01a0ea97-ed08-4760-8407-333e7f35047a#acc.cN89zpi1',
-      issuerLogo: '/logos/isoc.png'
+      id: "cert-how-to-win-at-the-sport-of-business",
+      group: "Business and project",
+      issuer: "LinkedIn Learning",
+      title: "How to Win at the Sport of Business",
+      year: "2021",
+      credentialUrl: "/certifications/How%20to%20Win%20at%20the%20Sport%20of%20Business%20Blinkist%20Summary.pdf",
+      issuerLogo: "/logos/linkedin-learning.png"
     },
     {
-      id: 'cert-isoc-digital-footprints',
-      group: 'Cloud, network and security',
-      issuer: 'Internet Society',
-      title: 'Digital Footprints',
-      year: '2026',
-      credentialUrl: 'https://www.credential.net/0f3dd5cb-fde7-4dbb-acf2-c2198f3b9f46#acc.EFtWLShO',
-      issuerLogo: '/logos/isoc.png'
+      id: "cert-ibm-cloud",
+      group: "Cloud, network and security",
+      issuer: "IBM",
+      title: "Cloud Core Certified",
+      year: "2023",
+      credentialUrl: "/certifications/IBM_Cloud_Core_Certified.pdf",
+      image: "/certifications/badges/ibm-cloud-core.png",
+      issuerLogo: "/logos/ibm.png"
     },
     {
-      id: 'cert-isoc-internet-security',
-      group: 'Cloud, network and security',
-      issuer: 'Internet Society',
-      title: 'Internet Security',
-      year: '2026',
-      credentialUrl: 'https://www.credential.net/157ef85c-7dab-4e21-afca-a254cd94d143#acc.vrIhDau5',
-      issuerLogo: '/logos/isoc.png'
+      id: "cert-isoc-digital-footprint-cert",
+      group: "Cloud, network and security",
+      issuer: "Internet Society",
+      title: "Digital Footprints",
+      year: "2026",
+      credentialUrl: "https://www.credential.net/0f3dd5cb-fde7-4dbb-acf2-c2198f3b9f46#acc.EFtWLShO",
+      issuerLogo: "/logos/isoc.png"
     },
     {
-      id: 'cert-isoc-privacy',
-      group: 'Cloud, network and security',
-      issuer: 'Internet Society',
-      title: 'Privacy',
-      year: '2026',
-      credentialUrl: 'https://www.credential.net/707a9836-8a5f-4090-939f-589df5adc276#acc.tGWNJD0Y',
-      issuerLogo: '/logos/isoc.png'
+      id: "cert-isoc-grant-application",
+      group: "Business and project",
+      issuer: "Internet Society",
+      title: "Grant Ready: Building Your Grant Application",
+      year: "2026",
+      credentialUrl: "https://www.credential.net/01a0ea97-ed08-4760-8407-333e7f35047a#acc.cN89zpi1",
+      issuerLogo: "/logos/isoc.png"
+    },
+    {
+      id: "cert-isoc-security",
+      group: "Cloud, network and security",
+      issuer: "Internet Society",
+      title: "Internet Security",
+      year: "2026",
+      credentialUrl: "https://www.credential.net/157ef85c-7dab-4e21-afca-a254cd94d143#acc.vrIhDau5",
+      issuerLogo: "/logos/isoc.png"
+    },
+    {
+      id: "cert-isoc-netops",
+      group: "Cloud, network and security",
+      issuer: "Internet Society",
+      title: "Introduction to Network Operations",
+      year: "2026",
+      credentialUrl: "https://www.credential.net/b78c11c4-7158-4acf-981b-6609dc3cab83#acc.3MlZcCRy",
+      issuerLogo: "/logos/isoc.png"
+    },
+    {
+      id: "cert-isoc-privacy-cert",
+      group: "Cloud, network and security",
+      issuer: "Internet Society",
+      title: "Privacy Frameworks & Governance",
+      year: "2026",
+      credentialUrl: "https://www.credential.net/707a9836-8a5f-4090-939f-589df5adc276#acc.tGWNJD0Y",
+      issuerLogo: "/logos/isoc.png"
+    },
+    {
+      id: "cert-isoc-membership",
+      group: "Cloud, network and security",
+      issuer: "Internet Society",
+      title: "Internet Society Official Professional Membership",
+      year: "2026",
+      credentialUrl: "/certifications/Internet%20Society%20Membership%20Recognition.png",
+      issuerLogo: "/logos/isoc.png"
+    },
+    {
+      id: "cert-open-university",
+      group: "Business and project",
+      issuer: "The Open University",
+      title: "Institute of Education Academic Statement",
+      year: "2021",
+      credentialUrl: "/certifications/IOE_1_statement.pdf",
+      issuerLogo: "/logos/open-university.png"
+    },
+    {
+      id: "cert-key-account-management",
+      group: "Sales and marketing",
+      issuer: "NASBA",
+      title: "kEY aCCOUNT mANAGEMENT",
+      year: "2021",
+      credentialUrl: "/certifications/kEY%20aCCOUNT%20mANAGEMENT%20(NASBA).pdf",
+      issuerLogo: "/logos/nasba.png"
+    },
+    {
+      id: "cert-managing-your-sales-process",
+      group: "Sales and marketing",
+      issuer: "LinkedIn Learning",
+      title: "Managing Your Sales Process",
+      year: "2021",
+      credentialUrl: "/certifications/Managing%20Your%20Sales%20Process.pdf",
+      issuerLogo: "/logos/linkedin-learning.png"
+    },
+    {
+      id: "cert-mastering-project-management-with-asana",
+      group: "Business and project",
+      issuer: "Asana Academy",
+      title: "Mastering Project Management with Asana",
+      year: "2026",
+      credentialUrl: "/certifications/Mastering%20Project%20Management%20with%20Asana.pdf",
+      issuerLogo: "/logos/asana.png"
+    },
+    {
+      id: "cert-microsoft-contract-requirements-and-compliance",
+      group: "Business and project",
+      issuer: "Microsoft",
+      title: "Microsoft Contract Requirements and Compliance",
+      year: "2021",
+      credentialUrl: "/certifications/Microsoft%20Contract%20Requirements%20and%20Compliance%20(18552).pdf",
+      issuerLogo: "/logos/microsoft.png"
+    },
+    {
+      id: "cert-microsoft-s-ethics-and-integrity-training",
+      group: "Business and project",
+      issuer: "Microsoft",
+      title: "Microsoft’s Ethics and Integrity Training",
+      year: "2021",
+      credentialUrl: "/certifications/Microsoft%E2%80%99s%20Ethics%20and%20Integrity%20Training%20(18763).pdf",
+      issuerLogo: "/logos/microsoft.png"
+    },
+    {
+      id: "cert-pmi-membership",
+      group: "Business and project",
+      issuer: "Project Management Institute (PMI)",
+      title: "Project Management Institute (PMI) Official Membership",
+      year: "2021",
+      credentialUrl: "/certifications/PMI%20Membership.pdf",
+      issuerLogo: "/logos/pmi.png"
+    },
+    {
+      id: "cert-pmp",
+      group: "Business and project",
+      issuer: "Project Management Institute (PMI)",
+      title: "Project Management Professional (PMP)® Exam Prep",
+      year: "2021",
+      credentialUrl: "/certifications/PMP%20Zain%20M.%20Abid.jpeg",
+      issuerLogo: "/logos/pmi.png"
+    },
+    {
+      id: "cert-hpi-profitable-ai",
+      group: "Business and project",
+      issuer: "Hasso Plattner Institute (openHPI)",
+      title: "Profitable AI: Business Value Creation with AI Systems",
+      year: "2026",
+      credentialUrl: "/certifications/ProfitableAI_Hasso_Plattner_Institute.pdf",
+      issuerLogo: "/logos/hpi.png"
+    },
+    {
+      id: "cert-project-leadership",
+      group: "Business and project",
+      issuer: "Project Management Institute (PMI)",
+      title: "Project Leadership",
+      year: "2021",
+      credentialUrl: "/certifications/Project%20Leadership%20(PMI).pdf",
+      issuerLogo: "/logos/pmi.png"
+    },
+    {
+      id: "cert-project-management-simplified",
+      group: "Business and project",
+      issuer: "Project Management Institute (PMI)",
+      title: "Project Management Simplified",
+      year: "2021",
+      credentialUrl: "/certifications/Project%20Management%20Simplified%20(PMI)%C2%AE.pdf",
+      issuerLogo: "/logos/pmi.png"
+    },
+    {
+      id: "cert-retail-sales-management",
+      group: "Sales and marketing",
+      issuer: "LinkedIn Learning",
+      title: "Retail Sales Management",
+      year: "2021",
+      credentialUrl: "/certifications/Retail%20Sales%20Management.pdf",
+      issuerLogo: "/logos/linkedin-learning.png"
+    },
+    {
+      id: "cert-sales-management-foundations",
+      group: "Sales and marketing",
+      issuer: "NASBA",
+      title: "Sales Management Foundations",
+      year: "2021",
+      credentialUrl: "/certifications/Sales%20Management%20Foundations%20(NASBA).pdf",
+      issuerLogo: "/logos/nasba.png"
+    },
+    {
+      id: "cert-sales-management-foundations-2019",
+      group: "Sales and marketing",
+      issuer: "LinkedIn Learning",
+      title: "Sales Management Foundations 2019",
+      year: "2021",
+      credentialUrl: "/certifications/Sales%20Management%20Foundations%202019.pdf",
+      issuerLogo: "/logos/linkedin-learning.png"
+    },
+    {
+      id: "cert-scrum-fundamentals",
+      group: "Business and project",
+      issuer: "SCRUMstudy",
+      title: "Scrum Fundamentals Certified (SFC™)",
+      year: "2026",
+      credentialUrl: "/certifications/Scrum_Fundamentals_Certified-ZainAbid-1173277.pdf",
+      issuerLogo: "/logos/scrumstudy.png"
+    },
+    {
+      id: "cert-selling-with-empathy-during-uncertain-times",
+      group: "Sales and marketing",
+      issuer: "LinkedIn Learning",
+      title: "Selling with Empathy during Uncertain Times",
+      year: "2021",
+      credentialUrl: "/certifications/Selling%20with%20Empathy%20during%20Uncertain%20Times.pdf",
+      issuerLogo: "/logos/linkedin-learning.png"
+    },
+    {
+      id: "cert-strategic-thinking",
+      group: "Business and project",
+      issuer: "Project Management Institute (PMI)",
+      title: "Strategic Thinking",
+      year: "2021",
+      credentialUrl: "/certifications/Strategic%20Thinking%20(PMI).pdf",
+      issuerLogo: "/logos/pmi.png"
+    },
+    {
+      id: "cert-studying-for-the-certified-business-analysis-professional-cbap",
+      group: "Business and project",
+      issuer: "International Institute of Business Analysis (IIBA)",
+      title: "Studying for the Certified Business Analysis Professional CBAP",
+      year: "2021",
+      credentialUrl: "/certifications/Studying%20for%20the%20Certified%20Business%20Analysis%20Professional%20CBAP%20(IIBA).pdf",
+      issuerLogo: "/logos/iiba.png"
+    },
+    {
+      id: "cert-studying-for-the-certified-business-analysis-professional-cbap",
+      group: "Business and project",
+      issuer: "Project Management Institute (PMI)",
+      title: "Studying for the Certified Business Analysis Professional CBAP",
+      year: "2021",
+      credentialUrl: "/certifications/Studying%20for%20the%20Certified%20Business%20Analysis%20Professional%20CBAP%20(PMI).pdf",
+      issuerLogo: "/logos/pmi.png"
+    },
+    {
+      id: "cert-hpi-sustainability",
+      group: "Business and project",
+      issuer: "Hasso Plattner Institute (openHPI)",
+      title: "Sustainability in the Digital Age",
+      year: "2026",
+      credentialUrl: "/certifications/Sustainability%20in%20the%20digital%20age_Hasso_Plattner_Institute.pdf",
+      issuerLogo: "/logos/hpi.png"
+    },
+    {
+      id: "cert-the-undercover-economist-the-economics-behind-everyday-decisions",
+      group: "Business and project",
+      issuer: "LinkedIn Learning",
+      title: "The Undercover Economist The Economics behind Everyday Decisions",
+      year: "2021",
+      credentialUrl: "/certifications/The%20Undercover%20Economist%20The%20Economics%20behind%20Everyday%20Decisions%20Blinkist%20Summary.pdf",
+      issuerLogo: "/logos/linkedin-learning.png"
+    },
+    {
+      id: "cert-virtual-selling-for-sales-professionals",
+      group: "Sales and marketing",
+      issuer: "LinkedIn Learning",
+      title: "Virtual Selling for Sales Professionals",
+      year: "2021",
+      credentialUrl: "/certifications/Virtual%20Selling%20for%20Sales%20Professionals.pdf",
+      issuerLogo: "/logos/linkedin-learning.png"
+    },
+    {
+      id: "cert-adbi-cybersecurity",
+      group: "Cloud, network and security",
+      issuer: "Asian Development Bank Institute (ADBI)",
+      title: "Cybersecurity Strategy & Operational Governance",
+      year: "2026",
+      credentialUrl: "/certifications/Zain-Abid%E2%80%93Cybersecurity%E2%80%93Cybersecurity%E2%80%93ADBI-E-Learning.pdf",
+      issuerLogo: "/logos/adbi.png"
+    },
+    {
+      id: "cert-adbi-ecommerce",
+      group: "Sales and marketing",
+      issuer: "Asian Development Bank Institute (ADBI)",
+      title: "Rights & Obligations in Digital E-Commerce Frameworks",
+      year: "2026",
+      credentialUrl: "/certifications/Zain-Abid%E2%80%93Rights-and-Obligations-in-E-commerce%E2%80%93Rights-and-Obligations-in-E-commerce%E2%80%93ADBI-E-Learning.pdf",
+      issuerLogo: "/logos/adbi.png"
     }
-
-    /* --------------------------------------------------------------------------
-     * TODO: HOW TO ADD MORE CERTIFICATIONS OR BADGES
-     * --------------------------------------------------------------------------
-     * To append any new certificate or Accredible badge, add an entry following this format:
-     *
-     * {
-     *   id: 'unique-slug-id',
-     *   group: 'Business and project' | 'Cloud, network and security' | 'Sales and marketing',
-     *   issuer: 'Issuing Organization Name',
-     *   title: 'Certification or Credential Title',
-     *   year: '2026', // optional
-     *   credentialUrl: 'https://...', // optional: external verification link or /certifications/... PDF path
-     *   image: '/path/to/badge.png' // optional: badge art URL or local image
-     * },
-     * -------------------------------------------------------------------------- */
   ],
 
   googleProfileUrl: 'https://www.skills.google/public_profiles/14bbe981-af34-4dd0-b317-30eaf266f8e3',

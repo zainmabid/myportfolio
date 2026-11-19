@@ -35,8 +35,8 @@ export const Certifications: React.FC = () => {
     });
   }, [certifications, selectedGroup, searchQuery]);
 
-  const visibleItems = showAll ? filteredItems : filteredItems.slice(0, 8);
-  const hasMoreThanEight = filteredItems.length > 8;
+  const visibleItems = showAll ? filteredItems : filteredItems.slice(0, 16);
+  const hasMoreThanLimit = filteredItems.length > 16;
 
   return (
     <section id="credentials" className="py-28 sm:py-36 border-b border-slate-800 bg-[#0F172A] text-white">
@@ -44,7 +44,7 @@ export const Certifications: React.FC = () => {
         {/* Section Heading */}
         <div className="max-w-2xl mb-12">
           <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-800/90 border border-slate-700 font-mono text-[11px] uppercase tracking-wider text-slate-200 mb-3 shadow-xs">
-            [ 05 // PROFESSIONAL CREDENTIALS ]
+            [ 05 // PROFESSIONAL CREDENTIALS ({certifications.length}) ]
           </span>
           <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold tracking-[-0.02em] text-white">
             Accredited Certifications &amp; Licenses
@@ -60,17 +60,21 @@ export const Certifications: React.FC = () => {
           <div className="flex flex-wrap items-center gap-2">
             {FILTER_GROUPS.map((group) => {
               const isActive = selectedGroup === group;
+              const count = group === 'All' ? certifications.length : certifications.filter((c) => c.group === group).length;
               return (
                 <button
                   key={group}
                   onClick={() => setSelectedGroup(group)}
-                  className={`px-3.5 py-1.5 rounded-lg font-mono text-xs uppercase tracking-wider transition-colors cursor-pointer ${
+                  className={`px-3.5 py-1.5 rounded-lg font-mono text-xs uppercase tracking-wider transition-colors cursor-pointer flex items-center gap-2 ${
                     isActive
                       ? 'bg-white text-[#1A1A1A] font-bold shadow-sm'
                       : 'bg-[#131B2E] text-slate-300 hover:text-white border border-slate-800 hover:border-slate-700'
                   }`}
                 >
-                  {group}
+                  <span>{group}</span>
+                  <span className={`text-[10px] px-1.5 py-0.5 rounded-md font-mono ${isActive ? 'bg-slate-200 text-slate-900 font-bold' : 'bg-slate-800 text-slate-400'}`}>
+                    {count}
+                  </span>
                 </button>
               );
             })}
@@ -179,8 +183,8 @@ export const Certifications: React.FC = () => {
           </div>
         )}
 
-        {/* Scalable "Show all" toggle after 8 items */}
-        {hasMoreThanEight && (
+        {/* Scalable "Show all" toggle after limit */}
+        {hasMoreThanLimit && (
           <div className="mt-8 text-center">
             <button
               onClick={() => setShowAll(!showAll)}
