@@ -143,7 +143,8 @@ export type BadgeGroup =
   | 'All'
   | 'Credly (PMI & IBM)'
   | 'Google Cloud & Gemini'
-  | 'Internet Society (ISOC)';
+  | 'Internet Society (ISOC)'
+  | 'Cloud, Security & Agile';
 
 export interface VerifiedBadge {
   id: string;
@@ -1749,6 +1750,18 @@ export const PORTFOLIO_DATA: PortfolioData = {
         "category": "Cloud Infrastructure",
         "verificationType": "IBM Certified",
         "description": "Foundational cloud architecture, virtualization, hybrid cloud models, microservices, and enterprise cloud operations."
+    },
+    {
+        "id": "badge-scrum-at-scale",
+        "title": "Certified Scrum@Scale Practitioner",
+        "issuer": "Scrum@Scale",
+        "group": "Cloud, Security & Agile",
+        "date": "2023",
+        "badgeUrl": "https://zain.zaintegrated.com/certifications/Certified%20Scrum%20Scale%20Practitioner%20by%20Scrum%40Scale.pdf",
+        "image": "/certifications/badges/certified-scrum-scale-practitioner.png",
+        "category": "Enterprise Agile & Scaling",
+        "verificationType": "Scrum@Scale Certified",
+        "description": "Certified Scrum@Scale Practitioner credential demonstrating mastery in scaling agile across multiple teams, Scrum of Scrums (SoS), Executive Action Team (EAT), and organizational agility frameworks."
     },
     {
         "id": "badge-scrum-master-csm",

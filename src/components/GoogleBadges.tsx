@@ -16,7 +16,8 @@ const FILTER_GROUPS: BadgeGroup[] = [
   'All',
   'Credly (PMI & IBM)',
   'Google Cloud & Gemini',
-  'Internet Society (ISOC)'
+  'Internet Society (ISOC)',
+  'Cloud, Security & Agile'
 ];
 
 export const GoogleBadges: React.FC = () => {
