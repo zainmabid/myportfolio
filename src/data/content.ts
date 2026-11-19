@@ -968,6 +968,15 @@ export const PORTFOLIO_DATA: PortfolioData = {
 
   certifications: [
     {
+        "id": "cert-unido-smart-manufacturing",
+        "group": "Business and project",
+        "issuer": "UNIDO & AIM Global",
+        "title": "Smart Manufacturing and Industry 4.0",
+        "year": "2026",
+        "credentialUrl": "/certifications/Smart%20Manufacturing%20and%20Industry%204.0%20-%20UNIDO.pdf",
+        "issuerLogo": "/logos/unido.svg"
+    },
+    {
         "id": "cert-unido-business-alliances",
         "group": "Business and project",
         "issuer": "United Nations (UNIDO)",
