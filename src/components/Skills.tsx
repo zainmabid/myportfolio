@@ -37,31 +37,31 @@ export const Skills: React.FC = () => {
             return (
               <div
                 key={group.id}
-                className="group relative rounded-2xl bg-white border border-[#E2E8F0] p-7 sm:p-8 flex flex-col justify-between shadow-sm hover:border-slate-400 hover:shadow-[0_12px_32px_-12px_rgba(15,23,42,0.12)] transition-all duration-300"
+                className="group relative rounded-2xl bg-[#0F172A] border border-slate-800 p-7 sm:p-8 flex flex-col justify-between shadow-xl hover:border-slate-700 hover:shadow-2xl transition-all duration-300 text-left"
               >
                 <div>
                   {/* Card Header: Icon + Number Capsule */}
                   <div className="flex items-center justify-between gap-3 mb-5">
-                    <div className="w-10 h-10 rounded-xl bg-[#F4F4F0] border border-[#E2E8F0] flex items-center justify-center text-[#1A1A1A] group-hover:bg-[#0F172A] group-hover:text-white group-hover:border-[#0F172A] transition-colors shadow-xs">
-                      <Icon className="w-5 h-5" />
+                    <div className="w-10 h-10 rounded-xl bg-slate-800 border border-slate-700 flex items-center justify-center text-white group-hover:bg-slate-700 group-hover:border-slate-600 transition-colors shadow-xs">
+                      <Icon className="w-5 h-5 text-white" />
                     </div>
 
-                    <span className="font-mono text-[10px] uppercase font-bold px-2.5 py-1 rounded-md bg-[#F4F4F0] border border-[#E2E8F0] text-slate-700 tracking-wider">
+                    <span className="font-mono text-[10px] uppercase font-bold px-2.5 py-1 rounded-md bg-slate-800/90 border border-slate-700 text-slate-300 tracking-wider">
                       [ CARD {cardNumber} ]
                     </span>
                   </div>
 
                   {/* Card Title */}
-                  <h3 className="font-heading text-xl font-bold tracking-[-0.015em] text-[#1A1A1A] leading-snug">
+                  <h3 className="font-heading text-xl font-bold tracking-[-0.015em] text-white leading-snug">
                     {group.category}
                   </h3>
 
                   {/* Top Tier: Core Focus (High-Level Engineering Control) */}
-                  <div className="mt-4 mb-6 pb-5 border-b border-[#E2E8F0]">
-                    <span className="font-mono text-[10px] uppercase tracking-wider text-slate-500 font-bold block mb-1.5">
+                  <div className="mt-4 mb-6 pb-5 border-b border-slate-800">
+                    <span className="font-mono text-[10px] uppercase tracking-wider text-slate-400 font-bold block mb-1.5">
                       Core Focus:
                     </span>
-                    <p className="text-sm text-[#1A1A1A] font-semibold leading-relaxed">
+                    <p className="text-sm text-slate-200 font-medium leading-relaxed">
                       {group.coreFocus}
                     </p>
                   </div>
@@ -75,7 +75,7 @@ export const Skills: React.FC = () => {
                       {group.skills.map((skill, sIdx) => (
                         <span
                           key={sIdx}
-                          className="inline-flex items-center px-3 py-1.5 rounded-lg bg-[#F8F9FA] hover:bg-[#0F172A] text-slate-700 hover:text-white border border-[#E2E8F0] hover:border-[#0F172A] font-mono text-[11px] tracking-wide font-medium transition-all duration-150 cursor-default shadow-2xs hover:scale-102 select-none"
+                          className="inline-flex items-center px-3 py-1.5 rounded-lg bg-[#131B2E] hover:bg-slate-800 text-slate-300 hover:text-white border border-slate-800 hover:border-slate-700 font-mono text-[11px] tracking-wide font-medium transition-all duration-150 cursor-default shadow-xs select-none"
                         >
                           [ {skill} ]
                         </span>
@@ -85,9 +85,9 @@ export const Skills: React.FC = () => {
                 </div>
 
                 {/* Card Footer: Mastery Status */}
-                <div className="mt-8 pt-4 border-t border-[#E2E8F0] flex items-center justify-between text-[10px] font-mono uppercase tracking-wider text-slate-500">
+                <div className="mt-8 pt-4 border-t border-slate-800 flex items-center justify-between text-[10px] font-mono uppercase tracking-wider text-slate-400">
                   <span>Execution Tier</span>
-                  <span className="text-[#1A1A1A] font-bold">100% Field Proven</span>
+                  <span className="text-white font-bold">100% Field Proven</span>
                 </div>
               </div>
             );
