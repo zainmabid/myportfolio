@@ -1133,7 +1133,7 @@ export const PORTFOLIO_DATA: PortfolioData = {
       id: "cert-cisa-ics-components",
       group: "Cloud, network and security",
       issuer: "US CISA & Idaho National Laboratory",
-      title: "Industrial Control Systems (ICS): Common Components (210W-03)",
+      title: "Common ICS Components (210W-03)",
       year: "2026",
       credentialUrl: "/certifications/Common%20ICS%20Components%20(210W-03)%20US%20CISA.pdf",
       issuerLogo: "/logos/cisa.png"
