@@ -507,6 +507,66 @@ export const PORTFOLIO_DATA: PortfolioData = {
       name: 'PAF Hospital (Islamabad)',
       descriptor: 'Military Healthcare & Clinical Services',
       logo: '/brands/paf-hospital.png'
+    },
+    {
+      id: 'telenor',
+      name: 'Telenor',
+      descriptor: 'Telecommunications Network',
+      logo: '/brands/telenor.png'
+    },
+    {
+      id: 'ufone',
+      name: 'Ufone 4G',
+      descriptor: 'Telecommunications Network',
+      logo: '/brands/ufone.png'
+    },
+    {
+      id: 'mobilink-bank',
+      name: 'Mobilink Microfinance Bank',
+      descriptor: 'Digital Banking & Microfinance',
+      logo: '/brands/mobilink-bank.png'
+    },
+    {
+      id: 'rwmc',
+      name: 'RWMC (Govt)',
+      descriptor: 'Rawalpindi Waste Management Company',
+      logo: '/brands/rwmc.png'
+    },
+    {
+      id: 'mashmoom',
+      name: 'Mashmoom',
+      descriptor: 'Food & Beverage Processing',
+      logo: '/brands/mashmoom.png'
+    },
+    {
+      id: 'elo',
+      name: 'elo (Export Leftovers)',
+      descriptor: 'Apparel & E-Commerce Retail',
+      logo: '/brands/elo.png'
+    },
+    {
+      id: 'bebejan',
+      name: 'Be Be Jan',
+      descriptor: 'Hospitality & Healthcare Textiles',
+      logo: '/brands/bebejan.png'
+    },
+    {
+      id: 'concordia-colleges',
+      name: 'Concordia Colleges',
+      descriptor: 'Beaconhouse Higher Education',
+      logo: '/brands/concordia-colleges.png'
+    },
+    {
+      id: 'capital-smart-city',
+      name: 'Capital Smart City',
+      descriptor: 'Smart Urban Development & Infrastructure',
+      logo: '/brands/capital-smart-city.png'
+    },
+    {
+      id: 'cpec',
+      name: 'CPEC Secretariat (Govt)',
+      descriptor: 'China-Pakistan Economic Corridor',
+      logo: '/brands/cpec.png'
     }
   ],
 

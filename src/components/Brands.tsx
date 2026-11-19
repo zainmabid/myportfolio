@@ -23,7 +23,10 @@ export const Brands: React.FC = () => {
       'colgate-palmolive',
       'daewoo-fastex',
       'daewoo-express',
-      'kohinoor-mills'
+      'kohinoor-mills',
+      'cpec',
+      'capital-smart-city',
+      'mashmoom'
     ]);
 
     const row1Ids = new Set([
@@ -40,7 +43,11 @@ export const Brands: React.FC = () => {
       'outfitters',
       'cass',
       'sitara-textile',
-      'parkview-city'
+      'parkview-city',
+      'telenor',
+      'ufone',
+      'elo',
+      'bebejan'
     ]);
 
     const r1: Brand[] = [];
