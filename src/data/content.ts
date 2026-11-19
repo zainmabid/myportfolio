@@ -1503,7 +1503,7 @@ export const PORTFOLIO_DATA: PortfolioData = {
         "group": "Sales and marketing",
         "issuer": "PITAC",
         "title": "Certified Social Media Marketing Expert",
-        "year": "2020",
+        "year": "2018",
         "credentialUrl": "/certifications/DMM_Certificate.jpg",
         "issuerLogo": "/logos/pitac.png"
     },
