@@ -1315,7 +1315,7 @@ export const PORTFOLIO_DATA: PortfolioData = {
       id: "cert-key-account-management",
       group: "Sales and marketing",
       issuer: "NASBA",
-      title: "kEY aCCOUNT mANAGEMENT",
+      title: "Key Account Management",
       year: "2021",
       credentialUrl: "/certifications/kEY%20aCCOUNT%20mANAGEMENT%20(NASBA).pdf",
       issuerLogo: "/logos/nasba.png"
