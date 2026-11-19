@@ -978,9 +978,9 @@ export const PORTFOLIO_DATA: PortfolioData = {
     {
       id: "cert-3d-max",
       group: "Business and project",
-      issuer: "National Training Bureau, ISB",
+      issuer: "NTB - ISB",
       title: "3D Studio Max Architectural Visualization & Modeling",
-      year: "2023",
+      year: "2011",
       credentialUrl: "/certifications/3D%20Max_Certificate.jpg"
     },
     {

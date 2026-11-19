@@ -98,31 +98,31 @@ export const Certifications: React.FC = () => {
           {visibleItems.map((item) => (
             <div
               key={item.id}
-              className="p-6 rounded-2xl bg-[#131B2E] border border-slate-800 hover:border-slate-600 hover:shadow-lg transition-all duration-200 shadow-md flex flex-col justify-between group text-left"
+              className="p-5 sm:p-6 rounded-2xl bg-[#131B2E] border border-slate-800 hover:border-slate-600 hover:shadow-lg transition-all duration-200 shadow-md flex flex-col justify-between group text-left overflow-hidden"
             >
               <div>
                 {/* Header label & Logo */}
-                <div className="flex items-center justify-between gap-2.5 mb-3.5 pb-2.5 border-b border-slate-800">
+                <div className="flex items-center justify-between gap-2 mb-3.5 pb-2.5 border-b border-slate-800 min-w-0">
                   {item.issuerLogo ? (
-                    <div className="h-10 sm:h-11 px-2.5 py-1 rounded-lg bg-white border border-slate-200 flex items-center shadow-xs shrink-0 max-w-[185px]">
+                    <div className="h-9 sm:h-10 px-2 py-1 rounded-lg bg-white border border-slate-200 flex items-center justify-center shadow-xs min-w-0 max-w-[125px] sm:max-w-[140px]">
                       <img
                         src={item.issuerLogo}
                         alt={`${item.issuer} logo`}
-                        className="max-h-8 sm:max-h-9 w-auto max-w-full object-contain transition-transform group-hover:scale-105 duration-200"
+                        className="max-h-6 sm:max-h-7 w-auto max-w-full object-contain transition-transform group-hover:scale-105 duration-200"
                         loading="lazy"
                       />
                     </div>
                   ) : (
-                    <div className="h-10 sm:h-11 px-3 py-1 rounded-lg bg-slate-800/90 border border-slate-700 flex items-center shadow-xs shrink-0 max-w-[210px]">
-                      <span className="font-mono text-[11px] uppercase font-bold tracking-wider text-slate-200 truncate">
+                    <div className="h-9 sm:h-10 px-2.5 py-1 rounded-lg bg-slate-800/90 border border-slate-700 flex items-center shadow-xs min-w-0 max-w-[135px] sm:max-w-[150px]">
+                      <span className="font-mono text-[10px] sm:text-[11px] uppercase font-bold tracking-wider text-slate-200 truncate">
                         {item.issuer}
                       </span>
                     </div>
                   )}
 
-                  <div className="flex flex-col items-end text-right font-mono text-[11px] text-[#94A3B8] shrink-0">
+                  <div className="flex flex-col items-end text-right font-mono text-[11px] text-[#94A3B8] shrink-0 ml-auto">
                     {item.year && (
-                      <span className="text-[10px] font-semibold text-slate-300 px-2 py-0.5 rounded-md bg-slate-800 border border-slate-700">
+                      <span className="text-[10px] font-semibold text-slate-300 px-2 py-0.5 rounded-md bg-slate-800 border border-slate-700 whitespace-nowrap">
                         {item.year}
                       </span>
                     )}
