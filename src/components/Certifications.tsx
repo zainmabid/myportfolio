@@ -113,9 +113,11 @@ export const Certifications: React.FC = () => {
                       />
                     </div>
                   ) : (
-                    <span className="font-mono text-xs uppercase font-bold tracking-wider text-slate-200">
-                      {item.issuer}
-                    </span>
+                    <div className="h-10 sm:h-11 px-3 py-1 rounded-lg bg-slate-800/90 border border-slate-700 flex items-center shadow-xs shrink-0 max-w-[210px]">
+                      <span className="font-mono text-[11px] uppercase font-bold tracking-wider text-slate-200 truncate">
+                        {item.issuer}
+                      </span>
+                    </div>
                   )}
 
                   <div className="flex flex-col items-end text-right font-mono text-[11px] text-[#94A3B8] shrink-0">
@@ -140,9 +142,11 @@ export const Certifications: React.FC = () => {
                 )}
 
                 {/* Issuer Subtitle */}
-                <div className="font-mono text-[11px] uppercase tracking-wider text-slate-400 font-semibold mb-1">
-                  {item.issuer}
-                </div>
+                {item.issuerLogo && (
+                  <div className="font-mono text-[11px] uppercase tracking-wider text-slate-400 font-semibold mb-1">
+                    {item.issuer}
+                  </div>
+                )}
 
                 {/* Credential Title */}
                 <h3 className="font-subheading text-sm sm:text-base font-bold tracking-[-0.015em] text-white leading-snug">

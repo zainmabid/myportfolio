@@ -978,11 +978,10 @@ export const PORTFOLIO_DATA: PortfolioData = {
     {
       id: "cert-3d-max",
       group: "Business and project",
-      issuer: "Autodesk Authorized Training",
+      issuer: "National Training Bureau, ISB",
       title: "3D Studio Max Architectural Visualization & Modeling",
       year: "2023",
-      credentialUrl: "/certifications/3D%20Max_Certificate.jpg",
-      issuerLogo: "/logos/open-university.png"
+      credentialUrl: "/certifications/3D%20Max_Certificate.jpg"
     },
     {
       id: "cert-agile-development-practices",
@@ -996,11 +995,11 @@ export const PORTFOLIO_DATA: PortfolioData = {
     {
       id: "cert-agile-project-management-with-microsoft-project",
       group: "Business and project",
-      issuer: "Microsoft Project",
+      issuer: "LinkedIn Learning",
       title: "Agile Project Management with Microsoft Project",
       year: "2026",
       credentialUrl: "/certifications/Agile%20Project%20Management%20with%20Microsoft%20Project.pdf",
-      issuerLogo: "/logos/microsoft.png"
+      issuerLogo: "/logos/linkedin-learning.png"
     },
     {
       id: "cert-hpi-edge-ai",
