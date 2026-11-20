@@ -106,7 +106,7 @@ export const Hero: React.FC = () => {
               className="relative max-w-[340px] sm:max-w-[380px] w-full"
             >
               {/* Pure White Card with 1px border #E2E8F0 and subtle depth shadow */}
-              <div className="relative rounded-2xl overflow-hidden border border-[#E2E8F0] bg-white shadow-sm hover:shadow-md p-3 sm:p-4 transition-all duration-300">
+              <div className="group relative rounded-2xl overflow-hidden border border-[#E2E8F0] bg-white shadow-sm hover:shadow-md p-3 sm:p-4 transition-all duration-300">
                 {/* Minimalist Top Edge Strip */}
                 <div className="px-4 py-2.5 rounded-t-xl border-b border-[#E2E8F0] bg-[#F4F4F0] flex items-center font-mono text-[10px] uppercase tracking-wider text-[#475569]">
                   <span className="flex items-center gap-1.5 text-[#1A1A1A] font-semibold">
@@ -115,16 +115,16 @@ export const Hero: React.FC = () => {
                   </span>
                 </div>
 
-                {/* High-contrast, Professional Portrait */}
+                {/* High-contrast, Professional Portrait (Black & White by default, Full Color on hover) */}
                 <div className="relative aspect-[4/5] overflow-hidden bg-slate-100">
                   <img
                     src={person.avatar || '/zain-portrait.jpg'}
                     alt={person.name}
-                    className="w-full h-full object-cover object-top transition-transform duration-700 hover:scale-102"
+                    className="w-full h-full object-cover object-top filter grayscale contrast-105 group-hover:grayscale-0 group-hover:contrast-100 transition-all duration-700 ease-out group-hover:scale-102"
                     loading="eager"
                   />
                   {/* Soft subtle bottom gradient to blend into card surface */}
-                  <div className="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-white to-transparent opacity-80" />
+                  <div className="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-white to-transparent opacity-80 pointer-events-none" />
                 </div>
 
                 {/* Clean Editorial Caption */}
