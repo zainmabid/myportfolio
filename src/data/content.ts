@@ -567,6 +567,12 @@ export const PORTFOLIO_DATA: PortfolioData = {
       name: 'CPEC Secretariat (Govt)',
       descriptor: 'China-Pakistan Economic Corridor',
       logo: '/brands/cpec.png'
+    },
+    {
+      id: 'finca',
+      name: 'FINCA Microfinance Bank',
+      descriptor: 'Banking & Financial Services',
+      logo: '/brands/finca.png'
     }
   ],
 
