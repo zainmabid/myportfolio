@@ -120,7 +120,7 @@ export const Hero: React.FC = () => {
                   <img
                     src={person.avatar || '/zain-portrait.jpg'}
                     alt={person.name}
-                    className="w-full h-full object-cover object-top filter grayscale contrast-105 group-hover:grayscale-0 group-hover:contrast-100 transition-all duration-700 ease-out group-hover:scale-102"
+                    className="w-full h-full object-cover object-top filter grayscale brightness-110 contrast-[0.95] group-hover:grayscale-0 group-hover:brightness-100 group-hover:contrast-100 transition-all duration-700 ease-out group-hover:scale-102"
                     loading="eager"
                   />
                   {/* Soft subtle bottom gradient to blend into card surface */}
