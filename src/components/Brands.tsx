@@ -93,13 +93,13 @@ export const Brands: React.FC = () => {
               <div
                 key={`r1-${brand.id}-${idx}`}
                 title={brand.name}
-                className="h-16 sm:h-20 min-w-[145px] sm:min-w-[175px] max-w-[210px] px-5 py-2.5 rounded-xl bg-white border border-slate-200 shadow-sm flex items-center justify-center transition-all duration-200 hover:scale-105 hover:shadow-lg shrink-0 cursor-default"
+                className="h-16 sm:h-20 min-w-[145px] sm:min-w-[175px] max-w-[220px] px-4 sm:px-5 py-2 rounded-xl bg-white border border-slate-200 shadow-sm flex items-center justify-center transition-all duration-200 hover:scale-105 hover:shadow-lg shrink-0 cursor-default"
               >
                 {brand.logo && (
                   <img
                     src={brand.logo}
                     alt={brand.name}
-                    className="max-h-8 sm:max-h-10 w-auto max-w-full object-contain"
+                    className="h-10 sm:h-12 w-auto max-w-[90%] sm:max-w-[92%] object-contain"
                     loading="lazy"
                   />
                 )}
@@ -115,13 +115,13 @@ export const Brands: React.FC = () => {
               <div
                 key={`r2-${brand.id}-${idx}`}
                 title={brand.name}
-                className="h-16 sm:h-20 w-16 sm:w-20 rounded-xl bg-white border border-slate-200 shadow-sm flex items-center justify-center transition-all duration-200 hover:scale-105 hover:shadow-lg shrink-0 p-2.5 cursor-default"
+                className="h-16 sm:h-20 w-16 sm:w-20 rounded-xl bg-white border border-slate-200 shadow-sm flex items-center justify-center transition-all duration-200 hover:scale-105 hover:shadow-lg shrink-0 p-2 sm:p-2.5 cursor-default"
               >
                 {brand.logo && (
                   <img
                     src={brand.logo}
                     alt={brand.name}
-                    className="max-h-11 sm:max-h-14 max-w-full object-contain"
+                    className="h-11 sm:h-14 w-auto max-w-full object-contain"
                     loading="lazy"
                   />
                 )}
@@ -137,13 +137,13 @@ export const Brands: React.FC = () => {
               <div
                 key={`r3-${brand.id}-${idx}`}
                 title={brand.name}
-                className="h-16 sm:h-20 min-w-[145px] sm:min-w-[175px] max-w-[210px] px-5 py-2.5 rounded-xl bg-white border border-slate-200 shadow-sm flex items-center justify-center transition-all duration-200 hover:scale-105 hover:shadow-lg shrink-0 cursor-default"
+                className="h-16 sm:h-20 min-w-[145px] sm:min-w-[175px] max-w-[220px] px-4 sm:px-5 py-2 rounded-xl bg-white border border-slate-200 shadow-sm flex items-center justify-center transition-all duration-200 hover:scale-105 hover:shadow-lg shrink-0 cursor-default"
               >
                 {brand.logo && (
                   <img
                     src={brand.logo}
                     alt={brand.name}
-                    className="max-h-8 sm:max-h-10 w-auto max-w-full object-contain"
+                    className="h-10 sm:h-12 w-auto max-w-[90%] sm:max-w-[92%] object-contain"
                     loading="lazy"
                   />
                 )}
