@@ -117,10 +117,18 @@ export const Hero: React.FC = () => {
 
                 {/* High-contrast, Professional Portrait (Black & White by default, Full Color on hover) */}
                 <div className="relative aspect-[4/5] overflow-hidden bg-slate-100">
+                  {/* Studio Black & White Portrait (Default) */}
                   <img
-                    src={person.avatar || '/zain-portrait.jpg'}
+                    src="/zain-portrait-bw.jpg"
                     alt={person.name}
-                    className="w-full h-full object-cover object-top filter grayscale brightness-110 contrast-[0.95] group-hover:grayscale-0 group-hover:brightness-100 group-hover:contrast-100 transition-all duration-700 ease-out group-hover:scale-102"
+                    className="w-full h-full object-cover object-top transition-transform duration-700 ease-out group-hover:scale-102"
+                    loading="eager"
+                  />
+                  {/* Studio Full Color Portrait (Smoothly reveals on Hover) */}
+                  <img
+                    src="/zain-portrait.jpg"
+                    alt={`${person.name} Color Portrait`}
+                    className="absolute inset-0 w-full h-full object-cover object-top opacity-0 transition-all duration-700 ease-out group-hover:opacity-100 group-hover:scale-102"
                     loading="eager"
                   />
                   {/* Soft subtle bottom gradient to blend into card surface */}
